@@ -5,18 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Website</title>
 
-    <environment include="Development">
-        
+    
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/dist/main.css" asp-append-version="true" />
     </environment>
+
 </head>
 <body>
     
         @RenderBody()
-       
 
-    <environment include="Development">
-        
-    </environment>
+        <script src="~/dist/site.js" type="text/javascript" asp-append-version="true"></script>
 
     @RenderSection("Scripts", required: false)
 </body>
