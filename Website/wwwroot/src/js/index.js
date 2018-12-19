@@ -1,9 +1,11 @@
-//import style from '../css/site.css'
-import style from '../scss/site.scss'
+import '../scss/global.scss'
+import agility from 'agility'
 
 document.getElementById('test').onclick = function() {
-    alert('hello tunc')
+    alert('hello ' + agility.UniqueID('fromAgilityNPM-'));
 }
 
-if (module.hot)
-  module.hot.accept()
+//support hot module reloading ;)
+if (module.hot) {
+  module.hot.accept();
+}
