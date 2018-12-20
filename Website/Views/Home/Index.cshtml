@@ -1,7 +1,8 @@
-﻿@{
+﻿@using React.AspNet
+@{
     ViewData["Title"] = "Home Page";
 }
 
 <h1>HOME</h1>
 
-        <button id="test">Hello</button>
+@Html.React("Components.TestComponent", new { props = "nothing" })
