@@ -10,6 +10,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
+
+using Agility.Web;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace Website
 {
@@ -25,8 +29,17 @@ namespace Website
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public void ConfigureServices(IServiceCollection services)
 		{
-		
-			services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+			services.TryAddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+			var assembly = typeof(Startup).GetTypeInfo().Assembly;
+
+			services.AddMvc()
+				.AddApplicationPart(assembly)
+				.AddControllersAsServices()
+				.SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+			AgilityContext.ConfigureServices(services, Configuration);
+
 		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,22 +48,29 @@ namespace Website
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
+				app.UseBrowserLink();
 			}
 			else
 			{
 				app.UseExceptionHandler("/Home/Error");
-				app.UseHsts();
 			}
 
-			app.UseHttpsRedirection();
+			//configure the Agility Context 
+			Agility.Web.AgilityContext.Configure(app, env, useResponseCaching: true);
+
 			app.UseStaticFiles();
 
 			app.UseMvc(routes =>
 			{
+				//Agility Builtin Route
+				routes.MapRoute("Agility", "{*sitemapPath}", new { controller = "Agility", action = "RenderPage" },
+					new { isAgilityPath = new Agility.Web.Mvc.AgilityRouteConstraint() });
+
 				routes.MapRoute(
 					name: "default",
 					template: "{controller=Home}/{action=Index}/{id?}");
 			});
+
 		}
 	}
 }
