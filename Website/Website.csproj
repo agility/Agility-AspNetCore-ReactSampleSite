@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+    <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
   </PropertyGroup>
-
   <ItemGroup>
     <PackageReference Include="AgilityWebCore" Version="0.0.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
