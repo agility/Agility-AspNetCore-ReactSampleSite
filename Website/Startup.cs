@@ -35,8 +35,10 @@ namespace Website
 
 			services.AddMvc()
 				.AddApplicationPart(assembly)
-				.AddControllersAsServices()
-				.SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+				.AddControllersAsServices();
+
+			//joelv: i think this was throwing an error..
+			//.SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
 			AgilityContext.ConfigureServices(services, Configuration);
 
