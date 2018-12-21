@@ -49,18 +49,24 @@ namespace Website
 			if (env.IsDevelopment())
 			{
 				app.UseDeveloperExceptionPage();
+				app.UseBrowserLink();
 			}
 			else
 			{
 				app.UseExceptionHandler("/Home/Error");
-				app.UseHsts();
 			}
 
-			app.UseHttpsRedirection();
+			//configure the Agility Context 
+			Agility.Web.AgilityContext.Configure(app, env, useResponseCaching: true);
+
 			app.UseStaticFiles();
 
 			app.UseMvc(routes =>
 			{
+				//Agility Builtin Route
+				routes.MapRoute("Agility", "{*sitemapPath}", new { controller = "Agility", action = "RenderPage" },
+					new { isAgilityPath = new Agility.Web.Mvc.AgilityRouteConstraint() });
+
 				routes.MapRoute(
 					name: "default",
 					template: "{controller=Home}/{action=Index}/{id?}");
