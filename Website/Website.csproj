@@ -4,7 +4,7 @@
     <MvcRazorExcludeRefAssembliesFromPublish>false</MvcRazorExcludeRefAssembliesFromPublish>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="AgilityWebCore" Version="0.0.1.4"/>
     <PackageReference Include="Microsoft.AspNetCore.App"/>
+    <PackageReference Include="Agility.AspNetCore" Version="0.0.1.5"/>
   </ItemGroup>
 </Project>
