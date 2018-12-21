@@ -13,6 +13,9 @@ using Microsoft.Extensions.DependencyInjection;
 using JavaScriptEngineSwitcher.ChakraCore;
 using JavaScriptEngineSwitcher.Extensions.MsDependencyInjection;
 using React.AspNet;
+using Agility.Web;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using System.Reflection;
 
 namespace Website
 {
@@ -35,7 +38,11 @@ namespace Website
             services.AddJsEngineSwitcher(options => options.DefaultEngineName = ChakraCoreJsEngine.EngineName)
               .AddChakraCore();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+			var assembly = typeof(Startup).GetTypeInfo().Assembly;
+
+            services.AddMvc()
+				.AddApplicationPart(assembly)
+				.AddControllersAsServices();
 
 
             
@@ -57,7 +64,7 @@ namespace Website
 			}
 
 			//configure the Agility Context 
-			Agility.Web.AgilityContext.Configure(app, env, useResponseCaching: true);
+			AgilityContext.Configure(app, env, useResponseCaching: true);
 
 			app.UseStaticFiles();
 
