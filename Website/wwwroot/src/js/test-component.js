@@ -7,7 +7,7 @@ class TestComponent extends React.Component {
         
         return (
             <div className="container">
-                <h1>Hello World sl;dkf;ldskfl;!</h1>
+                <h1>This is cool</h1>
                 <p>yoooo</p>
             </div>
         );

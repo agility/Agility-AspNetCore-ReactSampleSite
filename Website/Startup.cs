@@ -45,7 +45,8 @@ namespace Website
 				.AddControllersAsServices();
 
 
-            
+            AgilityContext.ConfigureServices(services, Configuration);
+
             // Build the intermediate service provider then return it
             return services.BuildServiceProvider();
         }

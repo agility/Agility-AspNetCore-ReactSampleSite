@@ -1,3 +1,4 @@
+@using React.AspNet
 @model Website.ViewModels.PanelSliderViewModel
 
 
@@ -11,5 +12,7 @@
     {
         <img src="@panel.Image.URL" alt="@panel.Image.Label" />
     }*@
+
+    @Html.React("Components.TestComponent", new {})
 
 }
