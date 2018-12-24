@@ -1,4 +1,5 @@
 ﻿@using React.AspNet
+@using Website.Helpers
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +16,10 @@
 <body>
     @RenderBody()
 
-    <script src="~/dist/main.js" type="text/javascript" asp-append-version="true"></script>
+
+    @Html.GetUGCDataServiceInitializationScript()
+    <script src="~/dist/client.js" type="text/javascript" asp-append-version="true"></script>
+    
     @Html.ReactInitJavaScript()
     @RenderSection("Scripts", required: false)
 </body>

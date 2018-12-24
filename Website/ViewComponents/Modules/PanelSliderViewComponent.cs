@@ -24,7 +24,7 @@ namespace Website.ViewComponents.Modules
 
                 
                 return new ReactViewComponentResult("Components.TestComponent", new {});
-                //return View("~/Views/Modules/PanelSlider.cshtml", viewModel);
+
             });
         }
 

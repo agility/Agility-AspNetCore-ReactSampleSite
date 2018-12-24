@@ -1,6 +1,4 @@
 import '../scss/global.scss'
-import agility from 'agility'
-
 
 
 import React from 'react'

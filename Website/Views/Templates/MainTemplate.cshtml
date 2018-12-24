@@ -1,6 +1,9 @@
+@using React.AspNet
 @using Agility.Web;
 @using Agility.Web.Mvc;
 
 <section>	
-	@await Component.RenderContentZone("Main")			
+	@await Component.RenderContentZone("Main")	
+
+	@Html.React("Components.UGCTestComponent", new {}, clientOnly: true)
 </section>

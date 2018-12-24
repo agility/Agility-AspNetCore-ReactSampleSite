@@ -87,7 +87,7 @@ namespace Website
                     .SetReuseJavaScriptEngines(true)
                     .SetLoadBabel(false)
                     .SetLoadReact(false)
-                    .AddScriptWithoutTransform("~/dist/main.js");
+                    .AddScriptWithoutTransform("~/dist/server.js");
                 // If you want to use server-side rendering of React components,
                 // add all the necessary JavaScript files here. This includes
                 // your components as well as all of their dependencies.
