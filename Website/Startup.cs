@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-
 using Agility.Web;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 

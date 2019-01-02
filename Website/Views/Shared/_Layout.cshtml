@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using Website.Helpers
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -12,9 +13,18 @@
 
 </head>
 <body>
+    <!-- Inner Template Render: Start -->
     @RenderBody()
+    <!-- Inner Template Render: End -->
     
+    <!-- Init UGC Access Hash: Start -->
+    @Html.GetUGCDataServiceInitializationScript()
+    <!-- Init UGC Access Hash: End -->
+
+    <!-- Main JS Bundle: Start -->
     <script src="~/dist/main.js" type="text/javascript" asp-append-version="true"></script>
+    <!-- Main JS Bundle: End -->
+
     @RenderSection("Scripts", required: false)
 </body>
 </html>
