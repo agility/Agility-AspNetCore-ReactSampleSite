@@ -23,7 +23,7 @@ namespace Website.ViewComponents.Modules
                 viewModel.Panels = panels;
 
                 
-                return new ReactViewComponentResult("Components.TestComponent", new {});
+                return new ReactViewComponentResult("Components.TestComponent", viewModel);
 
             });
         }
