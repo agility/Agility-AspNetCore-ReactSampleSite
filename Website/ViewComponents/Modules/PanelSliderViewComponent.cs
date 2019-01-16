@@ -22,7 +22,8 @@ namespace Website.ViewComponents.Modules
 
                 viewModel.Panels = panels;
 
-                return View("~/Views/Modules/PanelSlider.cshtml", viewModel);
+                return new ReactViewComponentResult("Components.PanelSlider", viewModel);
+
             });
         }
 

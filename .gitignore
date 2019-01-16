@@ -267,3 +267,8 @@ AgilityLogs/
 
 # AppSettings
 appsettings.json
+
+# Minified files
+*.map
+*.min.*
+.sass-cache

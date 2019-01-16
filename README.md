@@ -1,10 +1,10 @@
 # Introduction 
-Agility CMS Website - 2019 - built using .Net Core with Agility.Web and Webpack
+This is the source code for the new Agility website. It demonstrates how you can use .NET Core, [Agility](https://agilitycms.com), and React to create an isomorphic web app that is high performant, SEO friendly, supports modern frontend tooling, easy to manage content, and showcases content architecture best-practices.
 
-# Getting Started
-1.  Installation process
+## Getting Started
+1.  Run Locally
     - clone the repo
-    - rename the **Website/appsettings.json.sample** file to **appsettings.json**
+    - copy the **Website/appsettings.json.sample** and rename it to **appsettings.json**
     - enter the *WebsiteName*, *SecurityKey*, *UGC Key** and *UGC Password* in the **appsettings.json** file
 
 2.  Software dependencies
@@ -21,8 +21,7 @@ Agility CMS Website - 2019 - built using .Net Core with Agility.Web and Webpack
     ```
 
 
-# Build
-
+## Build
 1.  Build Frontend
     ```
     Website\wwwroot> npm run build
@@ -34,5 +33,13 @@ Agility CMS Website - 2019 - built using .Net Core with Agility.Web and Webpack
     ```
 
 
+## Contribution - Rules of Engagement
+The following instructions are only applicable to Agility developers contributing to this source code.
+1. Under no circumstances can any PID, passwords, or access tokens be checked into source control
+2. Create your own feature branch for any changes, feel free to publish the branch or keep local
+3. When ready to deploy updates to UAT, merge into *uat* branch
+4. When ready to deploy to production, mergin into *master* branch
+5. Delete the unusused feature branch you initially created
 
-
+---
+**Note**: This repository has a one-way sync between a private VSTS git repository and a public [Agility-AspNetCore-ReactSampleSite GitHub repo](https://github.com/agility/Agility-AspNetCore-ReactSampleSite)

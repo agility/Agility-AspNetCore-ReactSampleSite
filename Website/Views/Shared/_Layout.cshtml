@@ -1,17 +1,24 @@
-﻿@using Website.Helpers
+@using Website.Helpers
 @using Agility.Web.Mvc
+@using React.AspNet
+
 <!DOCTYPE html>
 <html>
+    <title>@ViewBag.Title</title>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!-- Start: Top Page and Global Scripts-->
+    <!-- Start: Top Page and Global Scripts -->
     @Html.RenderAgilityTopScripts()
     <!-- End: Top Page and Global Scripts -->
 
+    <!-- Start: Top Page Additional Header Markup + Meta -->
     @Html.RenderAgilityCss()
-    
+    <!-- End: Top Page Additional Header Markup + Meta -->
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css" />
+
     <environment exclude="Development">
         <!-- Style bundle only used in production build -->
         <link rel="stylesheet" href="~/dist/main.css" asp-append-version="true" />
@@ -32,9 +39,15 @@
     <!-- End: Compute/Set Hash -->
 
     <!-- Start: Main JS Bundle -->
-    <script src="~/dist/main.js" type="text/javascript" asp-append-version="true"></script>
-    <!-- End  Main JS Bundle -->
+    <script src="~/dist/client.js" type="text/javascript" asp-append-version="true"></script>
+    <!-- End: Main JS Bundle -->
+    
+    <!-- Start: ReactJS.NET Client Hydrate -->
+    @Html.ReactInitJavaScript()
+    <!-- End: ReactJS.NET Client Hydrate -->
 
+    <!-- Start: Any Additional Inner Template JS -->
     @RenderSection("Scripts", required: false)
+    <!-- End: Any Additional Inner Template JS -->
 </body>
 </html>

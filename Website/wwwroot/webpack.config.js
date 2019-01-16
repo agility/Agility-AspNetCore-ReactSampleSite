@@ -4,11 +4,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
-  entry: './src/js/index.js',
+  entry: {
+      server: './src/_server.js',
+      client: './src/_client.js'       
+  },
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'main.js'
+    filename: '[name].js'
   },
   module: {
     rules: [{
@@ -24,7 +27,7 @@ module.exports = {
         ]
       },
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         loader: 'babel-loader',
         exclude: /node_modules/
       },
@@ -70,7 +73,6 @@ if (!devMode) {
       // Options similar to the same options in webpackOptions.output
       // both options are optional
       filename: "[name].css",
-      chunkFilename: "[id].css"
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true
