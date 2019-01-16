@@ -1,0 +1,28 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "Agility": {
+    "applicationName": "My Web Application",
+    "websiteName": "{{website name goes here}}",
+    "securityKey": "{{security key goes here}}",
+    "contentCacheFilePath": "d:/home/AgilityContent/",
+    "contentServerUrl": "https://contentserver1503.agilitycms.com/agilitycontentserver.svc",
+    "developmentMode": "false",
+    "Trace": {
+      "traceLevel": "Warning",
+      "logFilePath": "d:/home/AgilityLogs/Website.log"
+    },
+    "UGC": {
+      "Url": "https://ugc.agilitycms.com/",
+      "Key": "{{ugc key goes here}}",
+      "Password": "{{ugc password goes here}}"
+    },
+    "Analytics": {
+      "Url": ""
+    }
+  }
+}

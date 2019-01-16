@@ -4,6 +4,8 @@ Agility CMS Website - 2019 - built using .Net Core with Agility.Web and Webpack
 # Getting Started
 1.  Installation process
     - clone the repo
+    - rename the **Website/appsettings.json.sample** file to **appsettings.json**
+    - enter the *WebsiteName*, *SecurityKey*, *UGC Key** and *UGC Password* in the **appsettings.json** file
 
 2.  Software dependencies
     - ensure at least .NET core 2.2 runtime is installed
