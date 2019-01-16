@@ -16,8 +16,8 @@ class UGCTestComponent extends React.Component {
                 var record = data.ResponseData;
                 console.log(record)	;
             }
-        })
-
+        });
+                
         //search for records in the "Profiles" Website User Type table
         //only return 10 records at a time
         //start at the beginning of the results

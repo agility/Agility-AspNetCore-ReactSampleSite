@@ -8,8 +8,8 @@ class TestComponent extends React.Component {
     render() {
         return (
             <div className="container">
-                <h1>This is cool</h1>
-                <p>yoooo</p>
+                <h1>Hey Joel?</h1>
+                <p>hello world</p>
                 <Button content="My Button" primary />
                 <Button content="Other Button" secondary />
                 <Image src={this.props.panels[0].image.url} size="small" circular/>
