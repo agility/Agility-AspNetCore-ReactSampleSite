@@ -10,6 +10,7 @@ This is the source code for the new Agility website. It demonstrates how you can
 2.  Software dependencies
     - ensure at least .NET core 2.2 runtime is installed
 
+
 3.  Start .NET Core site
     ```
     Website> dotnet run
@@ -17,6 +18,7 @@ This is the source code for the new Agility website. It demonstrates how you can
 
 4.  Start Webpack Dev Server to use things like hot module replacement
     ```
+    Website\wwwroot> npm install
     Website\wwwroot> npm run dev
     ```
 

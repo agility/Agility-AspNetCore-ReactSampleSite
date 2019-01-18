@@ -267,6 +267,7 @@ AgilityLogs/
 
 # AppSettings
 appsettings.json
+appsettings.Development.json
 
 # Minified files
 *.map
