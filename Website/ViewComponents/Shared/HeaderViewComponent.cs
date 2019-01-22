@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Website.ViewModels;
 using Website.AgilityModels;
+using Website.Extensions;
 using Agility.Web.Extensions;
 using Agility.Web;
 
@@ -18,7 +19,15 @@ namespace Website.ViewComponents.Shared
 			return Task.Run<IViewComponentResult>(() =>
 			{
 				var repo = new AgilityContentRepository<GlobalHeader>("GlobalHeader");
-				var viewModel = repo.Item(null);
+				var item = repo.Item(null);
+
+				var viewModel = new
+				{
+					logo = item.Logo,
+					preHeaderLinks = item.PreHeaderLinks.SortByIDs(item.PreHeaderLinkSortIDs).Select(a => a.ToFrontendProps()),
+					primaryButton = item.ParseUrl("PrimaryButton")
+				};
+
 				return new ReactViewComponentResult("Components.Header", viewModel);
 			});
 		}
