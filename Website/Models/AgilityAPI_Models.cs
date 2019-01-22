@@ -109,9 +109,9 @@ namespace Website.AgilityModels
 		private string __column3title = null;
 		private bool __column3title_set = false;
 		public virtual string Column3Title { get { if (!__column3title_set) __column3title = GetFieldValue<string>("Column3Title"); __column3title_set = true; return __column3title; } set { __column3title = value; __column3title_set = true; } }
-		private string __column3ids = null;
-		private bool __column3ids_set = false;
-		public virtual string Column3IDs { get { if (!__column3ids_set) __column3ids = GetFieldValue<string>("Column3IDs"); __column3ids_set = true; return __column3ids; } set { __column3ids = value; __column3ids_set = true; } }
+		private string __column3sortids = null;
+		private bool __column3sortids_set = false;
+		public virtual string Column3SortIDs { get { if (!__column3sortids_set) __column3sortids = GetFieldValue<string>("Column3SortIDs"); __column3sortids_set = true; return __column3sortids; } set { __column3sortids = value; __column3sortids_set = true; } }
 		private IAgilityContentRepository<Link> __column3links = null;
 		public virtual IAgilityContentRepository<Link> Column3Links { get { if (__column3links == null) __column3links = GetLinkedContent<Link>("Column3Links", "", "ItemOrder ", ""); return __column3links; } set { __column3links = value; } }
 		private string __followlinkids = null;
@@ -312,4 +312,5 @@ namespace Website.AgilityModels
 		public virtual IAgilityContentRepository<TabPanel> TabPanels { get { if (__tabpanels == null) __tabpanels = GetLinkedContent<TabPanel>("TabPanels", "", "ItemOrder ", ""); return __tabpanels; } set { __tabpanels = value; } }
 
 	}
+
 }
