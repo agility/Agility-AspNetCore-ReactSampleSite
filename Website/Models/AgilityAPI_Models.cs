@@ -142,6 +142,9 @@ namespace Website.AgilityModels
 		public virtual string PrimaryButton { get { if (!__primarybutton_set) __primarybutton = GetFieldValue<string>("PrimaryButton"); __primarybutton_set = true; return __primarybutton; } set { __primarybutton = value; __primarybutton_set = true; } }
 		private IAgilityContentRepository<Link> __preheaderlinks = null;
 		public virtual IAgilityContentRepository<Link> PreHeaderLinks { get { if (__preheaderlinks == null) __preheaderlinks = GetLinkedContent<Link>("PreHeaderLinks", "", "ItemOrder ", ""); return __preheaderlinks; } set { __preheaderlinks = value; } }
+		private string __preheaderlinksortids = null;
+		private bool __preheaderlinksortids_set = false;
+		public virtual string PreHeaderLinkSortIDs { get { if (!__preheaderlinksortids_set) __preheaderlinksortids = GetFieldValue<string>("PreHeaderLinkSortIDs"); __preheaderlinksortids_set = true; return __preheaderlinksortids; } set { __preheaderlinksortids = value; __preheaderlinksortids_set = true; } }
 
 	}
 	public partial class Link : Agility.Web.AgilityContentItem
