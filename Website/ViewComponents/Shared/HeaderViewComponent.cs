@@ -20,11 +20,14 @@ namespace Website.ViewComponents.Shared
 				var repo = new AgilityContentRepository<GlobalHeader>("GlobalHeader");
 				var item = repo.Item(null);
 
+				//TODO: need sitemap provider implemented in Agility.AspNetCore
+
 				var viewModel = new
 				{
 					logo = item.Logo,
 					preHeaderLinks = item.PreHeaderLinks.SortByIDs(item.PreHeaderLinkSortIDs).Select(a => a.ToFrontendProps()),
-					primaryButton = item.ParseUrl("PrimaryButton")
+					primaryButton = item.ParseUrl("PrimaryButton"),
+
 				};
 
 				return new ReactViewComponentResult("Components.Header", viewModel);

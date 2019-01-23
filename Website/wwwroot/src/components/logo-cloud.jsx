@@ -95,8 +95,8 @@ class LogoListing extends React.Component {
                 </ul>
 
                 <div className="buttons">
-                    <a href="#" className="btn">See Our Case Studies</a>
-                    <a href="#" className="btn">Lets Chat!</a>
+                    <button href="#" className="btn">See Our Case Studies</button>
+                    <button href="#" className="btn">Lets Chat!</button>
                 </div>
             </section>
         );

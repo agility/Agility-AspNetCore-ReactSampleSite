@@ -7,21 +7,28 @@ global['ReactDOMServer'] = ReactDOMServer;
 
 
 //React Components
+
+// -- global
+import Header from './components/header.jsx'
+import Footer from './components/footer.jsx'
+
+// -- modules
 import ContentPanel from './components/content-panel.jsx'
 import FeatureBlocks from './components/feature-blocks.jsx'
 import LogoListing from './components/logo-listing.jsx'
-import TabPanel from './components/tab-panel.jsx'
+import TabPanels from './components/tab-panels.jsx'
 import LogoCloud from './components/logo-cloud.jsx'
-import Header from './components/header.jsx'
-import Footer from './components/footer.jsx'
+import SectionHeading from './components/section-heading.jsx'
+
 
 
 global['Components'] = {
   FeatureBlocks,
   ContentPanel,
-  TabPanel,
+  TabPanels,
   LogoCloud,
   LogoListing,
+  SectionHeading,
   Header,
   Footer
 }
