@@ -69,12 +69,11 @@ class ContentPanel extends React.Component {
                 
                 <div className="rotated-bg"></div>
                 <div className="start-content">
-                    <h1>Design > Build > Deploy Faster with Agility!</h1>
-                    <h2>Want to be more flexible, quicker to market and adapt<br /> to the pace of business? Bring Agility to your team.</h2>
-                    <p>Agility is a content first Headless CMS. Start with your most valuable asset, your<br /> content. Then Build, Deploy and Engage your customers with a platform that<br /> manages your content across all your digital channels.</p>
+                    <h1>{this.props.title}</h1>
+                    <div dangerouslySetInnerHTML={{ __html: this.props.textBlob }} />
                     <div className="start-buttons">
-                        <button className="btn">Request a Demo</button>
-                        <a href="#" className="btn-link">Try for FREE <span><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/ico/gray.svg" alt="" /></span></a>
+                        <a href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</a>
+                        <a href={this.props.secondaryButton.href} target={this.props.secondaryButton.target} className="btn-link">{this.props.secondaryButton.text} <span><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/ico/gray.svg" alt="" /></span></a>
                     </div>
                 </div>
                 <div className="start-image">
