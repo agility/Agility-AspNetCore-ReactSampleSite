@@ -21,10 +21,11 @@ namespace Website.ViewComponents.Modules
 				var viewModel = new
 				{
 					title = module.Title,
+					subTitle = module.SubTitle,
 					tabs = module.TabPanels.GetByIDs(module.TabPanelIDs).Select(p => p.ToFrontendProps())
 				};
 
-				return new ReactViewComponentResult("Components.TabPanel", viewModel);
+				return new ReactViewComponentResult("Components.TabPanels", viewModel);
 			});
 		}
 
