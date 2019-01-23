@@ -7,8 +7,10 @@
     <title>@ViewBag.Title</title>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" media="all" />
+    <link rel="shortcut icon" type="image/x-icon" href="">
+
     <!-- Start: Top Page and Global Scripts -->
     @Html.RenderAgilityTopScripts()
     <!-- End: Top Page and Global Scripts -->
@@ -16,8 +18,6 @@
     <!-- Start: Top Page Additional Header Markup + Meta -->
     @Html.RenderAgilityCss()
     <!-- End: Top Page Additional Header Markup + Meta -->
-
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/semantic-ui@2.4.1/dist/semantic.min.css" />
 
     <environment exclude="Development">
         <!-- Style bundle only used in production build -->

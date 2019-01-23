@@ -1,0 +1,191 @@
+@import ./_variables.sass
+
+.foter
+  background-color: $act
+  color: $white
+  padding-top: 40px
+  padding-bottom: 13px
+  .foter-inner
+    display: flex
+    justify-content: space-between
+  .foter-menu
+    margin-bottom: 33px
+    .foter-menu-li.title
+      font-family: $extrabold
+      font-size: 16px
+      font-weight: 800
+      font-style: normal
+      font-stretch: normal
+      line-height: normal
+      letter-spacing: normal
+      color: $white
+      margin-bottom: 30px
+    .foter-menu-li a
+      font-family: $regular
+      font-size: 14px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: normal
+      letter-spacing: normal
+      color: $flc
+      display: block
+      cursor: pointer
+      margin-bottom: 14px
+      transition: opacity 0.2s cubic-bezier(0.24, 0.35, 0, 1.01)
+      &:hover
+        font-weight: 600
+        color: $white
+  .foter-menu.menu-social
+    display: flex
+    align-items: center
+    justify-content: space-around
+    flex-wrap: wrap
+    height: max-content
+    li:first-child
+      flex-basis: 100%
+      &:hover
+        a
+          //background-image: url('../img')
+    li:first-child:hover
+      a
+        //background-image: url('../img')
+    li
+      width: 50%
+      text-align: center
+      a
+        img
+          transition: all 0.2s ease-out
+        &:hover
+          img
+            filter: invert(100%) grayscale(1)
+
+
+  .foter-subscribe
+    span
+      font-family: $extrabold
+      font-size: 16px
+      font-weight: 800
+      font-style: normal
+      font-stretch: normal
+      line-height: normal
+      letter-spacing: normal
+      margin-bottom: 27px
+      display: block
+    p
+      font-family: $semibold
+      font-size: 14px
+      font-weight: 600
+      font-style: normal
+      font-stretch: normal
+      line-height: 1.71
+      letter-spacing: normal
+      margin-bottom: 25px
+    .foter-subscribe-form
+      width: 100%
+      max-width: 384px
+      height: 40px
+      border-radius: 5px
+      background-color: $white
+      position: relative
+      overflow: hidden
+      input[type="text"]
+        font-family: $regular
+        font-size: 12px
+        font-weight: normal
+        font-style: normal
+        font-stretch: normal
+        line-height: normal
+        letter-spacing: normal
+        color: #5400ca
+        border: none
+        outline: none
+        z-index: 4
+        padding-left: 24px
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 0
+        top: 0
+      input[type="text"]::-webkit-input-placeholder
+        color: #bc95f2
+      input[type="text"]:-ms-input-placeholder
+        color: #bc95f2
+      input[type="text"]::-moz-placeholder
+        color: #bc95f2
+        opacity: 1
+      input[type="text"]:-moz-placeholder
+        color: #bc95f2
+      input[type="submit"]
+        width: 102px
+        height: 36px
+        border-radius: 5px
+        box-shadow: 0 5px 35px 0 rgba(109, 6, 255, 0.25)
+        background-color: #4600a8
+        font-family: $bold
+        font-size: 13px
+        font-weight: bold
+        font-style: normal
+        font-stretch: normal
+        line-height: normal
+        letter-spacing: normal
+        text-align: center
+        color: $white
+        position: absolute
+        border: none
+        outline: none
+        top: 50%
+        right: 2px
+        z-index: 5
+        transform: translate(0 , -50%)
+        transition: all 0.2s cubic-bezier(0.24, 0.35, 0, 1.01)
+        cursor: pointer
+        &:hover
+          background-color: $btnhov
+  .foter-copyright
+    display: flex
+    align-items: center
+    justify-content: center
+    p
+      font-family: $regular
+      font-size: 11px
+      font-weight: normal
+      font-style: normal
+      font-stretch: normal
+      line-height: normal
+      letter-spacing: normal
+      position: relative
+      top: 2px
+    .foter-copyright-menu
+      display: flex
+      align-items: center
+      li
+        margin-left: 10px
+      span
+        margin-left: 10px
+      a
+        font-family: $regular
+        font-size: 12px
+        font-weight: normal
+        font-style: normal
+        font-stretch: normal
+        line-height: normal
+        letter-spacing: normal
+        color: $white
+        display: block
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

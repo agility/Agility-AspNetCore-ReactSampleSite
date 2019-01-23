@@ -7,13 +7,13 @@ global['ReactDOMServer'] = ReactDOMServer;
 
 
 //React Components
-import PanelSlider from './components/panel-slider.jsx'
+import ContentPanel from './components/content-panel.jsx'
 import Header from './components/header.jsx'
 import Footer from './components/footer.jsx'
 
 
 global['Components'] = {
-  PanelSlider,
+  ContentPanel,
   Header,
   Footer
 }

@@ -23,8 +23,9 @@ namespace Website.ViewComponents.Modules
 				// viewModel.Panels = panels;
 
 				// return new ReactViewComponentResult("Components.PanelSlider", viewModel);
-				return Content("TODO: implement ContentPanel");
+				//return Content("TODO: implement ContentPanel");
 
+				return new ReactViewComponentResult("Components.ContentPanel", module);
 			});
 		}
 
