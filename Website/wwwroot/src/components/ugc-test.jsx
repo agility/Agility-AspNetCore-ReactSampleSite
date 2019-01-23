@@ -1,6 +1,5 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import { Button } from 'semantic-ui-react'
 import ugcClient from 'agility-ugc'
 
 class UGCTestComponent extends React.Component {
