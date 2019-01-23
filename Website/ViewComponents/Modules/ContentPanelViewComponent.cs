@@ -19,7 +19,7 @@ namespace Website.ViewComponents.Modules
 
 				var panel = module.Panel.GetByID(module.PanelID).ToFrontendProps();
 
-				return new ReactViewComponentResult("Components.ContentPanel", module);
+				return new ReactViewComponentResult("Components.ContentPanel", panel);
 			});
 		}
 
