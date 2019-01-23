@@ -1,22 +1,9 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './footer.scss'
+import './foter.sass'
 
 
 class Footer extends React.Component {
-
-    // outputLinks = () => {
-    //     let lst = this.props.column1Links;
-    //     let links = []
-    //     if (!lst || lst.length == null) return null;
-
-    //     lst.forEach(item => {
-
-    //         links.push(<td>{item.title}</td>)
-    //     });
-
-    //     return <ol>{links}</ol>;
-    // };
 
     render() {
         console.log("foooter", this.props);
@@ -25,7 +12,7 @@ class Footer extends React.Component {
             if (!lst || lst.length == null) return null;
 
             lst.forEach(item => {
-                links.push(<li key={item.key}><a href={item.url.href} target={item.url.target}>{item.title}</a></li>)
+                links.push(<li className="foter-menu-li" key={item.key}><a href={item.url.href} target={item.url.target}>{item.title}</a></li>)
             });
 
             return <ul>{links}</ul>;
@@ -38,34 +25,56 @@ class Footer extends React.Component {
             lst.forEach(item => {
                 var img = <img src={item.logo.url} alt={item.logo.label}></img>;
                 var a = <a href={item.followURL.href} target={item.followURL.target} title={item.title}>{img}</a>
-                links.push(<li key={item.key}>{a}</li>)
+                links.push(<li className="foter-menu-li" key={item.key}>{a}</li>)
             });
 
             return <ul>{links}</ul>;
         };
 
         return (
-            <footer className="container" >
-                <h3>{this.props.column1Title}</h3>
-                {outputLinks(this.props.column1Links)}
 
-                <h3>{this.props.column2Title}</h3>
-                {outputLinks(this.props.column2Links)}
+            // </footer>
+            <footer className="foter p-w">
+                <div className="foter-inner">
 
-                <h3>{this.props.column3Title}</h3>
-                {outputLinks(this.props.column3Links)}
+                    <ul className="foter-menu menu-product">
+                        <li className="foter-menu-li title"><span>{this.props.column1Title}</span></li>
+                        {outputLinks(this.props.column1Links)}
+                    </ul>
+                    <ul className="foter-menu menu-about">
+                        <li className="foter-menu-li title"><span>{this.props.column2Title}</span></li>
+                        {outputLinks(this.props.column2Links)}
+                    </ul>
+                    <ul className="foter-menu menu-information">
+                        <li className="foter-menu-li title"><span>{this.props.column3Title}</span></li>
+                        {outputLinks(this.props.column3Links)}
+                    </ul>
+                    <ul className="foter-menu menu-social">
+                        <li className="foter-menu-li title"><span>{this.props.followTitle}</span></li>
+                        {outputFollowLinks(this.props.followLinks)}
+                    </ul>
+                    <div className="foter-subscribe">
+                        <span>{this.props.subscribeTitle}</span>
+                        <p>{this.props.subscribeDescription}</p>
+                        <form action="" className="foter-subscribe-form">
+                            <input type="text" placeholder={this.props.subscribeEmailPlaceholder} />
+                            <input type="submit" placeholder={this.props.subscribeButtonLabel} />
+                        </form>
+                    </div>
 
-                {/* follow links */}
-                {outputFollowLinks(this.props.followLinks)}
+                </div>
 
-                <h3>{this.props.subscribeTitle}</h3>
-                <div>{this.props.subscribeDescription}</div>
-                <form>
-                    <input type="text" placeholder={this.props.subscribeEmailPlaceholder} />
-                    <input type="submit" value={this.props.subscribeButtonLabel} />
-                </form>
+                <div className="foter-copyright">
+                    <p>© Copyright, Agility 2019</p>
+                    <ul className="foter-copyright-menu">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <span>|</span>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+            </footer>
 
-            </footer >
+                
         );
     }
 }

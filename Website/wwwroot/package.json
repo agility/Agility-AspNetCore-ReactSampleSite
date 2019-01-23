@@ -14,8 +14,7 @@
     "agility-ugc": "^1.0.4",
     "babel-polyfill": "^6.26.0",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "semantic-ui-react": "^0.84.0"
+    "react-dom": "^16.7.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",

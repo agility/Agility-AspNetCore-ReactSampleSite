@@ -19,7 +19,7 @@ module.exports = {
         loader: 'style-loader!css-loader'
       },
       { 
-          test: /\.scss$/,
+          test: /\.sass$/,
             use: [
               devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
               'css-loader',
