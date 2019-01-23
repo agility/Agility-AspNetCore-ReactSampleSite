@@ -11,7 +11,7 @@ class Header extends React.Component {
             if (!lst || lst.length == null) return null;
 
             lst.forEach(item => {
-                links.push(<li><a href={item.url.href} target={item.url.target}>{item.title}</a></li>)
+                links.push(<li key={item.key}><a href={item.url.href} target={item.url.target}>{item.title}</a></li>)
             });
 
             return <ul>{links}</ul>;

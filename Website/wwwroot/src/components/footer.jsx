@@ -19,13 +19,13 @@ class Footer extends React.Component {
     // };
 
     render() {
-
+        console.log("foooter", this.props);
         const outputLinks = (lst) => {
             let links = []
             if (!lst || lst.length == null) return null;
 
             lst.forEach(item => {
-                links.push(<li><a href={item.url.href} target={item.url.target}>{item.title}</a></li>)
+                links.push(<li key={item.key}><a href={item.url.href} target={item.url.target}>{item.title}</a></li>)
             });
 
             return <ul>{links}</ul>;
@@ -38,7 +38,7 @@ class Footer extends React.Component {
             lst.forEach(item => {
                 var img = <img src={item.logo.url} alt={item.logo.label}></img>;
                 var a = <a href={item.followURL.href} target={item.followURL.target} title={item.title}>{img}</a>
-                links.push(<li>{a}</li>)
+                links.push(<li key={item.key}>{a}</li>)
             });
 
             return <ul>{links}</ul>;

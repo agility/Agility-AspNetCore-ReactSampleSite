@@ -4,7 +4,6 @@ import './content-panel.scss'
 
 class ContentPanel extends React.Component {
     render() {
-        console.log("props", this.props);
         return (
             <div className="contentPanel">
                 <h2>{this.props.title}</h2>
