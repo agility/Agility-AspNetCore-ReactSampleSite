@@ -91,7 +91,7 @@ class LogoListing extends React.Component {
                     <li className="work-item"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/work/img2.png" alt="" /></li>
                     <li className="work-item"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/work/img3.png" alt="" /></li>
                     <li className="work-item"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/work/img4.png" alt="" /></li>
-                    <li className="work-item"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/work/img5.pngg" alt="" /></li>
+                    <li className="work-item"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/work/img5.png" alt="" /></li>
                     <li className="work-item"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/work/img6.png" alt="" /></li>
                 </ul>
 
