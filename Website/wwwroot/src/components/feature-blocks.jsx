@@ -1,7 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
 import FeatureBlock from "./feature-block.jsx"
-import './feature-blocks.scss'
+import './feature-blocks.sass'
 
 class FeatureBlocks extends React.Component {
     render() {
