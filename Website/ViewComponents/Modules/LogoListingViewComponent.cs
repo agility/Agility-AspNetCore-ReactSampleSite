@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Website.AgilityModels;
+using Website.Extensions;
 using Agility.Web.Extensions;
 
 namespace Website.ViewComponents.Modules
@@ -16,13 +17,25 @@ namespace Website.ViewComponents.Modules
 			return Task.Run<IViewComponentResult>(() =>
 			{
 				//TODO: implement viewmodel
-				if(module.RenderType == "cloud") {
-					return new ReactViewComponentResult("Components.LogoCloud", module);
-				} else {
-					return new ReactViewComponentResult("Components.LogoListing", module);
+
+
+
+				var viewModel = new
+				{
+					renderType = module.RenderType,
+					primaryButton = module.ParseUrl("PrimaryButton"),
+					secondaryButton = module.ParseUrl("SecondaryButton"),
+					logos = module.Logos.SortByIDs(module.LogoIDs).Select(p => p.ToFrontendProps())
+				};
+
+				if (module.RenderType == "cloud")
+				{
+					return new ReactViewComponentResult("Components.LogoCloud", viewModel);
 				}
-
-
+				else
+				{
+					return new ReactViewComponentResult("Components.LogoListing", viewModel);
+				}
 
 			});
 		}
