@@ -2,12 +2,10 @@ import React from 'react';
 import { hot } from 'react-hot-loader/root'
 import './tab-panel.sass'
 
-class ContentPanel extends React.Component {
+class TabPanel extends React.Component {
     constructor() {
         super()
     }
-
-
 
     render() {
 
@@ -42,5 +40,5 @@ class ContentPanel extends React.Component {
         );
     }
 }
-export default hot(ContentPanel);
+export default hot(TabPanel);
 
