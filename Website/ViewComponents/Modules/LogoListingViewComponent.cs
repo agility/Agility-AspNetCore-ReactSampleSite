@@ -11,12 +11,18 @@ namespace Website.ViewComponents.Modules
 	public class LogoListing : ViewComponent
 	{
 
-		public Task<IViewComponentResult> InvokeAsync(Module_ContentPanel module)
+		public Task<IViewComponentResult> InvokeAsync(Module_LogoListing module)
 		{
 			return Task.Run<IViewComponentResult>(() =>
 			{
+				//TODO: implement viewmodel
+				if(module.RenderType == "cloud") {
+					return new ReactViewComponentResult("Components.LogoCloud", module);
+				} else {
+					return new ReactViewComponentResult("Components.LogoListing", module);
+				}
 
-				return Content("TODO: implement LogoListing");
+
 
 			});
 		}
