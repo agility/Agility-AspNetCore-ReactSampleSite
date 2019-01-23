@@ -16,6 +16,9 @@ namespace Website.ViewComponents.Modules
 		{
 			return Task.Run<IViewComponentResult>(() =>
 			{
+				//TODO: implement viewmodel
+
+
 
 				var viewModel = new
 				{
@@ -25,7 +28,14 @@ namespace Website.ViewComponents.Modules
 					logos = module.Logos.SortByIDs(module.LogoIDs).Select(p => p.ToFrontendProps())
 				};
 
-				return new ReactViewComponentResult("Components.LogoListing", viewModel);
+				if (module.RenderType == "cloud")
+				{
+					return new ReactViewComponentResult("Components.LogoCloud", viewModel);
+				}
+				else
+				{
+					return new ReactViewComponentResult("Components.LogoListing", viewModel);
+				}
 
 			});
 		}

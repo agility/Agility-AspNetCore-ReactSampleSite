@@ -9,8 +9,9 @@ global['ReactDOMServer'] = ReactDOMServer;
 //React Components
 import ContentPanel from './components/content-panel.jsx'
 import FeatureBlocks from './components/feature-blocks.jsx'
-import TabPanel from './components/tab-panel.jsx'
 import LogoListing from './components/logo-listing.jsx'
+import TabPanel from './components/tab-panel.jsx'
+import LogoCloud from './components/logo-cloud.jsx'
 import Header from './components/header.jsx'
 import Footer from './components/footer.jsx'
 
@@ -19,6 +20,7 @@ global['Components'] = {
   FeatureBlocks,
   ContentPanel,
   TabPanel,
+  LogoCloud,
   LogoListing,
   Header,
   Footer

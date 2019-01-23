@@ -1,6 +1,46 @@
-@import "_variables"
-$color: black
+@import './_variables.sass'
+.work
+  padding-top: 198px
+  padding-bottom: 144px
+  position: relative
+  .rotated-bg
+    position: absolute
+    width: 100%
+    max-width: 100%
+    height: 100%
+    right: 0
+    top: 0
+    z-index: -1
+    background-image: url('https://cdn.agilitycms.com/agility-cms-2019/layout/img/bg/Triangle_3.png')
+    -webkit-background-size: 100% 100%
+    background-size: 100% 100%
+    background-repeat: no-repeat
+    background-position: center
+  h2
+    margin-bottom: 42px
+  p
+    font-family: $semibold
+    font-size: 20px
+    font-weight: 600
+    font-style: normal
+    font-stretch: normal
+    line-height: 1.6
+    letter-spacing: normal
+    text-align: center
+    margin-bottom: 186px
+    position: relative
+    z-index: 1
+  .work-list
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 193px
+    position: relative
+    z-index: 1
+    .work-item
+  .buttons
+    display: flex
+    justify-content: space-between
+    max-width: 380px
+    margin: 0 auto
 
-.logoListing 
-    color: $color
-    background-color: green
