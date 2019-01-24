@@ -128,7 +128,7 @@ class FeatureBlocks extends React.Component {
                     </div>
                 </div>
 
-                <h2 className="title-conponent">Benefits</h2>
+                <h2 className="title-conponent">{this.props.title}</h2>
 
                 <div className="ben-items container">
                     <div className="ben-items-forslider my-slider" id="slider">
