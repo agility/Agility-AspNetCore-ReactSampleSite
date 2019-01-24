@@ -23,15 +23,22 @@ class Header extends React.Component {
             let links = []
             if (!menu || !menu.length || menu.length == 0) return null;
 
+            let itemClassName = "h-menu-li";
+            let aClassName = "h-menu-a"
+            if (level > 0) {
+                itemClassName = "sub-menu-li";
+                aClassName = "sub-menu-a"
+            }
+
             menu.forEach(item => {
 
-                const subLinks = renderMenu(item.children);
+                const subLinks = renderMenu(item.children, level + 1);
                 if (subLinks == null) {
                     //no sub menu
-                    links.push(<li className="h-menu-li" key={item.key}><a href={item.url} target={item.target} className="h-menu-a">{item.text}</a></li>)
+                    links.push(<li className={itemClassName} key={item.key}><a href={item.url} target={item.target} className={aClassName}>{item.text}</a></li>)
                 } else {
                     //has a sub menu
-                    var li = <li className="h-menu-li has-children" key={item.key}><a href={item.url} target={item.target} className="h-menu-a">{item.text}</a>
+                    var li = <li className={itemClassName + ' has-children'} key={item.key}><a href={item.url} target={item.target} className={aClassName}>{item.text}</a>
                         <span className="sub-menu-icon"><img src="https://static.agilitycms.com/layout/img/ico/down.svg" alt="" /></span>
                         <div className="sub-menu-inner">
                             {subLinks}
@@ -40,19 +47,16 @@ class Header extends React.Component {
 
                     links.push(li);
                 }
-
-
             });
 
             let className = "header-menu";
             if (level > 0) {
                 className = "sub-menu";
-
             }
 
-            return <ul class={className}>{links}</ul>;
+            return <ul className={className}>{links}</ul>;
         };
-        console.log(this.props);
+
         return (
             <div>
                 <SignIn preHeaderLinks={this.props.preHeaderLinks} primaryButton={this.props.primaryButton} />
@@ -62,7 +66,7 @@ class Header extends React.Component {
                         <a href="/"><img src={this.props.logo.url} alt={this.props.logo.label} /></a>
                     </div>
 
-                    {renderMenu(this.props.menu)}
+                    {renderMenu(this.props.menu, 0)}
 
                     <button href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</button>
                 </header>

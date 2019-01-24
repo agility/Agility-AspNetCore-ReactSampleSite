@@ -5,44 +5,33 @@ import './logo-cloud.sass'
 class LogoListing extends React.Component {
     render() {
 
-        // const renderLogo = (logo) => {
-        //     //render one tab
-        //     return (
-        //         <div key={logo.key}>
-        //             <h3>{logo.title}</h3>
-        //             <div>{logo.shortDescription}</div>
-        //             <div dangerouslySetInnerHTML={{ __html: logo.textBlob }} />
-        //             <div>
-        //                 <img src={logo.logo.url} alt={logo.logo.label} />
-        //             </div>
-        //             <div>
-        //                 <a href={logo.url.href} target={logo.url.target}>{logo.url.text}</a>
-        //             </div>
-        //         </div>
-        //     );
-        // }
+        const renderLogo = (logo, index) => {
+            //render one logo
+            var className = "friend-item delay-" + (index + 1);
 
-        // //loop all the tabs and render them
-        // const logos = this.props.logos.map(function (logo) {
-        //     return renderLogo(logo)
-        // })
+            return (
+                <li className={className} key={logo.key}>
+                    <img src={logo.logo.url} alt={logo.logo.label} />
+                    {/* <a href={logo.url.href} target={logo.url.target}><img src={logo.logo.url} alt={logo.logo.label} /></a> */}
+                </li>
+            );
+            // <div key={logo.key}>
+            //     <h3>{logo.title}</h3>
+            //     <div>{logo.shortDescription}</div>
+            //     <div dangerouslySetInnerHTML={{ __html: logo.textBlob }} />
+            //     <div>
+            //         <img src={logo.logo.url} alt={logo.logo.label} />
+            //     </div>
+            //     <div>
+            //         <a href={logo.url.href} target={logo.url.target}>{logo.url.text}</a>
+            //     </div>
+            // </div>
+        }
 
-        // return (
-        //     <div className="logoListing">
-        //         <h2>{this.props.renderType}</h2>
-
-        //         {logos}
-
-        //         <div>
-        //             <a href={this.props.primaryButton.href} target={this.props.primaryButton.target}>{this.props.primaryButton.text}</a>
-        //         </div>
-        //         <div>
-        //             <a href={this.props.secondaryButton.href} target={this.props.secondaryButton.target}>{this.props.secondaryButton.text}</a>
-        //         </div>
-
-        //     </div>
-        // )
-
+        //loop all the logos and render them
+        const logos = this.props.logos.map(function (logo, index) {
+            return renderLogo(logo, index);
+        })
 
         return (
             <section id="sec-4" className="friends p-w">
@@ -85,18 +74,18 @@ class LogoListing extends React.Component {
                 <p>These industry leaders have trusted Agility for years, there is a reason their teams are more Agile then ever before.</p>
 
                 <ul className="friends-list">
-                    <li className="friend-item"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap5.png" alt="" /></li>
-                    <li className="friend-item delay-2"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap2.png" alt="" /></li>
+                    {logos}
+                    {/* <li className="friend-item delay-2"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap2.png" alt="" /></li>
                     <li className="friend-item delay-5"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap3.png" alt="" /></li>
                     <li className="friend-item delay-4"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap4.png" alt="" /></li>
                     <li className="friend-item delay-6"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap5.png" alt="" /></li>
                     <li className="friend-item delay-3"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap6.png" alt="" /></li>
-                    <li className="friend-item delay-4"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap7.png" alt="" /></li>
+                    <li className="friend-item delay-4"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap7.png" alt="" /></li> */}
                 </ul>
 
                 <div className="buttons">
-                    <button href="#" className="btn">See Our Case Studies</button>
-                    <button href="#" className="btn">Lets Chat!</button>
+                    <button href={this.props.primaryButton.href} className="btn" target={this.props.primaryButton.target}>{this.props.primaryButton.text}</button>
+                    <button href={this.props.secondaryButton.href} className="btn" target={this.props.secondaryButton.target}>{this.props.secondaryButton.text}</button>
                 </div>
             </section>
         );

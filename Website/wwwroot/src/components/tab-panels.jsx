@@ -276,7 +276,7 @@ class TabPanelNavItem extends React.Component {
         super(props)
 
         //todo: make more friendly
-        debugger;
+        // debugger;
         this.friendlyName = this.props.title.toLowerCase()
     }
     render() {
