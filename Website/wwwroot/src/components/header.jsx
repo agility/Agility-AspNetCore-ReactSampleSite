@@ -64,22 +64,6 @@ class Header extends React.Component {
 
                     {renderMenu(this.props.menu)}
 
-                    {/* <ul className="header-menu">
-                        <li className="h-menu-li has-children"><a href="#" className="h-menu-a">Product</a>
-                            <span className="sub-menu-icon"><img src="https://static.agilitycms.com/layout/img/ico/down.svg" alt="" /></span>
-                            <div className="sub-menu-inner">
-                                <ul className="sub-menu">
-                                    <li className="sub-menu-li"><a href="#" className="sub-menu-a">Product 1</a></li>
-                                    <li className="sub-menu-li"><a href="#" className="sub-menu-a">Product 2</a></li>
-                                    <li className="sub-menu-li"><a href="#" className="sub-menu-a">Product 3</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li className="h-menu-li"><a href="#" className="h-menu-a">Customers</a></li>
-                        <li className="h-menu-li"><a href="#" className="h-menu-a">Pricing</a></li>
-                        <li className="h-menu-li"><a href="#" className="h-menu-a">Documentation</a></li>
-                        <li className="h-menu-li"><a href="#" className="h-menu-a">Community</a></li>
-                    </ul> */}
                     <button href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</button>
                 </header>
             </div>
