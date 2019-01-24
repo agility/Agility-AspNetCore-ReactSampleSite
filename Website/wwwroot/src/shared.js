@@ -5,7 +5,6 @@ global['React'] = React;
 global['ReactDOM'] = ReactDOM;
 global['ReactDOMServer'] = ReactDOMServer;
 
-
 //React Components
 
 // -- global
@@ -18,8 +17,8 @@ import FeatureBlocks from './components/feature-blocks.jsx'
 import LogoListing from './components/logo-listing.jsx'
 import TabPanels from './components/tab-panels.jsx'
 import LogoCloud from './components/logo-cloud.jsx'
+import PostDetails from './components/post-details.jsx'
 import SectionHeading from './components/section-heading.jsx'
-
 
 
 global['Components'] = {
@@ -28,6 +27,7 @@ global['Components'] = {
   TabPanels,
   LogoCloud,
   LogoListing,
+  PostDetails,
   SectionHeading,
   Header,
   Footer

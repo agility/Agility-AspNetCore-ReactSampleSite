@@ -31,25 +31,25 @@ namespace Website
 		// This method gets called by the runtime. Use this method to add services to the container.
 		public IServiceProvider ConfigureServices(IServiceCollection services)
 		{
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddReact();
+			services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+			services.AddReact();
 
-            // Make sure a JS engine is registered, or you will get an error!
-            services.AddJsEngineSwitcher(options => options.DefaultEngineName = ChakraCoreJsEngine.EngineName)
-              .AddChakraCore();
+			// Make sure a JS engine is registered, or you will get an error!
+			services.AddJsEngineSwitcher(options => options.DefaultEngineName = ChakraCoreJsEngine.EngineName)
+			  .AddChakraCore();
 
 			var assembly = typeof(Startup).GetTypeInfo().Assembly;
 
-            services.AddMvc()
+			services.AddMvc()
 				.AddApplicationPart(assembly)
 				.AddControllersAsServices();
 
 
-            AgilityContext.ConfigureServices(services, Configuration);
+			AgilityContext.ConfigureServices(services, Configuration);
 
-            // Build the intermediate service provider then return it
-            return services.BuildServiceProvider();
-        }
+			// Build the intermediate service provider then return it
+			return services.BuildServiceProvider();
+		}
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -71,41 +71,50 @@ namespace Website
 
 			app.UseMvc(routes =>
 			{
+				//blog post redirects
+				routes.MapRoute(
+					name: "BlogPostRedirect",
+					template: "blog/{category}/{url}",
+					defaults: new { controller = "Redirect", action = "BlogPost" }
+				);
+
 				//Agility Builtin Route
 				routes.MapRoute("Agility", "{*sitemapPath}", new { controller = "Agility", action = "RenderPage" },
 					new { isAgilityPath = new Agility.Web.Mvc.AgilityRouteConstraint() });
+
+
 
 				routes.MapRoute(
 					name: "default",
 					template: "{controller=Home}/{action=Index}/{id?}");
 			});
 
-            // Initialise ReactJS.NET. Must be before static files.
-            app.UseReact(config =>
-            {
-                config
-                    .SetReuseJavaScriptEngines(true) //we want to reuse engines as much as possible
-                    .SetLoadBabel(false) //don't load bable, our webpack will handle that
-                    .SetLoadReact(false) //webpack will add-in react in our build
+			// Initialise ReactJS.NET. Must be before static files.
+			app.UseReact(config =>
+			{
+				config
+					.SetReuseJavaScriptEngines(true) //we want to reuse engines as much as possible
+					.SetLoadBabel(false) //don't load bable, our webpack will handle that
+					.SetLoadReact(false) //webpack will add-in react in our build
 					.SetMaxEngines(25) //default is 25 engines
-                    .AddScriptWithoutTransform("~/dist/server.js"); //tell our web app what JS we need to load for SSR
+					.AddScriptWithoutTransform("~/dist/server.js"); //tell our web app what JS we need to load for SSR
 
-                // If you want to use server-side rendering of React components,
-                // add all the necessary JavaScript files here. This includes
-                // your components as well as all of their dependencies.
-                // See http://reactjs.net/ for more information. Example:
-                //config
-                //  .AddScript("~/Scripts/First.jsx")
-                //  .AddScript("~/Scripts/Second.jsx");
+				// If you want to use server-side rendering of React components,
+				// add all the necessary JavaScript files here. This includes
+				// your components as well as all of their dependencies.
+				// See http://reactjs.net/ for more information. Example:
+				//config
+				//  .AddScript("~/Scripts/First.jsx")
+				//  .AddScript("~/Scripts/Second.jsx");
 
-                // If you use an external build too (for example, Babel, Webpack,
-                // Browserify or Gulp), you can improve performance by disabling
-                // ReactJS.NET's version of Babel and loading the pre-transpiled
-                // scripts. Example:
-                //config
-                //  .SetLoadBabel(false)
-                //  .AddScriptWithoutTransform("~/Scripts/bundle.server.js");
-            });
-        }
+				// If you use an external build too (for example, Babel, Webpack,
+				// Browserify or Gulp), you can improve performance by disabling
+				// ReactJS.NET's version of Babel and loading the pre-transpiled
+				// scripts. Example:
+				//config
+				//  .SetLoadBabel(false)
+				//  .AddScriptWithoutTransform("~/Scripts/bundle.server.js");
+			});
+		}
 	}
 }
