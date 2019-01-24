@@ -29,10 +29,10 @@ class Header extends React.Component {
 
             return <ul>{links}</ul>;
         };
-
+        console.log(this.props);
         return (
             <div>
-                <SignIn />
+                <SignIn preHeaderLinks={this.props.preHeaderLinks} primaryButton={this.props.primaryButton}/>
                 <Hamburger />
                 <header className="header p-w">
                     <div className="header-logo">
@@ -54,7 +54,7 @@ class Header extends React.Component {
                         <li className="h-menu-li"><a href="#" className="h-menu-a">Documentation</a></li>
                         <li className="h-menu-li"><a href="#" className="h-menu-a">Community</a></li>
                     </ul>
-                    <a href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</a>
+                    <button href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</button>
                 </header>
             </div>
         );

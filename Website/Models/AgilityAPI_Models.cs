@@ -148,6 +148,99 @@ namespace Website.AgilityModels
 		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
 
 	}
+	public partial class BlogAuthor : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
+		private string __textblob = null;
+		private bool __textblob_set = false;
+		public virtual string TextBlob { get { if (!__textblob_set) __textblob = GetFieldValue<string>("TextBlob"); __textblob_set = true; return __textblob; } set { __textblob = value; __textblob_set = true; } }
+		private string __subtitle = null;
+		private bool __subtitle_set = false;
+		public virtual string SubTitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("SubTitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true; } }
+		private Attachment __image = null;
+		public virtual Attachment Image { get { if (__image == null) __image = GetAttachment("Image"); return __image; } set { __image = value; } }
+
+	}
+	public partial class BlogCategory : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
+
+	}
+	public partial class BlogPost : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
+		private string __textblob = null;
+		private bool __textblob_set = false;
+		public virtual string TextBlob { get { if (!__textblob_set) __textblob = GetFieldValue<string>("TextBlob"); __textblob_set = true; return __textblob; } set { __textblob = value; __textblob_set = true; } }
+		private string __url = null;
+		private bool __url_set = false;
+		public virtual string URL { get { if (!__url_set) __url = GetFieldValue<string>("URL"); __url_set = true; return __url; } set { __url = value; __url_set = true; } }
+		private DateTime __date;
+		private bool __date_set = false;
+		public virtual DateTime Date { get { if (!__date_set) __date = GetFieldValue<DateTime>("Date"); __date_set = true; return __date; } set { __date = value; __date_set = true; } }
+		private int __authorid;
+		private bool __authorid_set = false;
+		public virtual int AuthorID { get { if (!__authorid_set) __authorid = GetFieldValue<int>("AuthorID"); __authorid_set = true; return __authorid; } set { __authorid = value; __authorid_set = true; } }
+		private string __authortitle = null;
+		private bool __authortitle_set = false;
+		public virtual string AuthorTitle { get { if (!__authortitle_set) __authortitle = GetFieldValue<string>("AuthorTitle"); __authortitle_set = true; return __authortitle; } set { __authortitle = value; __authortitle_set = true; } }
+		private IAgilityContentRepository<BlogAuthor> __author = null;
+		public virtual IAgilityContentRepository<BlogAuthor> Author { get { if (__author == null) __author = GetLinkedContent<BlogAuthor>("Author"); return __author; } set { __author = value; } }
+		private bool __enablecomments;
+		private bool __enablecomments_set = false;
+		public virtual bool EnableComments { get { if (!__enablecomments_set) __enablecomments = GetFieldValue<bool>("EnableComments"); __enablecomments_set = true; return __enablecomments; } set { __enablecomments = value; __enablecomments_set = true; } }
+		private string __excerpt = null;
+		private bool __excerpt_set = false;
+		public virtual string Excerpt { get { if (!__excerpt_set) __excerpt = GetFieldValue<string>("Excerpt"); __excerpt_set = true; return __excerpt; } set { __excerpt = value; __excerpt_set = true; } }
+		private Attachment __postimage = null;
+		public virtual Attachment PostImage { get { if (__postimage == null) __postimage = GetAttachment("PostImage"); return __postimage; } set { __postimage = value; } }
+		private bool __displayimageinpost;
+		private bool __displayimageinpost_set = false;
+		public virtual bool DisplayImageinPost { get { if (!__displayimageinpost_set) __displayimageinpost = GetFieldValue<bool>("DisplayImageinPost"); __displayimageinpost_set = true; return __displayimageinpost; } set { __displayimageinpost = value; __displayimageinpost_set = true; } }
+		private Attachment __listingimageoverride = null;
+		public virtual Attachment ListingImageOverride { get { if (__listingimageoverride == null) __listingimageoverride = GetAttachment("ListingImageOverride"); return __listingimageoverride; } set { __listingimageoverride = value; } }
+		private string __categoriesids = null;
+		private bool __categoriesids_set = false;
+		public virtual string CategoriesIDs { get { if (!__categoriesids_set) __categoriesids = GetFieldValue<string>("CategoriesIDs"); __categoriesids_set = true; return __categoriesids; } set { __categoriesids = value; __categoriesids_set = true; } }
+		private string __categoriestitle = null;
+		private bool __categoriestitle_set = false;
+		public virtual string CategoriesTitle { get { if (!__categoriestitle_set) __categoriestitle = GetFieldValue<string>("CategoriesTitle"); __categoriestitle_set = true; return __categoriestitle; } set { __categoriestitle = value; __categoriestitle_set = true; } }
+		private IAgilityContentRepository<BlogCategory> __categories = null;
+		public virtual IAgilityContentRepository<BlogCategory> Categories { get { if (__categories == null) __categories = GetLinkedContent<BlogCategory>("Categories"); return __categories; } set { __categories = value; } }
+		private string __blogtagsids = null;
+		private bool __blogtagsids_set = false;
+		public virtual string BlogTagsIDs { get { if (!__blogtagsids_set) __blogtagsids = GetFieldValue<string>("BlogTagsIDs"); __blogtagsids_set = true; return __blogtagsids; } set { __blogtagsids = value; __blogtagsids_set = true; } }
+		private string __blogtagstitle = null;
+		private bool __blogtagstitle_set = false;
+		public virtual string BlogTagsTitle { get { if (!__blogtagstitle_set) __blogtagstitle = GetFieldValue<string>("BlogTagsTitle"); __blogtagstitle_set = true; return __blogtagstitle; } set { __blogtagstitle = value; __blogtagstitle_set = true; } }
+		private IAgilityContentRepository<BlogTag> __blogtags = null;
+		public virtual IAgilityContentRepository<BlogTag> BlogTags { get { if (__blogtags == null) __blogtags = GetLinkedContent<BlogTag>("BlogTags"); return __blogtags; } set { __blogtags = value; } }
+		private string __relatepostsby = null;
+		private bool __relatepostsby_set = false;
+		public virtual string RelatePostsBy { get { if (!__relatepostsby_set) __relatepostsby = GetFieldValue<string>("RelatePostsBy"); __relatepostsby_set = true; return __relatepostsby; } set { __relatepostsby = value; __relatepostsby_set = true; } }
+		private IAgilityContentRepository<BlogPost> __relatedposts = null;
+		public virtual IAgilityContentRepository<BlogPost> RelatedPosts { get { if (__relatedposts == null) __relatedposts = GetLinkedContent<BlogPost>("RelatedPosts", "", "itemOrder ", ""); return __relatedposts; } set { __relatedposts = value; } }
+		private string __relatedpostsids = null;
+		private bool __relatedpostsids_set = false;
+		public virtual string RelatedPostsIDs { get { if (!__relatedpostsids_set) __relatedpostsids = GetFieldValue<string>("RelatedPostsIDs"); __relatedpostsids_set = true; return __relatedpostsids; } set { __relatedpostsids = value; __relatedpostsids_set = true; } }
+		private string __relatedposttitles = null;
+		private bool __relatedposttitles_set = false;
+		public virtual string RelatedPostTitles { get { if (!__relatedposttitles_set) __relatedposttitles = GetFieldValue<string>("RelatedPostTitles"); __relatedposttitles_set = true; return __relatedposttitles; } set { __relatedposttitles = value; __relatedposttitles_set = true; } }
+
+	}
+	public partial class BlogTag : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
+
+	}
 	public partial class ContentPanel : Agility.Web.AgilityContentItem
 	{
 		private string __title = null;
@@ -291,6 +384,9 @@ namespace Website.AgilityModels
 		private string __textblob = null;
 		private bool __textblob_set = false;
 		public virtual string TextBlob { get { if (!__textblob_set) __textblob = GetFieldValue<string>("TextBlob"); __textblob_set = true; return __textblob; } set { __textblob = value; __textblob_set = true; } }
+		private string __subtitle = null;
+		private bool __subtitle_set = false;
+		public virtual string SubTitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("SubTitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true; } }
 		private string __description = null;
 		private bool __description_set = false;
 		public virtual string Description { get { if (!__description_set) __description = GetFieldValue<string>("Description"); __description_set = true; return __description; } set { __description = value; __description_set = true; } }
@@ -402,6 +498,19 @@ namespace Website.AgilityModels
 		public virtual int RelatedPostsCount { get { if (!__relatedpostscount_set) __relatedpostscount = GetFieldValue<int>("RelatedPostsCount"); __relatedpostscount_set = true; return __relatedpostscount; } set { __relatedpostscount = value; __relatedpostscount_set = true; } }
 
 	}
+	public partial class Module_PostDetails : Agility.Web.AgilityContentItem
+	{
+		private string __categorylabel = null;
+		private bool __categorylabel_set = false;
+		public virtual string CategoryLabel { get { if (!__categorylabel_set) __categorylabel = GetFieldValue<string>("CategoryLabel"); __categorylabel_set = true; return __categorylabel; } set { __categorylabel = value; __categorylabel_set = true; } }
+		private string __relatedpostslabel = null;
+		private bool __relatedpostslabel_set = false;
+		public virtual string RelatedPostsLabel { get { if (!__relatedpostslabel_set) __relatedpostslabel = GetFieldValue<string>("RelatedPostsLabel"); __relatedpostslabel_set = true; return __relatedpostslabel; } set { __relatedpostslabel = value; __relatedpostslabel_set = true; } }
+		private int __relatedpostscount;
+		private bool __relatedpostscount_set = false;
+		public virtual int RelatedPostsCount { get { if (!__relatedpostscount_set) __relatedpostscount = GetFieldValue<int>("RelatedPostsCount"); __relatedpostscount_set = true; return __relatedpostscount; } set { __relatedpostscount = value; __relatedpostscount_set = true; } }
+
+	}
 	public partial class Module_RichTextArea : Agility.Web.AgilityContentItem
 	{
 		private string __textblob = null;
@@ -419,11 +528,24 @@ namespace Website.AgilityModels
 		public virtual string SubTitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("SubTitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true; } }
 
 	}
+	public partial class Module_SectionHeading : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
+		private string __subtitle = null;
+		private bool __subtitle_set = false;
+		public virtual string SubTitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("SubTitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true; } }
+
+	}
 	public partial class Module_TabPanels : Agility.Web.AgilityContentItem
 	{
 		private string __title = null;
 		private bool __title_set = false;
 		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
+		private string __subtitle = null;
+		private bool __subtitle_set = false;
+		public virtual string SubTitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("SubTitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true; } }
 		private string __tabpanelids = null;
 		private bool __tabpanelids_set = false;
 		public virtual string TabPanelIDs { get { if (!__tabpanelids_set) __tabpanelids = GetFieldValue<string>("TabPanelIDs"); __tabpanelids_set = true; return __tabpanelids; } set { __tabpanelids = value; __tabpanelids_set = true; } }

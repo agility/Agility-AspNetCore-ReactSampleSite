@@ -25,7 +25,7 @@ namespace Website.ViewComponents.Shared
 					   text = topNode.Title,
 					   url = Agility.Web.Util.Url.ResolveTildaUrlsInHtml(topNode.Url),
 					   target = topNode.Target,
-					   children = GetChildNodes(topNode, level)					   
+					   children = GetChildNodes(topNode, level)
 				   };
 		}
 		public Task<IViewComponentResult> InvokeAsync()
