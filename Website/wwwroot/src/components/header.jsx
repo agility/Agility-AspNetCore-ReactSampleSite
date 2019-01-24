@@ -50,7 +50,7 @@ class Header extends React.Component {
 
             }
 
-            return <ul class={className}>{links}</ul>;
+            return <ul className={className}>{links}</ul>;
         };
         console.log(this.props);
         return (
