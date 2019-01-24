@@ -11,8 +11,7 @@ class LogoListing extends React.Component {
 
             return (
                 <li className={className} key={logo.key}>
-                    <img src={logo.logo.url} alt={logo.logo.label} />
-                    {/* <a href={logo.url.href} target={logo.url.target}><img src={logo.logo.url} alt={logo.logo.label} /></a> */}
+                    <a href={logo.url.href} target={logo.url.target}><img src={logo.logo.url} alt={logo.logo.label} /></a>
                 </li>
             );
             // <div key={logo.key}>
@@ -32,6 +31,8 @@ class LogoListing extends React.Component {
         const logos = this.props.logos.map(function (logo, index) {
             return renderLogo(logo, index);
         })
+
+        console.log("logos", this.props);
 
         return (
             <section id="sec-4" className="friends p-w">
@@ -70,8 +71,8 @@ class LogoListing extends React.Component {
                     </div>
                 </div>
 
-                <h2 className="title-conponent">Don't just take our word for it!</h2>
-                <p>These industry leaders have trusted Agility for years, there is a reason their teams are more Agile then ever before.</p>
+                <h2 className="title-conponent">{this.props.heading}</h2>
+                <p>{this.props.subHeading}</p>
 
                 <ul className="friends-list">
                     {logos}

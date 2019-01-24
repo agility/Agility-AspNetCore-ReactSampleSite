@@ -72,8 +72,8 @@ class LogoListing extends React.Component {
 
                 <div className="rotated-bg"></div>
 
-                <h2 className="title-conponent">Leaders work better together!</h2>
-                <p>We believe heavily in real partnerships and believe you must integration and work with other leaders to be success.<br /> Here are just some of the platforms.</p>
+                <h2 className="title-conponent">{this.props.heading}</h2>
+                <p>{this.props.subHeading}</p>
 
                 <ul className="work-list">
                     {logos}
