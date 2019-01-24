@@ -18,42 +18,52 @@ class Header extends React.Component {
         });
     }
     render() {
-        console.log("menu", this.props.menu);
-        const outputLinks = (lst) => {
-            let links = []
-            if (!lst || lst.length == null) return null;
 
-            lst.forEach(item => {
-                links.push(<li key={item.key}><a href={item.url.href} target={item.url.target}>{item.title}</a></li>)
+        const renderMenu = (menu, level) => {
+            let links = []
+            if (!menu || !menu.length || menu.length == 0) return null;
+
+            menu.forEach(item => {
+
+                const subLinks = renderMenu(item.children);
+                if (subLinks == null) {
+                    //no sub menu
+                    links.push(<li className="h-menu-li" key={item.key}><a href={item.url} target={item.target} className="h-menu-a">{item.text}</a></li>)
+                } else {
+                    //has a sub menu
+                    var li = <li className="h-menu-li has-children" key={item.key}><a href={item.url} target={item.target} className="h-menu-a">{item.text}</a>
+                        <span className="sub-menu-icon"><img src="https://static.agilitycms.com/layout/img/ico/down.svg" alt="" /></span>
+                        <div className="sub-menu-inner">
+                            {subLinks}
+                        </div>
+                    </li>;
+
+                    links.push(li);
+                }
+
+
             });
 
-            return <ul>{links}</ul>;
+            let className = "header-menu";
+            if (level > 0) {
+                className = "sub-menu";
+
+            }
+
+            return <ul class={className}>{links}</ul>;
         };
         console.log(this.props);
         return (
             <div>
-                <SignIn preHeaderLinks={this.props.preHeaderLinks} primaryButton={this.props.primaryButton}/>
+                <SignIn preHeaderLinks={this.props.preHeaderLinks} primaryButton={this.props.primaryButton} />
                 <Hamburger />
                 <header className="header p-w">
                     <div className="header-logo">
                         <a href="/"><img src={this.props.logo.url} alt={this.props.logo.label} /></a>
                     </div>
-                    <ul className="header-menu">
-                        <li className="h-menu-li has-children"><a href="#" className="h-menu-a">Product</a>
-                            <span className="sub-menu-icon"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/ico/down.svg" alt="" /></span>
-                            <div className="sub-menu-inner">
-                                <ul className="sub-menu">
-                                    <li className="sub-menu-li"><a href="#" className="sub-menu-a">Product 1</a></li>
-                                    <li className="sub-menu-li"><a href="#" className="sub-menu-a">Product 2</a></li>
-                                    <li className="sub-menu-li"><a href="#" className="sub-menu-a">Product 3</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li className="h-menu-li"><a href="#" className="h-menu-a">Customers</a></li>
-                        <li className="h-menu-li"><a href="#" className="h-menu-a">Pricing</a></li>
-                        <li className="h-menu-li"><a href="#" className="h-menu-a">Documentation</a></li>
-                        <li className="h-menu-li"><a href="#" className="h-menu-a">Community</a></li>
-                    </ul>
+
+                    {renderMenu(this.props.menu)}
+
                     <button href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</button>
                 </header>
             </div>

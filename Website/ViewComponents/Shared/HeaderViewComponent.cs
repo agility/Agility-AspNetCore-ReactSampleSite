@@ -22,6 +22,7 @@ namespace Website.ViewComponents.Shared
 				   where topNode.MenuVisible && string.IsNullOrWhiteSpace(topNode.DynamicPageContentReferenceName)
 				   select new
 				   {
+					   key = topNode.PageItemID,
 					   text = topNode.Title,
 					   url = Agility.Web.Util.Url.ResolveTildaUrlsInHtml(topNode.Url),
 					   target = topNode.Target,
