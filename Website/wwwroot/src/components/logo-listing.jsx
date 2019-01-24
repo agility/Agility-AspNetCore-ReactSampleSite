@@ -49,34 +49,34 @@ class LogoListing extends React.Component {
                 <div className="canvas" id="canvas-5">
                     <div className="img">
                         <div className="item item-tangle-top-5 twentyone w58">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/yellow_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-5 twentytwo w58 rotate">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/green_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-5 twentythree w58">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/green_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-5 twentyfour w58 rotate">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/green_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-5 twentyfive w58">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/yellow_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-5 twentysix w58">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/green_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-5 twentyseven w58">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/green_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-5 twentyeight w58">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/yellow_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-5 twentynine w58">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/green_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-5 thirty w58 rotate">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/green_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
                         </div>
                     </div>
                 </div>
@@ -87,12 +87,12 @@ class LogoListing extends React.Component {
                 <p>We believe heavily in real partnerships and believe you must integration and work with other leaders to be success.<br /> Here are just some of the platforms.</p>
 
                 <ul className="work-list">
-                    <li className="work-item"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/work/img1.png" alt="" /></li>
-                    <li className="work-item"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/work/img2.png" alt="" /></li>
-                    <li className="work-item"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/work/img3.png" alt="" /></li>
-                    <li className="work-item"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/work/img4.png" alt="" /></li>
-                    <li className="work-item"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/work/img5.png" alt="" /></li>
-                    <li className="work-item"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/work/img6.png" alt="" /></li>
+                    <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img1.png" alt="" /></li>
+                    <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img2.png" alt="" /></li>
+                    <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img3.png" alt="" /></li>
+                    <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img4.png" alt="" /></li>
+                    <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img5.png" alt="" /></li>
+                    <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img6.png" alt="" /></li>
                 </ul>
 
                 <div className="buttons">

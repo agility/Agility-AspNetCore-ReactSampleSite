@@ -14,7 +14,7 @@ class FeatureBlocks extends React.Component {
         var slides = document.querySelectorAll('#slider .slide');
         for (var u = 0; u < sliderButtons.length; u++) {
             var button = sliderButtons[u];
-            button.addEventListener('click', function(){
+            button.addEventListener('click', function () {
                 for (var z = 0; z < sliderButtons.length; z++) {
                     sliderButtons[z].classList.remove('current');
                 }
@@ -42,10 +42,10 @@ class FeatureBlocks extends React.Component {
         var clientX;
         var deltaX;
         var b;
-        slider.addEventListener('touchstart', function(e){
+        slider.addEventListener('touchstart', function (e) {
             clientX = e.touches[0].clientX;
         });
-        slider.addEventListener('touchend', function(e) {
+        slider.addEventListener('touchend', function (e) {
             deltaX = e.changedTouches[0].clientX - clientX;
             if (deltaX < 0) {
                 for (var z = 0; z < slides.length; z++) {
@@ -96,34 +96,34 @@ class FeatureBlocks extends React.Component {
                 <div className="canvas" id="canvas-2">
                     <div className="img">
                         <div className="item item-tangle-top-2 twentyone w58">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/yellow_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-2 twentytwo w58 rotate">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/green_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-2 twentythree w58">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/green_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-2 twentyfour w58 rotate">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/green_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-2 twentyfive w58">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/yellow_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-2 twentysix w58">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/green_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-2 twentyseven w58">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/green_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-2 twentyeight w58">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/yellow_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-2 twentynine w58">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/green_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-2 thirty w58 rotate">
-                            <img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/green_treangle.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
                         </div>
                     </div>
                 </div>
@@ -142,7 +142,7 @@ class FeatureBlocks extends React.Component {
                 </div>
 
             </section>
-            
+
 
         );
     }

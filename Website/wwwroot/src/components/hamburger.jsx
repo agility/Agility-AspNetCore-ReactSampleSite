@@ -8,11 +8,11 @@ class Hamburger extends React.Component {
         super(props)
     }
 
-    
+
 
     componentDidMount() {
-        var menu = document.querySelector('.mobile-menu-inner .has-children'); 
-        menu.onclick = function() {
+        var menu = document.querySelector('.mobile-menu-inner .has-children');
+        menu.onclick = function () {
             this.classList.toggle('open');
         };
 
@@ -26,13 +26,13 @@ class Hamburger extends React.Component {
         var isOpen = false;
 
         if (btnMenuOpen) {
-            btnMenuOpen.addEventListener('click', function() {
-                if(isOpen == false){
+            btnMenuOpen.addEventListener('click', function () {
+                if (isOpen == false) {
                     menuContainer.classList.add('active');
                     btnMenuOpen.classList.add('active');
                     html.classList.add('overflow-scroll');
                     isOpen = true;
-                }else{
+                } else {
                     menuContainer.classList.remove('active');
                     btnMenuOpen.classList.remove('active');
                     html.classList.remove('overflow-scroll');
@@ -43,13 +43,13 @@ class Hamburger extends React.Component {
 
         var openMenuBlock = document.querySelector('#nav-icon-close'); // Using a class instead, see note below.
         var openMenuBtn = document.querySelector('.mobile-logo'); // Using a class instead, see note below.
-        openMenuBlock.onclick = function() {
+        openMenuBlock.onclick = function () {
             menuContainer.classList.remove('active');
             btnMenuOpen.classList.remove('active');
             html.classList.remove('overflow-scroll');
             isOpen = false;
         };
-        openMenuBtn.onclick = function() {
+        openMenuBtn.onclick = function () {
             menuContainer.classList.remove('active');
             btnMenuOpen.classList.remove('active');
             html.classList.remove('overflow-scroll');
@@ -66,13 +66,13 @@ class Hamburger extends React.Component {
 
                     <div className="inner">
                         <div className="mobile-logo">
-                            <a href="#"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/logo-original.svg" alt=""/></a>
+                            <a href="#"><img src="https://static.agilitycms.com/layout/img/logo-original.svg" alt="" /></a>
                         </div>
                         <button className='Button-menu' id="nav-icon-close"><span></span><span></span><span></span></button>
                         <div className="mobile-menu-inner">
                             <ul className="mob-menu">
                                 <li className="mobile-menu-li has-children"><a href="#" className="mobile-menu-a">Product</a>
-                                    <span className="sub-menu-icon"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/ico/down.svg" alt=""/></span>
+                                    <span className="sub-menu-icon"><img src="https://static.agilitycms.com/layout/img/ico/down.svg" alt="" /></span>
                                     <div className="sub-menu-inner">
                                         <ul className="sub-menu">
                                             <li className="sub-menu-li"><a href="#" className="sub-menu-a">Product 1</a></li>
