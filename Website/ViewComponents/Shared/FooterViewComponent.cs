@@ -34,7 +34,10 @@ namespace Website.ViewComponents.Shared
 					subscribeTitle = item.SubscribeTitle,
 					subscribeButtonLabel = item.SubscribeButtonLabel,
 					subscribeDescription = item.SubscribeDescription,
-					subscribeEmailPlaceholder = item.SubscribeEmailPlaceholder
+					subscribeEmailPlaceholder = item.SubscribeEmailPlaceholder,
+					bottomPrivacyPolicyLink = item.PrivacyPolicyLink,
+					bottomCopyright = item.Copyright,
+					bottomSecurityLink = item.SecurityLink
 				};
 
 

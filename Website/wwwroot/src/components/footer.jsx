@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './foter.sass'
+import './footer.sass'
 
 
 class Footer extends React.Component {
@@ -28,8 +28,13 @@ class Footer extends React.Component {
                 links.push(<li className="foter-menu-li" key={item.key}>{a}</li>)
             });
 
-            return <ul>{links}</ul>;
+            return links;
         };
+
+        const getYear = () => {
+            const d = new Date();
+            return d.getFullYear();
+        }
 
         return (
 
@@ -65,11 +70,11 @@ class Footer extends React.Component {
                 </div>
 
                 <div className="foter-copyright">
-                    <p>© Copyright, Agility 2019</p>
+                    <p>{this.props.bottomCopyright} {getYear()}</p>
                     <ul className="foter-copyright-menu">
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li dangerouslySetInnerHTML={{__html: this.props.bottomPrivacyPolicyLink}}></li>
                         <span>|</span>
-                        <li><a href="#">Security</a></li>
+                        <li dangerouslySetInnerHTML={{__html: this.props.bottomSecurityLink}}></li>
                     </ul>
                 </div>
             </footer>
