@@ -72,8 +72,8 @@ class TabPanels extends React.Component {
         })
 
         //loop all the tabs and render them
-        const tabs = this.props.tabs.map(function (tab) {
-            return <TabPanelContent tab={tab} key={tab.key} />
+        const tabs = this.props.tabs.map(function (tab, index) {
+            return <TabPanelContent tab={tab} key={tab.key} index={index} />
         })
 
         return (
@@ -129,139 +129,7 @@ class TabPanels extends React.Component {
                 </ul>
 
                 <div className="features-toggle-tab-items">
-                    <div className="features-toggle-tab-item active visible" data-blocktab="design">
-                        <div className="img"><img src="https://static.agilitycms.com/layout/img/features/pic_2.png" alt="" /></div>
-                        <div className="content">
-                            <h3 className="feature-title">Build the foundation for long lasting success. Start with a content first approach and design your content structures and relationships to enable easily distribution of your content ANYWHERE!</h3>
-                            <ul className="feature-list">
-                                <li className="feature-li-item"> <span></span>
-                                    Set up fields, entries and relationships in whatever way makes the most sense for your project
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Content structure and distribution
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Choose the components you will need for your project (Digital Content, Media, UGC, Ecommerce, Ticketing, Search, Personalization)
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Workflow and approval setup
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Build in Localization
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Powerful templating
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Configurable Rich Authoring experience - Adjust the interface to the skillset of your team
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Plan Personalized Content needs
-                                </li>
-                            </ul>
-                            <button className="btn">Checkout All Our Features</button>
-                        </div>
-                    </div>
-                    <div className="features-toggle-tab-item" data-blocktab="build">
-                        <div className="img"><img src="https://static.agilitycms.com/layout/img/features/pic_2.png" alt="" /></div>
-                        <div className="content">
-                            <h3 className="feature-title">Build the foundation for long lasting success. Start with a content first approach and design your content structures and relationships to enable easily distribution of your content ANYWHERE!</h3>
-                            <ul className="feature-list">
-                                <li className="feature-li-item"> <span></span>
-                                    Set up fields, entries and relationships in whatever way makes the most sense for your project
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Content structure and distribution
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Choose the components you will need for your project (Digital Content, Media, UGC, Ecommerce, Ticketing, Search, Personalization)
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Workflow and approval setup
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Build in Localization
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Powerful templating
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Configurable Rich Authoring experience - Adjust the interface to the skillset of your team
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Plan Personalized Content needs
-                                </li>
-                            </ul>
-                            <button className="btn">Checkout All Our Features</button>
-                        </div>
-                    </div>
-                    <div className="features-toggle-tab-item" data-blocktab="deploy">
-                        <div className="img"><img src="https://static.agilitycms.com/layout/img/features/pic_2.png" alt="" /></div>
-                        <div className="content">
-                            <h3 className="feature-title">Build the foundation for long lasting success. Start with a content first approach and design your content structures and relationships to enable easily distribution of your content ANYWHERE!</h3>
-                            <ul className="feature-list">
-                                <li className="feature-li-item"> <span></span>
-                                    Set up fields, entries and relationships in whatever way makes the most sense for your project
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Content structure and distribution
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Choose the components you will need for your project (Digital Content, Media, UGC, Ecommerce, Ticketing, Search, Personalization)
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Workflow and approval setup
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Build in Localization
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Powerful templating
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Configurable Rich Authoring experience - Adjust the interface to the skillset of your team
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Plan Personalized Content needs
-                                </li>
-                            </ul>
-                            <button className="btn">Checkout All Our Features</button>
-                        </div>
-                    </div>
-                    <div className="features-toggle-tab-item" data-blocktab="manage">
-                        <div className="img"><img src="https://static.agilitycms.com/layout/img/features/pic_2.png" alt="" /></div>
-                        <div className="content">
-                            <h3 className="feature-title">Build the foundation for long lasting success. Start with a content first approach and design your content structures and relationships to enable easily distribution of your content ANYWHERE!</h3>
-                            <ul className="feature-list">
-                                <li className="feature-li-item"> <span></span>
-                                    Set up fields, entries and relationships in whatever way makes the most sense for your project
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Content structure and distribution
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Choose the components you will need for your project (Digital Content, Media, UGC, Ecommerce, Ticketing, Search, Personalization)
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Workflow and approval setup
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Build in Localization
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Powerful templating
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Configurable Rich Authoring experience - Adjust the interface to the skillset of your team
-                                </li>
-                                <li className="feature-li-item"> <span></span>
-                                    Plan Personalized Content needs
-                                </li>
-                            </ul>
-                            <button className="btn">Checkout All Our Features</button>
-                        </div>
-                    </div>
-
+                    {tabs}
                 </div>
             </section>
 
@@ -276,7 +144,10 @@ class TabPanelNavItem extends React.Component {
         super(props)
 
         //todo: make more friendly
+<<<<<<< HEAD
         // debugger;
+=======
+>>>>>>> a279579ad266d4619244a4cfb9468679869bb628
         this.friendlyName = this.props.title.toLowerCase()
     }
     render() {
@@ -289,17 +160,27 @@ class TabPanelNavItem extends React.Component {
 class TabPanelContent extends React.Component {
     constructor(props) {
         super(props)
+
+        //todo: make more friendly
+        this.friendlyName = this.props.tab.title.toLowerCase()
     }
     render() {
-        return (
-            <div key={tab.key}>
-                <h3>{tab.title}</h3>
-                <div dangerouslySetInnerHTML={{ __html: tab.textBlob }} />
-                <div>
-                    <img src={tab.image.url} alt={tab.image.label} />
-                </div>
-                <div>
-                    <a href={tab.primaryButton.href} target={tab.primaryButton.target}>{tab.primaryButton.text}</a>
+        
+        let containerClass = null;
+        if(this.props.index == 0) {
+            containerClass = "active visible"; 
+        }
+
+        return(
+
+            <div className={'features-toggle-tab-item ' + containerClass} data-blocktab={this.friendlyName}>
+                <div className="img"><img src={this.props.tab.image.url} alt={this.props.tab.image.label} /></div>
+                <div className="content">
+                    <h3 className="feature-title">{this.props.tab.description}</h3>
+
+                    <div dangerouslySetInnerHTML={{ __html: this.props.tab.textBlob }} />
+
+                    <button href={this.props.tab.primaryButton.href} target={this.props.tab.primaryButton.target} className="btn">{this.props.tab.primaryButton.text}</button>
                 </div>
             </div>
         );
