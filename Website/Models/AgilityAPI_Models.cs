@@ -417,6 +417,15 @@ namespace Website.AgilityModels
 		public virtual int RelatedPostsCount { get { if (!__relatedpostscount_set) __relatedpostscount = GetFieldValue<int>("RelatedPostsCount"); __relatedpostscount_set = true; return __relatedpostscount; } set { __relatedpostscount = value; __relatedpostscount_set = true; } }
 
 	}
+	public partial class Module_PostListing : Agility.Web.AgilityContentItem
+	{
+		private IAgilityContentRepository<BlogPost> __posts = null;
+		public virtual IAgilityContentRepository<BlogPost> Posts { get { if (__posts == null) __posts = GetLinkedContent<BlogPost>("Posts"); return __posts; } set { __posts = value; } }
+		private int __postcount;
+		private bool __postcount_set = false;
+		public virtual int PostCount { get { if (!__postcount_set) __postcount = GetFieldValue<int>("PostCount"); __postcount_set = true; return __postcount; } set { __postcount = value; __postcount_set = true; } }
+
+	}
 	public partial class Module_RichTextArea : Agility.Web.AgilityContentItem
 	{
 		private string __textblob = null;
