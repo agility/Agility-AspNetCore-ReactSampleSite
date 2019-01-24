@@ -12,13 +12,13 @@ class Header extends React.Component {
     componentDidMount() {
         //dropdown Menu
         var hiddenParent = document.querySelector('.has-children');
-        hiddenParent.addEventListener('click', function(e){
-            
+        hiddenParent.addEventListener('click', function (e) {
+
             this.classList.toggle('open');
         });
     }
     render() {
-
+        console.log("menu", this.props.menu);
         const outputLinks = (lst) => {
             let links = []
             if (!lst || lst.length == null) return null;
@@ -40,7 +40,7 @@ class Header extends React.Component {
                     </div>
                     <ul className="header-menu">
                         <li className="h-menu-li has-children"><a href="#" className="h-menu-a">Product</a>
-                            <span className="sub-menu-icon"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/ico/down.svg" alt=""/></span>
+                            <span className="sub-menu-icon"><img src="https://cdn.agilitycms.com/agility-cms-2019/layout/img/ico/down.svg" alt="" /></span>
                             <div className="sub-menu-inner">
                                 <ul className="sub-menu">
                                     <li className="sub-menu-li"><a href="#" className="sub-menu-a">Product 1</a></li>

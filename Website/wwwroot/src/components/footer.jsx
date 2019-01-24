@@ -6,7 +6,7 @@ import './foter.sass'
 class Footer extends React.Component {
 
     render() {
-        console.log("foooter", this.props);
+        
         const outputLinks = (lst) => {
             let links = []
             if (!lst || lst.length == null) return null;
