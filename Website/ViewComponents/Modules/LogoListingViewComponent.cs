@@ -22,6 +22,8 @@ namespace Website.ViewComponents.Modules
 
 				var viewModel = new
 				{
+					heading = module.Heading,
+					subHeading = module.SubHeading,
 					renderType = module.RenderType,
 					primaryButton = module.ParseUrl("PrimaryButton"),
 					secondaryButton = module.ParseUrl("SecondaryButton"),

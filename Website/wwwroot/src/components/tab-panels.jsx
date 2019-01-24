@@ -161,13 +161,13 @@ class TabPanelContent extends React.Component {
         this.friendlyName = this.props.tab.title.toLowerCase()
     }
     render() {
-        
+
         let containerClass = null;
-        if(this.props.index == 0) {
-            containerClass = "active visible"; 
+        if (this.props.index == 0) {
+            containerClass = "active visible";
         }
 
-        return(
+        return (
 
             <div className={'features-toggle-tab-item ' + containerClass} data-blocktab={this.friendlyName}>
                 <div className="img"><img src={this.props.tab.image.url} alt={this.props.tab.image.label} /></div>
