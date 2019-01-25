@@ -13,7 +13,6 @@ class Sample extends Component {
         <section className="sample-page p-w">
           My new HTML goes here!
         </section>
-        </div>
       </div>
     );
   }

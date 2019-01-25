@@ -2,9 +2,8 @@
 import '../_client.js'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-//help
+//404
 import NotFound from './help/not-found.jsx'
-import Help from './help/help.jsx'
 
 //global elements
 import Header from '../components/header.jsx' //the header HTML 
@@ -29,8 +28,6 @@ ReactDOM.render((
                         <Route path="/home" component={Home} />
                         <Route path="/product" component={Product} />
                         
-
-                        <Route path="/help" component={Help} />
                         <Route component={NotFound} />
                     </Switch>
                 </div>
