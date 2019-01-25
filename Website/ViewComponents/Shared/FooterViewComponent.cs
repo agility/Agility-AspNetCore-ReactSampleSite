@@ -3,7 +3,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Website.ViewModels;
 using Website.AgilityModels;
 using Website.Extensions;
 using Agility.Web.Extensions;
@@ -30,11 +29,15 @@ namespace Website.ViewComponents.Shared
 					column1Links = item.Column1Links.SortByIDs(item.Column1SortIDs).Select(a => a.ToFrontendProps()),
 					column2Links = item.Column2Links.SortByIDs(item.Column2SortIDs).Select(a => a.ToFrontendProps()),
 					column3Links = item.Column3Links.SortByIDs(item.Column3SortIDs).Select(a => a.ToFrontendProps()),
-					followLinks = item.FollowLinks.SortByIDs(item.FollowLinkIDs),
+					followTitle = item.FollowTitle,
+					followLinks = item.FollowLinks.SortByIDs(item.FollowLinkIDs).Select(a => a.ToFrontendProps()),
 					subscribeTitle = item.SubscribeTitle,
 					subscribeButtonLabel = item.SubscribeButtonLabel,
 					subscribeDescription = item.SubscribeDescription,
-					subscribeEmailPlaceholder = item.SubscribeEmailPlaceholder
+					subscribeEmailPlaceholder = item.SubscribeEmailPlaceholder,
+					bottomPrivacyPolicyLink = item.PrivacyPolicyLink,
+					bottomCopyright = item.Copyright,
+					bottomSecurityLink = item.SecurityLink
 				};
 
 

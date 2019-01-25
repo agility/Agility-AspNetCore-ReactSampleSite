@@ -3,8 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Website.ViewModels;
 using Website.AgilityModels;
+using Website.Extensions;
 using Agility.Web.Extensions;
 
 namespace Website.ViewComponents.Modules
@@ -12,18 +12,32 @@ namespace Website.ViewComponents.Modules
 	public class LogoListing : ViewComponent
 	{
 
-		public Task<IViewComponentResult> InvokeAsync(Module_ContentPanel module)
+		public Task<IViewComponentResult> InvokeAsync(Module_LogoListing module)
 		{
 			return Task.Run<IViewComponentResult>(() =>
 			{
-				// var viewModel = new PanelSliderViewModel();
+				//TODO: implement viewmodel
 
-				// var panels = module.Panels.GetByIDs(module.PanelsIDs).ToList();
 
-				// viewModel.Panels = panels;
 
-				// return new ReactViewComponentResult("Components.PanelSlider", viewModel);
-				return Content("TODO: implement LogoListing");
+				var viewModel = new
+				{
+					heading = module.Heading,
+					subHeading = module.SubHeading,
+					renderType = module.RenderType,
+					primaryButton = module.ParseUrl("PrimaryButton"),
+					secondaryButton = module.ParseUrl("SecondaryButton"),
+					logos = module.Logos.SortByIDs(module.LogoIDs).Select(p => p.ToFrontendProps())
+				};
+
+				if (module.RenderType == "cloud")
+				{
+					return new ReactViewComponentResult("Components.LogoCloud", viewModel);
+				}
+				else
+				{
+					return new ReactViewComponentResult("Components.LogoListing", viewModel);
+				}
 
 			});
 		}

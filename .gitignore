@@ -273,3 +273,9 @@ appsettings.Development.json
 *.map
 *.min.*
 .sass-cache
+
+# Dist - don't track this, this is the compiled build files for frontend
+Website/wwwroot/dist/client.css
+Website/wwwroot/dist/client.js
+Website/wwwroot/dist/server.css
+Website/wwwroot/dist/server.js

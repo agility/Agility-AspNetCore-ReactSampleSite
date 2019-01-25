@@ -3,8 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Website.ViewModels;
+
 using Website.AgilityModels;
+using Website.Extensions;
 using Agility.Web.Extensions;
 
 namespace Website.ViewComponents.Modules
@@ -12,19 +13,19 @@ namespace Website.ViewComponents.Modules
 	public class TabPanels : ViewComponent
 	{
 
-		public Task<IViewComponentResult> InvokeAsync(Module_FeatureBlocks module)
+		public Task<IViewComponentResult> InvokeAsync(Module_TabPanels module)
 		{
 			return Task.Run<IViewComponentResult>(() =>
 			{
-				// var viewModel = new PanelSliderViewModel();
 
-				// var panels = module.Panels.GetByIDs(module.PanelsIDs).ToList();
+				var viewModel = new
+				{
+					title = module.Title,
+					subTitle = module.SubTitle,
+					tabs = module.TabPanels.GetByIDs(module.TabPanelIDs).Select(p => p.ToFrontendProps())
+				};
 
-				// viewModel.Panels = panels;
-
-				// return new ReactViewComponentResult("Components.PanelSlider", viewModel);
-				return Content("TODO: implement TabPanels ");
-
+				return new ReactViewComponentResult("Components.TabPanels", viewModel);
 			});
 		}
 
