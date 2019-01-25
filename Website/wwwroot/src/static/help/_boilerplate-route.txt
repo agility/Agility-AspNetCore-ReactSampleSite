@@ -1,0 +1,3 @@
+import YourPage from './pages/your-page.jsx'
+...
+<Route path="/your-page-path" component={YourPage} />

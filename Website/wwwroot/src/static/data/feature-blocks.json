@@ -1,0 +1,62 @@
+{
+    "title": "Benefits",
+    "features": [
+        {
+            "title": "Unlimited Creative Flexibility",
+            "textBlob": "\u003cp\u003eUnlimited Creative Flexibility\u003c/p\u003e\u003cp\u003eDevelop in the framework of your choice\u003c/p\u003e\u003cp\u003eConnect to ANY destination\u003c/p\u003e",
+            "icon": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 2,
+                "fileName": "https://cdn.agilitycms.com/agility-cms-2019/layout/img/ben/ben1.svg",
+                "label": "Agility Logo",
+                "target": "",
+                "url": "https://cdn.agilitycms.com/agility-cms-2019/layout/img/ben/ben1.svg",
+                "fileSize": 0,
+                "height": 0,
+                "width": 0,
+                "thumbnails": {}
+            },
+            "key": 29
+        },
+        {
+            "title": "Better / Faster Teams",
+            "textBlob": "\u003cp\u003eApproach aligns marketers and developers\u003c/p\u003e\u003cp\u003eFaster development and management of content\u003c/p\u003e\u003cp\u003eEasy to use interface \u003c/p\u003e",
+            "icon": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 1,
+                "fileName": "https://cdn.agilitycms.com/agility-cms-2019/layout/img/ben/ben2.svg",
+                "label": "",
+                "target": "",
+                "url": "https://cdn.agilitycms.com/agility-cms-2019/layout/img/ben/ben2.svg",
+                "fileSize": 0,
+                "height": 0,
+                "width": 0,
+                "thumbnails": {}
+            },
+            "key": 278
+        },
+        {
+            "title": "Secure, Scalable, Fully Managed",
+            "textBlob": "\u003cp\u003eUse ANY hosting setup or our Fully Managed Cloud Services\u003c/p\u003e \u003cp\u003eDedicated Support and SLAs\u003c/p\u003e \u003cp\u003eUnlimited Integration Options\u003c/p\u003e",
+            "icon": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 1,
+                "fileName": "https://cdn.agilitycms.com/agility-cms-2019/layout/img/ben/ben3.svg",
+                "label": "",
+                "target": "",
+                "url": "https://cdn.agilitycms.com/agility-cms-2019/layout/img/ben/ben3.svg",
+                "fileSize": 0,
+                "height": 0,
+                "width": 0,
+                "thumbnails": {}
+            },
+            "key": 279
+        }
+    ]
+}
