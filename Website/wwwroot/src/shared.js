@@ -20,6 +20,7 @@ import LogoCloud from './components/logo-cloud.jsx'
 import PostDetails from './components/post-details.jsx'
 import PostListing from './components/post-listing.jsx'
 import SectionHeading from './components/section-heading.jsx'
+import ContactUs from './components/contact-us.jsx'
 
 
 global['Components'] = {
@@ -31,6 +32,7 @@ global['Components'] = {
   PostDetails,
   PostListing,
   SectionHeading,
+  ContactUs,
   Header,
   Footer
 }

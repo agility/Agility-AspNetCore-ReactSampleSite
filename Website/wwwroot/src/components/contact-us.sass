@@ -1,3 +1,13 @@
 @import ./_variables.sass
 .contactUs
     background-color: #eaeaea;
+    .invalid-msg
+        display: none
+    .is-invalid 
+        .invalid-msg
+            display: block
+    .was-validated 
+        .form-control 
+            &:valid~.invalid-feedback 
+                display: none
+            

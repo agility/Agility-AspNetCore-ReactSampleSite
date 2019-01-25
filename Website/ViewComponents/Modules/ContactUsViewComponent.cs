@@ -12,14 +12,12 @@ namespace Website.ViewComponents.Modules
 	public class ContactUs : ViewComponent
 	{
 
-		public Task<IViewComponentResult> InvokeAsync(Module_ContentPanel module)
+		public Task<IViewComponentResult> InvokeAsync(Module_ContactUsForm module)
 		{
 			return Task.Run<IViewComponentResult>(() =>
 			{
 
-				var panel = module.Panel.GetByID(module.PanelID).ToFrontendProps();
-
-				return new ReactViewComponentResult("Components.ContentPanel", panel);
+				return new ReactViewComponentResult("Components.ContactUs", module.ToFrontendProps());
 			});
 		}
 
