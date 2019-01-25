@@ -10,7 +10,7 @@ class NotFound extends Component {
     return (
       <div id="not-found" className="p-w">        
         <h1>Could not find this page in the frontend app</h1>
-        <p>See <a href="/help">Help Page</a> for details on how to create a new static page.</p>
+        <p>View the README file for the repository for details on how to create a static page for this route.</p>
       </div>
     );
   }
