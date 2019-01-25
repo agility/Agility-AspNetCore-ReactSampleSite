@@ -2,6 +2,7 @@ const path = require('path')
 const webpack = require('webpack')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const devMode = process.env.NODE_ENV !== 'production';
+const isStatic = process.env.NODE_ENV === 'static';
 
 module.exports = {
   entry: {
@@ -37,32 +38,47 @@ module.exports = {
         options: {
           name: '[name].[ext]?[hash]'
         }
+      },
+      {
+        test: /\.txt$/,
+        use: 'raw-loader' 
       }
     ]
   },
   resolve: {
 
   },
-  // node: {
-  //   fs: 'empty'
-  // },
-  devServer: {
-    historyApiFallback: true,
-    noInfo: true,
-    overlay: true,
-    proxy: {
-      '*': {
-        target: 'https://localhost:5001',
-        changeOrigin: true,
-        secure: false
-      }
-    }
-  },
   performance: {
     hints: false
   },
   devtool: '#eval-source-map'
 }
+
+if(isStatic) {
+  module.exports.entry = {
+    static: './src/static/index.js'
+  }
+  module.exports.devServer = {
+    historyApiFallback: {
+      index: 'index.html'
+    }
+  }
+} else {
+  //running with backend
+  module.exports.devServer =  {
+      historyApiFallback: true,
+      noInfo: true,
+      overlay: true,
+      proxy: {
+        '*': {
+          target: 'https://localhost:5001',
+          changeOrigin: true,
+          secure: false
+        }
+      }
+    }
+}
+
 
 if (!devMode) {
 

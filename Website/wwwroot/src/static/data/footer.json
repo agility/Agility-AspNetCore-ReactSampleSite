@@ -1,0 +1,99 @@
+{
+    "column1Title": "Product",
+    "column2Title": "About Us",
+    "column3Title": "Resources",
+    "column1Links": [
+        {
+            "title": "Why Agility",
+            "textBlob": null,
+            "url": {
+                "text": "",
+                "href": "/why-agility",
+                "target": "_self"
+            },
+            "key": 17
+        }
+    ],
+    "column2Links": [
+        {
+            "title": "About Us",
+            "textBlob": null,
+            "url": {
+                "text": "",
+                "href": "/about-us",
+                "target": "_self"
+            },
+            "key": 18
+        }
+    ],
+    "column3Links": [
+        {
+            "title": "Guides",
+            "textBlob": null,
+            "url": {
+                "text": "",
+                "href": "/guides",
+                "target": "_self"
+            },
+            "key": 19
+        }
+    ],
+    "followTitle": "Follow Us",
+    "followLinks": [
+        {
+            "title": "Twitter",
+            "textBlob": null,
+            "logo": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 1,
+                "fileName": "https://cdn.agilitycms.com/agility-cms-2019/social/twitter.svg",
+                "label": "Twitter",
+                "target": "",
+                "url": "https://cdn.agilitycms.com/agility-cms-2019/social/twitter.svg",
+                "fileSize": 0,
+                "height": 0,
+                "width": 0,
+                "thumbnails": {}
+            },
+            "followURL": {
+                "text": "@agilitycms",
+                "href": "http://twitter.com/agilitycms",
+                "target": "_blank"
+            },
+            "key": 20
+        },
+        {
+            "title": "Facebook",
+            "textBlob": null,
+            "logo": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 1,
+                "fileName": "https://cdn.agilitycms.com/agility-cms-2019/social/facebook.svg",
+                "label": "",
+                "target": "",
+                "url": "https://cdn.agilitycms.com/agility-cms-2019/social/facebook.svg",
+                "fileSize": 0,
+                "height": 0,
+                "width": 0,
+                "thumbnails": {}
+            },
+            "followURL": {
+                "text": "Agility",
+                "href": "https://www.facebook.com/AgilityInc",
+                "target": "_blank"
+            },
+            "key": 21
+        }
+    ],
+    "subscribeTitle": "Subscribe",
+    "subscribeButtonLabel": "Subscribe",
+    "subscribeDescription": "Learn about our platform get involved in our Community",
+    "subscribeEmailPlaceholder": "Email",
+    "bottomPrivacyPolicyLink": "\u003ca href=\u0022#\u0022 target=\u0022_self\u0022\u003ePrivacy Policy\u003c/a\u003e",
+    "bottomCopyright": "© Copyright, Agility",
+    "bottomSecurityLink": "\u003ca href=\u0022#\u0022 target=\u0022_self\u0022\u003eSecurity\u003c/a\u003e"
+}

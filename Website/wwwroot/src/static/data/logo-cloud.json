@@ -1,0 +1,281 @@
+{
+    "heading": "Don\u0027t just take our word for it!",
+    "subHeading": "These industry leaders have trusted Agility for years, there is a reason their teams are more Agile then ever before.",
+    "renderType": "cloud",
+    "primaryButton": {
+        "text": "See Our Case Studies",
+        "href": "#",
+        "target": "_self"
+    },
+    "secondaryButton": {
+        "text": "Let\u0027s Chat",
+        "href": "#",
+        "target": "_self"
+    },
+    "logos": [
+        {
+            "title": "Customer 1",
+            "textBlob": null,
+            "logo": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 2,
+                "fileName": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+                "label": "Logo Alt Test",
+                "target": "",
+                "url": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+                "fileSize": 0,
+                "height": 0,
+                "width": 0,
+                "thumbnails": {}
+            },
+            "shortDescription": "Short desc.",
+            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
+            "url": {
+                "text": "AgilityCMS.com",
+                "href": "https://agilitycms.com",
+                "target": "_self"
+            },
+            "dynamicPageMetaKeywords": null,
+            "dynamicPageMetaDescription": null,
+            "dynamicPageAdditionalHeaderCode": null,
+            "dynamicPageTopScript": null,
+            "dynamicPageBottomScript": null,
+            "dynamicPageVisibleOnSitemap": null,
+            "dynamicPageVisibleOnMenu": null,
+            "key": 31
+        },
+        {
+            "title": "Customer 2",
+            "textBlob": null,
+            "logo": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 2,
+                "fileName": "https://static.agilitycms.com/logos/test/Hexagon_AB_Logo_Color.svg",
+                "label": "Logo Alt Test 2",
+                "target": "",
+                "url": "https://static.agilitycms.com/logos/test/Hexagon_AB_Logo_Color.svg",
+                "fileSize": 0,
+                "height": 0,
+                "width": 0,
+                "thumbnails": {}
+            },
+            "shortDescription": "Short desc 2",
+            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
+            "url": {
+                "text": "AgilityCMS.com",
+                "href": "https://agilitycms.com",
+                "target": "_self"
+            },
+            "dynamicPageMetaKeywords": null,
+            "dynamicPageMetaDescription": null,
+            "dynamicPageAdditionalHeaderCode": null,
+            "dynamicPageTopScript": null,
+            "dynamicPageBottomScript": null,
+            "dynamicPageVisibleOnSitemap": null,
+            "dynamicPageVisibleOnMenu": null,
+            "key": 290
+        },
+        {
+            "title": "Customer 3",
+            "textBlob": null,
+            "logo": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 1,
+                "fileName": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+                "label": "Logo Alt Test",
+                "target": "",
+                "url": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+                "fileSize": 0,
+                "height": 0,
+                "width": 0,
+                "thumbnails": {}
+            },
+            "shortDescription": "Short desc.",
+            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
+            "url": {
+                "text": "AgilityCMS.com",
+                "href": "https://agilitycms.com",
+                "target": "_self"
+            },
+            "dynamicPageMetaKeywords": null,
+            "dynamicPageMetaDescription": null,
+            "dynamicPageAdditionalHeaderCode": null,
+            "dynamicPageTopScript": null,
+            "dynamicPageBottomScript": null,
+            "dynamicPageVisibleOnSitemap": null,
+            "dynamicPageVisibleOnMenu": null,
+            "key": 293
+        },
+        {
+            "title": "Customer 4",
+            "textBlob": null,
+            "logo": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 1,
+                "fileName": "https://static.agilitycms.com/logos/test/Hexagon_AB_Logo_Color.svg",
+                "label": "Logo Alt Test 2",
+                "target": "",
+                "url": "https://static.agilitycms.com/logos/test/Hexagon_AB_Logo_Color.svg",
+                "fileSize": 0,
+                "height": 0,
+                "width": 0,
+                "thumbnails": {}
+            },
+            "shortDescription": "Short desc 2",
+            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
+            "url": {
+                "text": "AgilityCMS.com",
+                "href": "https://agilitycms.com",
+                "target": "_self"
+            },
+            "dynamicPageMetaKeywords": null,
+            "dynamicPageMetaDescription": null,
+            "dynamicPageAdditionalHeaderCode": null,
+            "dynamicPageTopScript": null,
+            "dynamicPageBottomScript": null,
+            "dynamicPageVisibleOnSitemap": null,
+            "dynamicPageVisibleOnMenu": null,
+            "key": 294
+        },
+        {
+            "title": "Customer 5",
+            "textBlob": null,
+            "logo": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 1,
+                "fileName": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+                "label": "Logo Alt Test",
+                "target": "",
+                "url": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+                "fileSize": 0,
+                "height": 0,
+                "width": 0,
+                "thumbnails": {}
+            },
+            "shortDescription": "Short desc.",
+            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
+            "url": {
+                "text": "AgilityCMS.com",
+                "href": "https://agilitycms.com",
+                "target": "_self"
+            },
+            "dynamicPageMetaKeywords": null,
+            "dynamicPageMetaDescription": null,
+            "dynamicPageAdditionalHeaderCode": null,
+            "dynamicPageTopScript": null,
+            "dynamicPageBottomScript": null,
+            "dynamicPageVisibleOnSitemap": null,
+            "dynamicPageVisibleOnMenu": null,
+            "key": 295
+        },
+        {
+            "title": "Customer 6",
+            "textBlob": null,
+            "logo": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 1,
+                "fileName": "https://static.agilitycms.com/logos/test/Hexagon_AB_Logo_Color.svg",
+                "label": "Logo Alt Test 2",
+                "target": "",
+                "url": "https://static.agilitycms.com/logos/test/Hexagon_AB_Logo_Color.svg",
+                "fileSize": 0,
+                "height": 0,
+                "width": 0,
+                "thumbnails": {}
+            },
+            "shortDescription": "Short desc 2",
+            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
+            "url": {
+                "text": "AgilityCMS.com",
+                "href": "https://agilitycms.com",
+                "target": "_self"
+            },
+            "dynamicPageMetaKeywords": null,
+            "dynamicPageMetaDescription": null,
+            "dynamicPageAdditionalHeaderCode": null,
+            "dynamicPageTopScript": null,
+            "dynamicPageBottomScript": null,
+            "dynamicPageVisibleOnSitemap": null,
+            "dynamicPageVisibleOnMenu": null,
+            "key": 296
+        },
+        {
+            "title": "Customer 7",
+            "textBlob": null,
+            "logo": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 1,
+                "fileName": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+                "label": "Logo Alt Test",
+                "target": "",
+                "url": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+                "fileSize": 0,
+                "height": 0,
+                "width": 0,
+                "thumbnails": {}
+            },
+            "shortDescription": "Short desc.",
+            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
+            "url": {
+                "text": "AgilityCMS.com",
+                "href": "https://agilitycms.com",
+                "target": "_self"
+            },
+            "dynamicPageMetaKeywords": null,
+            "dynamicPageMetaDescription": null,
+            "dynamicPageAdditionalHeaderCode": null,
+            "dynamicPageTopScript": null,
+            "dynamicPageBottomScript": null,
+            "dynamicPageVisibleOnSitemap": null,
+            "dynamicPageVisibleOnMenu": null,
+            "key": 297
+        },
+        {
+            "title": "Customer 8",
+            "textBlob": null,
+            "logo": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 1,
+                "fileName": "https://static.agilitycms.com/logos/test/Hexagon_AB_Logo_Color.svg",
+                "label": "Logo Alt Test 2",
+                "target": "",
+                "url": "https://static.agilitycms.com/logos/test/Hexagon_AB_Logo_Color.svg",
+                "fileSize": 0,
+                "height": 0,
+                "width": 0,
+                "thumbnails": {}
+            },
+            "shortDescription": "Short desc 2",
+            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
+            "url": {
+                "text": "AgilityCMS.com",
+                "href": "https://agilitycms.com",
+                "target": "_self"
+            },
+            "dynamicPageMetaKeywords": null,
+            "dynamicPageMetaDescription": null,
+            "dynamicPageAdditionalHeaderCode": null,
+            "dynamicPageTopScript": null,
+            "dynamicPageBottomScript": null,
+            "dynamicPageVisibleOnSitemap": null,
+            "dynamicPageVisibleOnMenu": null,
+            "key": 298
+        }
+    ]
+}
