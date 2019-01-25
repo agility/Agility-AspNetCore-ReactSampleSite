@@ -50,7 +50,7 @@ Running this site as an isomorphic web app means you'll be running a .NET Core w
     ```
 ---
 ## Static Web App - Frontend Only
-Running thw web app like this means that all requests will be processed by the Webpack Dev Server. There is no dependancy on the .NET Core website or Agility. You also don't need to know the Agility *websiteName* or *securityKey*. This makes it ideal to work with external frontend developers and minimize the time it takes to take their work and integrate it into the project. It also lowers the barrier of entry to contribute to your website.
+Running the web app like this means that all requests will be processed by the Webpack Dev Server. There is no dependancy on the .NET Core website or Agility. You also don't need to know the Agility *websiteName* or *securityKey*. This makes it ideal to work with external frontend developers and minimize the time it takes to take their work and integrate it into the project. It also lowers the barrier of entry to contribute to your website.
 
 The goal of this is to have the static site use the exact same styles and react components as the isomorphic app, thus increasing speed of development and increasing collaboration across teams. Generally speaking, an Agility module will correspond directly to a React component.
 
