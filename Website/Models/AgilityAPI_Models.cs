@@ -310,6 +310,25 @@ namespace Website.AgilityModels
 		public virtual string PrimaryButton { get { if (!__primarybutton_set) __primarybutton = GetFieldValue<string>("PrimaryButton"); __primarybutton_set = true; return __primarybutton; } set { __primarybutton = value; __primarybutton_set = true; } }
 
 	}
+	public partial class Module_ContactUsForm : Agility.Web.AgilityContentItem
+	{
+		private string __heading = null;
+		private bool __heading_set = false;
+		public virtual string Heading { get { if (!__heading_set) __heading = GetFieldValue<string>("Heading"); __heading_set = true; return __heading; } set { __heading = value; __heading_set = true; } }
+		private string __subheading = null;
+		private bool __subheading_set = false;
+		public virtual string Subheading { get { if (!__subheading_set) __subheading = GetFieldValue<string>("Subheading"); __subheading_set = true; return __subheading; } set { __subheading = value; __subheading_set = true; } }
+		private string __thanksmessage = null;
+		private bool __thanksmessage_set = false;
+		public virtual string ThanksMessage { get { if (!__thanksmessage_set) __thanksmessage = GetFieldValue<string>("ThanksMessage"); __thanksmessage_set = true; return __thanksmessage; } set { __thanksmessage = value; __thanksmessage_set = true; } }
+		private string __validationmessage = null;
+		private bool __validationmessage_set = false;
+		public virtual string ValidationMessage { get { if (!__validationmessage_set) __validationmessage = GetFieldValue<string>("ValidationMessage"); __validationmessage_set = true; return __validationmessage; } set { __validationmessage = value; __validationmessage_set = true; } }
+		private string __errormessage = null;
+		private bool __errormessage_set = false;
+		public virtual string ErrorMessage { get { if (!__errormessage_set) __errormessage = GetFieldValue<string>("ErrorMessage"); __errormessage_set = true; return __errormessage; } set { __errormessage = value; __errormessage_set = true; } }
+
+	}
 	public partial class Module_ContentPanel : Agility.Web.AgilityContentItem
 	{
 		private IAgilityContentRepository<ContentPanel> __panel = null;
