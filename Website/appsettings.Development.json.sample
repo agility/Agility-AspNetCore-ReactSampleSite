@@ -1,0 +1,15 @@
+{
+    "Logging": {
+      "LogLevel": {
+        "Default": "Warning"
+      }
+    },
+    "Agility": {
+      "contentCacheFilePath": "../AgilityContent/",
+      "developmentMode": "true",
+      "Trace": {
+        "traceLevel": "Verbose",
+        "logFilePath": "c:/AgilityLogs/Website.log"
+      }
+    }
+  }
