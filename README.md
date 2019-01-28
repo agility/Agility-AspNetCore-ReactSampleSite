@@ -8,7 +8,7 @@ If you are a full stack developer who is comfortable working in .NET and React, 
 
 If you are primarily a frontend developer and prefer to seperate concerns, then you can run a static version of the site which has no dependancy on Agility or .NET. Instead, you can build out your own static pages using React components and .sass styles and then pass that off to a .NET developer who will integrte your React component with a .NET ViewComponent and supply dynamic props to your component.
 
-----
+-----
 
 ## Isomorphic Web App - Full Stack
 Running this site as an isomorphic web app means you'll be running a .NET Core website alongside a webpack dev server. Requests to the webpack dev server will be proxied through to your .NET Core website, serving dynamic content from the CMS.
