@@ -1,5 +1,5 @@
-# Introduction 
-This is the source code for the new **Agility** website. It demonstrates how you can use .NET Core, [Agility](https://agilitycms.com), and [ReactJS.NET](https://reactjs.net) to create an isomorphic web app that is high performant, SEO friendly, supports modern frontend tooling - along with a static web app option, easy to manage content, and showcases content architecture best-practices.
+# Agility React Isomorphic Web App 
+This is the source code for the new **Agility** website. It is a work in progress. It demonstrates how you can use .NET Core, [Agility](https://agilitycms.com), and [ReactJS.NET](https://reactjs.net) to create an isomorphic web app that is high performant, SEO friendly, supports modern frontend tooling - along with a static web app option, easy to manage content, and showcases content architecture best-practices.
 
 ## Getting Started
 There are two way to run this project. You can either run this as an isomorphic application with the .NET Core website and the Webpack Dev Server or you can run a static instance of the site through the Webpack Dev Server only. 
@@ -156,6 +156,7 @@ class Sample extends Component {
 }
 export default hot(Sample);
 ```
+---
 
 ## How JS Bundling Works
 Webpack is used as the module bundler. Since this supports Server-Side-Rendering (SSR), the server must be able to render react components. In order to handle seperate dependancies for the server/client, there are 2 entry points, client and server. Where the server entry point is for the dependancies for SSR, the client entry point is for dependancies on react components that will be handled on the client-side in the browser.
