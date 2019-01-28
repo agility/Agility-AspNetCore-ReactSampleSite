@@ -11,7 +11,7 @@ If you are primarily a frontend developer and prefer to seperate concerns, then 
 ---
 
 ## Isomorphic Web App - Full Stack
-Running this site as an isomorphic web app means you'll be running a .NET Core website alongside a webpack dev server. Requests to the webpack dev server will be proxied through to your .NET Core website. Running the web app in this mode will mimic how it will perform when deployed to a web server.
+Running this site as an isomorphic web app means you'll be running a .NET Core website alongside a webpack dev server. Requests to the webpack dev server will be proxied through to your .NET Core website, serving dynamic content from the CMS.
 
 ### Start
 1.  Run Locally
@@ -49,8 +49,9 @@ Running this site as an isomorphic web app means you'll be running a .NET Core w
     Website> dotnet build
     ```
 ---
+
 ## Static Web App - Frontend Only
-Running thw web app like this means that all requests will be processed by the Webpack Dev Server. There is no dependancy on the .NET Core website or Agility. You also don't need to know the Agility *websiteName* or *securityKey*. This makes it ideal to work with external frontend developers and minimize the time it takes to take their work and integrate it into the project. It also lowers the barrier of entry to contribute to your website.
+Running the web app like this means that all requests will be processed by the Webpack Dev Server. There is no dependancy on the .NET Core website or Agility. You also don't need to know the Agility *websiteName* or *securityKey*. This makes it ideal to work with external frontend developers and minimize the time it takes to take their work and integrate it into the project. It also lowers the barrier of entry to contribute to your website.
 
 The goal of this is to have the static site use the exact same styles and react components as the isomorphic app, thus increasing speed of development and increasing collaboration across teams. Generally speaking, an Agility module will correspond directly to a React component.
 
@@ -155,6 +156,140 @@ class Sample extends Component {
 }
 export default hot(Sample);
 ```
+
+## How JS Bundling Works
+Webpack is used as the module bundler. Since this supports Server-Side-Rendering (SSR), the server must be able to render react components. In order to handle seperate dependancies for the server/client, there are 2 entry points, client and server. Where the server entry point is for the dependancies for SSR, the client entry point is for dependancies on react components that will be handled on the client-side in the browser.
+``` javascript
+module.exports = {
+  entry: {
+      server: './src/_server.js',
+      client: './src/_client.js'       
+  },
+  output: {
+    path: path.resolve(__dirname, './dist'),
+    publicPath: '/dist/',
+    filename: '[name].js'
+  }
+  ...
+}
+```
+
+## How CSS Bundling Works
+This project is using the css and sass loader. When webpack sees dependancies on css/sass files within the react components, the styles will be bundled into the /dist/client.css file bundle.
+``` javascript
+import style from './styles.sass';
+class HeadingH2 extends React.Component {
+    render() {
+        return (
+            <div className="container">
+                <h2 className="some-class-from-styles}">{this.props.title}</h2>
+            </div>
+        );
+    }
+}
+export default HeadingH2;
+```
+
+## How to: Add a new Module with a ViewComponent using .NET Core and React
+1. Create a module just like you normally would, and set the Output Template to a ViewComponent.
+2. Update your C# Agility API classes by refreshing your C# models by clicking the **Download API** button from the Content Manager.
+3. Write your ViewComponent code, returning a ReactActionResult to the name of your corresponding React component (which will be created in the next steps).
+
+``` csharp
+using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Website.AgilityModels;
+using Website.Extensions;
+using Agility.Web.Extensions; 
+namespace Website.ViewComponents.Modules
+{
+	public class ContentPanel : ViewComponent
+	{
+		public Task<IViewComponentResult> InvokeAsync(Module_ContentPanel module)
+		{
+			return Task.Run<IViewComponentResult>(() =>
+			{
+				var panel = module.Panel.GetByID(module.PanelID).ToFrontendProps();
+				return new ReactViewComponentResult("Components.ContentPanel", panel);
+			});
+		}
+	}
+}
+```
+4. Build and run the .NET site
+```
+Website> dotnet run
+```
+5. In the **Website/wwwroot/src/components** folder add a new *.jsx/js* file and a .sass/css for your component
+``` javascript
+import React from 'react';
+import { hot } from 'react-hot-loader/root'
+import './content-panel.sass'
+class ContentPanel extends React.Component {
+    render() {
+        return (
+            <section id="sec-1" className="front-start p-w">
+                <div className="start-content">
+                    <h1>{this.props.title}</h1>
+                    <div dangerouslySetInnerHTML={{ __html: this.props.textBlob }} />
+                    <div className="start-buttons">
+                        <button href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</button>
+                        <a href={this.props.secondaryButton.href} target={this.props.secondaryButton.target} className="btn-link">{this.props.secondaryButton.text} <span><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt="" /></span></a>
+                    </div>
+                </div>
+                <div className="start-image">
+                    <img src="https://static.agilitycms.com/layout/img/content/img1.png" alt="" />
+                </div>
+            </section>
+        );
+    }
+}
+export default hot(ContentPanel);
+```
+6. You need to tell webpack about the dependancy on your React component so that your SSR is aware of it. Do this by opening to the *shared.js* file in the **Website/wwwroot/src/** directory and add an import statement and add the object to the global JS variable *Components*. This *Components* variable is accessed by the ReactJS.NET js engine to grab a hold of the component it needs to render.
+``` javascript
+import ContentPanel from './components/content-panel.jsx'
+...
+global['Components'] = {
+  FeatureBlocks,
+  ContentPanel, //our new module
+  TabPanels,
+  LogoCloud,
+  LogoListing,
+  PostDetails,
+  PostListing,
+  SectionHeading,
+  Header,
+  Footer
+}
+```
+7. Build the frontend so that the server.js bundle it updated with the new dependancy.
+``` 
+Website/wwwroot> npm run build
+```
+
+## How to: Add a new Module without ANY updates to the .NET Core Site
+This site is equipped with a ReactViewComponent that will simply pass any Module's properties as a *props* to a React component of the same name as the module. This allows for frontend developers to easily add new modules in Agility and write the corresponding React component without modifying anything within the .NET Core website. This is recommended for simple modules that do not interact with linked content.
+
+1. Create a new *Module Definition* in the Agility Content Manager
+2. Add your fields in the Form Builder tab as usual.
+3. In the *Output Template*, for ViewCompoent enter '*React*'.
+4. Save the definition.
+5. Register a new dependancy for your isomorphic app by adding your import statement in the *shared.js* file and add it to the global JS variable *Components*.
+6. Build the frontend so that the server.js bundle it updated with the new dependancy.
+``` 
+Website/wwwroot> npm run build
+```
+
+## Helpful Extensions
+**ToFrontendProps** (C#): Will remove Agility specific properties from an object that do not need to be passed to the client. This is done for performance and efficiency.
+``` csharp
+    viewModel.GlobalHeader = header.ToFrontendProps(); //Removes things like 'CreatedDate', 'ModifiedDate' etc...
+```
+
 
 ## Contribution - Rules of Engagement
 The following instructions are only applicable to developers contributing to this source code in the private Azure DevOps repo.
