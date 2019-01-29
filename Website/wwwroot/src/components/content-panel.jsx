@@ -72,7 +72,7 @@ class ContentPanel extends React.Component {
                     <h1>{this.props.title}</h1>
                     <div dangerouslySetInnerHTML={{ __html: this.props.textBlob }} />
                     <div className="start-buttons">
-                        <button href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</button>
+                        <a href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</a>
                         <a href={this.props.secondaryButton.href} target={this.props.secondaryButton.target} className="btn-link">{this.props.secondaryButton.text} <span><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt="" /></span></a>
                     </div>
                 </div>

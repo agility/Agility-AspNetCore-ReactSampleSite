@@ -1,6 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
 import './tab-panels.sass'
+import './tab-panels-products.sass'
 
 class TabPanels extends React.Component {
     constructor() {
@@ -119,10 +120,8 @@ class TabPanels extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="rotated-bg"></div>
 
                 <h2 className="title-conponent" dangerouslySetInnerHTML={this.rawMarkup('title')}></h2>
-                <span dangerouslySetInnerHTML={this.rawMarkup('subTitle')}></span>
 
                 <ul className="features-tabs">
                     {tabNav}

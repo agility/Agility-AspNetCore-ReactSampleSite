@@ -6,8 +6,14 @@ import ContentPanelProps from '../data/content-panel.json'
 
 
 
-import TabPanels from '../../components/tab-panels.jsx'
-import TabPanelsProps from '../data/tab-panels.json'
+import TabPanelsProducts from '../../components/tab-panels-products.jsx'
+import TabPanelsPropsProducts from '../data/tab-panels-products.json'
+
+import ProductsStaff from '../../components/products-staff.jsx'
+import ProductsStaffProps from '../data/products-staff.json'
+
+import ProductsFeatures from '../../components/products-features.jsx'
+import ProductsFeaturesProps from '../data/products-features.json'
 
 
 class Product extends Component {
@@ -16,7 +22,9 @@ class Product extends Component {
     return (
       <div id="product-page">        
         <ContentPanel {...ContentPanelProps } />
-        <TabPanels {...TabPanelsProps} />
+        <TabPanelsProducts {...TabPanelsPropsProducts} />
+        <ProductsStaff {...ProductsStaffProps} />
+        <ProductsFeatures {...ProductsFeaturesProps} />
       </div>
     );
   }

@@ -85,8 +85,8 @@ class LogoListing extends React.Component {
                 </ul>
 
                 <div className="buttons">
-                    <button href={this.props.primaryButton.href} className="btn" target={this.props.primaryButton.target}>{this.props.primaryButton.text}</button>
-                    <button href={this.props.secondaryButton.href} className="btn" target={this.props.secondaryButton.target}>{this.props.secondaryButton.text}</button>
+                    <a href={this.props.primaryButton.href} className="btn" target={this.props.primaryButton.target}>{this.props.primaryButton.text}</a>
+                    <a href={this.props.secondaryButton.href} className="btn" target={this.props.secondaryButton.target}>{this.props.secondaryButton.text}</a>
                 </div>
             </section>
         );
