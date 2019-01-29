@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
 import FeatureBlock from './feature-block.jsx'
-import './feature-blocks.sass'
+import './feature-blocks-w-text.sass'
 
 class FeatureBlocks extends React.Component {
     constructor() {
@@ -92,56 +93,15 @@ class FeatureBlocks extends React.Component {
         })
 
         return (
-
-            <section id="sec-2" className="benefits p-w">
-                <div className="canvas" id="canvas-2">
-                    <div className="img">
-                        <div className="item item-tangle-top-2 twentyone w58">
-                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-2 twentytwo w58 rotate">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-2 twentythree w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-2 twentyfour w58 rotate">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-2 twentyfive w58">
-                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-2 twentysix w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-2 twentyseven w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-2 twentyeight w58">
-                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-2 twentynine w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-2 thirty w58 rotate">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                    </div>
+            <section>
+                <h2 >{this.props.title}</h2>
+                <h3>
+                    {this.props.sideTitle}
+                </h3>
+                <div dangerouslySetInnerHTML={{ __html: this.props.sideBody }} />
+                <div>
+                    {features}
                 </div>
-
-                <h2 className="title-conponent">{this.props.title}</h2>
-
-                <div className="ben-items container">
-                    <div className="ben-items-forslider my-slider" id="slider">
-                        {features}
-                    </div>
-                    <div id="slider-nav">
-                        <button data-slide="0" className="current"></button>
-                        <button data-slide="1"></button>
-                        <button data-slide="2"></button>
-                    </div>
-                </div>
-
             </section>
 
 
@@ -149,3 +109,4 @@ class FeatureBlocks extends React.Component {
     }
 }
 export default hot(FeatureBlocks);
+
