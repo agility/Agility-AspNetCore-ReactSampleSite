@@ -14,17 +14,20 @@ import Footer from './components/footer.jsx'
 // -- modules
 import ContentPanel from './components/content-panel.jsx'
 import FeatureBlocks from './components/feature-blocks.jsx'
+import FeatureBlocksWithText from './components/feature-blocks-w-text.jsx'
 import LogoListing from './components/logo-listing.jsx'
 import TabPanels from './components/tab-panels.jsx'
 import LogoCloud from './components/logo-cloud.jsx'
 import PostDetails from './components/post-details.jsx'
 import PostListing from './components/post-listing.jsx'
 import SectionHeading from './components/section-heading.jsx'
+import Testimonials from './components/testimonials.jsx'
 import ContactUs from './components/contact-us.jsx'
 
 
 global['Components'] = {
   FeatureBlocks,
+  FeatureBlocksWithText,
   ContentPanel,
   TabPanels,
   LogoCloud,
@@ -32,6 +35,7 @@ global['Components'] = {
   PostDetails,
   PostListing,
   SectionHeading,
+  Testimonials,
   ContactUs,
   Header,
   Footer
