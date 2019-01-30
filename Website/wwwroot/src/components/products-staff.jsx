@@ -85,6 +85,9 @@ class ProductsStaffContent extends React.Component {
 
             <div className="staff-item">
                 <div className="item-inner">
+                    <div className="image">
+                        <img src={this.props.staff.image.url} alt={this.props.staff.title}/>
+                    </div>
                     <div className="title">
                         <h3>{this.props.staff.title}</h3>
                         <span>{this.props.staff.position}</span>

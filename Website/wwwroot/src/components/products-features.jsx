@@ -12,6 +12,10 @@ class ProductsFeatures extends React.Component {
     }
     render() {
 
+        const productsFeatures = this.props.items.map(function (item) {
+            return <ProductsFeaturesContent item={item}/>
+        })
+
         return (
 
             <section id="sec-5" className="features p-w">
@@ -51,7 +55,24 @@ class ProductsFeatures extends React.Component {
                 </div>
 
                 <h2 className="title-conponent" dangerouslySetInnerHTML={this.rawMarkup('title')}></h2>
-
+                <div className="products-features">
+                    <div className="row-my">
+                        <div className="col-md-4">
+                            <div className="features-left">
+                                <h3 dangerouslySetInnerHTML={this.rawMarkup('titleLeft')}></h3>
+                                <div className="text" dangerouslySetInnerHTML={this.rawMarkup('textLeft')}></div>
+                                <a class="btn" href="">Checkout Details Features Here</a>
+                            </div>
+                        </div>
+                        <div className="col-md-8">
+                            <div className="features-right">
+                                <div className="row-my">
+                                    {productsFeatures}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </section>
 
@@ -61,3 +82,28 @@ class ProductsFeatures extends React.Component {
 }
 
 export default hot(ProductsFeatures);
+
+class ProductsFeaturesContent extends React.Component {
+    constructor(props) {
+        super(props)
+    }
+    render() {
+
+        return (
+            <div className="col-md-4">
+                <div className="featurer-item">
+                    <div className="item-inner">
+                        <div className="image">
+                            <img src={this.props.item.image.url} alt={this.props.item.title}/>
+                        </div>
+                        <div className="title">
+                            <h4>{this.props.item.title}</h4>
+                        </div>
+                        <p>{this.props.item.content}</p>
+                        <a href={this.props.item.button.href} target={this.props.item.button.target}><span>{this.props.item.button.text}</span><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt=""/></a>
+                    </div>
+                </div>
+            </div>
+        );
+    }
+}
