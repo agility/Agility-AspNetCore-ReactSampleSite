@@ -26,7 +26,6 @@ import PostListing from './components/post-listing.jsx'
 import TestimonialsListing from './components/testimonials-listing.jsx'
 import ProductsFeatures from './components/feature-block-w-text.jsx'
 import SectionHeading from './components/section-heading.jsx'
-import Testimonials from './components/testimonials.jsx'
 import ContactUs from './components/contact-us.jsx'
 
 
@@ -45,7 +44,6 @@ global['Components'] = {
   TestimonialsListing,
   ProductsFeatures,
   SectionHeading,
-  Testimonials,
   ContactUs,
   Header,
   Footer
