@@ -176,7 +176,7 @@ class TabPanelContent extends React.Component {
 
                     <div dangerouslySetInnerHTML={{ __html: this.props.tab.textBlob }} />
 
-                    <button href={this.props.tab.primaryButton.href} target={this.props.tab.primaryButton.target} className="btn">{this.props.tab.primaryButton.text}</button>
+                    <a href={this.props.tab.primaryButton.href} target={this.props.tab.primaryButton.target} className="btn">{this.props.tab.primaryButton.text}</a>
                 </div>
             </div>
         );
