@@ -14,6 +14,7 @@ import FooterProps from './data/footer.json' //the footer data
 //static pages for frontend development
 import Home from './pages/home.jsx'
 import Product from './pages/product.jsx'
+import Community from './pages/community.jsx'
 
 
 
@@ -27,7 +28,8 @@ ReactDOM.render((
                         <Route path="/" exact component={Home} />
                         <Route path="/home" component={Home} />
                         <Route path="/product" component={Product} />
-                        
+                        <Route path="/community" component={Community} />
+
                         <Route component={NotFound} />
                     </Switch>
                 </div>

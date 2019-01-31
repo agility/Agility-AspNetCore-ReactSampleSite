@@ -1,0 +1,184 @@
+#comunity-page
+  p.intro
+    display: inline-block
+    margin-bottom: 80px
+    text-align: center
+    max-width: 1008px
+    font-size: 20px
+    line-height: 32px
+    font-family: "Muli-SemiBold", sans-serif
+    color: #484b4d
+  .comunity-events
+    text-align: center
+    .col-md-4
+      @media (max-width: 991px)
+        max-width: 50%
+        -webkit-flex: 0 0 50%
+        -moz-flex: 0 0 50%
+        -ms-flex: 0 0 50%
+        -o-flex: 0 0 50%
+        flex: 0 0 50%
+      @media (max-width: 767px)
+        max-width: 100%
+        -webkit-flex: 0 0 100%
+        -moz-flex: 0 0 100%
+        -ms-flex: 0 0 100%
+        -o-flex: 0 0 100%
+        flex: 0 0 100%
+    #canvas-2
+      top: 430px
+    .rotated-bg
+      max-height: 1300px
+    .events-item
+      margin-bottom: 32px
+      position: relative
+      height: 520px
+      text-align: left
+      background-color: #fff
+      @media (max-width: 1199px)
+        height: 620px
+      @media (max-width: 991px)
+        height: 540px
+      .item-front
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 2
+        border-radius: 5px
+        -webkit-box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1)
+                box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1)
+        background-color: #ffffff
+        overflow: hidden
+        height: 100%
+        transition: all .15s ease-out
+        .image
+          max-height: 290px
+          overflow: hidden
+          img
+            display: block
+        .front-date
+          position: absolute
+          left: 0
+          top: 24px
+          width: 80px
+          padding-top: 2px
+          padding-bottom: 6px
+          border-radius: 0 5px 5px 0
+          text-align: center
+          background-color: #ffcb28
+          color: #fff
+          p
+            font-size: 14px
+            font-family: "Muli-bold", sans-serif
+            span
+              font-size: 30px
+              font-family: "Muli-bold", sans-serif
+              display: block
+        .inner-content
+          padding: 28px 24px
+          text-align: center
+          h4
+            margin-bottom: 15px
+            font-size: 20px
+            font-family: "Muli-ExtraBold", sans-serif
+            color: #2a3846
+            text-align: left
+          .front-content
+            margin-bottom: 12px
+            font-size: 16px
+            line-height: 24px
+            font-family: "Muli-Regular", sans-serif
+            color: #6d7882
+            text-align: left
+          .arrow-button
+            min-width: 123px
+      .adres,
+      .date-back
+        margin-bottom: 20px
+        display: -webkit-flex
+        display: -moz-flex
+        display: -ms-flex
+        display: -o-flex
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        -webkit-box-align: center
+        -moz-box-align: center
+        -ms-flex-align: center
+        img
+          display: block
+          margin-right: 20px
+        span
+          font-size: 16px
+          line-height: 32px
+          font-family: "Muli-Regular", sans-serif
+          color: #484b4d
+      .date-back
+        margin-bottom: 5px
+      .item-back
+        position: absolute
+        left: 0
+        top: 0
+        z-index: 1
+        padding: 28px 24px
+        height: 100%
+        text-align: center
+        border-radius: 5px
+        -webkit-box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1)
+                box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1)
+        background-color: #ffffff
+        overflow: hidden
+        -webkit-transform: rotateY(180deg)
+        -moz-transform: rotateY(180deg)
+        -ms-transform: rotateY(180deg)
+        -o-transform: rotateY(180deg)
+        transform: rotateY(180deg)
+        transition: all .15s ease-out
+        .title
+          margin-bottom: 20px
+          display: -webkit-flex
+          display: -moz-flex
+          display: -ms-flex
+          display: -o-flex
+          display: flex
+          flex-wrap: wrap
+          align-items: center
+          -webkit-box-align: center
+          -moz-box-align: center
+          -ms-flex-align: center
+          .title-img
+            width: 88px
+            height: 88px
+            margin-right: 24px
+            -webkit-border-radius: 50%
+            -moz-border-radius: 50%
+            border-radius: 50%
+            overflow: hidden
+          h5
+            font-size: 20px
+            font-family: "Muli-ExtraBold", sans-serif
+            color: #2a3846
+        p
+          margin-bottom: 20px
+          font-size: 16px
+          line-height: 24px
+          font-family: "Muli-Regular", sans-serif
+          color: #6d7882
+          text-align: left
+        .arrow-button
+          min-width: 73px
+      &.active
+        .item-front
+          -webkit-transform: rotateY(-180deg)
+          -moz-transform: rotateY(-180deg)
+          -ms-transform: rotateY(-180deg)
+          -o-transform: rotateY(-180deg)
+          transform: rotateY(-180deg)
+          z-index: -4
+        .item-back
+          -webkit-transform: rotateY(0deg)
+          -moz-transform: rotateY(0deg)
+          -ms-transform: rotateY(0deg)
+          -o-transform: rotateY(0deg)
+          transform: rotateY(0deg)
+          z-index: 2

@@ -6,28 +6,28 @@ import ContentPanelProps from '../data/content-panel.json'
 
 
 
-import TabPanelsProducts from '../../components/tab-panels-products.jsx'
+import TabPanels from '../../components/tab-panels.jsx'
 import TabPanelsPropsProducts from '../data/tab-panels-products.json'
 
-import ProductsStaff from '../../components/products-staff.jsx'
-import ProductsStaffProps from '../data/products-staff.json'
+import TestimonialsListing from '../../components/testimonials-listing.jsx'
+import ProductsStaffProps from '../data/testimonials-listing.json'
 
-import ProductsFeatures from '../../components/products-features.jsx'
-import ProductsFeaturesProps from '../data/products-features.json'
+import ProductsFeatures from '../../components/feature-block-w-text.jsx'
+import ProductsFeaturesProps from '../data/feature-block-w-text.json'
 
 
 class Product extends Component {
-  render() {
+    render() {
 
-    return (
-      <div id="product-page">        
-        <ContentPanel {...ContentPanelProps } />
-        <TabPanelsProducts {...TabPanelsPropsProducts} />
-        <ProductsStaff {...ProductsStaffProps} />
-        <ProductsFeatures {...ProductsFeaturesProps} />
-      </div>
-    );
-  }
+        return (
+            <div id="product-page">
+                <ContentPanel {...ContentPanelProps } />
+                <TabPanels {...TabPanelsPropsProducts} />
+                <TestimonialsListing {...ProductsStaffProps} />
+                <ProductsFeatures {...ProductsFeaturesProps} />
+            </div>
+        );
+    }
 }
 
 export default hot(Product);

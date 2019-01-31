@@ -1,0 +1,18 @@
+{
+  "title": "Agility Summit!",
+  "titleBold": "Want to be more flexible, quicker to market and adapt to the pace of business? Bring Agility to your team.",
+  "image": {
+    "url": "https://static.agilitycms.com/layout/img/content/img1.png"
+  },
+  "content": "Agility is a content first Headless CMS. Start with your most valuable asset, your content. Then Build, Deploy and Engage your customers with a platform that manages your content across all your digital channels.",
+  "primaryButton": {
+    "text": "Request a Demo",
+    "href": "#",
+    "target": "_self"
+  },
+  "secondaryButton": {
+    "text": "Request a Demo",
+    "href": "#",
+    "target": "_self"
+  }
+}

@@ -13,29 +13,33 @@ import Footer from './components/footer.jsx'
 
 // -- modules
 import ContentPanel from './components/content-panel.jsx'
+import ComunitySummit from './components/comunity-summit.jsx'
+import EventListing from './components/event-listing.jsx'
+import CtaBlocks from './components/cta-blocks.jsx'
 import FeatureBlocks from './components/feature-blocks.jsx'
 import LogoListing from './components/logo-listing.jsx'
 import TabPanels from './components/tab-panels.jsx'
-import TabPanelsProducts from './components/tab-panels-products.jsx'
 import LogoCloud from './components/logo-cloud.jsx'
 import PostDetails from './components/post-details.jsx'
 import PostListing from './components/post-listing.jsx'
-import ProductsStaff from './components/products-staff.jsx'
-import ProductsFeatures from './components/products-features.jsx'
+import TestimonialsListing from './components/testimonials-listing.jsx'
+import ProductsFeatures from './components/feature-block-w-text.jsx'
 import SectionHeading from './components/section-heading.jsx'
 import ContactUs from './components/contact-us.jsx'
 
 
 global['Components'] = {
   FeatureBlocks,
+  ComunitySummit,
+  EventListing,
+  CtaBlocks,
   ContentPanel,
   TabPanels,
-  TabPanelsProducts,
   LogoCloud,
   LogoListing,
   PostDetails,
   PostListing,
-  ProductsStaff,
+  TestimonialsListing,
   ProductsFeatures,
   SectionHeading,
   ContactUs,
