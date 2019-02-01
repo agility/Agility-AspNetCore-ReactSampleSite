@@ -1,12 +1,58 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
+import PostUtil from '../utils/post-util.js';
+
 import './footer.sass'
 
 
 class Footer extends React.Component {
 
+    constructor(props) {
+        super(props);
+
+
+        this.state = {
+            isSubmitting: false
+        };
+
+        this.submitHandler = this.submitHandler.bind(this);
+
+    }
+
+    /**
+	* This is the method that is called on form submit.
+	* It stops the default form submission process and proceeds with custom validation.
+	**/
+    submitHandler(event) {
+
+        event.preventDefault();
+
+        const form = event.target;
+        let data = {};
+
+        //grab all the name/value pairs for the inputs in this form
+        [...form.elements].forEach((input) => {
+            if (!input.value || input.value == "") return;
+            if (!input.name) return;
+            data[input.name] = input.value;
+        });
+
+        this.setState({ isSubmitting: true });
+
+        PostUtil.postData(
+            this.props.subscribePOSTUrl,
+            data
+        ).then(response => {
+            location.href = this.props.subscribeRedirect;
+        }).catch(err => {
+
+            this.setState({ isSubmitting: false });
+        });
+
+    }
+
     render() {
-        
+
         const outputLinks = (lst) => {
             let links = []
             if (!lst || lst.length == null) return null;
@@ -61,9 +107,10 @@ class Footer extends React.Component {
                     <div className="foter-subscribe">
                         <span>{this.props.subscribeTitle}</span>
                         <p>{this.props.subscribeDescription}</p>
-                        <form action="" className="foter-subscribe-form">
-                            <input type="text" placeholder={this.props.subscribeEmailPlaceholder} />
+                        <form onSubmit={this.submitHandler} action="" className="foter-subscribe-form">
+                            <input type="email" placeholder={this.props.subscribeEmailPlaceholder} name="email" />
                             <input type="submit" placeholder={this.props.subscribeButtonLabel} />
+                            <input type="hidden" name="_autopilot_session_id" />
                         </form>
                     </div>
 
@@ -72,14 +119,14 @@ class Footer extends React.Component {
                 <div className="foter-copyright">
                     <p>{this.props.bottomCopyright} {getYear()}</p>
                     <ul className="foter-copyright-menu">
-                        <li dangerouslySetInnerHTML={{__html: this.props.bottomPrivacyPolicyLink}}></li>
+                        <li dangerouslySetInnerHTML={{ __html: this.props.bottomPrivacyPolicyLink }}></li>
                         <span>|</span>
-                        <li dangerouslySetInnerHTML={{__html: this.props.bottomSecurityLink}}></li>
+                        <li dangerouslySetInnerHTML={{ __html: this.props.bottomSecurityLink }}></li>
                     </ul>
                 </div>
             </footer>
 
-                
+
         );
     }
 }

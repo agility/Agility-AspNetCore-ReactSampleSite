@@ -230,6 +230,12 @@ namespace Website.AgilityModels
 		private string __subscribebuttonlabel = null;
 		private bool __subscribebuttonlabel_set = false;
 		public virtual string SubscribeButtonLabel { get { if (!__subscribebuttonlabel_set) __subscribebuttonlabel = GetFieldValue<string>("SubscribeButtonLabel"); __subscribebuttonlabel_set = true; return __subscribebuttonlabel; } set { __subscribebuttonlabel = value; __subscribebuttonlabel_set = true; } }
+		private string __subscriberedirect = null;
+		private bool __subscriberedirect_set = false;
+		public virtual string SubscribeRedirect { get { if (!__subscriberedirect_set) __subscriberedirect = GetFieldValue<string>("SubscribeRedirect"); __subscriberedirect_set = true; return __subscriberedirect; } set { __subscriberedirect = value; __subscriberedirect_set = true; } }
+		private string __subscribeposturl = null;
+		private bool __subscribeposturl_set = false;
+		public virtual string SubscribePOSTUrl { get { if (!__subscribeposturl_set) __subscribeposturl = GetFieldValue<string>("SubscribePOSTUrl"); __subscribeposturl_set = true; return __subscribeposturl; } set { __subscribeposturl = value; __subscribeposturl_set = true; } }
 		private string __copyright = null;
 		private bool __copyright_set = false;
 		public virtual string Copyright { get { if (!__copyright_set) __copyright = GetFieldValue<string>("Copyright"); __copyright_set = true; return __copyright; } set { __copyright = value; __copyright_set = true; } }
