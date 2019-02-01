@@ -47,7 +47,6 @@ class ComunityEvents extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="rotated-bg"></div>
                 <h2 className="title-conponent">{this.props.title}</h2>
                 <p className="intro">{this.props.titleBold}</p>
                 <div className="events-content">

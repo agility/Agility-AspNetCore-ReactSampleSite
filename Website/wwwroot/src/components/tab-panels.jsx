@@ -119,7 +119,6 @@ class TabPanels extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="rotated-bg"></div>
 
                 <h2 className="title-conponent" dangerouslySetInnerHTML={this.rawMarkup('title')}></h2>
                 <span dangerouslySetInnerHTML={this.rawMarkup('subTitle')}></span>
