@@ -1,24 +1,26 @@
-@media screen and (max-width: 1680px)
+@import ./_variables.sass
+
+@media screen and (max-width: $xl-width)
   .canvas
     display: none
   .p-w
     padding-left: 12.33333333333333%
     padding-right: 12.33333333333333%
 
-@media screen and (max-width: 1680px)
+@media screen and (max-width: $xl-width)
   .p-w
     padding-left: 6.33333333333333%
     padding-right: 6.33333333333333%
 
-@media screen and (max-width: 1190px)
+@media screen and (max-width: $lg-width)
   .p-w
     padding-left: 2.33333333333333%
     padding-right: 2.33333333333333%
-@media (max-width: 1199px)
+@media (max-width: $lg-width-plus-99)
   .header .btn
     padding-left: 30px
     padding-right: 30px
-@media screen and (max-width: 1080px)
+@media screen and (max-width: $md-width)
   .p-w
     padding-left: 16px
     padding-right: 16px
@@ -85,11 +87,11 @@
     width: 70%
     margin: 0 auto
     overflow-x: hidden
-@media screen and (max-width: 767px)
+@media screen and (max-width: $std-width-minus-1)
   .ben-items.container
     width: 100%
     overflow-x: visible
-@media screen and (max-width: 769px)
+@media screen and (max-width: $std-width-plus-1)
   .header .btn,
   .header .header-menu,
   .sign-in,
@@ -221,7 +223,7 @@
 
 
 
-@media screen and (max-width: 680px)
+@media screen and (max-width: $sml-width)
   //hidden items
   .feature-list li:first-child
     display: block
@@ -244,7 +246,7 @@
 
 
 
-@media screen and (max-width: 480px)
+@media screen and (max-width: $xs-width)
   //.benefits .ben-items .ben-item
   //  max-width: 360px
   //  margin: 0 0 0 0

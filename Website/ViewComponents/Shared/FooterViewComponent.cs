@@ -35,6 +35,8 @@ namespace Website.ViewComponents.Shared
 					subscribeButtonLabel = item.SubscribeButtonLabel,
 					subscribeDescription = item.SubscribeDescription,
 					subscribeEmailPlaceholder = item.SubscribeEmailPlaceholder,
+					subscribePOSTUrl = item.SubscribePOSTUrl,
+					subscribeRedirect = item.SubscribeRedirect,
 					bottomPrivacyPolicyLink = item.PrivacyPolicyLink,
 					bottomCopyright = item.Copyright,
 					bottomSecurityLink = item.SecurityLink

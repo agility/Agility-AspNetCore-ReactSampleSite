@@ -58,7 +58,9 @@ class Header extends React.Component {
         };
 
         return (
+
             <div>
+
                 <SignIn preHeaderLinks={this.props.preHeaderLinks} primaryButton={this.props.primaryButton} />
                 <Hamburger />
                 <header className="header p-w">
@@ -71,8 +73,10 @@ class Header extends React.Component {
                     <button href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</button>
                 </header>
             </div>
+
         );
     }
 }
+
 export default hot(Header);
 
