@@ -9,6 +9,10 @@ class AnimatedBg extends React.Component {
 	}
 
 	render() {
+		if (document && document.body && document.body.clientWidth <= 768) {
+			return null;
+		}
+
 		return <Particles
 			className="animated-bg"
 			canvasClassName="animated-bg-canvas"

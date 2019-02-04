@@ -17,7 +17,9 @@ namespace Website.ViewComponents.Shared
 		{
 			return Task.Run<IViewComponentResult>(() =>
 			{
-				return new ReactViewComponentResult("Components.AnimatedBg");
+				var ret = new ReactViewComponentResult("Components.AnimatedBg");
+				ret.ClientOnly = true;
+				return ret;
 			});
 		}
 
