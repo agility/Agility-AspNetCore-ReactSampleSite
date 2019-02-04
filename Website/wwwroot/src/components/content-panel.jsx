@@ -12,7 +12,6 @@ class ContentPanel extends React.Component {
 
 
     render() {
-        console.log("content panel", this.props)
 
         return (
             <section id="sec-1" className="front-start p-w">

@@ -32,7 +32,6 @@ class LogoListing extends React.Component {
             return renderLogo(logo, index);
         })
 
-        console.log("logos", this.props);
 
         return (
             <section id="sec-4" className="friends p-w">
