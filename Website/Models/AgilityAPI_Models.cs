@@ -167,6 +167,9 @@ namespace Website.AgilityModels
 		private string __imageposition = null;
 		private bool __imageposition_set = false;
 		public virtual string ImagePosition { get { if (!__imageposition_set) __imageposition = GetFieldValue<string>("ImagePosition"); __imageposition_set = true; return __imageposition; } set { __imageposition = value; __imageposition_set = true; } }
+		private bool __enablebackgroundimage;
+		private bool __enablebackgroundimage_set = false;
+		public virtual bool EnableBackgroundImage { get { if (!__enablebackgroundimage_set) __enablebackgroundimage = GetFieldValue<bool>("EnableBackgroundImage"); __enablebackgroundimage_set = true; return __enablebackgroundimage; } set { __enablebackgroundimage = value; __enablebackgroundimage_set = true; } }
 
 	}
 	public partial class FeatureBlock : Agility.Web.AgilityContentItem
