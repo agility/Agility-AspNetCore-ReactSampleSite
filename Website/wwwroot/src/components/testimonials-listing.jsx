@@ -6,15 +6,12 @@ class TestimonialsListing extends React.Component {
     constructor() {
         super()
     }
-    rawMarkup(propName) {
-        const rawMarkup = this.props[propName].toString();
-        return { __html: rawMarkup };
-    }
+
     render() {
+        console.log("testimonials", this.props);
 
-
-        const productsStaff = this.props.items.map(function (staff) {
-            return <ProductsStaffContent staff={staff}/>
+        const testimonials = this.props.testimonials.map(function (item) {
+            return <TestimonialContent item={item} />
         })
 
         return (
@@ -22,7 +19,7 @@ class TestimonialsListing extends React.Component {
             <section className="features p-w testimonials-listing">
                 <div className="canvas" id="canvas-4">
                     <div className="img">
-                        <div className="item item-tangle-top-3 twentyone w58">
+                        {/* <div className="item item-tangle-top-3 twentyone w58">
                             <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
                         </div>
                         <div className="item item-tangle-top-3 twentytwo w58 rotate">
@@ -51,18 +48,18 @@ class TestimonialsListing extends React.Component {
                         </div>
                         <div className="item item-tangle-top-3 thirty w58 rotate">
                             <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
+                        </div> */}
                     </div>
                 </div>
 
-                <h2 className="title-conponent" dangerouslySetInnerHTML={this.rawMarkup('title')}></h2>
-
+                <h2 className="title-conponent">{this.props.header}</h2>
+                <p>{this.props.subHeading}</p>
                 <div className="products-staff">
                     <div className="row-my">
-                        {productsStaff}
+                        {testimonials}
                     </div>
                     <div className="button-wrap">
-                        <a className="btn" href="">Checkout Case Studies</a>
+                        <a className="btn" href={this.props.bottomlink.href} target={this.props.bottomlink.target}>{this.props.bottomlink.text}</a>
                     </div>
                 </div>
 
@@ -74,7 +71,7 @@ class TestimonialsListing extends React.Component {
 }
 export default hot(TestimonialsListing);
 
-class ProductsStaffContent extends React.Component {
+class TestimonialContent extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -85,13 +82,15 @@ class ProductsStaffContent extends React.Component {
             <div className="staff-item">
                 <div className="item-inner">
                     <div className="image">
-                        <img src={this.props.staff.image.url} alt={this.props.staff.title}/>
+                        {this.props.item.headshot &&
+                            <img src={this.props.item.headshot.url + '?w=200&h=200'} alt={this.props.item.title} />
+                        }
                     </div>
                     <div className="title">
-                        <h3>{this.props.staff.title}</h3>
-                        <span>{this.props.staff.position}</span>
+                        <h3>{this.props.item.title}</h3>
+                        <span>{this.props.item.jobTitle}</span>
                     </div>
-                    <p>{this.props.staff.content}</p>
+                    <p>{this.props.item.excerpt}</p>
                 </div>
             </div>
         );
