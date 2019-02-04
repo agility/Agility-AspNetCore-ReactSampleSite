@@ -15,20 +15,21 @@ class AnimatedBg extends React.Component {
 			width="300px"
 			params={{
 				particles: {
-					"number": {
-						"value": 31,
-						"density": {
-							"enable": true,
-							"value_area": 800
+					number: {
+						value: 31,
+						density: {
+							enable: true,
+
 						}
 					},
-					"line_linked": {
-						"enable": false
+					line_linked: {
+						enable: false
 					},
-					"move": {
-						"speed": .3,
-						"direction": "top",
-						"out_mode": "out"
+					move: {
+						speed: .3,
+						direction: "top",
+						out_mode: "bounce",
+						random: true,
 					},
 					shape: {
 						type: "images",
@@ -57,18 +58,18 @@ class AnimatedBg extends React.Component {
 						]
 					},
 
-					"size": {
-						"value": 20,
-						"random": false,
-						"anim": {
-							"enable": true,
-							"speed": 4,
-							"size_min": 10,
-							"sync": false
+					size: {
+						value: 20,
+						random: true,
+						anim: {
+							enable: true,
+							speed: 4,
+							size_min: 15,
+							sync: true
 						}
 					}
 				},
-				"retina_detect": false
+				retina_detect: true
 			}} />
 	}
 
