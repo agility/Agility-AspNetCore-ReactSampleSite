@@ -24,7 +24,7 @@ namespace Website.ViewComponents.Modules
 					bottomlink = module.ParseUrl("BottomLink")
 				};
 
-				return new ReactViewComponentResult("Components.Testimonials", model);
+				return new ReactViewComponentResult("Components.TestimonialsListing", model);
 			});
 		}
 
