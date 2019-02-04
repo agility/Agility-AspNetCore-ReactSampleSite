@@ -19,7 +19,7 @@ class SignIn extends React.Component {
         return (
             <div className="sign-in p-w">
                 <ul className="sign-in-list">
-                    <li><button href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</button></li>
+                    <li><a href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</a></li>
                     {this.outputLinks()}
                 </ul>
             </div>

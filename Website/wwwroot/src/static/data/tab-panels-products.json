@@ -1,0 +1,106 @@
+{
+    "title": "Get All Your Teams Working Together Finally!",
+    "subTitle": "",
+    "tabs": [
+        {
+            "title": "Developers",
+            "textBlob": "\u003cul\u003e\n\u003cli\u003eSet up fields, entries \u003cg class=\u0022gr_ gr_14 gr-alert gr_gramm gr_inline_cards gr_disable_anim_appear Punctuation only-ins replaceWithoutSep\u0022 id=\u002214\u0022 data-gr-id=\u002214\u0022\u003eand\u003c/g\u003e relationships in whatever way makes the most sense for your project\u003c/li\u003e\n\u003cli\u003eContent structure and distribution\u003c/li\u003e\n\u003cli\u003eChoose the components you will need for your project (Digital Content, Media, UGC, \u003cg class=\u0022gr_ gr_13 gr-alert gr_spell gr_inline_cards gr_disable_anim_appear ContextualSpelling ins-del multiReplace\u0022 id=\u002213\u0022 data-gr-id=\u002213\u0022\u003eEcommerce\u003c/g\u003e, Ticketing, Search, Personalization)\u003c/li\u003e\n\u003cli\u003eWorkflow and approval setup\u003c/li\u003e\n\u003cli\u003eBuild in Localization\u003c/li\u003e\n\u003cli\u003ePowerful templating\u003c/li\u003e\n\u003cli\u003eConfigurable Rich Authoring experience - Adjust the interface to the skillset of your team\u003c/li\u003e\n\u003cli\u003ePlan Personalized Content needs\u003c/li\u003e\n\u003c/ul\u003e",
+            "description": "Build the foundation for long lasting success. Start with a content first approach and design your content structures and relationships to enable easily distribution of your content ANYWHERE!",
+            "image": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 2,
+                "fileName": "https://static.agilitycms.com/layout/img/features/pic_2.png",
+                "label": "Image Alt Test",
+                "target": "",
+                "url": "https://static.agilitycms.com/layout/img/features/pic_2.png",
+                "fileSize": 0,
+                "height": 600,
+                "width": 416,
+                "thumbnails": {}
+            },
+            "primaryButton": {
+                "text": "Checkout All our Features",
+                "href": "#",
+                "target": "_self"
+            },
+            "key": 30
+        },
+        {
+            "title": "Editors",
+            "textBlob": "\u003cul\u003e\n\u003cli\u003eSet up fields, entries \u003cg class=\u0022gr_ gr_13 gr-alert gr_gramm gr_inline_cards gr_run_anim Punctuation only-ins replaceWithoutSep\u0022 id=\u002213\u0022 data-gr-id=\u002213\u0022\u003eand\u003c/g\u003e relationships in whatever way makes the most sense for your project\u003c/li\u003e\n\u003cli\u003eContent structure and distribution\u003c/li\u003e\n\u003cli\u003eChoose the components you will need for your project (Digital Content, Media, UGC, \u003cg class=\u0022gr_ gr_14 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace\u0022 id=\u002214\u0022 data-gr-id=\u002214\u0022\u003eEcommerce\u003c/g\u003e, Ticketing, Search, Personalization)\u003c/li\u003e\n\u003cli\u003eWorkflow and approval setup\u003c/li\u003e\n\u003cli\u003eBuild in Localization\u003c/li\u003e\n\u003cli\u003ePowerful templating\u003c/li\u003e\n\u003cli\u003eConfigurable Rich Authoring experience - Adjust the interface to the skillset of your team\u003c/li\u003e\n\u003cli\u003ePlan Personalized Content needs\u003c/li\u003e\n\u003c/ul\u003e",
+            "description": "Build the foundation for long lasting success. Start with a content first approach and design your content structures and relationships to enable easily distribution of your content ANYWHERE!",
+            "image": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 2,
+                "fileName": "https://static.agilitycms.com/layout/img/features/pic_2.png",
+                "label": "Image Alt Test",
+                "target": "",
+                "url": "https://static.agilitycms.com/layout/img/features/pic_2.png",
+                "fileSize": 0,
+                "height": 600,
+                "width": 416,
+                "thumbnails": {}
+            },
+            "primaryButton": {
+                "text": "Learn more about Development",
+                "href": "#",
+                "target": "_blank"
+            },
+            "key": 284
+        },
+        {
+            "title": "Strategic",
+            "textBlob": "\u003cul\u003e\n\u003cli\u003eSet up fields, entries \u003cg class=\u0022gr_ gr_13 gr-alert gr_gramm gr_inline_cards gr_run_anim Punctuation only-ins replaceWithoutSep\u0022 id=\u002213\u0022 data-gr-id=\u002213\u0022\u003eand\u003c/g\u003e relationships in whatever way makes the most sense for your project\u003c/li\u003e\n\u003cli\u003eContent structure and distribution\u003c/li\u003e\n\u003cli\u003eChoose the components you will need for your project (Digital Content, Media, UGC, \u003cg class=\u0022gr_ gr_14 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace\u0022 id=\u002214\u0022 data-gr-id=\u002214\u0022\u003eEcommerce\u003c/g\u003e, Ticketing, Search, Personalization)\u003c/li\u003e\n\u003cli\u003eWorkflow and approval setup\u003c/li\u003e\n\u003cli\u003eBuild in Localization\u003c/li\u003e\n\u003cli\u003ePowerful templating\u003c/li\u003e\n\u003cli\u003eConfigurable Rich Authoring experience - Adjust the interface to the skillset of your team\u003c/li\u003e\n\u003cli\u003ePlan Personalized Content needs\u003c/li\u003e\n\u003c/ul\u003e",
+            "description": "Build the foundation for long lasting success. Start with a content first approach and design your content structures and relationships to enable easily distribution of your content ANYWHERE!",
+            "image": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 2,
+                "fileName": "https://static.agilitycms.com/layout/img/features/pic_2.png",
+                "label": "Image Alt Test",
+                "target": "",
+                "url": "https://static.agilitycms.com/layout/img/features/pic_2.png",
+                "fileSize": 0,
+                "height": 600,
+                "width": 416,
+                "thumbnails": {}
+            },
+            "primaryButton": {
+                "text": "Show More about Deployments",
+                "href": "#",
+                "target": "_blank"
+            },
+            "key": 285
+        },
+        {
+            "title": "Corporate",
+            "textBlob": "\u003cul\u003e\n\u003cli\u003eSet up fields, entries and relationships in whatever way makes the most sense for your project\u003c/li\u003e\n\u003cli\u003eContent structure and distribution\u003c/li\u003e\n\u003cli\u003eChoose the components you will need for your project (Digital Content, Media, UGC, \u003cg class=\u0022gr_ gr_13 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace\u0022 id=\u002213\u0022 data-gr-id=\u002213\u0022\u003eEcommerce\u003c/g\u003e, Ticketing, Search, Personalization)\u003c/li\u003e\n\u003cli\u003eWorkflow and approval setup\u003c/li\u003e\n\u003cli\u003eBuild in Localization\u003c/li\u003e\n\u003cli\u003ePowerful templating\u003c/li\u003e\n\u003cli\u003eConfigurable Rich Authoring experience - Adjust the interface to the skillset of your team\u003c/li\u003e\n\u003cli\u003ePlan Personalized Content needs\u003c/li\u003e\n\u003c/ul\u003e",
+            "description": "Build the foundation for long lasting success. Start with a content first approach and design your content structures and relationships to enable easily distribution of your content ANYWHERE!",
+            "image": {
+                "guid": null,
+                "managerID": null,
+                "blob": null,
+                "itemOrder": 1,
+                "fileName": "https://static.agilitycms.com/Attachments/NewItems/323_20181221211440_0.jpg",
+                "label": "Image Alt Test",
+                "target": "",
+                "url": "https://static.agilitycms.com/Attachments/NewItems/323_20181221211440_0.jpg",
+                "fileSize": 0,
+                "height": 480,
+                "width": 640,
+                "thumbnails": {}
+            },
+            "primaryButton": {
+                "text": "Learn More about Managing Content",
+                "href": "#",
+                "target": "_blank"
+            },
+            "key": 286
+        }
+    ]
+}
