@@ -25,7 +25,6 @@ import LogoCloud from './components/logo-cloud.jsx'
 import PostDetails from './components/post-details.jsx'
 import PostListing from './components/post-listing.jsx'
 import TestimonialsListing from './components/testimonials-listing.jsx'
-import ProductsFeatures from './components/feature-block-w-text.jsx'
 import SectionHeading from './components/section-heading.jsx'
 import ContactUs from './components/contact-us.jsx'
 
@@ -43,7 +42,6 @@ global['Components'] = {
   PostDetails,
   PostListing,
   TestimonialsListing,
-  ProductsFeatures,
   SectionHeading,
   ContactUs,
   Header,

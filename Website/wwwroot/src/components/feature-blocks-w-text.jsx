@@ -1,7 +1,6 @@
 
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import FeatureBlock from './feature-block.jsx'
 import './feature-blocks-w-text.sass'
 
 class FeatureBlocksWithText extends React.Component {
@@ -13,7 +12,7 @@ class FeatureBlocksWithText extends React.Component {
     }
 
     render() {
-        console.log("fb", this.props);
+
 
         var features = this.props.features.map(function (f) {
             return <ProductsFeaturesContent data={f} key={f.key} />;
@@ -101,7 +100,7 @@ class ProductsFeaturesContent extends React.Component {
                         <div className="title">
                             <h4>{this.props.data.title}</h4>
                         </div>
-                        <p dangerouslySetInnerHTML={{ __html: this.props.data.textBlob }} />
+                        <div dangerouslySetInnerHTML={{ __html: this.props.data.textBlob }} />
                         {this.props.data.bottomLink &&
                             <a className="arrow-button" href={this.props.data.bottomLink.href} target={this.props.data.bottomLink.target}><span>{this.props.data.bottomLink.text}</span><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt="" /></a>
                         }
