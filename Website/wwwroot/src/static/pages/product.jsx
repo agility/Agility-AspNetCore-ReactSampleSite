@@ -12,8 +12,7 @@ import TabPanelsPropsProducts from '../data/tab-panels-products.json'
 import TestimonialsListing from '../../components/testimonials-listing.jsx'
 import ProductsStaffProps from '../data/testimonials-listing.json'
 
-import ProductsFeatures from '../../components/feature-block-w-text.jsx'
-import ProductsFeaturesProps from '../data/feature-block-w-text.json'
+import ProductsFeaturesProps from '../data/feature-blocks-w-text.json'
 
 
 class Product extends Component {
@@ -21,10 +20,10 @@ class Product extends Component {
 
         return (
             <div id="product-page">
-                <ContentPanel {...ContentPanelProps } />
+                <ContentPanel {...ContentPanelProps} />
                 <TabPanels {...TabPanelsPropsProducts} />
                 <TestimonialsListing {...ProductsStaffProps} />
-                <ProductsFeatures {...ProductsFeaturesProps} />
+                <FeatureBlocksWithText {...ProductsFeaturesProps} />
             </div>
         );
     }

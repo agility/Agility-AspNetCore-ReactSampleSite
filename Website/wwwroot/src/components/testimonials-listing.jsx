@@ -8,7 +8,6 @@ class TestimonialsListing extends React.Component {
     }
 
     render() {
-        console.log("testimonials", this.props);
 
         const testimonials = this.props.testimonials.map(function (item) {
             return <TestimonialContent item={item} />
