@@ -15,6 +15,10 @@ import FooterProps from './data/footer.json' //the footer data
 import Home from './pages/home.jsx'
 import Product from './pages/product.jsx'
 import Community from './pages/community.jsx'
+import Partners from './pages/partners.jsx'
+import Resources from './pages/resources.jsx'
+import RichTextPage from './pages/rich-text.jsx'
+import BlogListing from './pages/blog-listing.jsx'
 
 
 
@@ -29,6 +33,10 @@ ReactDOM.render((
                         <Route path="/home" component={Home} />
                         <Route path="/product" component={Product} />
                         <Route path="/community" component={Community} />
+                        <Route path="/partners" component={Partners} />
+                        <Route path="/resources" component={Resources} />
+                        <Route path="/rich-text" component={RichTextPage} />
+                        <Route path="/blog-listing" component={BlogListing} />
 
                         <Route component={NotFound} />
                     </Switch>

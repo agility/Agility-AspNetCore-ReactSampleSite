@@ -94,7 +94,7 @@ class ComunityEventsContent extends React.Component {
                         </div>
                         <div className="front-date"><p><span>{day}</span>{month}</p></div>
                         <div className="inner-content">
-                            <h4>{this.props.item.title}</h4>
+                            <h4 className="h4">{this.props.item.title}</h4>
                             <p className="front-content">{eventContent}</p>
                             <div className="adres">
                                 <img src="/dist/img/location.svg" alt=""/><span>{this.props.item.event.adres}</span>
@@ -107,7 +107,7 @@ class ComunityEventsContent extends React.Component {
                             <div className="title-img">
                                 <img src={this.props.item.event.foto.url} alt=""/>
                             </div>
-                            <h5>{this.props.item.event.name}</h5>
+                            <h5 className="h5">{this.props.item.event.name}</h5>
                         </div>
                         <div className="inner-content">
                             <div className="date-back">

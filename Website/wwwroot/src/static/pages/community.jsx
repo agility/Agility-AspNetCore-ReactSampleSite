@@ -2,10 +2,9 @@ import React, { Component } from 'react'
 import { hot } from 'react-hot-loader/root'
 
 import ContentPanel from '../../components/content-panel.jsx'
-import ContentPanelProps from '../data/content-panel.json'
+import ContentPanelProps from '../data/content-panel-right.json'
+import ContentPanelPropsLeft from '../data/content-panel-left.json'
 
-import ComunitySummit from '../../components/comunity-summit.jsx'
-import ComunitySummitProps from '../data/comunity-summit.json'
 
 import EventListing from '../../components/event-listing.jsx'
 import EventListingProps from '../data/event-listing.json'
@@ -19,7 +18,7 @@ class Community extends Component {
         return (
             <div id="comunity-page">
                 <ContentPanel {...ContentPanelProps } />
-                <ComunitySummit {...ComunitySummitProps } />
+                <ContentPanel {...ContentPanelPropsLeft } />
                 <EventListing {...EventListingProps } />
                 <CtaBlocks {...CtaBlocksProps } />
             </div>

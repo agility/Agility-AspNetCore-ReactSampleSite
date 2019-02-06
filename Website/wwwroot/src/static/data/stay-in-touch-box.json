@@ -1,0 +1,26 @@
+{
+  "title": "Stay in Touch",
+  "items": [
+    {
+      "ico": {
+        "url": "dist/img/twitter.svg"
+      },
+      "href": "#",
+      "title": "Follow Us on Twitter"
+    },
+    {
+      "ico": {
+        "url": "dist/img/message.svg"
+      },
+      "href": "#",
+      "title": "Subscribe to Our Newsletter"
+    },
+    {
+      "ico": {
+        "url": "dist/img/rss.svg"
+      },
+      "href": "#",
+      "title": "Subscribe via RSS"
+    }
+  ]
+}

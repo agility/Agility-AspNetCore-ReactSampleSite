@@ -1,0 +1,91 @@
+{
+  "title": "Latest Resources",
+  "subTitle": "Well educated, intellectual people, especially scientists at all times demonstrate considerably smaller adherence to religiosity than others. ",
+  "leftTopTitle": "Type of asset",
+  "leftBottomTitle": "Nothing is more important then connection!",
+  "leftButton": {
+    "text": "Request a Demo",
+    "href": "#",
+    "target": "_self"
+  },
+  "items": [
+    {
+      "image": {
+        "url": "dist/img/latest-resources1.png"
+      },
+      "label": "Whitepaper",
+      "title": "Put Wings On Your Dreams",
+      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
+      "primaryButton": {
+        "text": "Read Now",
+        "href": "#",
+        "target": "_self"
+      }
+    },
+    {
+      "image": {
+        "url": "dist/img/latest-resources2.png"
+      },
+      "label": "Ebook",
+      "title": "Put Wings On Your Dreams",
+      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
+      "primaryButton": {
+        "text": "Read Now",
+        "href": "#",
+        "target": "_self"
+      }
+    },
+    {
+      "image": {
+        "url": "dist/img/latest-resources1.png"
+      },
+      "label": "Whitepaper",
+      "title": "Put Wings On Your Dreams",
+      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
+      "primaryButton": {
+        "text": "Read Now",
+        "href": "#",
+        "target": "_self"
+      }
+    },
+    {
+      "image": {
+        "url": "dist/img/latest-resources2.png"
+      },
+      "label": "Report",
+      "title": "Put Wings On Your Dreams",
+      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
+      "primaryButton": {
+        "text": "Read Now",
+        "href": "#",
+        "target": "_self"
+      }
+    },
+    {
+      "image": {
+        "url": "dist/img/latest-resources1.png"
+      },
+      "label": "Webinar",
+      "title": "Put Wings On Your Dreams",
+      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
+      "primaryButton": {
+        "text": "Read Now",
+        "href": "#",
+        "target": "_self"
+      }
+    },
+    {
+      "image": {
+        "url": "dist/img/latest-resources2.png"
+      },
+      "label": "Ebook",
+      "title": "Put Wings On Your Dreams",
+      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
+      "primaryButton": {
+        "text": "Read Now",
+        "href": "#",
+        "target": "_self"
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "title": "Featured Case Studies",
+  "primaryButton": {
+    "text": "More Success Stories",
+    "href": "#",
+    "target": "_self"
+  },
+  "items": [
+    {
+      "image": {
+        "url": "dist/img/case1.png"
+      },
+      "app": {
+        "href": "#",
+        "target": "_blank",
+        "image": {
+          "url": "dist/img/spotify.png"
+        }
+      },
+      "text": "With the exception of Nietzsche, no other madman has contributed so much to human sanity Althusser.",
+      "products": [
+        {
+          "name": "PHP",
+          "image": {
+            "url": "dist/img/php.png"
+          }
+        },
+        {
+          "name": "Node JS",
+          "image": {
+            "url": "dist/img/js.png"
+          }
+        }
+      ]
+    },
+    {
+      "image": {
+        "url": "dist/img/case2.png"
+      },
+      "app": {
+        "href": "#",
+        "target": "_blank",
+        "image": {
+          "url": "dist/img/lyat.png"
+        }
+      },
+      "text": "With the exception of Nietzsche, no other madman has contributed so much to human sanity Althusser.",
+      "products": [
+        {
+          "name": "PHP",
+          "image": {
+            "url": "dist/img/php.png"
+          }
+        },
+        {
+          "name": "Node JS",
+          "image": {
+            "url": "dist/img/js.png"
+          }
+        },
+        {
+          "name": "React JS",
+          "image": {
+            "url": "dist/img/react.png"
+          }
+        }
+      ]
+    },
+    {
+      "image": {
+        "url": "dist/img/case3.png"
+      },
+      "app": {
+        "href": "#",
+        "target": "_blank",
+        "image": {
+          "url": "dist/img/m2m.jpg"
+        }
+      },
+      "text": "With the exception of Nietzsche, no other madman has contributed so much to human sanity Althusser.",
+      "products": [
+        {
+          "name": "PHP",
+          "image": {
+            "url": "dist/img/php.png"
+          }
+        },
+        {
+          "name": "Node JS",
+          "image": {
+            "url": "dist/img/js.png"
+          }
+        }
+      ]
+    }
+  ]
+}
