@@ -1,0 +1,48 @@
+{
+  "title": "Featured Resources (Guides, Blogs etc)",
+  "subTitle": "Well educated, intellectual people, especially scientists at all times demonstrate considerably smaller adherence to religiosity than others. ",
+  "items": [
+    {
+      "image": {
+        "url": "dist/img/featured-resources.png"
+      },
+      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
+      "primaryButton": {
+        "text": "Download Whitepaper",
+        "href": "#",
+        "target": "_self",
+        "ico": {
+          "url": "dist/img/download.svg"
+        }
+      }
+    },
+    {
+      "image": {
+        "url": "dist/img/featured-resources.png"
+      },
+      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
+      "primaryButton": {
+        "text": "Download Whitepaper",
+        "href": "#",
+        "target": "_self",
+        "ico": {
+          "url": "dist/img/download.svg"
+        }
+      }
+    },
+    {
+      "image": {
+        "url": "dist/img/featured-resources.png"
+      },
+      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
+      "primaryButton": {
+        "text": "Download Whitepaper",
+        "href": "#",
+        "target": "_self",
+        "ico": {
+          "url": "dist/img/download.svg"
+        }
+      }
+    }
+  ]
+}
