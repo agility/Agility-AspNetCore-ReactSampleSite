@@ -157,6 +157,7 @@ namespace Website.Middleware
 				AgilityContentRepository<AgilityContentItem> content = new AgilityContentRepository<AgilityContentItem>(dynamicNode.ReferenceName);
 				AgilityContentItem item = content.Item(string.Format("ContentID = {0}", dynamicNode.ContentID));
 				lastMod = item.ModifiedDate;
+				priority = 0;
 
 			}
 			else if (agilityNode != null)
@@ -276,9 +277,11 @@ namespace Website.Middleware
 				writer.WriteEndElement();
 			} while (false);
 
+			var children = AgilityContext.AgilitySiteMap.GetChildNodes(node);
+
 
 			//loop all the child elements..
-			foreach (var child in node.ChildNodes)
+			foreach (var child in children)
 			{
 				WriteURLNode(context, writer, langCode, child, channelDomain);
 			}
