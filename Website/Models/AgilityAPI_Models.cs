@@ -167,6 +167,9 @@ namespace Website.AgilityModels
 		private string __imageposition = null;
 		private bool __imageposition_set = false;
 		public virtual string ImagePosition { get { if (!__imageposition_set) __imageposition = GetFieldValue<string>("ImagePosition"); __imageposition_set = true; return __imageposition; } set { __imageposition = value; __imageposition_set = true; } }
+		private bool __enablebackgroundimage;
+		private bool __enablebackgroundimage_set = false;
+		public virtual bool EnableBackgroundImage { get { if (!__enablebackgroundimage_set) __enablebackgroundimage = GetFieldValue<bool>("EnableBackgroundImage"); __enablebackgroundimage_set = true; return __enablebackgroundimage; } set { __enablebackgroundimage = value; __enablebackgroundimage_set = true; } }
 
 	}
 	public partial class FeatureBlock : Agility.Web.AgilityContentItem
@@ -230,6 +233,12 @@ namespace Website.AgilityModels
 		private string __subscribebuttonlabel = null;
 		private bool __subscribebuttonlabel_set = false;
 		public virtual string SubscribeButtonLabel { get { if (!__subscribebuttonlabel_set) __subscribebuttonlabel = GetFieldValue<string>("SubscribeButtonLabel"); __subscribebuttonlabel_set = true; return __subscribebuttonlabel; } set { __subscribebuttonlabel = value; __subscribebuttonlabel_set = true; } }
+		private string __subscriberedirect = null;
+		private bool __subscriberedirect_set = false;
+		public virtual string SubscribeRedirect { get { if (!__subscriberedirect_set) __subscriberedirect = GetFieldValue<string>("SubscribeRedirect"); __subscriberedirect_set = true; return __subscriberedirect; } set { __subscriberedirect = value; __subscriberedirect_set = true; } }
+		private string __subscribeposturl = null;
+		private bool __subscribeposturl_set = false;
+		public virtual string SubscribePOSTUrl { get { if (!__subscribeposturl_set) __subscribeposturl = GetFieldValue<string>("SubscribePOSTUrl"); __subscribeposturl_set = true; return __subscribeposturl; } set { __subscribeposturl = value; __subscribeposturl_set = true; } }
 		private string __copyright = null;
 		private bool __copyright_set = false;
 		public virtual string Copyright { get { if (!__copyright_set) __copyright = GetFieldValue<string>("Copyright"); __copyright_set = true; return __copyright; } set { __copyright = value; __copyright_set = true; } }
@@ -281,6 +290,15 @@ namespace Website.AgilityModels
 		private string __url = null;
 		private bool __url_set = false;
 		public virtual string URL { get { if (!__url_set) __url = GetFieldValue<string>("URL"); __url_set = true; return __url; } set { __url = value; __url_set = true; } }
+		private string __city = null;
+		private bool __city_set = false;
+		public virtual string City { get { if (!__city_set) __city = GetFieldValue<string>("City"); __city_set = true; return __city; } set { __city = value; __city_set = true; } }
+		private string __state = null;
+		private bool __state_set = false;
+		public virtual string State { get { if (!__state_set) __state = GetFieldValue<string>("State"); __state_set = true; return __state; } set { __state = value; __state_set = true; } }
+		private string __country = null;
+		private bool __country_set = false;
+		public virtual string Country { get { if (!__country_set) __country = GetFieldValue<string>("Country"); __country_set = true; return __country; } set { __country = value; __country_set = true; } }
 
 	}
 	public partial class SocialFollowLink : Agility.Web.AgilityContentItem
@@ -393,6 +411,9 @@ namespace Website.AgilityModels
 		private string __sidebody = null;
 		private bool __sidebody_set = false;
 		public virtual string SideBody { get { if (!__sidebody_set) __sidebody = GetFieldValue<string>("SideBody"); __sidebody_set = true; return __sidebody; } set { __sidebody = value; __sidebody_set = true; } }
+		private string __sidelink = null;
+		private bool __sidelink_set = false;
+		public virtual string SideLink { get { if (!__sidelink_set) __sidelink = GetFieldValue<string>("SideLink"); __sidelink_set = true; return __sidelink; } set { __sidelink = value; __sidelink_set = true; } }
 		private string __featureblockids = null;
 		private bool __featureblockids_set = false;
 		public virtual string FeatureBlockIDs { get { if (!__featureblockids_set) __featureblockids = GetFieldValue<string>("FeatureBlockIDs"); __featureblockids_set = true; return __featureblockids; } set { __featureblockids = value; __featureblockids_set = true; } }

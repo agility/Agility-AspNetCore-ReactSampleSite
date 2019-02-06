@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { hot } from 'react-hot-loader/root'
 
 import ContentPanel from '../../components/content-panel.jsx'
-import ContentPanelProps from '../data/content-panel.json'
+import ContentPanelProps from '../data/content-panel-right.json'
 
 import FeatureBlocks from '../../components/feature-blocks.jsx'
 import FeatureBlocksProps from '../data/feature-blocks.json'

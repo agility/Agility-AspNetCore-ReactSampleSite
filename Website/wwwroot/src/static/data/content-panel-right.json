@@ -1,0 +1,31 @@
+{
+    "title": "Design \u003e Build \u003e Deploy Faster with Agility!",
+    "textBlob": "\u003ch2\u003eWant to be more flexible, quicker to market and adapt\u003cbr /\u003eto the pace of business? Bring Agility to your team.\u003c/h2\u003e\n\u003cp\u003e\u003cspan\u003eAgility is a content-first Headless CMS. Start with your most valuable asset, your\u003c/span\u003e\u003cbr /\u003e\u003cspan\u003econtent. Then Build, Deploy and Engage your customers with a platform that\u003c/span\u003e\u003cbr /\u003e\u003cspan\u003emanages your content across all your digital channels.\u003c/span\u003e\u003c/p\u003e",
+    "primaryButton": {
+        "text": "Try for FREE",
+        "href": "/",
+        "target": "_self"
+    },
+    "secondaryButton": {
+        "text": "Request Demo",
+        "href": "/",
+        "target": "_self"
+    },
+    "image": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 3,
+        "fileName": "https://static.agilitycms.com/layout/img/content/img1.png",
+        "label": "Design - Deploy - Faster with Agility",
+        "target": "",
+        "url": "https://static.agilitycms.com/layout/img/content/img1.png",
+        "fileSize": 0,
+        "height": 0,
+        "width": 0,
+        "thumbnails": {}
+    },
+    "imagePosition": "right",
+    "enableBackgroundImage": true,
+    "key": 7
+}

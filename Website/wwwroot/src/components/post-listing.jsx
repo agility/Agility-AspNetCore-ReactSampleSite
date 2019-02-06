@@ -5,7 +5,7 @@ import './post-listing.sass'
 
 class PostListing extends React.Component {
     render() {
-        console.log("posts", this.props.posts);
+
         const renderPost = (post) => {
             //render one tab
             return (

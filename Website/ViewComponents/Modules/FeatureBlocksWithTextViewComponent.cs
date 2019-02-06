@@ -21,7 +21,8 @@ namespace Website.ViewComponents.Modules
 				{
 					title = module.Title,
 					sideTitle = module.SideTitle,
-					siteBody = module.SideBody,
+					sideBody = module.SideBody,
+					sideLink = module.ParseUrl("SideLink"),
 					features = module.FeatureBlocks.GetByIDs(module.FeatureBlockIDs).Select(p => p.ToFrontendProps())
 				};
 
