@@ -1,0 +1,43 @@
+{
+  "items": [
+    {
+      "href": "#",
+      "image": {
+        "url": "dist/img/pic.png"
+      },
+      "title": "Put Wings On Your Dreams",
+      "authorName": "Donald Dixon",
+      "authorFoto": {
+        "url": "dist/img/team3-min.jpg"
+      },
+      "text": "There are many kinds of narratives and organizing principles. Science is driven evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones, other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
+      "date": "09 Jun 2019"
+    },
+    {
+      "href": "#",
+      "image": {
+        "url": "dist/img/pic.png"
+      },
+      "title": "Put Wings On Your Dreams",
+      "authorName": "Donald Dixon",
+      "authorFoto": {
+        "url": "dist/img/team3-min.jpg"
+      },
+      "text": "There are many kinds of narratives and organizing principles. Science is driven evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones, other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
+      "date": "09 Jun 2019"
+    },
+    {
+      "href": "#",
+      "image": {
+        "url": "dist/img/pic.png"
+      },
+      "title": "Put Wings On Your Dreams",
+      "authorName": "Donald Dixon",
+      "authorFoto": {
+        "url": "dist/img/team3-min.jpg"
+      },
+      "text": "There are many kinds of narratives and organizing principles. Science is driven evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones, other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
+      "date": "09 Jun 2019"
+    }
+  ]
+}
