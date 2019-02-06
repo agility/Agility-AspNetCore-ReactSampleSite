@@ -16,6 +16,7 @@ using React.AspNet;
 using Agility.Web;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using System.Reflection;
+using Website.Middleware;
 
 namespace Website
 {
@@ -66,6 +67,14 @@ namespace Website
 
 			//configure the Agility Context 
 			AgilityContext.Configure(app, env, useResponseCaching: true);
+
+			//custom middleware defined in this website code
+			app.MapWhen(context => context.Request.Path.Value.EndsWith("robots.txt", true, null),
+						appBranch => { appBranch.UseRobotsHandler(); });
+
+			app.MapWhen(context => context.Request.Path.Value.EndsWith("sitemap.xml", true, null),
+						appBranch => { appBranch.UseSitemapHandler(); });
+
 
 			app.UseStaticFiles();
 
