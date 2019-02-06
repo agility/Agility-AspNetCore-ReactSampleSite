@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 import { hot } from 'react-hot-loader/root'
 
-import RichTextPage from '../../components/rich-text.jsx'
+import RichText from '../../components/rich-text.jsx'
 import RichTextProps from '../data/rich-text.json'
 
-class RichText extends Component {
+class RichTextPage extends Component {
     render() {
 
         return (
             <div id="rich-text-page">
-                <RichTextPage {...RichTextProps } />
+                <RichText {...RichTextProps } />
             </div>
         );
     }
 }
 
-export default hot(RichText);
+export default hot(RichTextPage);

@@ -17,7 +17,7 @@ import Product from './pages/product.jsx'
 import Community from './pages/community.jsx'
 import Partners from './pages/partners.jsx'
 import Resources from './pages/resources.jsx'
-import RichText from './pages/rich-text.jsx'
+import RichTextPage from './pages/rich-text.jsx'
 import BlogListing from './pages/blog-listing.jsx'
 
 
@@ -35,7 +35,7 @@ ReactDOM.render((
                         <Route path="/community" component={Community} />
                         <Route path="/partners" component={Partners} />
                         <Route path="/resources" component={Resources} />
-                        <Route path="/rich-text" component={RichText} />
+                        <Route path="/rich-text" component={RichTextPage} />
                         <Route path="/blog-listing" component={BlogListing} />
 
                         <Route component={NotFound} />
