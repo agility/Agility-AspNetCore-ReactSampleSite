@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Website.AgilityModels;
 using Website.Extensions;
 using Agility.Web.Extensions;
+using Agility.Web;
 
 namespace Website.ViewComponents.Modules
 {
@@ -18,6 +19,16 @@ namespace Website.ViewComponents.Modules
 			{
 				var post = Agility.Web.AgilityContext.GetDynamicPageItem<BlogPost>();
 
+
+				var currentPage = AgilityContext.Page;
+
+				var description = currentPage.MetaTags;
+				if (string.IsNullOrWhiteSpace(description))
+				{
+					description = post.Excerpt.Truncate(300, "...", true, true);
+				}
+
+
 				var viewModel = new
 				{
 					categoryLabel = module.CategoryLabel,
@@ -25,7 +36,6 @@ namespace Website.ViewComponents.Modules
 					relatedPostsCount = module.RelatedPostsCount,
 					post = post.ToFrontendProps()
 				};
-
 
 				return new ReactViewComponentResult("Components.PostDetails", viewModel);
 			});
