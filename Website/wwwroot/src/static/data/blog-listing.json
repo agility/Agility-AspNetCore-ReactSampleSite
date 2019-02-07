@@ -1,7 +1,7 @@
 {
   "items": [
     {
-      "href": "#",
+      "href": "/blog-details-page",
       "image": {
         "url": "dist/img/pic.png"
       },
@@ -14,7 +14,7 @@
       "date": "09 Jun 2019"
     },
     {
-      "href": "#",
+      "href": "/blog-details-page",
       "image": {
         "url": "dist/img/pic.png"
       },
@@ -27,7 +27,7 @@
       "date": "09 Jun 2019"
     },
     {
-      "href": "#",
+      "href": "/blog-details-page",
       "image": {
         "url": "dist/img/pic.png"
       },

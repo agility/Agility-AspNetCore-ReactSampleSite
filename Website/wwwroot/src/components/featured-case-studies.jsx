@@ -72,7 +72,7 @@ class FeaturedCaseStudiesContent extends React.Component {
             <div class="col-md-4">
                 <div className="case-item">
                     <div className="image">
-                        <img src={this.props.item.image.url} alt=""/>
+                        <a href={this.props.item.app.href}><img src={this.props.item.image.url} alt=""/></a>
                     </div>
                     <div className="app-name">
                         <a href={this.props.item.app.href} target={this.props.item.app.target}><img src={this.props.item.app.image.url} alt=""/></a>

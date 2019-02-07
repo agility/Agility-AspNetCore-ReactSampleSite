@@ -19,6 +19,9 @@ import Partners from './pages/partners.jsx'
 import Resources from './pages/resources.jsx'
 import RichTextPage from './pages/rich-text.jsx'
 import BlogListing from './pages/blog-listing.jsx'
+import Team from './pages/team.jsx'
+import BlogPost from './pages/blog-details-page.jsx'
+import CaseStudyDetails from './pages/case-study-details-page.jsx'
 
 
 
@@ -37,6 +40,9 @@ ReactDOM.render((
                         <Route path="/resources" component={Resources} />
                         <Route path="/rich-text" component={RichTextPage} />
                         <Route path="/blog-listing" component={BlogListing} />
+                        <Route path="/team" component={Team} />
+                        <Route path="/blog-details-page" component={BlogPost} />
+                        <Route path="/case-study-details-page" component={CaseStudyDetails} />
 
                         <Route component={NotFound} />
                     </Switch>
