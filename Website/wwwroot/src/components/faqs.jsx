@@ -70,7 +70,7 @@ class FaqsContent extends React.Component {
     render() {
 
         return (
-            <div class="col-md-6">
+            <div className="col-md-6">
                 <div className="faq-item">
                     <h3 className="h3">{this.props.item.question}</h3>
                     <div className="content" dangerouslySetInnerHTML={{ __html: this.props.item.answer }}></div>
