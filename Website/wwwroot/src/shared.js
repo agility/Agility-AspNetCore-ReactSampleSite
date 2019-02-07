@@ -14,6 +14,9 @@ import AnimatedBg from './components/animated-bg.jsx'
 
 // -- modules
 import BlogListing from './components/blog-listing.jsx'
+import BlogPostDetails from './components/blog-post-details.jsx'
+import CaseDetails from './components/case-study-details.jsx'
+import CaseStudyContentPanel from './components/case-study-content-panel.jsx'
 import ContentPanel from './components/content-panel.jsx'
 import ComunitySummit from './components/comunity-summit.jsx'
 import Callout from './components/callout.jsx'
@@ -29,6 +32,7 @@ import LogoListing from './components/logo-listing.jsx'
 import LatestResources from './components/latest-resources.jsx'
 import LatestBlogPosts from './components/latest-blog-posts.jsx'
 import TabPanels from './components/tab-panels.jsx'
+import PeopleListing from './components/people-listing.jsx'
 import LogoCloud from './components/logo-cloud.jsx'
 import PostDetails from './components/post-details.jsx'
 import PostListing from './components/post-listing.jsx'
@@ -44,7 +48,10 @@ import ContactUs from './components/contact-us.jsx'
 
 global['Components'] = {
   BlogListing,
+  BlogPostDetails,
   FeatureBlocks,
+  CaseDetails,
+  CaseStudyContentPanel,
   ComunitySummit,
   Callout,
   EventListing,
@@ -60,6 +67,7 @@ global['Components'] = {
   LatestBlogPosts,
   LogoCloud,
   LogoListing,
+  PeopleListing,
   PostDetails,
   PostListing,
   CaseStudyDetails,

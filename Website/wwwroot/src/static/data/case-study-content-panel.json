@@ -1,0 +1,25 @@
+{
+  "fgColor": "#2a3846",
+  "bgColor": "#1ab26b",
+  "studyImage": {
+    "url": "dist/img/spotify_white.png"
+  },
+  "title": "Case Study Name",
+  "textBlob": "<p>Agility is a content first Headless CMS. Start with your most valuable asset, your content. Then Build, Deploy and Engage your customers with a platform that manages your content across all your digital channels.</p>",
+  "image": {
+    "guid": null,
+    "managerID": null,
+    "blob": null,
+    "itemOrder": 2,
+    "fileName": "https://cdn.agilitycms.com/agility-cms-2019/Attachments/NewItems/167aa57490ef7aab96d78000dce42cac_20190116160727_0.jpg",
+    "label": "",
+    "target": "",
+    "url": "https://cdn.agilitycms.com/agility-cms-2019/Attachments/NewItems/167aa57490ef7aab96d78000dce42cac_20190116160727_0.jpg",
+    "fileSize": 0,
+    "height": 855,
+    "width": 600,
+    "thumbnails": {}
+  },
+  "imagePosition": "right",
+  "key": 7
+}

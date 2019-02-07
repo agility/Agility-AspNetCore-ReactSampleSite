@@ -11,8 +11,8 @@
         "url": "dist/img/case1.png"
       },
       "app": {
-        "href": "#",
-        "target": "_blank",
+        "href": "/case-study-details-page",
+        "target": "_self",
         "image": {
           "url": "dist/img/spotify.png"
         }
@@ -38,8 +38,8 @@
         "url": "dist/img/case2.png"
       },
       "app": {
-        "href": "#",
-        "target": "_blank",
+        "href": "/case-study-details-page",
+        "target": "_self",
         "image": {
           "url": "dist/img/lyat.png"
         }
@@ -71,8 +71,8 @@
         "url": "dist/img/case3.png"
       },
       "app": {
-        "href": "#",
-        "target": "_blank",
+        "href": "/case-study-details-page",
+        "target": "_self",
         "image": {
           "url": "dist/img/m2m.jpg"
         }

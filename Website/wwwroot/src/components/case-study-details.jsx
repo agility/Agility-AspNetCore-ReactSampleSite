@@ -1,18 +1,82 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-
 import './case-study-details.sass'
+import './rich-text.sass'
 
+class CaseDetails extends React.Component {
 
-class CaseStudyDetails extends React.Component {
     render() {
+
+        var fgColor = this.props.fgColor;
+        const metrics = this.props.metrics.map(function (item) {
+            return (
+                <div class="metrics-item" style={{color: fgColor}}>
+                    <h4 className="h4" dangerouslySetInnerHTML={{__html: item.value}}></h4>
+                    <hr style={{backgroundColor: fgColor}}/>
+                    <span>{item.title}</span>
+                </div>
+            );
+        });
+
         return (
-            <div className="caseStudyDetails">
-                <h1>{this.props.item.title}</h1>
-                <h2> Case Study Detail</h2>
-            </div>
+
+            <section className="p-w case-study-details">
+                <div className="canvas" id="canvas-4">
+                    <div className="img">
+                        <div className="item item-tangle-top-5 twentyone w58">
+                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
+                        </div>
+                        <div className="item item-tangle-top-5 twentytwo w58 rotate">
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
+                        </div>
+                        <div className="item item-tangle-top-5 twentythree w58">
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
+                        </div>
+                        <div className="item item-tangle-top-5 twentyfour w58 rotate">
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
+                        </div>
+                        <div className="item item-tangle-top-5 twentyfive w58">
+                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
+                        </div>
+                        <div className="item item-tangle-top-5 twentysix w58">
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
+                        </div>
+                        <div className="item item-tangle-top-5 twentyseven w58">
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
+                        </div>
+                        <div className="item item-tangle-top-5 twentyeight w58">
+                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
+                        </div>
+                        <div className="item item-tangle-top-5 twentynine w58">
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
+                        </div>
+                        <div className="item item-tangle-top-5 thirty w58 rotate">
+                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div className="row-my">
+                    <div className="col-md-12">
+                        <div className="case-study-top d-flex jc-sb">
+                            {metrics}
+                        </div>
+                    </div>
+                    <div className="col-md-8">
+                        <div className="case-study-left">
+                            <div className="rich-text" dangerouslySetInnerHTML={{__html: this.props.contentLeft}}></div>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div className="case-study-right">
+                            <div className="rich-text" dangerouslySetInnerHTML={{__html: this.props.contentRight}}></div>
+                            <div className="color-text"><p>{this.props.colorText}</p></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
         );
     }
 }
-export default hot(CaseStudyDetails);
-
+export default hot(CaseDetails);

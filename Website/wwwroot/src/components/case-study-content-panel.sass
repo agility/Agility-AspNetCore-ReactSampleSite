@@ -1,0 +1,69 @@
+.case-study-content-panel
+  position: relative
+  padding-top: 112px
+  padding-bottom: 160px
+  overflow: hidden
+  .canvas#canvas-5
+    top: 70px
+  &:after
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 0
+    height: 0
+    display: block
+    content: ''
+    border-bottom: 250px solid #fff
+    border-left: 100vw solid transparent
+    z-index: 5
+  .start-content,
+  .start-image
+    max-width: 50%
+    -webkit-box: 0 0 50%
+    -moz-box: 0 0 50%
+    -webkit-flex: 0 0 50%
+    -ms-flex: 0 0 50%
+    flex: 0 0 50%
+    padding-left: 16px
+    padding-right: 16px
+  .start-content
+    .image
+      margin-bottom: 55px
+      max-width: 160px
+      img
+        display: block
+        width: 100%
+        height: auto
+    .h1
+      margin-bottom: 29px
+      font-size: 24px
+      line-height: 32px
+      font-family: "Muli-Bold", sans-serif
+      color: #2a3846
+    p
+      max-width: 520px
+      font-size: 16px
+      line-height: 2
+      font-family: "Muli-Regular", sans-serif
+  .start-image
+    position: relative
+    text-align: right
+    z-index: 10
+    .image-inner
+      display: inline-block
+      -webkit-border-radius: 5px
+      -moz-border-radius: 5px
+      border-radius: 5px
+      overflow: hidden
+      -webkit-box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15)
+      -moz-box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15)
+      box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15)
+      img
+        display: block
+    &.left
+      text-align: left
+    &.left+.start-content
+      justify-content: flex-end
+      -webkit-box-pack: end
+      -moz-box-pack: end
+      -ms-flex-pack: end
