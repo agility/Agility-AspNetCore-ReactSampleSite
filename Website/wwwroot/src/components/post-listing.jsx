@@ -10,15 +10,19 @@ class PostListing extends React.Component {
             //render one tab
             return (
                 <li key={post.key} className="post">
-                    <a href={post.url}>
-                        <div className="postImage">
-                            <picture>
-                                <source srcset={post.image.srcLarge} media="(min-width: 1400px)" />
-                                <source srcset={post.image.srcMedium} media="(min-width: 800px)" />
-                                <img src={post.image.srcSmall} alt={post.image.alt} />
-                            </picture>
-                        </div>
-                    </a>
+
+                    {post.image &&
+                        <a href={post.url}>
+                            <div className="postImage">
+                                <picture>
+                                    <source srcset={post.image.srcLarge} media="(min-width: 1400px)" />
+                                    <source srcset={post.image.srcMedium} media="(min-width: 800px)" />
+                                    <img src={post.image.srcSmall} alt={post.image.alt} />
+                                </picture>
+                            </div>
+                        </a>
+                    }
+
                     <a href={post.url}>
                         <h3 className="postTitle">{post.title}</h3>
                     </a>

@@ -32,22 +32,30 @@ namespace Website.ViewComponents.Modules
 					var image = item.ListingImageOverride != null ? item.ListingImageOverride : item.PostImage;
 					var author = authorRepo.GetByID(item.AuthorID);
 
-					posts.Add(new
+					dynamic postImage = null;
+					if (image != null)
+					{
+						postImage = new
+						{
+							alt = image.Label,
+							srcSmall = $"{image.URL}?q=65&w=100",
+							srcMedium = $"{image.URL}?q=65&w=300",
+							srcLarge = $"{image.URL}?q=65&w=500"
+						};
+					}
+
+					var post = new
 					{
 						title = dp.Title,
 						excerpt = item.Excerpt,
 						date = item.Date.ToString("yyyy/MM/dd"),
 						author = author == null ? "Agility" : author.Title,
 						url = url,
-						image = new
-						{
-							alt = image.Label,
-							srcSmall = $"{image.URL}?q=65&w=100",
-							srcMedium = $"{image.URL}?q=65&w=300",
-							srcLarge = $"{image.URL}?q=65&w=500"
-						}
+						image = postImage
 
-					});
+					};
+
+					posts.Add(post);
 
 				}
 

@@ -11,35 +11,35 @@ using Agility.Web;
 
 namespace Website.ViewComponents.Modules
 {
-	public class PostDetails : ViewComponent
+	public class ResourceDetails : ViewComponent
 	{
 
-		public Task<IViewComponentResult> InvokeAsync(Module_PostDetails module)
+		public Task<IViewComponentResult> InvokeAsync(Module_ResourceDetails module)
 		{
 			return Task.Run<IViewComponentResult>(() =>
 			{
-				var post = Agility.Web.AgilityContext.GetDynamicPageItem<BlogPost>();
+				var resource = Agility.Web.AgilityContext.GetDynamicPageItem<Resource>();
+
 				var currentPage = AgilityContext.Page;
 
-				BlogCategory category = null;
+				ResourceType resourceType = null;
 				BlogAuthor author = null;
 
-				if (post.AuthorID > 0)
+				if (resource.AuthorID > 0)
 				{
-					author = post.Author.GetByID(post.AuthorID);
+					author = resource.Author.GetByID(resource.AuthorID);
 				}
 
-				if (!string.IsNullOrWhiteSpace(post.CategoriesIDs))
+				if (resource.ResourceTypeID > 0)
 				{
-					var cats = post.Categories.GetByIDs(post.CategoriesIDs);
-					if (cats.Count > 0) category = cats[0];
+					resourceType = resource.ResourceType.GetByID(resource.ResourceTypeID);
 				}
 
 
 				string description = currentPage.MetaTags;
 				if (string.IsNullOrWhiteSpace(description))
 				{
-					description = post.Excerpt.Truncate(300, "...", true, true).Replace("\"", "&quot;");
+					description = resource.Excerpt.Truncate(300, "...", true, true).Replace("\"", "&quot;");
 					currentPage.MetaTags = description;
 				}
 
@@ -48,24 +48,24 @@ namespace Website.ViewComponents.Modules
 
 				currentPage.MetaTagsRaw = Utils.SEOUtils.GetRawMetaTags(
 					existingRawTags: currentPage.MetaTagsRaw,
-					title: post.Title,
+					title: resource.Title,
 					canonicalUrl: canonicalUrl,
-					category: category?.Title,
+					category: resourceType?.Title,
 					description: description,
-					image: post.PostImage
+					image: resource.Image
 				);
+
 
 				var viewModel = new
 				{
-					categoryLabel = module.CategoryLabel,
-					relatedPostsLabel = module.RelatedPostsLabel,
-					relatedPostsCount = module.RelatedPostsCount,
-					post = post.ToFrontendProps(),
-					category = category.ToFrontendProps(),
-					author = author.ToFrontendProps()
+
+					resource = resource.ToFrontendProps(),
+					author = author,
+					resourceType = resourceType
 				};
 
-				return new ReactViewComponentResult("Components.PostDetails", viewModel);
+
+				return new ReactViewComponentResult("Components.ResourceDetails", viewModel);
 			});
 		}
 

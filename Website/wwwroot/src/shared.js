@@ -36,6 +36,9 @@ import PeopleListing from './components/people-listing.jsx'
 import LogoCloud from './components/logo-cloud.jsx'
 import PostDetails from './components/post-details.jsx'
 import PostListing from './components/post-listing.jsx'
+import ResourceDetails from './components/resource-details.jsx'
+import CaseStudyDetails from './components/case-study-details.jsx'
+
 import TestimonialsListing from './components/testimonials-listing.jsx'
 import RichText from './components/rich-text.jsx'
 import SectionHeading from './components/section-heading.jsx'
@@ -67,6 +70,8 @@ global['Components'] = {
   PeopleListing,
   PostDetails,
   PostListing,
+  CaseStudyDetails,
+  ResourceDetails,
   TestimonialsListing,
   RichText,
   SectionHeading,
