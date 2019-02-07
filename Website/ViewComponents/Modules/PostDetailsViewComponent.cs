@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,23 +19,50 @@ namespace Website.ViewComponents.Modules
 			return Task.Run<IViewComponentResult>(() =>
 			{
 				var post = Agility.Web.AgilityContext.GetDynamicPageItem<BlogPost>();
-
-
 				var currentPage = AgilityContext.Page;
 
-				var description = currentPage.MetaTags;
-				if (string.IsNullOrWhiteSpace(description))
+				BlogCategory category = null;
+				BlogAuthor author = null;
+
+				if (post.AuthorID > 0)
 				{
-					description = post.Excerpt.Truncate(300, "...", true, true);
+					author = post.Author.GetByID(post.AuthorID);
 				}
 
+				if (!string.IsNullOrWhiteSpace(post.CategoriesIDs))
+				{
+					var cats = post.Categories.GetByIDs(post.CategoriesIDs);
+					if (cats.Count > 0) category = cats[0];
+				}
+
+
+				string description = currentPage.MetaTags;
+				if (string.IsNullOrWhiteSpace(description))
+				{
+					description = post.Excerpt.Truncate(300, "...", true, true).Replace("\"", "&quot;");
+					currentPage.MetaTags = description;
+				}
+
+				string canonicalUrl = Request.GetEncodedUrl();
+				if (canonicalUrl.Contains("?")) canonicalUrl = canonicalUrl.Substring(0, canonicalUrl.IndexOf("?"));
+
+				currentPage.MetaTagsRaw = Utils.SEOUtils.GetRawMetaTags(
+					existingRawTags: currentPage.MetaTagsRaw,
+					title: post.Title,
+					canonicalUrl: canonicalUrl,
+					category: category?.Title,
+					description: description,
+					image: post.PostImage
+				);
 
 				var viewModel = new
 				{
 					categoryLabel = module.CategoryLabel,
 					relatedPostsLabel = module.RelatedPostsLabel,
 					relatedPostsCount = module.RelatedPostsCount,
-					post = post.ToFrontendProps()
+					post = post.ToFrontendProps(),
+					category = category.ToFrontendProps(),
+					author = author.ToFrontendProps()
 				};
 
 				return new ReactViewComponentResult("Components.PostDetails", viewModel);

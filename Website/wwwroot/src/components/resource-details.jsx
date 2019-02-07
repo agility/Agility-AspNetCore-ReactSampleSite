@@ -1,17 +1,25 @@
 import React from 'react';
+import moment from 'moment';
 import { hot } from 'react-hot-loader/root'
 import './resource-details.sass'
 
 
 class ResourceDetails extends React.Component {
     render() {
-        console.log(this.props);
+
         return (
             <div className="resourceDetails">
+                {this.props.resourceType &&
+                    <div>{this.props.resourceType.title}</div>
+                }
+
                 <h1>{this.props.resource.title}</h1>
                 <h2>{this.props.resource.subTitle}</h2>
-                <h3>{this.props.resource.authorName}</h3>
-                <div>{this.props.resource.date}</div>
+
+                {this.props.author &&
+                    <div>{this.props.author.title}</div>
+                }
+                <div>{moment(this.props.resource.date).format("LL")}</div>
                 {this.props.resource.image &&
                     <div>
                         <picture>
