@@ -4,7 +4,6 @@ import './header.sass'
 import SignIn from './sign-in.jsx'
 import Hamburger from './hamburger.jsx'
 
-
 class Header extends React.Component {
     constructor() {
         super()
@@ -13,11 +12,21 @@ class Header extends React.Component {
         //dropdown Menu
         var hiddenParent = document.querySelector('.has-children');
         hiddenParent.addEventListener('click', function (e) {
-
             this.classList.toggle('open');
         });
     }
+
     render() {
+
+        var url = document.location;
+        url = url.toString();
+        url = url.split('/');
+        var curUrl = url[3];
+        if ('' == curUrl || 'product' == curUrl || 'community' == curUrl || 'partners' == curUrl) {
+            var headerClass = "header p-w";
+        } else  {
+            headerClass = "header p-w shadow";
+        }
 
         const renderMenu = (menu, level) => {
             let links = []
@@ -60,10 +69,9 @@ class Header extends React.Component {
         return (
 
             <div>
-
                 <SignIn preHeaderLinks={this.props.preHeaderLinks} primaryButton={this.props.primaryButton} />
                 <Hamburger />
-                <header className="header p-w">
+                <header className={headerClass}>
                     <div className="header-logo">
                         <a href="/"><img src={this.props.logo.url} alt={this.props.logo.label} /></a>
                     </div>
@@ -77,6 +85,5 @@ class Header extends React.Component {
         );
     }
 }
-
 export default hot(Header);
 
