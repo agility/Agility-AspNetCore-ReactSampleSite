@@ -9,13 +9,23 @@ class ResponsiveImage extends React.Component {
 	}
 
 	render() {
+		let image = this.props.img;
+		if (!image) return null;
 
-		let url = this.props.url;
-		let alt = this.props.alt;
+		let url = image.url;
+		let alt = image.label;
 
 		const sources = this.props.breaks.map(res => {
+
+			let media = "";
+			if (res.max) {
+				media = "(max-width: " + res.max + "px)";
+			} else if (res.min) {
+				media = "(max-width: " + res.min + "px)";
+			}
+
 			return (
-				<source srcSet={url + "?w=" + res.w} media={"(min-width: " + res.m + "px)"} />
+				<source srcSet={url + "?w=" + res.w} media={media} />
 			)
 		});
 

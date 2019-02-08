@@ -39,7 +39,7 @@ namespace Website.ViewComponents.Modules
 				string description = currentPage.MetaTags;
 				if (string.IsNullOrWhiteSpace(description))
 				{
-					description = post.Excerpt.Truncate(300, "...", true, true).Replace("\"", "&quot;");
+					description = post.Excerpt.Truncate(240, "...", true, true).Replace("\"", "&quot;");
 					currentPage.MetaTags = description;
 				}
 
