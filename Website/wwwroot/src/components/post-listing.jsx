@@ -2,6 +2,7 @@ import React from 'react';
 import moment from 'moment'
 import { hot } from 'react-hot-loader/root'
 import './post-listing.sass'
+import ResponsiveImage from './responsive-image.jsx'
 
 
 class PostListing extends React.Component {
@@ -69,11 +70,7 @@ class PostListing extends React.Component {
                     {post.image &&
                         <a href={post.url}>
                             <div className="postImage">
-                                <picture>
-                                    <source srcSet={post.image.url + "?w=600"} media="(min-width: 1400px)" />
-                                    <source srcSet={post.image.url + '?w=400'} media="(min-width: 800px)" />
-                                    <img src={post.image.url} alt={post.image.alt} />
-                                </picture>
+                                <ResponsiveImage url={post.image.url} alt={post.image.label} breaks={[{ w: 600, m: 1400 }, { w: 400, m: 800 }]} />
                             </div>
                         </a>
                     }
@@ -107,4 +104,7 @@ class PostListing extends React.Component {
     }
 }
 export default hot(PostListing);
+
+
+
 
