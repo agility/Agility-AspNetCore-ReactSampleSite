@@ -87,17 +87,39 @@
     width: 70%
     margin: 0 auto
     overflow-x: hidden
-@media screen and (max-width: $std-width-minus-1)
-  .ben-items.container
-    width: 100%
-    overflow-x: visible
-@media screen and (max-width: $std-width-plus-1)
+  #nav-icon1
+    display: block
   .header .btn,
   .header .header-menu,
   .sign-in,
   .canvas,
   br
     display: none
+  .row-my
+    justify-content: center
+    -webkit-box-pack: center
+    -moz-box-pack: center
+    -ms-flex-pack: center
+    .col-md-4
+      max-width: 50%
+      -webkit-box: 0 0 50%
+      -moz-box: 0 0 50%
+      -webkit-flex: 0 0 50%
+      -ms-flex: 0 0 50%
+      flex: 0 0 50%
+    .col-md-8
+      max-width: 100%
+      -webkit-box: 0 0 100%
+      -moz-box: 0 0 100%
+      -webkit-flex: 0 0 100%
+      -ms-flex: 0 0 100%
+      flex: 0 0 100%
+@media screen and (max-width: $std-width-minus-1)
+  .ben-items.container
+    width: 100%
+    overflow-x: visible
+@media screen and (max-width: $std-width-plus-1)
+
   .btn
     font-size: 13px
 
@@ -164,7 +186,8 @@
   .features .features-toggle-tab-items .features-toggle-tab-item .content button
     margin-top: 25px
   .features
-    padding-bottom: 120px
+    padding-bottom: 60px
+    padding-top: 60px
   .friends
     h2
       margin-bottom: 23px
@@ -185,8 +208,8 @@
         width: 170px
         font-size: 12px
   .work
-    padding-top: 135px
-    padding-bottom: 112px
+    padding-top: 60px
+    padding-bottom: 60px
     h2
       margin-bottom: 15px
     p
@@ -212,13 +235,20 @@
     width: 30%
   .has-children:hover .sub-menu-icon
     transform: rotate(0)
-  #nav-icon1
-    display: block
   .benefits .ben-items-forslider
     display: flex
     >.ben-item
       max-width: 460px
-
+  .row-my
+    .col-md-4,
+    .col-md-5,
+    .col-md-7
+      max-width: 100%
+      -webkit-box: 0 0 100%
+      -moz-box: 0 0 100%
+      -webkit-flex: 0 0 100%
+      -ms-flex: 0 0 100%
+      flex: 0 0 100%
 
 
 
@@ -264,4 +294,6 @@
   .work .buttons button
     flex: 0 0 100%
     margin-bottom: 20px
+  .front-start .start-content .start-buttons .btn
+    margin-right: 15px
 

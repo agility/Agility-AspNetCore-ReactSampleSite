@@ -48,23 +48,29 @@ class CaseStudyContentPanel extends React.Component {
                         </div>
                     </div>
                     {this.props.imagePosition === 'left' &&
-                    <div className="start-image left">
+                    <div className="col-md-6 left d-flex">
+                        <div className="start-image">
                         <img src={this.props.image.url + '?w=500&h=500'} alt={this.props.image.label} />
                     </div>
+                    </div>
                     }
-
-                    <div className="start-content ai-center d-flex">
-                        <div className="sc-inner">
-                            <div className="image"><img src={this.props.studyImage.url} alt=""/></div>
-                            <h1 className="h1" style={{color: fgColor}}>{this.props.title}</h1>
-                            <div style={{color: fgColor}} dangerouslySetInnerHTML={{ __html: this.props.textBlob }} />
+                    <div className="col-md-6 ai-center d-flex">
+                        <div className="start-content">
+                            <div className="sc-inner">
+                                <div className="image"><img src={this.props.studyImage.url} alt=""/></div>
+                                <h1 className="h1" style={{color: fgColor}}>{this.props.title}</h1>
+                                <div style={{color: fgColor}} dangerouslySetInnerHTML={{ __html: this.props.textBlob }} />
+                            </div>
                         </div>
                     </div>
 
+
                     {this.props.imagePosition === 'right' &&
-                    <div className="start-image">
-                        <div className="image-inner">
-                            <img src={this.props.image.url + '?w=500&h=500'} alt={this.props.image.label} />
+                    <div className="col-md-6 d-flex">
+                        <div className="start-image">
+                            <div className="image-inner">
+                                <img src={this.props.image.url + '?w=500&h=500'} alt={this.props.image.label} />
+                            </div>
                         </div>
                     </div>
                     }
