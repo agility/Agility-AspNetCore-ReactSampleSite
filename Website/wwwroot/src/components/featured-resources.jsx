@@ -4,6 +4,7 @@ import './featured-resources.sass'
 
 class FeaturedResources extends React.Component {
 
+
     render() {
 
         const featuredRes = this.props.items.map(function (item) {
@@ -12,7 +13,7 @@ class FeaturedResources extends React.Component {
 
         return (
 
-            <section className="features p-w featured-resources">
+            <section className="features p-w featured-resources get-shadow">
                 <div className="canvas" id="canvas-1">
                     <div className="img">
                         <div className="item item-tangle-top-3 twentyone w58">

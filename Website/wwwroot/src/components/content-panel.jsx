@@ -14,7 +14,7 @@ class ContentPanel extends React.Component {
     render() {
 
         return (
-            <section id="sec-1" className="front-start p-w">
+            <section className="front-start p-w">
                 <div className="canvas" id="canvas-1">
                     <div className="img">
                         {/* <div className="item item-tangle-top one w58">

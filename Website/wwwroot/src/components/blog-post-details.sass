@@ -1,5 +1,7 @@
 .blog-post-details
   padding-bottom: 80px
+  @media (max-width: 767px)
+    padding-bottom: 0
   .rich-text
     .container.p-w-small
       > .h4
@@ -8,6 +10,9 @@
         margin-left: -208px
         margin-right: -208px
         margin-bottom: 24px
+        @media (max-width: 1216px)
+          margin-left: 0
+          margin-right: 0
       .meta
         margin-bottom: 32px
         .author
