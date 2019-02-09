@@ -15,7 +15,7 @@ class ResponsiveImage extends React.Component {
 		let url = image.url;
 		let alt = image.label;
 
-		const sources = this.props.breaks.map(res => {
+		const sources = this.props.breaks.map((res, index) => {
 
 			let media = "";
 			if (res.max) {
@@ -25,7 +25,7 @@ class ResponsiveImage extends React.Component {
 			}
 
 			return (
-				<source srcSet={url + "?w=" + res.w} media={media} />
+				<source key={index + '-img'} srcSet={url + "?w=" + res.w} media={media} />
 			)
 		});
 
