@@ -9,6 +9,11 @@ class PostListing extends React.Component {
     constructor(props) {
         super(props)
 
+
+
+        this.loadMore = this.loadMore.bind(this);
+        this.handleHistoryEvent = this.handleHistoryEvent.bind(this);
+        //init state from props
         this.state = {
             posts: this.props.posts,
             skip: this.props.skip,
@@ -16,12 +21,40 @@ class PostListing extends React.Component {
             loadingMore: false,
             noMoreData: false
         };
-        this.loadMore = this.loadMore.bind(this);
+
+    }
+
+    componentWillMount() {
 
     }
 
     componentDidMount() {
+        this.handleHistoryEvent();
+    }
 
+    handleHistoryEvent() {
+        var self = this;
+
+        if (window != undefined
+            && window
+            && window.history
+            && window.history.state) {
+
+            //if we have some posts listed in the state, use them here
+            let newState = window.history.state;
+            if (newState.posts && newState.posts.length > 0) {
+
+                self.setState(prevState => ({
+                    posts: newState.posts,
+                    loadingMore: false,
+                    skip: newState.skip,
+                    take: newState.take,
+                    noMoreData: newState.noModeData
+                }));
+
+
+            }
+        }
     }
 
 
@@ -50,9 +83,8 @@ class PostListing extends React.Component {
                     noMoreData: noMore
                 }));
 
-                //set the url in the browser...
-                let url = location.pathname + "?skip=" + this.state.skip;
-                window.history.pushState({ path: url }, '', url);
+                //set the state in the browser in case we come back
+                window.history.replaceState(this.state, null);
 
             }).catch(err => {
                 console.warn("An error occurred while loading more data...", err);
@@ -68,39 +100,11 @@ class PostListing extends React.Component {
     render() {
 
 
-        const renderPost = (post) => {
-            //render one tab
-            return (
-                <li key={post.key} className="post">
-
-                    {post.image &&
-                        <a href={post.url}>
-                            <div className="postImage">
-                                <ResponsiveImage url={post.image.url} alt={post.image.label} breaks={[{ w: 600, m: 1400 }, { w: 400, m: 800 }]} />
-                            </div>
-                        </a>
-                    }
-
-                    <a href={post.url}>
-                        <h3 className="postTitle">{post.title}</h3>
-                    </a>
-
-                    <h4 className="postAuthorDate">{post.author} - {moment(post.date).format("LL")}</h4>
-                    <div className="postExcerpt" dangerouslySetInnerHTML={{ __html: post.excerpt }} ></div>
-                </li>
-            );
-        }
-
-        // const postsX = this.state.posts.map(renderPost);
-
         var posts = this.state.posts.map(item => {
             return <PostListItem item={item} />
         });
 
         return (
-
-
-
             <div className="left-col">
 
                 {posts}
@@ -117,8 +121,6 @@ class PostListing extends React.Component {
     }
 }
 export default hot(PostListing);
-
-
 
 
 class PostListItem extends React.Component {
@@ -140,7 +142,7 @@ class PostListItem extends React.Component {
 
                             <img src={this.props.item.author.image ? this.props.item.author.image.url + '?w=100' : "https://static.agilitycms.com/authors/blank-head-profile-pic.jpg?w=100"} alt="" />
                         </div>
-                        <h5 class="h5">{this.props.item.author.title}</h5>
+                        <h5 className="h5">{this.props.item.author.title}</h5>
                     </div>
                     <div className="text"><p>{this.props.item.excerpt}</p></div>
                     <span className="date">{moment(this.props.item.date).format("LL")}</span>
