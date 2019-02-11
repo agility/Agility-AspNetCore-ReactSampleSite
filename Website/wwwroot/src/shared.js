@@ -27,6 +27,7 @@ import FeatureBlocksWithText from './components/feature-blocks-w-text.jsx'
 import FeaturedResources from './components/featured-resources.jsx'
 import FeaturedCaseStudies from './components/featured-case-studies.jsx'
 import FAQs from './components/faqs.jsx'
+import FormPage from './components/form.jsx'
 import InfoBox from './components/info-box.jsx'
 import LogoListing from './components/logo-listing.jsx'
 import LatestResources from './components/latest-resources.jsx'
@@ -60,6 +61,7 @@ global['Components'] = {
   FeaturedResources,
   FeaturedCaseStudies,
   FAQs,
+  FormPage,
   InfoBox,
   ContentPanel,
   TabPanels,

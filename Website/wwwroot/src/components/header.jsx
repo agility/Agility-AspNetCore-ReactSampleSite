@@ -22,7 +22,7 @@ class Header extends React.Component {
         url = url.toString();
         url = url.split('/');
         var curUrl = url[3];
-        if ('' == curUrl || 'product' == curUrl || 'community' == curUrl || 'partners' == curUrl) {
+        if ('' == curUrl || 'product' == curUrl || 'community' == curUrl || 'partners' == curUrl || 'form-page-purple' == curUrl || 'form-page-yellow' == curUrl) {
             var headerClass = "header p-w";
         } else  {
             headerClass = "header p-w shadow";
