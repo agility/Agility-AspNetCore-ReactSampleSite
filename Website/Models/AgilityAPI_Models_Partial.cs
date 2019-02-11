@@ -8,8 +8,56 @@ using Website.Extensions;
 using Agility.Web.Extensions;
 namespace Website.AgilityModels
 {
+
+	public partial class BlogAuthor
+	{
+		public const string BlankImage = "https://static.agilitycms.com/authors/blank-head-profile-pic.jpg";
+	}
+
 	public partial class BlogPost
 	{
+		public dynamic GetDetailsViewModel()
+		{
+
+			BlogCategory category = null;
+			BlogAuthor author = null;
+
+			if (!string.IsNullOrWhiteSpace(CategoriesIDs))
+			{
+				var cats = Categories.GetByIDs(CategoriesIDs);
+				if (cats.Count > 0) category = cats[0];
+			}
+
+			if (AuthorID > 0)
+			{
+				author = Author.GetByID(AuthorID);
+			}
+
+			if (author == null)
+			{
+				author = new BlogAuthor()
+				{
+					Title = AuthorTitle,
+					Image = new Attachment()
+					{
+						URL = BlogAuthor.BlankImage
+					}
+				};
+			}
+
+
+
+			var viewModel = new
+			{
+				post = this.ToFrontendProps(),
+				category = category?.ToFrontendProps(),
+				author = author.ToFrontendProps()
+			};
+
+			return viewModel;
+
+		}
+
 		public dynamic GetListingViewModel()
 		{
 			DynamicPageItem dp = Data.GetDynamicPageItem("~/posts/post-details", this.ContentReferenceName, this.Row);
@@ -36,7 +84,7 @@ namespace Website.AgilityModels
 			{
 				author.Image = new Attachment()
 				{
-					URL = "https://static.agilitycms.com/authors/blank-head-profile-pic.jpg"
+					URL = BlogAuthor.BlankImage
 				};
 			}
 
@@ -48,9 +96,9 @@ namespace Website.AgilityModels
 				title = dp.Title,
 				excerpt = excerpt,
 				date = this.Date,
-				author = author.ToFrontendProps(),
+				author = author,
 				url = url,
-				image = image.ToFrontendProps()
+				image = image
 
 			};
 
@@ -58,5 +106,4 @@ namespace Website.AgilityModels
 
 		}
 	}
-
 }
