@@ -21,20 +21,15 @@ namespace Website.ViewComponents.Modules
 				var post = Agility.Web.AgilityContext.GetDynamicPageItem<BlogPost>();
 				var currentPage = AgilityContext.Page;
 
-				BlogCategory category = null;
-				BlogAuthor author = null;
+				var viewModel = post.GetDetailsViewModel();
 
-				if (post.AuthorID > 0)
-				{
-					author = post.Author.GetByID(post.AuthorID);
-				}
+				BlogCategory category = null;
 
 				if (!string.IsNullOrWhiteSpace(post.CategoriesIDs))
 				{
 					var cats = post.Categories.GetByIDs(post.CategoriesIDs);
 					if (cats.Count > 0) category = cats[0];
 				}
-
 
 				string description = currentPage.MetaTags;
 				if (string.IsNullOrWhiteSpace(description))
@@ -55,15 +50,7 @@ namespace Website.ViewComponents.Modules
 					image: post.PostImage
 				);
 
-				var viewModel = new
-				{
-					categoryLabel = module.CategoryLabel,
-					relatedPostsLabel = module.RelatedPostsLabel,
-					relatedPostsCount = module.RelatedPostsCount,
-					post = post.ToFrontendProps(),
-					category = category.ToFrontendProps(),
-					author = author.ToFrontendProps()
-				};
+
 
 				return new ReactViewComponentResult("Components.PostDetails", viewModel);
 			});
