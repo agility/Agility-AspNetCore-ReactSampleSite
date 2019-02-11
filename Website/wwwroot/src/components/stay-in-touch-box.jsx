@@ -5,9 +5,9 @@ import './stay-in-touch-box.sass'
 class StayInTouchBox extends React.Component {
 
     render() {
-
-        var four = this.props.items.map(function (items){
-            return <StayInTouchBoxContent item={items} />
+        console.log(this.props);
+        var four = this.props.links.map(function (item) {
+            return <StayInTouchBoxContent item={item} />
         });
 
         return (
@@ -26,9 +26,14 @@ export default hot(StayInTouchBox);
 
 class StayInTouchBoxContent extends React.Component {
     render() {
-
+        console.log(this.props.item)
         return (
-            <a href={this.props.item.href} target="_blank"><img src={this.props.item.ico.url} alt=""/><span>{this.props.item.title}</span></a>
+            <a     key={this.props.item.key} 
+                  href={this.props.item.followURL.href} 
+                target={this.props.item.followURL.target}>
+                <img src={this.props.item.logo.url} alt="" />
+                <span>{this.props.item.title}</span>
+            </a>
         );
     }
 }
