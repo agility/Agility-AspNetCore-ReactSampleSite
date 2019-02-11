@@ -14,6 +14,8 @@ import FooterProps from './data/footer.json' //the footer data
 //static pages for frontend development
 import Home from './pages/home.jsx'
 import Product from './pages/product.jsx'
+import Form from './pages/form-page-purple.jsx'
+import FormYellow from './pages/form-page-yellow.jsx'
 import Community from './pages/community.jsx'
 import Partners from './pages/partners.jsx'
 import Resources from './pages/resources.jsx'
@@ -43,6 +45,8 @@ ReactDOM.render((
                         <Route path="/team" component={Team} />
                         <Route path="/blog-details-page" component={BlogPost} />
                         <Route path="/case-study-details-page" component={CaseStudyDetails} />
+                        <Route path="/form-page-purple" component={Form} />
+                        <Route path="/form-page-yellow" component={FormYellow} />
 
                         <Route component={NotFound} />
                     </Switch>

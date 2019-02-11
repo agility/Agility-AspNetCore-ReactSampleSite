@@ -1,0 +1,12 @@
+<svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+ <title>ic/arrow/down</title>
+
+ <g>
+  <title>background</title>
+  <rect x="-1" y="-1" width="26" height="26" id="canvas_background" fill="none"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <path d="m2.667,7.889a0.685,0.685 0 0 1 -0.205,-0.496a0.702,0.702 0 0 1 1.197,-0.496l8.717,8.718l8.717999,-8.718a0.702,0.702 0 0 1 0.990999,0.992l-9.212999,9.214001a0.702,0.702 0 0 1 -0.992,0l-9.213,-9.214001z" fill="#9fa7b0" stroke="#9fa7b0" stroke-width="0.5" id="svg_1"/>
+ </g>
+</svg>

@@ -17,7 +17,7 @@ class Resources extends Component {
     render() {
 
         return (
-            <div id="resource-page" className="header-shadow">
+            <div id="resource-page">
                 <FeaturedResources {...FeaturedResourcesProps } />
                 <LatestResources {...LatestResourcesProps } />
                 <FeaturedCaseStudies {...FeaturedCaseStudiesProps } />
