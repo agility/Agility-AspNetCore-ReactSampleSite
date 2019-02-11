@@ -2,26 +2,61 @@ import React from 'react';
 import moment from 'moment'
 import { hot } from 'react-hot-loader/root'
 import './post-listing.sass'
+import ResponsiveImage from './responsive-image.jsx'
 
 
 class PostListing extends React.Component {
     constructor(props) {
         super(props)
 
+
+
+        this.loadMore = this.loadMore.bind(this);
+        this.handleHistoryEvent = this.handleHistoryEvent.bind(this);
+        //init state from props
         this.state = {
             posts: this.props.posts,
-            skip: 0,
+            skip: this.props.skip,
             take: this.props.take,
             loadingMore: false,
             noMoreData: false
         };
-        this.loadMore = this.loadMore.bind(this);
+
+    }
+
+    componentWillMount() {
 
     }
 
     componentDidMount() {
-
+        this.handleHistoryEvent();
     }
+
+    handleHistoryEvent() {
+        var self = this;
+
+        if (window != undefined
+            && window
+            && window.history
+            && window.history.state) {
+
+            //if we have some posts listed in the state, use them here
+            let newState = window.history.state;
+            if (newState.posts && newState.posts.length > 0) {
+
+                self.setState(prevState => ({
+                    posts: newState.posts,
+                    loadingMore: false,
+                    skip: newState.skip,
+                    take: newState.take,
+                    noMoreData: newState.noModeData
+                }));
+
+
+            }
+        }
+    }
+
 
     loadMore(event) {
 
@@ -48,6 +83,9 @@ class PostListing extends React.Component {
                     noMoreData: noMore
                 }));
 
+                //set the state in the browser in case we come back
+                window.history.replaceState(this.state, null);
+
             }).catch(err => {
                 console.warn("An error occurred while loading more data...", err);
                 this.setState(prevState => ({
@@ -61,46 +99,22 @@ class PostListing extends React.Component {
 
     render() {
 
-        const renderPost = (post) => {
-            //render one tab
-            return (
-                <li key={post.key} className="post">
 
-                    {post.image &&
-                        <a href={post.url}>
-                            <div className="postImage">
-                                <picture>
-                                    <source srcSet={post.image.url + "?w=600"} media="(min-width: 1400px)" />
-                                    <source srcSet={post.image.url + '?w=400'} media="(min-width: 800px)" />
-                                    <img src={post.image.url} alt={post.image.alt} />
-                                </picture>
-                            </div>
-                        </a>
-                    }
-
-                    <a href={post.url}>
-                        <h3 className="postTitle">{post.title}</h3>
-                    </a>
-
-                    <h4 className="postAuthorDate">{post.author} - {moment(post.date).format("LL")}</h4>
-                    <div className="postExcerpt" dangerouslySetInnerHTML={{ __html: post.excerpt }} ></div>
-                </li>
-            );
-        }
-
-        //loop all the tabs and render them
-        const posts = this.state.posts.map(renderPost);
+        var posts = this.state.posts.map(item => {
+            return <PostListItem item={item} />
+        });
 
         return (
-            <div>
-                <ul className="postListing">
-                    {posts}
-                </ul>
+            <div className="left-col">
+
+                {posts}
+
                 {this.state.loadingMore &&
-                    <div>Loading...</div>
+                    <div><a className="btn" disabled> Loading... </a></div>
                 }
                 {!this.state.loadingMore && !this.state.noMoreData &&
-                    <div><a href="#" onClick={this.loadMore}> Load More</a></div>
+
+                    <div><a href="#" onClick={this.loadMore} className="btn"> Load More</a></div>
                 }
             </div>
         );
@@ -108,3 +122,32 @@ class PostListing extends React.Component {
 }
 export default hot(PostListing);
 
+
+class PostListItem extends React.Component {
+    render() {
+
+        return (
+            <div className="blog-post" key={this.props.item.key}>
+                {this.props.item.image &&
+                    <div className="image">
+                        <a href={this.props.item.url}>
+                            <ResponsiveImage img={this.props.item.image}
+                                breaks={[{ w: 640, max: 640 }, { w: 780, max: 800 }]} /></a>
+                    </div>
+                }
+                <div className="content">
+                    <h3 className="h3"><a href={this.props.item.url}>{this.props.item.title}</a></h3>
+                    <div className="author">
+                        <div className="author-image">
+
+                            <img src={this.props.item.author.image ? this.props.item.author.image.url + '?w=100' : "https://static.agilitycms.com/authors/blank-head-profile-pic.jpg?w=100"} alt="" />
+                        </div>
+                        <h5 className="h5">{this.props.item.author.title}</h5>
+                    </div>
+                    <div className="text"><p>{this.props.item.excerpt}</p></div>
+                    <span className="date">{moment(this.props.item.date).format("LL")}</span>
+                </div>
+            </div>
+        );
+    }
+}

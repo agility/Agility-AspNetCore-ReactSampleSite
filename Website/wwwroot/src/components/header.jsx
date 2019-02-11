@@ -10,23 +10,28 @@ class Header extends React.Component {
     }
     componentDidMount() {
         //dropdown Menu
-        var hiddenParent = document.querySelector('.has-children');
-        hiddenParent.addEventListener('click', function (e) {
-            this.classList.toggle('open');
-        });
+        if (document) {
+            var hiddenParent = document.querySelector('.has-children');
+            hiddenParent.addEventListener('click', function (e) {
+                this.classList.toggle('open');
+            });
+        }
     }
 
     render() {
 
-        var url = document.location;
-        url = url.toString();
-        url = url.split('/');
-        var curUrl = url[3];
-        if ('' == curUrl || 'product' == curUrl || 'community' == curUrl || 'partners' == curUrl || 'form-page-purple' == curUrl || 'form-page-yellow' == curUrl) {
-            var headerClass = "header p-w";
-        } else  {
-            headerClass = "header p-w shadow";
-        }
+        let headerClass = "header p-w shadow";
+
+        //MOD: JOEL V - THIS BREAKS SERVER RENDERING - should be handled in css
+        // var url = "";//document.location;
+        // url = url.toString();
+        // url = url.split('/');
+        // var curUrl = url[3];
+        // if ('' == curUrl || 'product' == curUrl || 'community' == curUrl || 'partners' == curUrl) {
+        //     var headerClass = "header p-w";
+        // } else  {
+        //     ;
+        // }
 
         const renderMenu = (menu, level) => {
             let links = []
