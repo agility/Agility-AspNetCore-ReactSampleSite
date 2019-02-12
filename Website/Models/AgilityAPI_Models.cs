@@ -151,6 +151,19 @@ namespace Website.AgilityModels
 		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
 
 	}
+	public partial class CalloutItem : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
+		private string __caption = null;
+		private bool __caption_set = false;
+		public virtual string Caption { get { if (!__caption_set) __caption = GetFieldValue<string>("Caption"); __caption_set = true; return __caption; } set { __caption = value; __caption_set = true; } }
+		private string __link = null;
+		private bool __link_set = false;
+		public virtual string Link { get { if (!__link_set) __link = GetFieldValue<string>("Link"); __link_set = true; return __link; } set { __link = value; __link_set = true; } }
+
+	}
 	public partial class CaseStudy : Agility.Web.AgilityContentItem
 	{
 		private string __title = null;
@@ -227,12 +240,14 @@ namespace Website.AgilityModels
 		private string __subtitle = null;
 		private bool __subtitle_set = false;
 		public virtual string SubTitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("SubTitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true; } }
-		private string __address = null;
-		private bool __address_set = false;
-		public virtual string Address { get { if (!__address_set) __address = GetFieldValue<string>("Address"); __address_set = true; return __address; } set { __address = value; __address_set = true; } }
-		private DateTime __date;
-		private bool __date_set = false;
-		public virtual DateTime Date { get { if (!__date_set) __date = GetFieldValue<DateTime>("Date"); __date_set = true; return __date; } set { __date = value; __date_set = true; } }
+		private IAgilityContentRepository<EventType> __eventtype = null;
+		public virtual IAgilityContentRepository<EventType> EventType { get { if (__eventtype == null) __eventtype = GetLinkedContent<EventType>("EventType"); return __eventtype; } set { __eventtype = value; } }
+		private int __eventtypeid;
+		private bool __eventtypeid_set = false;
+		public virtual int EventTypeID { get { if (!__eventtypeid_set) __eventtypeid = GetFieldValue<int>("EventTypeID"); __eventtypeid_set = true; return __eventtypeid; } set { __eventtypeid = value; __eventtypeid_set = true; } }
+		private string __eventtypename = null;
+		private bool __eventtypename_set = false;
+		public virtual string EventTypeName { get { if (!__eventtypename_set) __eventtypename = GetFieldValue<string>("EventTypeName"); __eventtypename_set = true; return __eventtypename; } set { __eventtypename = value; __eventtypename_set = true; } }
 		private int __organizerid;
 		private bool __organizerid_set = false;
 		public virtual int OrganizerID { get { if (!__organizerid_set) __organizerid = GetFieldValue<int>("OrganizerID"); __organizerid_set = true; return __organizerid; } set { __organizerid = value; __organizerid_set = true; } }
@@ -241,6 +256,12 @@ namespace Website.AgilityModels
 		public virtual string OrganizerName { get { if (!__organizername_set) __organizername = GetFieldValue<string>("OrganizerName"); __organizername_set = true; return __organizername; } set { __organizername = value; __organizername_set = true; } }
 		private IAgilityContentRepository<BlogAuthor> __organizer = null;
 		public virtual IAgilityContentRepository<BlogAuthor> Organizer { get { if (__organizer == null) __organizer = GetLinkedContent<BlogAuthor>("Organizer"); return __organizer; } set { __organizer = value; } }
+		private string __address = null;
+		private bool __address_set = false;
+		public virtual string Address { get { if (!__address_set) __address = GetFieldValue<string>("Address"); __address_set = true; return __address; } set { __address = value; __address_set = true; } }
+		private DateTime __date;
+		private bool __date_set = false;
+		public virtual DateTime Date { get { if (!__date_set) __date = GetFieldValue<DateTime>("Date"); __date_set = true; return __date; } set { __date = value; __date_set = true; } }
 		private string __externallink = null;
 		private bool __externallink_set = false;
 		public virtual string ExternalLink { get { if (!__externallink_set) __externallink = GetFieldValue<string>("ExternalLink"); __externallink_set = true; return __externallink; } set { __externallink = value; __externallink_set = true; } }
@@ -249,6 +270,13 @@ namespace Website.AgilityModels
 		private string __description = null;
 		private bool __description_set = false;
 		public virtual string Description { get { if (!__description_set) __description = GetFieldValue<string>("Description"); __description_set = true; return __description; } set { __description = value; __description_set = true; } }
+
+	}
+	public partial class EventType : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
 
 	}
 	public partial class FaqItem : Agility.Web.AgilityContentItem
@@ -385,6 +413,21 @@ namespace Website.AgilityModels
 		private string __country = null;
 		private bool __country_set = false;
 		public virtual string Country { get { if (!__country_set) __country = GetFieldValue<string>("Country"); __country_set = true; return __country; } set { __country = value; __country_set = true; } }
+
+	}
+	public partial class Person : Agility.Web.AgilityContentItem
+	{
+		private string __fullname = null;
+		private bool __fullname_set = false;
+		public virtual string FullName { get { if (!__fullname_set) __fullname = GetFieldValue<string>("FullName"); __fullname_set = true; return __fullname; } set { __fullname = value; __fullname_set = true; } }
+		private string __jobtitle = null;
+		private bool __jobtitle_set = false;
+		public virtual string JobTitle { get { if (!__jobtitle_set) __jobtitle = GetFieldValue<string>("JobTitle"); __jobtitle_set = true; return __jobtitle; } set { __jobtitle = value; __jobtitle_set = true; } }
+		private string __summary = null;
+		private bool __summary_set = false;
+		public virtual string Summary { get { if (!__summary_set) __summary = GetFieldValue<string>("Summary"); __summary_set = true; return __summary; } set { __summary = value; __summary_set = true; } }
+		private Attachment __headshot = null;
+		public virtual Attachment Headshot { get { if (__headshot == null) __headshot = GetAttachment("Headshot"); return __headshot; } set { __headshot = value; } }
 
 	}
 	public partial class Podcast : Agility.Web.AgilityContentItem
@@ -524,6 +567,18 @@ namespace Website.AgilityModels
 		public virtual int CustomerID { get { if (!__customerid_set) __customerid = GetFieldValue<int>("CustomerID"); __customerid_set = true; return __customerid; } set { __customerid = value; __customerid_set = true; } }
 
 	}
+	public partial class Module_Callout : Agility.Web.AgilityContentItem
+	{
+		private int __calloutid;
+		private bool __calloutid_set = false;
+		public virtual int CalloutID { get { if (!__calloutid_set) __calloutid = GetFieldValue<int>("CalloutID"); __calloutid_set = true; return __calloutid; } set { __calloutid = value; __calloutid_set = true; } }
+		private IAgilityContentRepository<CalloutItem> __callout = null;
+		public virtual IAgilityContentRepository<CalloutItem> Callout { get { if (__callout == null) __callout = GetLinkedContent<CalloutItem>("Callout"); return __callout; } set { __callout = value; } }
+		private string __theme = null;
+		private bool __theme_set = false;
+		public virtual string Theme { get { if (!__theme_set) __theme = GetFieldValue<string>("Theme"); __theme_set = true; return __theme; } set { __theme = value; __theme_set = true; } }
+
+	}
 	public partial class Module_CaseStudyDetails : Agility.Web.AgilityContentItem
 	{
 
@@ -576,8 +631,25 @@ namespace Website.AgilityModels
 		private string __subtitle = null;
 		private bool __subtitle_set = false;
 		public virtual string SubTitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("SubTitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true; } }
+		private IAgilityContentRepository<EventType> __filterbytype = null;
+		public virtual IAgilityContentRepository<EventType> FilterByType { get { if (__filterbytype == null) __filterbytype = GetLinkedContent<EventType>("FilterByType"); return __filterbytype; } set { __filterbytype = value; } }
+		private int __filterbytypeid;
+		private bool __filterbytypeid_set = false;
+		public virtual int FilterByTypeID { get { if (!__filterbytypeid_set) __filterbytypeid = GetFieldValue<int>("FilterByTypeID"); __filterbytypeid_set = true; return __filterbytypeid; } set { __filterbytypeid = value; __filterbytypeid_set = true; } }
+		private bool __showpasteventsonly;
+		private bool __showpasteventsonly_set = false;
+		public virtual bool ShowPastEventsOnly { get { if (!__showpasteventsonly_set) __showpasteventsonly = GetFieldValue<bool>("ShowPastEventsOnly"); __showpasteventsonly_set = true; return __showpasteventsonly; } set { __showpasteventsonly = value; __showpasteventsonly_set = true; } }
 		private IAgilityContentRepository<Event> __events = null;
 		public virtual IAgilityContentRepository<Event> Events { get { if (__events == null) __events = GetLinkedContent<Event>("Events", "", "Date ", ""); return __events; } set { __events = value; } }
+		private string __viewdetailslabel = null;
+		private bool __viewdetailslabel_set = false;
+		public virtual string ViewDetailsLabel { get { if (!__viewdetailslabel_set) __viewdetailslabel = GetFieldValue<string>("ViewDetailsLabel"); __viewdetailslabel_set = true; return __viewdetailslabel; } set { __viewdetailslabel = value; __viewdetailslabel_set = true; } }
+		private string __backlabel = null;
+		private bool __backlabel_set = false;
+		public virtual string BackLabel { get { if (!__backlabel_set) __backlabel = GetFieldValue<string>("BackLabel"); __backlabel_set = true; return __backlabel; } set { __backlabel = value; __backlabel_set = true; } }
+		private string __registerlabel = null;
+		private bool __registerlabel_set = false;
+		public virtual string RegisterLabel { get { if (!__registerlabel_set) __registerlabel = GetFieldValue<string>("RegisterLabel"); __registerlabel_set = true; return __registerlabel; } set { __registerlabel = value; __registerlabel_set = true; } }
 
 	}
 	public partial class Module_Faqs : Agility.Web.AgilityContentItem
@@ -706,6 +778,18 @@ namespace Website.AgilityModels
 		private string __secondarybutton = null;
 		private bool __secondarybutton_set = false;
 		public virtual string SecondaryButton { get { if (!__secondarybutton_set) __secondarybutton = GetFieldValue<string>("SecondaryButton"); __secondarybutton_set = true; return __secondarybutton; } set { __secondarybutton = value; __secondarybutton_set = true; } }
+
+	}
+	public partial class Module_PeopleListing : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
+		private string __subtitle = null;
+		private bool __subtitle_set = false;
+		public virtual string Subtitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("Subtitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true; } }
+		private IAgilityContentRepository<Person> __people = null;
+		public virtual IAgilityContentRepository<Person> People { get { if (__people == null) __people = GetLinkedContent<Person>("People"); return __people; } set { __people = value; } }
 
 	}
 	public partial class Module_PostDetails : Agility.Web.AgilityContentItem
