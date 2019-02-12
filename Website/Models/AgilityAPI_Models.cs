@@ -207,6 +207,18 @@ namespace Website.AgilityModels
 		public virtual bool EnableBackgroundImage { get { if (!__enablebackgroundimage_set) __enablebackgroundimage = GetFieldValue<bool>("EnableBackgroundImage"); __enablebackgroundimage_set = true; return __enablebackgroundimage; } set { __enablebackgroundimage = value; __enablebackgroundimage_set = true; } }
 
 	}
+	public partial class CTABlock : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
+		private Attachment __image = null;
+		public virtual Attachment Image { get { if (__image == null) __image = GetAttachment("Image"); return __image; } set { __image = value; } }
+		private string __link = null;
+		private bool __link_set = false;
+		public virtual string Link { get { if (!__link_set) __link = GetFieldValue<string>("Link"); __link_set = true; return __link; } set { __link = value; __link_set = true; } }
+
+	}
 	public partial class Event : Agility.Web.AgilityContentItem
 	{
 		private string __title = null;
@@ -466,9 +478,6 @@ namespace Website.AgilityModels
 		private string __followurl = null;
 		private bool __followurl_set = false;
 		public virtual string FollowURL { get { if (!__followurl_set) __followurl = GetFieldValue<string>("FollowURL"); __followurl_set = true; return __followurl; } set { __followurl = value; __followurl_set = true; } }
-		private string __svgcolorfill = null;
-		private bool __svgcolorfill_set = false;
-		public virtual string SVGColorFill { get { if (!__svgcolorfill_set) __svgcolorfill = GetFieldValue<string>("SVGColorFill"); __svgcolorfill_set = true; return __svgcolorfill; } set { __svgcolorfill = value; __svgcolorfill_set = true; } }
 
 	}
 	public partial class TabPanel : Agility.Web.AgilityContentItem
@@ -545,6 +554,18 @@ namespace Website.AgilityModels
 		private int __panelid;
 		private bool __panelid_set = false;
 		public virtual int PanelID { get { if (!__panelid_set) __panelid = GetFieldValue<int>("PanelID"); __panelid_set = true; return __panelid; } set { __panelid = value; __panelid_set = true; } }
+
+	}
+	public partial class Module_CTABlocks : Agility.Web.AgilityContentItem
+	{
+		private string __heading = null;
+		private bool __heading_set = false;
+		public virtual string Heading { get { if (!__heading_set) __heading = GetFieldValue<string>("Heading"); __heading_set = true; return __heading; } set { __heading = value; __heading_set = true; } }
+		private string __subheading = null;
+		private bool __subheading_set = false;
+		public virtual string SubHeading { get { if (!__subheading_set) __subheading = GetFieldValue<string>("SubHeading"); __subheading_set = true; return __subheading; } set { __subheading = value; __subheading_set = true; } }
+		private IAgilityContentRepository<CTABlock> __ctablocks = null;
+		public virtual IAgilityContentRepository<CTABlock> CTABlocks { get { if (__ctablocks == null) __ctablocks = GetLinkedContent<CTABlock>("CTABlocks", "", "ItemOrder ", ""); return __ctablocks; } set { __ctablocks = value; } }
 
 	}
 	public partial class Module_EventListing : Agility.Web.AgilityContentItem

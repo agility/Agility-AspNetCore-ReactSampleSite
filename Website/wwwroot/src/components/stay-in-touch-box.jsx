@@ -7,7 +7,7 @@ class StayInTouchBox extends React.Component {
     render() {
         console.log(this.props);
         var four = this.props.links.map(function (item) {
-            return <StayInTouchBoxContent item={item} />
+            return <StayInTouchBoxContent item={item} key={item.key} />
         });
 
         return (
@@ -26,10 +26,10 @@ export default hot(StayInTouchBox);
 
 class StayInTouchBoxContent extends React.Component {
     render() {
-        console.log(this.props.item)
+
         return (
-            <a     key={this.props.item.key} 
-                  href={this.props.item.followURL.href} 
+            <a
+                href={this.props.item.followURL.href}
                 target={this.props.item.followURL.target}>
                 <img src={this.props.item.logo.url} alt="" />
                 <span>{this.props.item.title}</span>
