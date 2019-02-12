@@ -9,9 +9,9 @@ class InfoBox extends React.Component {
         return (
 
             <div className="info-box">
-                <h4 className="h4">{this.props.title}</h4>
+                <h4 className="h4">{this.props.heading}</h4>
                 <div className="about">
-                    <p dangerouslySetInnerHTML={{__html: this.props.content}}></p>
+                    <div dangerouslySetInnerHTML={{ __html: this.props.textBlob }}></div>
                 </div>
             </div>
 

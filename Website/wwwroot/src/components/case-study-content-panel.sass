@@ -3,6 +3,10 @@
   padding-top: 112px
   padding-bottom: 160px
   overflow: hidden
+  @media (max-width: 767px)
+    padding-top: 50px
+    padding-bottom: 50px
+    margin-bottom: 50px
   .canvas#canvas-5
     top: 70px
   &:after
@@ -16,17 +20,28 @@
     border-bottom: 250px solid #fff
     border-left: 100vw solid transparent
     z-index: 5
-  .start-content,
-  .start-image
-    max-width: 50%
-    -webkit-box: 0 0 50%
-    -moz-box: 0 0 50%
-    -webkit-flex: 0 0 50%
-    -ms-flex: 0 0 50%
-    flex: 0 0 50%
-    padding-left: 16px
-    padding-right: 16px
+    @media (max-width: 767px)
+      display: none
+  .col-md-6
+    align-items: center
+    -webkit-box-align: center
+    -moz-box-align: center
+    -ms-flex-align: center
+    &.left
+      justify-content: flex-start
+      -webkit-box-pack: start
+      -moz-box-pack: start
+      -ms-flex-pack: start
+      @media (max-width: 767px)
+        margin-bottom: 30px
+    &.left+.col-md-6
+      justify-content: flex-end
+      -webkit-box-pack: end
+      -moz-box-pack: end
+      -ms-flex-pack: end
   .start-content
+    @media (max-width: 767px)
+      margin-bottom: 30px
     .image
       margin-bottom: 55px
       max-width: 160px
@@ -60,10 +75,3 @@
       box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15)
       img
         display: block
-    &.left
-      text-align: left
-    &.left+.start-content
-      justify-content: flex-end
-      -webkit-box-pack: end
-      -moz-box-pack: end
-      -ms-flex-pack: end

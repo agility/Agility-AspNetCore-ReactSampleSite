@@ -19,6 +19,8 @@ namespace Website.ViewComponents.Modules
 			return Task.Run<IViewComponentResult>(() =>
 			{
 
+
+
 				var posts = module.Posts
 					.Items(rowFilter: null, sort: null, take: module.PostCount, skip: 0)
 					.Select(p => p.GetListingViewModel());
