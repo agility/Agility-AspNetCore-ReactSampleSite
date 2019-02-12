@@ -30,11 +30,7 @@ namespace Website.ViewComponents.Shared
 					column2Links = item.Column2Links.SortByIDs(item.Column2SortIDs).Select(a => a.ToFrontendProps()),
 					column3Links = item.Column3Links.SortByIDs(item.Column3SortIDs).Select(a => a.ToFrontendProps()),
 					followTitle = item.FollowTitle,
-<<<<<<< HEAD
 					//followLinks = item.FollowLinks.SortByIDs(item.FollowLinkIDs).Select(a => a.ToFrontendProps()),
-=======
-					followLinks = item.FollowLinks.Items().Select(a => a.ToFrontendProps()),
->>>>>>> 3e1f5f8adfe9f3bb962770eeb1fea9d58e653a7a
 					subscribeTitle = item.SubscribeTitle,
 					subscribeButtonLabel = item.SubscribeButtonLabel,
 					subscribeDescription = item.SubscribeDescription,
