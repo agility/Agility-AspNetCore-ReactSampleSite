@@ -32,15 +32,11 @@ namespace Website.ViewComponents.Modules
 
 				if (module.RenderType == "cloud")
 				{
-					return new ReactViewComponentResult("Components.LogoCloud", viewModel) {
-						ClientOnly = true
-					};
+					return new ReactViewComponentResult("Components.LogoCloud", viewModel);
 				}
 				else
 				{
-					return new ReactViewComponentResult("Components.LogoListing", viewModel) {
-						ClientOnly = true
-					};
+					return new ReactViewComponentResult("Components.LogoListing", viewModel);
 				}
 
 			});
