@@ -51,9 +51,7 @@ namespace Website.ViewComponents.Modules
                     RegisterLabel = module.RegisterLabel
                 };
 
-                return new ReactViewComponentResult("Components.EventListing", viewModel) {
-                    ClientOnly = true
-                };
+                return new ReactViewComponentResult("Components.EventListing", viewModel);
             });
         }
 

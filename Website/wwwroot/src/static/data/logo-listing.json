@@ -16,7 +16,7 @@
         {
             "title": "Partner 1",
             "textBlob": null,
-            "logo": {
+            "_Logo": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -49,7 +49,7 @@
         {
             "title": "Partner 2",
             "textBlob": null,
-            "logo": {
+            "_Logo": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,

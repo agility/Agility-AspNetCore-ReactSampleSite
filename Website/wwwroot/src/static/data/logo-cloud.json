@@ -16,7 +16,7 @@
         {
             "title": "Customer 1",
             "textBlob": null,
-            "logo": {
+            "_Logo": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -49,7 +49,7 @@
         {
             "title": "Customer 2",
             "textBlob": null,
-            "logo": {
+            "_Logo": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -82,7 +82,7 @@
         {
             "title": "Customer 3",
             "textBlob": null,
-            "logo": {
+            "_Logo": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -115,7 +115,7 @@
         {
             "title": "Customer 4",
             "textBlob": null,
-            "logo": {
+            "_Logo": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -148,7 +148,7 @@
         {
             "title": "Customer 5",
             "textBlob": null,
-            "logo": {
+            "_Logo": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -181,7 +181,7 @@
         {
             "title": "Customer 6",
             "textBlob": null,
-            "logo": {
+            "_Logo": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -214,7 +214,7 @@
         {
             "title": "Customer 7",
             "textBlob": null,
-            "logo": {
+            "_Logo": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -247,7 +247,7 @@
         {
             "title": "Customer 8",
             "textBlob": null,
-            "logo": {
+            "_Logo": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
