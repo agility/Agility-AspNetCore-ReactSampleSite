@@ -1,9 +1,8 @@
 {
-  "bgColor": "#ffcb28",
-  "buttonColor": "#5800d4",
+  "theme": "primary",
   "title": "Improve the Flexibility, Adaptability and Speed at Which You Reach Your Goals.",
-  "subTitle": "Transform your entire team, all while improving moral across the board! ",
-  "primaryButton": {
+  "caption": "Transform your entire team, all while improving moral across the board! ",
+  "link": {
     "text": "Lets Chat!",
     "href": "#",
     "target": "_self"

@@ -151,6 +151,19 @@ namespace Website.AgilityModels
 		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true;  } }
 
 	}
+	public partial class CalloutItem : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true;  } }
+		private string __caption = null;
+		private bool __caption_set = false;
+		public virtual string Caption { get { if (!__caption_set) __caption = GetFieldValue<string>("Caption"); __caption_set = true; return __caption; } set { __caption = value; __caption_set = true;  } }
+		private string __link = null;
+		private bool __link_set = false;
+		public virtual string Link { get { if (!__link_set) __link = GetFieldValue<string>("Link"); __link_set = true; return __link; } set { __link = value; __link_set = true;  } }
+
+	}
 	public partial class CaseStudy : Agility.Web.AgilityContentItem
 	{
 		private string __title = null;
@@ -554,6 +567,18 @@ namespace Website.AgilityModels
 		public virtual int CustomerID { get { if (!__customerid_set) __customerid = GetFieldValue<int>("CustomerID"); __customerid_set = true; return __customerid; } set { __customerid = value; __customerid_set = true;  } }
 
 	}
+	public partial class Module_Callout : Agility.Web.AgilityContentItem
+	{
+		private int __calloutid;
+		private bool __calloutid_set = false;
+		public virtual int CalloutID { get { if (!__calloutid_set) __calloutid = GetFieldValue<int>("CalloutID"); __calloutid_set = true; return __calloutid; } set { __calloutid = value; __calloutid_set = true;  } }
+		private IAgilityContentRepository<CalloutItem> __callout = null;
+		public virtual IAgilityContentRepository<CalloutItem> Callout { get { if (__callout == null) __callout = GetLinkedContent<CalloutItem>("Callout"); return __callout; } set { __callout = value; }}
+		private string __theme = null;
+		private bool __theme_set = false;
+		public virtual string Theme { get { if (!__theme_set) __theme = GetFieldValue<string>("Theme"); __theme_set = true; return __theme; } set { __theme = value; __theme_set = true;  } }
+
+	}
 	public partial class Module_CaseStudyDetails : Agility.Web.AgilityContentItem
 	{
 
@@ -616,6 +641,15 @@ namespace Website.AgilityModels
 		public virtual bool ShowPastEventsOnly { get { if (!__showpasteventsonly_set) __showpasteventsonly = GetFieldValue<bool>("ShowPastEventsOnly"); __showpasteventsonly_set = true; return __showpasteventsonly; } set { __showpasteventsonly = value; __showpasteventsonly_set = true;  } }
 		private IAgilityContentRepository<Event> __events = null;
 		public virtual IAgilityContentRepository<Event> Events { get { if (__events == null) __events = GetLinkedContent<Event>("Events", "", "Date ", ""); return __events; } set { __events = value; }}
+		private string __viewdetailslabel = null;
+		private bool __viewdetailslabel_set = false;
+		public virtual string ViewDetailsLabel { get { if (!__viewdetailslabel_set) __viewdetailslabel = GetFieldValue<string>("ViewDetailsLabel"); __viewdetailslabel_set = true; return __viewdetailslabel; } set { __viewdetailslabel = value; __viewdetailslabel_set = true;  } }
+		private string __backlabel = null;
+		private bool __backlabel_set = false;
+		public virtual string BackLabel { get { if (!__backlabel_set) __backlabel = GetFieldValue<string>("BackLabel"); __backlabel_set = true; return __backlabel; } set { __backlabel = value; __backlabel_set = true;  } }
+		private string __registerlabel = null;
+		private bool __registerlabel_set = false;
+		public virtual string RegisterLabel { get { if (!__registerlabel_set) __registerlabel = GetFieldValue<string>("RegisterLabel"); __registerlabel_set = true; return __registerlabel; } set { __registerlabel = value; __registerlabel_set = true;  } }
 
 	}
 	public partial class Module_Faqs : Agility.Web.AgilityContentItem
