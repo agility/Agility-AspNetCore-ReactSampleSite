@@ -10,20 +10,9 @@ class LogoListing extends React.Component {
             return (
 
                 <li className="work-item" key={logo.key}>
-                    <a href={logo.url.href} target={logo.url.target}><img src={logo.logo.url} alt={logo.logo.label} /></a>
+                    <a href={logo.url.href} target={logo.url.target}><img src={logo._Logo.url} alt={logo._Logo.label} /></a>
                 </li>
 
-                // <div key={logo.key}>
-                //     <h3>{logo.title}</h3>
-                //     <div>{logo.shortDescription}</div>
-                //     <div dangerouslySetInnerHTML={{ __html: logo.textBlob }} />
-                //     <div>
-                //         <img src={logo.logo.url} alt={logo.logo.label} />
-                //     </div>
-                //     <div>
-                //         <a href={logo.url.href} target={logo.url.target}>{logo.url.text}</a>
-                //     </div>
-                // </div>
             );
         }
 
