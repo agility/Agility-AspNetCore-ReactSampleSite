@@ -1,29 +1,29 @@
 {
   "title": "Advisory Board",
-  "titleBold": "Well educated, intellectual people, especially scientists at all times demonstrate considerably smaller adherence to religiosity than others.",
+  "subtitle": "Well educated, intellectual people, especially scientists at all times demonstrate considerably smaller adherence to religiosity than others.",
   "items": [
     {
-      "foto": {
+      "headshot": {
         "url": "dist/img/team3-min.jpg"
       },
-      "name": "Noah Nunez",
-      "position": "Manager",
+      "fullName": "Noah Nunez",
+      "jobTitle": "Manager",
       "text": "<p>There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).</p>"
     },
     {
-      "foto": {
+      "headshot": {
         "url": "dist/img/team3-min.jpg"
       },
-      "name": "Noah Nunez",
-      "position": "Manager",
+      "fullName": "Noah Nunez",
+      "jobTitle": "Manager",
       "text": "<p>There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).</p><p>There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).</p>"
     },
     {
-      "foto": {
+      "headshot": {
         "url": "dist/img/team3-min.jpg"
       },
-      "name": "Noah Nunez",
-      "position": "Manager",
+      "fullName": "Noah Nunez",
+      "jobTitle": "Manager",
       "text": "<p>There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).</p>"
     }
   ]
