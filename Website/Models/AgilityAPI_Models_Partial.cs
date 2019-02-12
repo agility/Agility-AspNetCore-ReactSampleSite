@@ -9,6 +9,34 @@ using Agility.Web.Extensions;
 namespace Website.AgilityModels
 {
 
+	public partial class Resource
+	{
+		public dynamic GetListingViewModel()
+		{
+			ResourceType resourceType = null;
+			if (this.ResourceTypeID > 0)
+			{
+				resourceType = this.ResourceType.GetByID(this.ResourceTypeID);
+			}
+
+			DynamicPageItem dp = Data.GetDynamicPageItem("~/resources/resource-details", this.ContentReferenceName, this.Row);
+			string url = $"/resources/{dp.Name}";
+
+			var viewModel = new
+			{
+				image = this.Image?.ToFrontendProps(),
+				label = resourceType?.Title,
+				title = this.Title,
+				text = this.Excerpt.Truncate(240, "...", true, true),
+				url = url
+			};
+
+			return viewModel;
+
+		}
+
+	}
+
 	public partial class BlogAuthor
 	{
 		public const string BlankImage = "https://static.agilitycms.com/authors/blank-head-profile-pic.jpg";

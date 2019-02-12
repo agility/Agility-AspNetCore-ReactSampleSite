@@ -16,9 +16,9 @@ class LatestResources extends React.Component {
             labelArr.push(labelValue);
             objArr.push(item);
         });
-        removerArr = objArr.splice(0,4);
-        var four = removerArr.map(function (items){
-            return <LatestResContent item={items} />
+        removerArr = objArr.splice(0, 4);
+        var resources = removerArr.map(function (item) {
+            return <LatestResContent item={item} key={item.key} />
         });
 
         function labelClick(elem) {
@@ -26,53 +26,20 @@ class LatestResources extends React.Component {
             target.classList.toggle('active');
         }
         //create left checkboxes
-        Array.prototype.unique = function() {
+        Array.prototype.unique = function () {
             return this.filter(function (value, index, self) {
                 return self.indexOf(value) === index;
             });
         };
         labelArr = labelArr.unique();
-        var labels = labelArr.map(function(label){
+        var labels = labelArr.map(function (label) {
             return (<button className="latest-filter" onClick={labelClick}>{label}</button>);
         });
 
         return (
 
             <section className="features p-w latest-resources">
-                <div className="canvas" id="canvas-2">
-                    <div className="img">
-                        <div className="item item-tangle-top-3 twentyone w58">
-                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentytwo w58 rotate">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentythree w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentyfour w58 rotate">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentyfive w58">
-                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentysix w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentyseven w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentyeight w58">
-                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentynine w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 thirty w58 rotate">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                    </div>
-                </div>
+
                 <h2 className="title-component">{this.props.title}</h2>
                 <p className="intro">{this.props.subTitle}</p>
                 <div className="latest-wrapper">
@@ -87,14 +54,12 @@ class LatestResources extends React.Component {
                         </div>
                         <div className="col-md-8">
                             <div className="row-my">
-                                {four}
+                                {resources}
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-
-
         );
     }
 }
@@ -106,21 +71,17 @@ class LatestResContent extends React.Component {
     }
     render() {
 
-        var eventContent = this.props.item.text;
-        eventContent = eventContent.substr(0, 75);
-        eventContent = eventContent+'...';
-
         return (
             <div class="col-md-6">
                 <div className="latest-item">
                     <div className="image">
-                        <img src={this.props.item.image.url} alt=""/>
+                        <img src={this.props.item.image.url} alt="" />
                         <span>{this.props.item.label}</span>
                     </div>
                     <div className="content">
                         <h4 className="h4">{this.props.item.title}</h4>
-                        <p>{eventContent}</p>
-                        <a href={this.props.item.primaryButton.href} target={this.props.item.primaryButton.target}>{this.props.item.primaryButton.text}</a>
+                        <p>{this.props.item.text}</p>
+                        <a href={this.props.item.url}>Read More</a>
                     </div>
                 </div>
             </div>

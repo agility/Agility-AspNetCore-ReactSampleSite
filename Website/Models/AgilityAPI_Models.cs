@@ -756,6 +756,24 @@ namespace Website.AgilityModels
 		public virtual string Heading { get { if (!__heading_set) __heading = GetFieldValue<string>("Heading"); __heading_set = true; return __heading; } set { __heading = value; __heading_set = true; } }
 
 	}
+	public partial class Module_LatestResources : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
+		private string __subtitle = null;
+		private bool __subtitle_set = false;
+		public virtual string SubTitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("SubTitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true; } }
+		private string __lefttypetitle = null;
+		private bool __lefttypetitle_set = false;
+		public virtual string LeftTypeTitle { get { if (!__lefttypetitle_set) __lefttypetitle = GetFieldValue<string>("LeftTypeTitle"); __lefttypetitle_set = true; return __lefttypetitle; } set { __lefttypetitle = value; __lefttypetitle_set = true; } }
+		private string __leftbutton = null;
+		private bool __leftbutton_set = false;
+		public virtual string LeftButton { get { if (!__leftbutton_set) __leftbutton = GetFieldValue<string>("LeftButton"); __leftbutton_set = true; return __leftbutton; } set { __leftbutton = value; __leftbutton_set = true; } }
+		private IAgilityContentRepository<Resource> __resources = null;
+		public virtual IAgilityContentRepository<Resource> Resources { get { if (__resources == null) __resources = GetLinkedContent<Resource>("Resources"); return __resources; } set { __resources = value; } }
+
+	}
 	public partial class Module_LogoListing : Agility.Web.AgilityContentItem
 	{
 		private string __heading = null;
