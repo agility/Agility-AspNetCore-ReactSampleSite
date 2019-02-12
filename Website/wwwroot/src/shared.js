@@ -45,9 +45,11 @@ import RichText from './components/rich-text.jsx'
 import SectionHeading from './components/section-heading.jsx'
 import StayInTouchBox from './components/stay-in-touch-box.jsx'
 import ContactUs from './components/contact-us.jsx'
+import Blank from './components/blank.jsx'
 
 
 global['Components'] = {
+  Blank,
   BlogListing,
   BlogPostDetails,
   FeatureBlocks,
