@@ -24,10 +24,12 @@ namespace Website.AgilityModels
 
 			var viewModel = new
 			{
+				key = this.ContentID,
 				image = this.Image?.ToFrontendProps(),
 				label = resourceType?.Title,
+				resourceTypeID = ResourceTypeID,
 				title = this.Title,
-				text = this.Excerpt.Truncate(240, "...", true, true),
+				text = this.Excerpt.Truncate(75, "...", true, true),
 				url = url
 			};
 

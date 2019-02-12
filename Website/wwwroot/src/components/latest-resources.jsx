@@ -4,36 +4,98 @@ import './latest-resources.sass'
 
 class LatestResources extends React.Component {
 
+    constructor(props) {
+        super(props)
+
+        this.fetchItems = this.fetchItems.bind(this);
+        this.labelClick = this.labelClick.bind(this);
+
+        //init state from props
+        this.state = {
+            items: this.props.items,
+            skip: 0,
+            take: 0,
+            ids: "",
+            loadingMore: false,
+            noMoreData: false
+        };
+
+    }
+
+    componentDidMount() {
+
+    }
+
+    fetchItems(ids) {
+
+        var self = this;
+
+        var url = self.props.fetchUrl + "?ids=" + ids + "&skip=" + (this.state.skip + this.state.take) + "&take=" + this.state.take;
+
+        var timeout = setTimeout(function () {
+            self.setState(prevState => ({
+                loadingMore: true
+            }));
+        }, 300);
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+
+                clearTimeout(timeout);
+
+                this.setState(prevState => ({
+                    items: data.items,
+                    loadingMore: false,
+                    skip: data.skip,
+                    take: data.take,
+                    ids: data.ids
+                }));
+
+            }).catch(err => {
+                clearTimeout(timeout);
+                console.warn("An error occurred while loading data...", err);
+                this.setState(prevState => ({
+                    loadingMore: false
+                }));
+            });
+
+        return false;
+    }
+
+    labelClick(elem) {
+
+        var target = elem.target;
+
+        target.classList.toggle('active');
+
+        var parent = target.parentNode;
+
+        var selectedNodes = parent.getElementsByClassName("active");
+        var selectedIDs = [];
+
+        for (var i = 0; i < selectedNodes.length; i++) {
+            selectedIDs.push(selectedNodes[i].getAttribute('data-key'));
+        }
+
+        let ids = selectedIDs.join(",");
+
+        this.fetchItems(ids);
+
+
+    }
+
+
     render() {
 
-        //show first 4 elements
-        var objArr = [];
-        var labelArr = [];
-        var removerArr = [];
-        var fullArr = this.props.items;
-        var latestRes = fullArr.map(function (item) {
-            var labelValue = item.label;
-            labelArr.push(labelValue);
-            objArr.push(item);
-        });
-        removerArr = objArr.splice(0, 4);
-        var resources = removerArr.map(function (item) {
+        let resources = this.state.items.map(function (item) {
             return <LatestResContent item={item} key={item.key} />
         });
 
-        function labelClick(elem) {
-            var target = elem.target;
-            target.classList.toggle('active');
-        }
-        //create left checkboxes
-        Array.prototype.unique = function () {
-            return this.filter(function (value, index, self) {
-                return self.indexOf(value) === index;
-            });
-        };
-        labelArr = labelArr.unique();
-        var labels = labelArr.map(function (label) {
-            return (<button className="latest-filter" onClick={labelClick}>{label}</button>);
+        var self = this;
+
+        let labels = this.props.types.map(function (t) {
+            return (<button key={t.key} data-key={t.key} className="latest-filter" onClick={self.labelClick}>{t.title}</button>);
         });
 
         return (
@@ -54,7 +116,12 @@ class LatestResources extends React.Component {
                         </div>
                         <div className="col-md-8">
                             <div className="row-my">
-                                {resources}
+                                {this.state.loadingMore &&
+                                    <div>Loading... </div>
+                                }
+                                {!this.state.loadingMore &&
+                                    resources
+                                }
                             </div>
                         </div>
                     </div>
@@ -72,7 +139,7 @@ class LatestResContent extends React.Component {
     render() {
 
         return (
-            <div class="col-md-6">
+            <div className="col-md-6">
                 <div className="latest-item">
                     <div className="image">
                         <img src={this.props.item.image.url} alt="" />

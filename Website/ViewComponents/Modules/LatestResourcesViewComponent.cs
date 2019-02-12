@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Website.AgilityModels;
 using Website.Extensions;
 using Agility.Web.Extensions;
+using Agility.Web;
 
 namespace Website.ViewComponents.Modules
 {
@@ -15,13 +16,26 @@ namespace Website.ViewComponents.Modules
 		{
 			return Task.Run<IViewComponentResult>(() =>
 			{
+
+				var resourceTypeRepo = new AgilityContentRepository<ResourceType>("ResourceTypes");
+				var resourceTypes = resourceTypeRepo.Items()
+													.Select(r => new
+													{
+														title = r.Title,
+														key = r.ContentID
+													});
+
 				var viewmodel = new
 				{
+					fetchUrl = "/Listing/Resources",
+					types = resourceTypes,
 					title = module.Title,
 					subTitle = module.SubTitle,
 					leftButton = module.ParseUrl("LeftButton"),
 					leftBottomTitle = module.LeftTypeTitle,
-					items = module.Resources.Items().Select(i => i.GetListingViewModel())
+					items = module.Resources
+								  .Items(rowFilter: null, sort: "Date desc", take: 100, skip: 0)
+								  .Select(i => i.GetListingViewModel())
 				};
 
 				return new ReactViewComponentResult("Components.LatestResources", viewmodel);
