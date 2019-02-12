@@ -1,18 +1,23 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
 import './event-listing.sass'
+import moment from 'moment'
 
 class ComunityEvents extends React.Component {
 
     render() {
 
+        const registerLabel = this.props.registerLabel;
+        const viewDetailsLabel = this.props.viewDetailsLabel;
+        const backLabel = this.props.backLabel;
+
         const comunityEvents = this.props.items.map(function (item) {
-            return <ComunityEventsContent item={item}/>
+            return <ComunityEventsContent item={item} registerLabel={registerLabel} viewDetailsLabel={viewDetailsLabel} backLabel={backLabel} />
         })
 
         return (
 
-            <section className="features p-w comunity-events">
+            <section className="p-w event-listing">
                 <div className="canvas" id="canvas-2">
                     <div className="img">
                         <div className="item item-tangle-top-3 twentyone w58">
@@ -48,7 +53,7 @@ class ComunityEvents extends React.Component {
                     </div>
                 </div>
                 <h2 className="title-conponent">{this.props.title}</h2>
-                <p className="intro">{this.props.titleBold}</p>
+                <p className="intro">{this.props.subTitle}</p>
                 <div className="events-content">
                     <div className="row-my">
                         {comunityEvents}
@@ -76,48 +81,48 @@ class ComunityEventsContent extends React.Component {
             parentElem.classList.toggle('active');
         }
 
-        var dateText = this.props.item.event.date;
-        dateText = dateText.split(' ');
-        var day = dateText[0];
-        var month = dateText[1];
+        var dateMoment = new moment(this.props.item.date);
+        var day = dateMoment.format("DD");
+        var month = dateMoment.format("MMM");
+        var dateText = dateMoment.format("MMMM Do YYYY, h:mm a")
 
-        var eventContent = this.props.item.event.content;
-        eventContent = eventContent.substr(0, 80);
-        eventContent = eventContent+'...';
-
+ 
         return (
             <div className="col-md-4">
                 <div className="events-item" onClick={rotateEvents}>
                     <div className="item-front">
                         <div className="image">
-                            <img src={this.props.item.image.url} alt=""/>
+                            <img src={this.props.item.thumbnail.url} alt=""/>
                         </div>
                         <div className="front-date"><p><span>{day}</span>{month}</p></div>
                         <div className="inner-content">
                             <h4 className="h4">{this.props.item.title}</h4>
-                            <p className="front-content">{eventContent}</p>
+                            <p className="front-content">{this.props.item.subTitle}</p>
                             <div className="adres">
-                                <img src="/dist/img/location.svg" alt=""/><span>{this.props.item.event.adres}</span>
+                                <img src="/dist/img/location.svg" alt=""/><span>{this.props.item.address}</span>
                             </div>
-                            <a href="" className="arrow-button"><span>View Details</span><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt=""/></a>
+                            <a href="" className="arrow-button"><span>{this.props.viewDetailsLabel}</span><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt=""/></a>
                         </div>
                     </div>
                     <div className="item-back">
                         <div className="title">
                             <div className="title-img">
-                                <img src={this.props.item.event.foto.url} alt=""/>
+                                <img src={this.props.item.organizer.image.url} alt=""/>
                             </div>
-                            <h5 className="h5">{this.props.item.event.name}</h5>
+                            <h5 className="h5">{this.props.item.organizer.title}</h5>
                         </div>
                         <div className="inner-content">
                             <div className="date-back">
-                                <img src="/dist/img/calendar.svg" alt=""/><span>{this.props.item.event.date}</span>
+                                <img src="/dist/img/calendar.svg" alt=""/><span>{dateText}</span>
                             </div>
                             <div className="adres">
-                                <img src="/dist/img/location.svg" alt=""/><span>{this.props.item.event.adres}</span>
+                                <img src="/dist/img/location.svg" alt=""/><span>{this.props.item.address}</span>
                             </div>
-                            <p>{this.props.item.event.content}</p>
-                            <a href="" className="arrow-button"><span>Back</span><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt=""/></a>
+                            <p>{this.props.item.description}</p>
+                            <a class="btn" href={this.props.item.externalLink.href} target={this.props.item.externalLink.target} title={this.props.item.externalLink.title}>{this.props.registerLabel}</a>
+                            <br />
+                            <a href="" className="arrow-button"><span>{this.props.backLabel}</span><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt=""/></a>
+                            
                         </div>
                     </div>
                 </div>

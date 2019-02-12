@@ -2,6 +2,7 @@
 import './shared'
 
 //load global styles
+import './components/_react-debug.sass'
 import './components/_components.sass'
 import './components/_reset.sass'
 import './components/_media.sass'

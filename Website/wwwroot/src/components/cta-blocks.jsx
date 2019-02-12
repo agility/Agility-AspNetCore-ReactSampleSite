@@ -1,57 +1,25 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
+import ResponsiveImage from './responsive-image.jsx'
 import './cta-blocks.sass'
 
-class ComunityApps extends React.Component {
+class CtaBlocks extends React.Component {
 
     render() {
-
-        const comunityApps = this.props.items.map(function (item) {
-            return <ComunityAppsContent item={item}/>
+        console.log(this.props)
+        const blocks = this.props.items.map(function (item) {
+            return <CtaBlock item={item} key={item.key} />
         })
 
         return (
 
             <section className="features p-w comunity-apps">
-                <div className="canvas" id="canvas-3">
-                    <div className="img">
-                        <div className="item item-tangle-top-3 twentyone w58">
-                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentytwo w58 rotate">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentythree w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentyfour w58 rotate">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentyfive w58">
-                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentysix w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentyseven w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentyeight w58">
-                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 twentynine w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-3 thirty w58 rotate">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                    </div>
-                </div>
-                <h2 className="title-conponent">{this.props.title}</h2>
-                <p className="intro">{this.props.titleBold}</p>
+
+                <h2 className="title-conponent">{this.props.heading}</h2>
+                <p className="intro">{this.props.subHeading}</p>
                 <div className="apps-content">
                     <div className="row-my">
-                        {comunityApps}
+                        {blocks}
                     </div>
                 </div>
             </section>
@@ -60,18 +28,20 @@ class ComunityApps extends React.Component {
         );
     }
 }
-export default hot(ComunityApps);
+export default hot(CtaBlocks);
 
-class ComunityAppsContent extends React.Component {
+class CtaBlock extends React.Component {
 
     render() {
 
         return (
             <div className="col-md-4">
                 <div className="app-item">
-                    <a href="">
+                    <a href={this.props.item.link.href} title={this.props.item.link.text} target={this.props.item.link.target}>
                         <div className="image">
-                            <img src={this.props.item.image.url} alt=""/>
+                            <ResponsiveImage img={this.props.item.image}
+                                breaks={[{ w: 640, max: 480 }, { w: 900, max: 400 }, { w: 1200, max: 700 }]} />
+
                         </div>
                         <p>{this.props.item.title}</p>
                     </a>
