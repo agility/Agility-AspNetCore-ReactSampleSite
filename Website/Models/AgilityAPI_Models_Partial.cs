@@ -39,6 +39,34 @@ namespace Website.AgilityModels
 
 	}
 
+	public partial class CaseStudy
+	{
+		public dynamic GetFeaturedListingViewModel()
+		{
+
+
+			DynamicPageItem dp = Data.GetDynamicPageItem("~/case-studies/case-study-details", this.ContentReferenceName, this.Row);
+			string url = $"/case-studies/{dp.Name}";
+
+			var viewModel = new
+			{
+				key = this.ContentID,
+				image = this.Image?.ToFrontendProps(),
+				label = "Case Study",
+				resourceTypeID = -1,
+				title = this.Title,
+				text = this.Excerpt.Truncate(75, "...", true, true),
+				url = url,
+				logo = this.CustomerLogo?.ToFrontendProps(),
+				products = this.Products.GetByIDs(this.ProductIDs).Select(p => p.ToFrontendProps())
+			};
+
+			return viewModel;
+
+		}
+
+	}
+
 	public partial class Logo
 	{
 		public bool MatchesWith(string[] thoseIDs)

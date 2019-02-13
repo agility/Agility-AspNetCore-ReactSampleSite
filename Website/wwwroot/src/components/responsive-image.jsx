@@ -14,6 +14,10 @@ class ResponsiveImage extends React.Component {
 
 		let url = image.url;
 		let alt = image.label;
+		let urlNoQuery = url;
+		if (urlNoQuery.indexOf("?") != -1) {
+			urlNoQuery = urlNoQuery.substring(0, urlNoQuery.indexOf("?"));
+		}
 
 		const sources = this.props.breaks.map((res, index) => {
 
@@ -21,11 +25,11 @@ class ResponsiveImage extends React.Component {
 			if (res.max) {
 				media = "(max-width: " + res.max + "px)";
 			} else if (res.min) {
-				media = "(max-width: " + res.min + "px)";
+				media = "(min-width: " + res.min + "px)";
 			}
 
 			return (
-				<source key={index + '-img'} srcSet={url + "?w=" + res.w} media={media} />
+				<source key={index + '-img'} srcSet={urlNoQuery + "?w=" + res.w} media={media} />
 			)
 		});
 
