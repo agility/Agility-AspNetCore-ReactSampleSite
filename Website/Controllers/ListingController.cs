@@ -32,17 +32,57 @@ namespace Website.Controllers
 			return Json(viewModel);
 		}
 
-		public IActionResult Contact()
+		public IActionResult Resources(string ids = null, int skip = 0, int take = 100)
 		{
-			ViewData["Message"] = "Your contact page.";
 
-			return View();
+			var repo = new AgilityContentRepository<Resource>("Resources");
+			string filter = null;
+			if (!string.IsNullOrWhiteSpace(ids))
+			{
+				filter = $"ResourceTypeID in ({ids})";
+			}
+
+			var items = repo
+					.Items(rowFilter: filter, sort: "Date desc", take: take, skip: skip)
+					.Select(p => p.GetListingViewModel());
+
+			var viewModel = new
+			{
+				items = items,
+				skip = skip,
+				take = take,
+				ids = ids
+			};
+
+			return Json(viewModel);
 		}
 
-		public IActionResult Privacy()
+		public IActionResult Partners(string refName, string labelIDs, string dynPagePath, string ids = null, int skip = 0, int take = 100)
 		{
-			return View();
+
+
+			var repo = new AgilityContentRepository<Logo>(refName);
+			var items = repo.Items().AsQueryable();
+			if (!string.IsNullOrWhiteSpace(ids))
+			{
+				string[] lstIds = ids.Split(',');
+				items = items.Where(l => l.MatchesWith(lstIds));
+			}
+
+			if (skip > 0) items = items.Skip(skip);
+			if (take > 0) items = items.Take(take);
+
+			var viewModel = new
+			{
+				items = items.Select(l => l.GetPartnerListingViewModel(labelIDs, dynPagePath)),
+				skip = skip,
+				take = take,
+				ids = ids
+			};
+
+			return Json(viewModel);
 		}
+
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
