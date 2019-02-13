@@ -21,6 +21,7 @@ import Partners from './pages/partners.jsx'
 import Resources from './pages/resources.jsx'
 import RichTextPage from './pages/rich-text.jsx'
 import BlogListing from './pages/blog-listing.jsx'
+import PodcastListing from './pages/podcast-listing.jsx'
 import Team from './pages/team.jsx'
 import BlogPost from './pages/blog-details-page.jsx'
 import CaseStudyDetails from './pages/case-study-details-page.jsx'
@@ -47,6 +48,7 @@ ReactDOM.render((
                         <Route path="/case-study-details-page" component={CaseStudyDetails} />
                         <Route path="/form-page-purple" component={Form} />
                         <Route path="/form-page-yellow" component={FormYellow} />
+                        <Route path="/podcast-listing" component={PodcastListing} />
 
                         <Route component={NotFound} />
                     </Switch>

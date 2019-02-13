@@ -1,6 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
 import './blog-listing.sass'
+import './podcast-listing.sass'
 
 class BlogListing extends React.Component {
 
@@ -30,6 +31,7 @@ class BlogListingContent extends React.Component {
         return (
             <div className="blog-post">
                 <div className="image">
+                    <img className="podcast" src="dist/img/podcast.svg" alt="" />
                     <a href={this.props.item.href}><img src={this.props.item.image.url} alt=""/></a>
                 </div>
                 <div className="content">

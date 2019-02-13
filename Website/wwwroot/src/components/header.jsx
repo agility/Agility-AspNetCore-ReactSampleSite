@@ -33,6 +33,9 @@ class Header extends React.Component {
         //     ;
         // }
 
+
+        //header must have different className to apply different style on pages
+
         const renderMenu = (menu, level) => {
             let links = []
             if (!menu || !menu.length || menu.length == 0) return null;

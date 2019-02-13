@@ -1,5 +1,5 @@
 {
-  "type": "blog",
+  "type": "podcast",
   "items": [
     {
       "href": "/blog-details-page",
@@ -7,7 +7,7 @@
         "url": "dist/img/pic.png"
       },
       "title": "Put Wings On Your Dreams",
-      "authorName": "Donald Dixon",
+      "authorName": "Episode #1",
       "authorFoto": {
         "url": "dist/img/team3-min.jpg"
       },
@@ -20,7 +20,7 @@
         "url": "dist/img/pic.png"
       },
       "title": "Put Wings On Your Dreams",
-      "authorName": "Donald Dixon",
+      "authorName": "Episode #2",
       "authorFoto": {
         "url": "dist/img/team3-min.jpg"
       },
@@ -33,7 +33,7 @@
         "url": "dist/img/pic.png"
       },
       "title": "Put Wings On Your Dreams",
-      "authorName": "Donald Dixon",
+      "authorName": "Episode #3",
       "authorFoto": {
         "url": "dist/img/team3-min.jpg"
       },
