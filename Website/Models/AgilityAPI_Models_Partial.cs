@@ -92,6 +92,19 @@ namespace Website.AgilityModels
 
 	public partial class BlogPost
 	{
+
+		public bool MatchesWith(string[] thoseIDs)
+		{
+			if (thoseIDs == null || thoseIDs.Length == 0) return true;
+			if (string.IsNullOrWhiteSpace(this.CategoriesIDs)) return false;
+
+			string[] thisIDs = this.CategoriesIDs.Split(',');
+
+			var ret = thisIDs.Any(i => thoseIDs.Contains(i));
+			return ret;
+
+		}
+
 		public dynamic GetDetailsViewModel()
 		{
 
@@ -134,7 +147,8 @@ namespace Website.AgilityModels
 
 		}
 
-		public dynamic GetListingViewModel()
+
+		public dynamic GetListingViewModel(int excerptLength = 240)
 		{
 			DynamicPageItem dp = Data.GetDynamicPageItem("~/posts/post-details", this.ContentReferenceName, this.Row);
 			string url = $"/posts/{dp.Name}";
@@ -164,7 +178,7 @@ namespace Website.AgilityModels
 				};
 			}
 
-			string excerpt = System.Web.HttpUtility.HtmlDecode(this.Excerpt.Truncate(240, "...", true, true));
+			string excerpt = System.Web.HttpUtility.HtmlDecode(this.Excerpt.Truncate(excerptLength, "...", true, true));
 
 			var post = new
 			{

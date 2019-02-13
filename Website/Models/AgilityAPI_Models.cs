@@ -774,6 +774,29 @@ namespace Website.AgilityModels
 		public virtual string Heading { get { if (!__heading_set) __heading = GetFieldValue<string>("Heading"); __heading_set = true; return __heading; } set { __heading = value; __heading_set = true; } }
 
 	}
+	public partial class Module_LatestPosts : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
+		private int __postcount;
+		private bool __postcount_set = false;
+		public virtual int PostCount { get { if (!__postcount_set) __postcount = GetFieldValue<int>("PostCount"); __postcount_set = true; return __postcount; } set { __postcount = value; __postcount_set = true; } }
+		private IAgilityContentRepository<BlogPost> __posts = null;
+		public virtual IAgilityContentRepository<BlogPost> Posts { get { if (__posts == null) __posts = GetLinkedContent<BlogPost>("Posts"); return __posts; } set { __posts = value; } }
+		private string __categoryids = null;
+		private bool __categoryids_set = false;
+		public virtual string CategoryIDs { get { if (!__categoryids_set) __categoryids = GetFieldValue<string>("CategoryIDs"); __categoryids_set = true; return __categoryids; } set { __categoryids = value; __categoryids_set = true; } }
+		private string __categorynames = null;
+		private bool __categorynames_set = false;
+		public virtual string CategoryNames { get { if (!__categorynames_set) __categorynames = GetFieldValue<string>("CategoryNames"); __categorynames_set = true; return __categorynames; } set { __categorynames = value; __categorynames_set = true; } }
+		private IAgilityContentRepository<BlogCategory> __categories = null;
+		public virtual IAgilityContentRepository<BlogCategory> Categories { get { if (__categories == null) __categories = GetLinkedContent<BlogCategory>("Categories"); return __categories; } set { __categories = value; } }
+		private string __readmorelabel = null;
+		private bool __readmorelabel_set = false;
+		public virtual string ReadMoreLabel { get { if (!__readmorelabel_set) __readmorelabel = GetFieldValue<string>("ReadMoreLabel"); __readmorelabel_set = true; return __readmorelabel; } set { __readmorelabel = value; __readmorelabel_set = true; } }
+
+	}
 	public partial class Module_LatestResources : Agility.Web.AgilityContentItem
 	{
 		private string __title = null;
