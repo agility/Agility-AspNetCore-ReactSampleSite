@@ -39,6 +39,52 @@ namespace Website.AgilityModels
 
 	}
 
+	public partial class Logo
+	{
+		public bool MatchesWith(string[] thoseIDs)
+		{
+			if (thoseIDs == null || thoseIDs.Length == 0) return true;
+			if (string.IsNullOrWhiteSpace(this.LogoTagIDs)) return false;
+
+			string[] thisIDs = this.LogoTagIDs.Split(',');
+
+			var ret = thisIDs.Any(i => thoseIDs.Contains(i));
+			return ret;
+
+		}
+		public dynamic GetPartnerListingViewModel(string labelIDs, string dynPath)
+		{
+			IList<LogoTags> tags = null;
+			LogoTags logoTag = null;
+			if (!string.IsNullOrWhiteSpace(this.LogoTagIDs))
+			{
+				tags = this.LogoTags.GetByIDs(this.LogoTagIDs);
+				var tagIDsForLabel = labelIDs.Split(',');
+				logoTag = tags.FirstOrDefault(tag => tagIDsForLabel.Contains(tag.ContentID.ToString()));
+			}
+
+			string dynPathForFormula = dynPath.Substring(0, dynPath.LastIndexOf("/"));
+
+			DynamicPageItem dp = Data.GetDynamicPageItem(dynPath, this.ContentReferenceName, this.Row);
+			string url = $"{dynPathForFormula}/{dp.Name}";
+
+			var viewModel = new
+			{
+				key = this.ContentID,
+				image = this._Logo?.ToFrontendProps(),
+				label = logoTag?.Title,
+				resourceTypeID = logoTag?.ContentID,
+				title = this.Title,
+				text = this.Description.Truncate(75, "...", true, true),
+				url = url
+			};
+
+			return viewModel;
+
+		}
+
+	}
+
 	public partial class BlogAuthor
 	{
 		public const string BlankImage = "https://static.agilitycms.com/authors/blank-head-profile-pic.jpg";

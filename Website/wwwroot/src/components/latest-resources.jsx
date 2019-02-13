@@ -30,7 +30,13 @@ class LatestResources extends React.Component {
 
         var self = this;
 
-        var url = self.props.fetchUrl + "?ids=" + ids + "&skip=" + (this.state.skip + this.state.take) + "&take=" + this.state.take;
+        var url = self.props.fetchUrl;
+        if (url.indexOf("?") == -1) {
+            url += "?"
+        } else {
+            url += "&";
+        }
+        url += "ids=" + ids + "&skip=" + (this.state.skip + this.state.take) + "&take=" + this.state.take;
 
         var timeout = setTimeout(function () {
             self.setState(prevState => ({
@@ -143,7 +149,10 @@ class LatestResContent extends React.Component {
                 <div className="latest-item">
                     <div className="image">
                         <img src={this.props.item.image.url} alt="" />
-                        <span>{this.props.item.label}</span>
+                        {this.props.item.label &&
+                            <span>{this.props.item.label}</span>
+                        }
+
                     </div>
                     <div className="content">
                         <h4 className="h4">{this.props.item.title}</h4>
