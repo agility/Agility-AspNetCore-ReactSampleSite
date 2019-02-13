@@ -56,7 +56,7 @@ namespace Website.ViewComponents.Modules
 						i.Value
 					}					
 					),
-					fgColor = caseStudy.BrandFGColor,
+					bgColor = caseStudy.BrandBGColor,
 					Body = caseStudy.TextBlob,
 					RightContentCopy = caseStudy.RightContentCopy,
 					Quote = caseStudy.Quote

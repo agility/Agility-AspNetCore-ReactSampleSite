@@ -7,12 +7,12 @@ class CaseDetails extends React.Component {
 
     render() {
 
-        var fgColor = this.props.fgColor;
+        var bgColor = this.props.bgColor;
         const metrics = this.props.metrics.map(function (item) {
             return (
-                <div class="metrics-item" style={{color: fgColor}}>
+                <div class="metrics-item" style={{color: bgColor}}>
                     <h4 className="h4" dangerouslySetInnerHTML={{__html: item.value}}></h4>
-                    <hr style={{backgroundColor: fgColor}}/>
+                    <hr style={{backgroundColor: bgColor}}/>
                     <span>{item.title}</span>
                 </div>
             );
