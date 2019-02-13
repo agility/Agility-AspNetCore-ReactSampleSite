@@ -19,7 +19,6 @@ namespace Website.ViewComponents.Modules
 			{
 				var caseStudy = Agility.Web.AgilityContext.GetDynamicPageItem<CaseStudy>();
 
-
                 if(caseStudy == null)
                     throw new ArgumentNullException("Case study");
 
