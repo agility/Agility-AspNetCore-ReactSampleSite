@@ -22,7 +22,7 @@ class FeaturedCaseStudies extends React.Component {
                         {items}
                     </div>
                 </div>
-                <a class="btn" href={this.props.primaryButton.href} target={this.props.primaryButton.target}>{this.props.primaryButton.text}</a>
+                <a className="btn" href={this.props.primaryButton.href} target={this.props.primaryButton.target}>{this.props.primaryButton.text}</a>
             </section>
 
         );
@@ -38,7 +38,7 @@ class FeaturedCaseStudiesContent extends React.Component {
         });
 
         return (
-            <div class="col-md-4">
+            <div className="col-md-4">
                 <div className="case-item">
                     <div className="image">
                         <a href={this.props.item.url}>

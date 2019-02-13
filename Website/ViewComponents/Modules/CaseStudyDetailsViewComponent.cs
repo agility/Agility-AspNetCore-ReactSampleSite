@@ -29,10 +29,7 @@ namespace Website.ViewComponents.Modules
 
 				BlogAuthor author = null;
 
-				if (caseStudy.AuthorID > 0)
-				{
-					author = caseStudy.Author.GetByID(caseStudy.AuthorID);
-				}
+
 
 				string description = currentPage.MetaTags;
 				if (string.IsNullOrWhiteSpace(description))
