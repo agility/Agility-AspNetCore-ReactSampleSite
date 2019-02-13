@@ -175,25 +175,53 @@ namespace Website.AgilityModels
 		private string __url = null;
 		private bool __url_set = false;
 		public virtual string URL { get { if (!__url_set) __url = GetFieldValue<string>("URL"); __url_set = true; return __url; } set { __url = value; __url_set = true;  } }
-		private string __subtitle = null;
-		private bool __subtitle_set = false;
-		public virtual string SubTitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("SubTitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true;  } }
-		private int __authorid;
-		private bool __authorid_set = false;
-		public virtual int AuthorID { get { if (!__authorid_set) __authorid = GetFieldValue<int>("AuthorID"); __authorid_set = true; return __authorid; } set { __authorid = value; __authorid_set = true;  } }
-		private string __authorname = null;
-		private bool __authorname_set = false;
-		public virtual string AuthorName { get { if (!__authorname_set) __authorname = GetFieldValue<string>("AuthorName"); __authorname_set = true; return __authorname; } set { __authorname = value; __authorname_set = true;  } }
-		private IAgilityContentRepository<BlogAuthor> __author = null;
-		public virtual IAgilityContentRepository<BlogAuthor> Author { get { if (__author == null) __author = GetLinkedContent<BlogAuthor>("Author"); return __author; } set { __author = value; }}
-		private DateTime __date;
-		private bool __date_set = false;
-		public virtual DateTime Date { get { if (!__date_set) __date = GetFieldValue<DateTime>("Date"); __date_set = true; return __date; } set { __date = value; __date_set = true;  } }
 		private Attachment __image = null;
 		public virtual Attachment Image { get {  if (__image == null) __image = GetAttachment("Image"); return __image; } set { __image = value; } }
+		private Attachment __customerlogo = null;
+		public virtual Attachment CustomerLogo { get {  if (__customerlogo == null) __customerlogo = GetAttachment("CustomerLogo"); return __customerlogo; } set { __customerlogo = value; } }
 		private string __excerpt = null;
 		private bool __excerpt_set = false;
 		public virtual string Excerpt { get { if (!__excerpt_set) __excerpt = GetFieldValue<string>("Excerpt"); __excerpt_set = true; return __excerpt; } set { __excerpt = value; __excerpt_set = true;  } }
+		private string __rightcontentcopy = null;
+		private bool __rightcontentcopy_set = false;
+		public virtual string RightContentCopy { get { if (!__rightcontentcopy_set) __rightcontentcopy = GetFieldValue<string>("RightContentCopy"); __rightcontentcopy_set = true; return __rightcontentcopy; } set { __rightcontentcopy = value; __rightcontentcopy_set = true;  } }
+		private string __quote = null;
+		private bool __quote_set = false;
+		public virtual string Quote { get { if (!__quote_set) __quote = GetFieldValue<string>("Quote"); __quote_set = true; return __quote; } set { __quote = value; __quote_set = true;  } }
+		private IAgilityContentRepository<KeyValuePair> __metrics = null;
+		public virtual IAgilityContentRepository<KeyValuePair> Metrics { get { if (__metrics == null) __metrics = GetLinkedContent<KeyValuePair>("Metrics"); return __metrics; } set { __metrics = value; }}
+		private string __productids = null;
+		private bool __productids_set = false;
+		public virtual string ProductIDs { get { if (!__productids_set) __productids = GetFieldValue<string>("ProductIDs"); __productids_set = true; return __productids; } set { __productids = value; __productids_set = true;  } }
+		private string __productnames = null;
+		private bool __productnames_set = false;
+		public virtual string ProductNames { get { if (!__productnames_set) __productnames = GetFieldValue<string>("ProductNames"); __productnames_set = true; return __productnames; } set { __productnames = value; __productnames_set = true;  } }
+		private IAgilityContentRepository<CaseStudyProducts> __products = null;
+		public virtual IAgilityContentRepository<CaseStudyProducts> Products { get { if (__products == null) __products = GetLinkedContent<CaseStudyProducts>("Products"); return __products; } set { __products = value; }}
+		private string __contentpanelcopy = null;
+		private bool __contentpanelcopy_set = false;
+		public virtual string ContentPanelCopy { get { if (!__contentpanelcopy_set) __contentpanelcopy = GetFieldValue<string>("ContentPanelCopy"); __contentpanelcopy_set = true; return __contentpanelcopy; } set { __contentpanelcopy = value; __contentpanelcopy_set = true;  } }
+		private string __brandfgcolor = null;
+		private bool __brandfgcolor_set = false;
+		public virtual string BrandFGColor { get { if (!__brandfgcolor_set) __brandfgcolor = GetFieldValue<string>("BrandFGColor"); __brandfgcolor_set = true; return __brandfgcolor; } set { __brandfgcolor = value; __brandfgcolor_set = true;  } }
+		private string __brandbgcolor = null;
+		private bool __brandbgcolor_set = false;
+		public virtual string BrandBGColor { get { if (!__brandbgcolor_set) __brandbgcolor = GetFieldValue<string>("BrandBGColor"); __brandbgcolor_set = true; return __brandbgcolor; } set { __brandbgcolor = value; __brandbgcolor_set = true;  } }
+		private string __imageposition = null;
+		private bool __imageposition_set = false;
+		public virtual string ImagePosition { get { if (!__imageposition_set) __imageposition = GetFieldValue<string>("ImagePosition"); __imageposition_set = true; return __imageposition; } set { __imageposition = value; __imageposition_set = true;  } }
+
+	}
+	public partial class CaseStudyProducts : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true;  } }
+		private Attachment __icon = null;
+		public virtual Attachment Icon { get {  if (__icon == null) __icon = GetAttachment("Icon"); return __icon; } set { __icon = value; } }
+		private string __url = null;
+		private bool __url_set = false;
+		public virtual string URL { get { if (!__url_set) __url = GetFieldValue<string>("URL"); __url_set = true; return __url; } set { __url = value; __url_set = true;  } }
 
 	}
 	public partial class ContentPanel : Agility.Web.AgilityContentItem
@@ -378,6 +406,16 @@ namespace Website.AgilityModels
 		public virtual string PreHeaderLinkSortIDs { get { if (!__preheaderlinksortids_set) __preheaderlinksortids = GetFieldValue<string>("PreHeaderLinkSortIDs"); __preheaderlinksortids_set = true; return __preheaderlinksortids; } set { __preheaderlinksortids = value; __preheaderlinksortids_set = true;  } }
 
 	}
+	public partial class KeyValuePair : Agility.Web.AgilityContentItem
+	{
+		private string __key = null;
+		private bool __key_set = false;
+		public virtual string Key { get { if (!__key_set) __key = GetFieldValue<string>("Key"); __key_set = true; return __key; } set { __key = value; __key_set = true;  } }
+		private string __value = null;
+		private bool __value_set = false;
+		public virtual string Value { get { if (!__value_set) __value = GetFieldValue<string>("Value"); __value_set = true; return __value; } set { __value = value; __value_set = true;  } }
+
+	}
 	public partial class Link : Agility.Web.AgilityContentItem
 	{
 		private string __title = null;
@@ -392,10 +430,10 @@ namespace Website.AgilityModels
 	{
 		private string __title = null;
 		private bool __title_set = false;
-		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true;  } }
 		private string __urlslug = null;
 		private bool __urlslug_set = false;
-		public virtual string URLSlug { get { if (!__urlslug_set) __urlslug = GetFieldValue<string>("URLSlug"); __urlslug_set = true; return __urlslug; } set { __urlslug = value; __urlslug_set = true; } }
+		public virtual string URLSlug { get { if (!__urlslug_set) __urlslug = GetFieldValue<string>("URLSlug"); __urlslug_set = true; return __urlslug; } set { __urlslug = value; __urlslug_set = true;  } }
 		private Attachment ___logo = null;
 		public virtual Attachment _Logo { get {  if (___logo == null) ___logo = GetAttachment("Logo"); return ___logo; } set { ___logo = value; } }
 		private string __shortdescription = null;
@@ -415,22 +453,22 @@ namespace Website.AgilityModels
 		public virtual string State { get { if (!__state_set) __state = GetFieldValue<string>("State"); __state_set = true; return __state; } set { __state = value; __state_set = true;  } }
 		private string __country = null;
 		private bool __country_set = false;
-		public virtual string Country { get { if (!__country_set) __country = GetFieldValue<string>("Country"); __country_set = true; return __country; } set { __country = value; __country_set = true; } }
+		public virtual string Country { get { if (!__country_set) __country = GetFieldValue<string>("Country"); __country_set = true; return __country; } set { __country = value; __country_set = true;  } }
 		private string __logotagids = null;
 		private bool __logotagids_set = false;
-		public virtual string LogoTagIDs { get { if (!__logotagids_set) __logotagids = GetFieldValue<string>("LogoTagIDs"); __logotagids_set = true; return __logotagids; } set { __logotagids = value; __logotagids_set = true; } }
+		public virtual string LogoTagIDs { get { if (!__logotagids_set) __logotagids = GetFieldValue<string>("LogoTagIDs"); __logotagids_set = true; return __logotagids; } set { __logotagids = value; __logotagids_set = true;  } }
 		private string __logotagnames = null;
 		private bool __logotagnames_set = false;
-		public virtual string LogoTagNames { get { if (!__logotagnames_set) __logotagnames = GetFieldValue<string>("LogoTagNames"); __logotagnames_set = true; return __logotagnames; } set { __logotagnames = value; __logotagnames_set = true; } }
+		public virtual string LogoTagNames { get { if (!__logotagnames_set) __logotagnames = GetFieldValue<string>("LogoTagNames"); __logotagnames_set = true; return __logotagnames; } set { __logotagnames = value; __logotagnames_set = true;  } }
 		private IAgilityContentRepository<LogoTags> __logotags = null;
-		public virtual IAgilityContentRepository<LogoTags> LogoTags { get { if (__logotags == null) __logotags = GetLinkedContent<LogoTags>("LogoTags", "", "ItemOrder ", ""); return __logotags; } set { __logotags = value; } }
+		public virtual IAgilityContentRepository<LogoTags> LogoTags { get { if (__logotags == null) __logotags = GetLinkedContent<LogoTags>("LogoTags", "", "ItemOrder ", ""); return __logotags; } set { __logotags = value; }}
 
 	}
 	public partial class LogoTags : Agility.Web.AgilityContentItem
 	{
 		private string __title = null;
 		private bool __title_set = false;
-		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true;  } }
 
 	}
 	public partial class Person : Agility.Web.AgilityContentItem
@@ -597,6 +635,12 @@ namespace Website.AgilityModels
 		public virtual string Theme { get { if (!__theme_set) __theme = GetFieldValue<string>("Theme"); __theme_set = true; return __theme; } set { __theme = value; __theme_set = true;  } }
 
 	}
+	public partial class Module_CaseStudyContentPanel : Agility.Web.AgilityContentItem
+	{
+		private IAgilityContentRepository<CaseStudy> __casestudies = null;
+		public virtual IAgilityContentRepository<CaseStudy> CaseStudies { get { if (__casestudies == null) __casestudies = GetLinkedContent<CaseStudy>("CaseStudies"); return __casestudies; } set { __casestudies = value; }}
+
+	}
 	public partial class Module_CaseStudyDetails : Agility.Web.AgilityContentItem
 	{
 
@@ -718,6 +762,45 @@ namespace Website.AgilityModels
 		public virtual IAgilityContentRepository<FeatureBlock> FeatureBlocks { get { if (__featureblocks == null) __featureblocks = GetLinkedContent<FeatureBlock>("FeatureBlocks", "", "Title ", ""); return __featureblocks; } set { __featureblocks = value; }}
 
 	}
+	public partial class Module_FeaturedCaseStudies : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true;  } }
+		private string __primarybutton = null;
+		private bool __primarybutton_set = false;
+		public virtual string PrimaryButton { get { if (!__primarybutton_set) __primarybutton = GetFieldValue<string>("PrimaryButton"); __primarybutton_set = true; return __primarybutton; } set { __primarybutton = value; __primarybutton_set = true;  } }
+		private string __ids = null;
+		private bool __ids_set = false;
+		public virtual string IDs { get { if (!__ids_set) __ids = GetFieldValue<string>("IDs"); __ids_set = true; return __ids; } set { __ids = value; __ids_set = true;  } }
+		private string __names = null;
+		private bool __names_set = false;
+		public virtual string Names { get { if (!__names_set) __names = GetFieldValue<string>("Names"); __names_set = true; return __names; } set { __names = value; __names_set = true;  } }
+		private IAgilityContentRepository<CaseStudy> __casestudies = null;
+		public virtual IAgilityContentRepository<CaseStudy> CaseStudies { get { if (__casestudies == null) __casestudies = GetLinkedContent<CaseStudy>("CaseStudies", "", "Title ", ""); return __casestudies; } set { __casestudies = value; }}
+
+	}
+	public partial class Module_FeaturedResources : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true;  } }
+		private string __subtitle = null;
+		private bool __subtitle_set = false;
+		public virtual string SubTitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("SubTitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true;  } }
+		private string __ids = null;
+		private bool __ids_set = false;
+		public virtual string IDs { get { if (!__ids_set) __ids = GetFieldValue<string>("IDs"); __ids_set = true; return __ids; } set { __ids = value; __ids_set = true;  } }
+		private string __names = null;
+		private bool __names_set = false;
+		public virtual string Names { get { if (!__names_set) __names = GetFieldValue<string>("Names"); __names_set = true; return __names; } set { __names = value; __names_set = true;  } }
+		private IAgilityContentRepository<Resource> __resources = null;
+		public virtual IAgilityContentRepository<Resource> Resources { get { if (__resources == null) __resources = GetLinkedContent<Resource>("Resources"); return __resources; } set { __resources = value; }}
+		private string __readmorelabel = null;
+		private bool __readmorelabel_set = false;
+		public virtual string ReadMoreLabel { get { if (!__readmorelabel_set) __readmorelabel = GetFieldValue<string>("ReadMoreLabel"); __readmorelabel_set = true; return __readmorelabel; } set { __readmorelabel = value; __readmorelabel_set = true;  } }
+
+	}
 	public partial class Module_FormBuilder : Agility.Web.AgilityContentItem
 	{
 		private string __recordtypename = null;
@@ -774,6 +857,29 @@ namespace Website.AgilityModels
 		public virtual string Heading { get { if (!__heading_set) __heading = GetFieldValue<string>("Heading"); __heading_set = true; return __heading; } set { __heading = value; __heading_set = true;  } }
 
 	}
+	public partial class Module_LatestPosts : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true;  } }
+		private int __postcount;
+		private bool __postcount_set = false;
+		public virtual int PostCount { get { if (!__postcount_set) __postcount = GetFieldValue<int>("PostCount"); __postcount_set = true; return __postcount; } set { __postcount = value; __postcount_set = true;  } }
+		private IAgilityContentRepository<BlogPost> __posts = null;
+		public virtual IAgilityContentRepository<BlogPost> Posts { get { if (__posts == null) __posts = GetLinkedContent<BlogPost>("Posts"); return __posts; } set { __posts = value; }}
+		private string __categoryids = null;
+		private bool __categoryids_set = false;
+		public virtual string CategoryIDs { get { if (!__categoryids_set) __categoryids = GetFieldValue<string>("CategoryIDs"); __categoryids_set = true; return __categoryids; } set { __categoryids = value; __categoryids_set = true;  } }
+		private string __categorynames = null;
+		private bool __categorynames_set = false;
+		public virtual string CategoryNames { get { if (!__categorynames_set) __categorynames = GetFieldValue<string>("CategoryNames"); __categorynames_set = true; return __categorynames; } set { __categorynames = value; __categorynames_set = true;  } }
+		private IAgilityContentRepository<BlogCategory> __categories = null;
+		public virtual IAgilityContentRepository<BlogCategory> Categories { get { if (__categories == null) __categories = GetLinkedContent<BlogCategory>("Categories"); return __categories; } set { __categories = value; }}
+		private string __readmorelabel = null;
+		private bool __readmorelabel_set = false;
+		public virtual string ReadMoreLabel { get { if (!__readmorelabel_set) __readmorelabel = GetFieldValue<string>("ReadMoreLabel"); __readmorelabel_set = true; return __readmorelabel; } set { __readmorelabel = value; __readmorelabel_set = true;  } }
+
+	}
 	public partial class Module_LatestResources : Agility.Web.AgilityContentItem
 	{
 		private string __title = null;
@@ -790,47 +896,6 @@ namespace Website.AgilityModels
 		public virtual string LeftButton { get { if (!__leftbutton_set) __leftbutton = GetFieldValue<string>("LeftButton"); __leftbutton_set = true; return __leftbutton; } set { __leftbutton = value; __leftbutton_set = true;  } }
 		private IAgilityContentRepository<Resource> __resources = null;
 		public virtual IAgilityContentRepository<Resource> Resources { get { if (__resources == null) __resources = GetLinkedContent<Resource>("Resources"); return __resources; } set { __resources = value; }}
-
-	}
-	public partial class Module_LatestPosts : Agility.Web.AgilityContentItem
-	{
-		private string __title = null;
-		private bool __title_set = false;
-		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
-		private int __postcount;
-		private bool __postcount_set = false;
-		public virtual int PostCount { get { if (!__postcount_set) __postcount = GetFieldValue<int>("PostCount"); __postcount_set = true; return __postcount; } set { __postcount = value; __postcount_set = true; } }
-		private IAgilityContentRepository<BlogPost> __posts = null;
-		public virtual IAgilityContentRepository<BlogPost> Posts { get { if (__posts == null) __posts = GetLinkedContent<BlogPost>("Posts"); return __posts; } set { __posts = value; } }
-		private string __categoryids = null;
-		private bool __categoryids_set = false;
-		public virtual string CategoryIDs { get { if (!__categoryids_set) __categoryids = GetFieldValue<string>("CategoryIDs"); __categoryids_set = true; return __categoryids; } set { __categoryids = value; __categoryids_set = true; } }
-		private string __categorynames = null;
-		private bool __categorynames_set = false;
-		public virtual string CategoryNames { get { if (!__categorynames_set) __categorynames = GetFieldValue<string>("CategoryNames"); __categorynames_set = true; return __categorynames; } set { __categorynames = value; __categorynames_set = true; } }
-		private IAgilityContentRepository<BlogCategory> __categories = null;
-		public virtual IAgilityContentRepository<BlogCategory> Categories { get { if (__categories == null) __categories = GetLinkedContent<BlogCategory>("Categories"); return __categories; } set { __categories = value; } }
-		private string __readmorelabel = null;
-		private bool __readmorelabel_set = false;
-		public virtual string ReadMoreLabel { get { if (!__readmorelabel_set) __readmorelabel = GetFieldValue<string>("ReadMoreLabel"); __readmorelabel_set = true; return __readmorelabel; } set { __readmorelabel = value; __readmorelabel_set = true; } }
-
-	}
-	public partial class Module_LatestResources : Agility.Web.AgilityContentItem
-	{
-		private string __title = null;
-		private bool __title_set = false;
-		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
-		private string __subtitle = null;
-		private bool __subtitle_set = false;
-		public virtual string SubTitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("SubTitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true; } }
-		private string __lefttypetitle = null;
-		private bool __lefttypetitle_set = false;
-		public virtual string LeftTypeTitle { get { if (!__lefttypetitle_set) __lefttypetitle = GetFieldValue<string>("LeftTypeTitle"); __lefttypetitle_set = true; return __lefttypetitle; } set { __lefttypetitle = value; __lefttypetitle_set = true; } }
-		private string __leftbutton = null;
-		private bool __leftbutton_set = false;
-		public virtual string LeftButton { get { if (!__leftbutton_set) __leftbutton = GetFieldValue<string>("LeftButton"); __leftbutton_set = true; return __leftbutton; } set { __leftbutton = value; __leftbutton_set = true; } }
-		private IAgilityContentRepository<Resource> __resources = null;
-		public virtual IAgilityContentRepository<Resource> Resources { get { if (__resources == null) __resources = GetLinkedContent<Resource>("Resources"); return __resources; } set { __resources = value; } }
 
 	}
 	public partial class Module_LogoListing : Agility.Web.AgilityContentItem
@@ -861,29 +926,29 @@ namespace Website.AgilityModels
 	{
 		private string __title = null;
 		private bool __title_set = false;
-		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true;  } }
 		private string __subtitle = null;
 		private bool __subtitle_set = false;
-		public virtual string SubTitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("SubTitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true; } }
+		public virtual string SubTitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("SubTitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true;  } }
 		private string __lefttypetitle = null;
 		private bool __lefttypetitle_set = false;
-		public virtual string LeftTypeTitle { get { if (!__lefttypetitle_set) __lefttypetitle = GetFieldValue<string>("LeftTypeTitle"); __lefttypetitle_set = true; return __lefttypetitle; } set { __lefttypetitle = value; __lefttypetitle_set = true; } }
+		public virtual string LeftTypeTitle { get { if (!__lefttypetitle_set) __lefttypetitle = GetFieldValue<string>("LeftTypeTitle"); __lefttypetitle_set = true; return __lefttypetitle; } set { __lefttypetitle = value; __lefttypetitle_set = true;  } }
 		private string __leftbutton = null;
 		private bool __leftbutton_set = false;
-		public virtual string LeftButton { get { if (!__leftbutton_set) __leftbutton = GetFieldValue<string>("LeftButton"); __leftbutton_set = true; return __leftbutton; } set { __leftbutton = value; __leftbutton_set = true; } }
+		public virtual string LeftButton { get { if (!__leftbutton_set) __leftbutton = GetFieldValue<string>("LeftButton"); __leftbutton_set = true; return __leftbutton; } set { __leftbutton = value; __leftbutton_set = true;  } }
 		private IAgilityContentRepository<Logo> __partners = null;
-		public virtual IAgilityContentRepository<Logo> Partners { get { if (__partners == null) __partners = GetLinkedContent<Logo>("Partners"); return __partners; } set { __partners = value; } }
+		public virtual IAgilityContentRepository<Logo> Partners { get { if (__partners == null) __partners = GetLinkedContent<Logo>("Partners"); return __partners; } set { __partners = value; }}
 		private IAgilityContentRepository<LogoTags> __tags = null;
-		public virtual IAgilityContentRepository<LogoTags> Tags { get { if (__tags == null) __tags = GetLinkedContent<LogoTags>("Tags"); return __tags; } set { __tags = value; } }
+		public virtual IAgilityContentRepository<LogoTags> Tags { get { if (__tags == null) __tags = GetLinkedContent<LogoTags>("Tags"); return __tags; } set { __tags = value; }}
 		private string __dynamicpagepath = null;
 		private bool __dynamicpagepath_set = false;
-		public virtual string DynamicPagePath { get { if (!__dynamicpagepath_set) __dynamicpagepath = GetFieldValue<string>("DynamicPagePath"); __dynamicpagepath_set = true; return __dynamicpagepath; } set { __dynamicpagepath = value; __dynamicpagepath_set = true; } }
+		public virtual string DynamicPagePath { get { if (!__dynamicpagepath_set) __dynamicpagepath = GetFieldValue<string>("DynamicPagePath"); __dynamicpagepath_set = true; return __dynamicpagepath; } set { __dynamicpagepath = value; __dynamicpagepath_set = true;  } }
 		private string __tagids = null;
 		private bool __tagids_set = false;
-		public virtual string TagIDs { get { if (!__tagids_set) __tagids = GetFieldValue<string>("TagIDs"); __tagids_set = true; return __tagids; } set { __tagids = value; __tagids_set = true; } }
+		public virtual string TagIDs { get { if (!__tagids_set) __tagids = GetFieldValue<string>("TagIDs"); __tagids_set = true; return __tagids; } set { __tagids = value; __tagids_set = true;  } }
 		private string __tagnames = null;
 		private bool __tagnames_set = false;
-		public virtual string TagNames { get { if (!__tagnames_set) __tagnames = GetFieldValue<string>("TagNames"); __tagnames_set = true; return __tagnames; } set { __tagnames = value; __tagnames_set = true; } }
+		public virtual string TagNames { get { if (!__tagnames_set) __tagnames = GetFieldValue<string>("TagNames"); __tagnames_set = true; return __tagnames; } set { __tagnames = value; __tagnames_set = true;  } }
 
 	}
 	public partial class Module_PeopleListing : Agility.Web.AgilityContentItem

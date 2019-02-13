@@ -27,13 +27,6 @@ namespace Website.ViewComponents.Modules
 					Title = "Case Study"
 				};
 
-				BlogAuthor author = null;
-
-				if (caseStudy.AuthorID > 0)
-				{
-					author = caseStudy.Author.GetByID(caseStudy.AuthorID);
-				}
-
 				string description = currentPage.MetaTags;
 				if (string.IsNullOrWhiteSpace(description))
 				{
@@ -56,10 +49,8 @@ namespace Website.ViewComponents.Modules
 				var viewModel = new
 				{
 					resource = caseStudy.ToFrontendProps(),
-					author = author,
 					resourceType = resourceType
 				};
-
 
 				return new ReactViewComponentResult("Components.CaseStudyDetails", viewModel);
 			});

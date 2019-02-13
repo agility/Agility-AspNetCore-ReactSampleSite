@@ -6,7 +6,7 @@ using Website.Extensions;
 
 namespace Website.ViewComponents.Modules
 {
-    public class CalloutViewComponent: ViewComponent
+    public class Callout: ViewComponent
     {
         
         public Task<IViewComponentResult> InvokeAsync(Module_Callout module)
