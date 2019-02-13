@@ -1018,13 +1018,16 @@ namespace Website.AgilityModels
 		private string __backgroundcolour = null;
 		private bool __backgroundcolour_set = false;
 		public virtual string BackgroundColour { get { if (!__backgroundcolour_set) __backgroundcolour = GetFieldValue<string>("BackgroundColour"); __backgroundcolour_set = true; return __backgroundcolour; } set { __backgroundcolour = value; __backgroundcolour_set = true;  } }
-		private string __textcolour = null;
-		private bool __textcolour_set = false;
-		public virtual string TextColour { get { if (!__textcolour_set) __textcolour = GetFieldValue<string>("TextColour"); __textcolour_set = true; return __textcolour; } set { __textcolour = value; __textcolour_set = true;  } }
+		private string __submissionposturl = null;
+		private bool __submissionposturl_set = false;
+		public virtual string SubmissionPOSTURL { get { if (!__submissionposturl_set) __submissionposturl = GetFieldValue<string>("SubmissionPOSTURL"); __submissionposturl_set = true; return __submissionposturl; } set { __submissionposturl = value; __submissionposturl_set = true;  } }
 
 	}
 	public partial class Module_ResourceDetails : Agility.Web.AgilityContentItem
 	{
+		private string __backbutton = null;
+		private bool __backbutton_set = false;
+		public virtual string BackButton { get { if (!__backbutton_set) __backbutton = GetFieldValue<string>("BackButton"); __backbutton_set = true; return __backbutton; } set { __backbutton = value; __backbutton_set = true;  } }
 
 	}
 	public partial class Module_RichTextArea : Agility.Web.AgilityContentItem
