@@ -18,14 +18,13 @@ class Form extends React.Component {
 		this.validate = this.validate.bind(this);
 		this.submitHandler = this.submitHandler.bind(this);
 		this.submit = this.submit.bind(this);
-		this.postData = this.postData.bind(this);
 
 		this._renderErrorMessage = this._renderErrorMessage.bind(this);
 		this._renderForm = this._renderForm.bind(this);
 		this._renderInvalidMessage = this._renderInvalidMessage.bind(this);
 		this._renderSuccessMessage = this._renderSuccessMessage.bind(this);
 
-		if (!this.props.beforeSubmit) this.props.beforeSubmit = () => { return true; }
+
 
 	}
 
@@ -35,6 +34,7 @@ class Form extends React.Component {
 	 * @returns bool Returns a boolean showing if the form is valid for submission or not.
 	 **/
 	validate() {
+
 		//this.formEl is a reference in the component to the form DOM element.
 		const formEl = this.formEl;
 		const formLength = formEl.length;
@@ -114,9 +114,13 @@ class Form extends React.Component {
 				data[input.name] = input.value;
 			});
 
-			//hit the callback beforeSubmit
-			if (this.props.beforeSubmit(data)) {
-				//actually do the submission
+			if (this.props.beforeSubmit) {
+				//hit the callback beforeSubmit
+				if (!this.props.beforeSubmit(data)) {
+					//actually do the submission
+					this.submit(data);
+				}
+			} else {
 				this.submit(data);
 			}
 
@@ -133,7 +137,7 @@ class Form extends React.Component {
 
 
 		PostUtil.postData(
-			this.props.url,
+			this.props.postURL,
 			data
 		).then(response => {
 
@@ -159,16 +163,21 @@ class Form extends React.Component {
 	}
 
 	_renderInvalidMessage() {
+		let msg = this.props.validationMessage;
+		if (!msg) msg = "Please check your values and try again.";
 		return (
-			<div className={"alert alert-success mt-4"} role="alert">
-				<div dangerouslySetInnerHTML={{ __html: this.props.validationMessage }} />
+			<div className={"alert"} role="alert">
+				<div dangerouslySetInnerHTML={{ __html: msg }} />
 			</div>
 		);
 	}
 
 	_renderErrorMessage() {
+		let msg = this.props.errorMessage;
+		if (!msg) msg = "An error occurred while submitting the form.  Please try again.";
+
 		return (
-			<div className={"alert alert-error mt-4"} role="alert">
+			<div className={"alert"} role="alert">
 				<div dangerouslySetInnerHTML={{ __html: this.props.errorMessage }} />
 			</div>
 		);
@@ -177,12 +186,12 @@ class Form extends React.Component {
 	_renderForm(props) {
 
 		//Add bootstrap's 'was-validated' class to the forms classes to support its styling
-		let classNames = [];
+		var classNames = [];
 
-		if (props.className) {
-			classNames = [props.className];
-			delete props.className;
-		}
+		// if (props.className) {
+		// 	classNames = [props.className];
+		// 	delete props.className;
+		// }
 
 		if (this.state.isValidated) {
 			classNames.push("was-validated");
@@ -201,7 +210,7 @@ class Form extends React.Component {
 			errorMessage = this._renderErrorMessage();
 		}
 
-		const btnClass = "btn " + this.state.isSubmitting ? "submitting" : "";
+		let btnClass = "btn " + (this.state.isSubmitting ? "submitting" : "");
 
 		return (
 			<form
@@ -212,14 +221,14 @@ class Form extends React.Component {
 				onSubmit={this.submitHandler}
 
 			>
-				{invalidMessage}
-				{errorMessage}
-
 				{this.props.children}
 
-				<div>
-					<button type="submit" className={btnClass} disabled={this.state.isSubmitting}>Submit</button>
+				<div className="form-item submit">
+					<button type="submit" className={btnClass} disabled={this.state.isSubmitting} >Submit</button>
 				</div>
+
+				{invalidMessage}
+				{errorMessage}
 
 			</form >
 		);
@@ -229,10 +238,11 @@ class Form extends React.Component {
 	* Render the component as a regular form element with appended children from props.
 	**/
 	render() {
-		const props = [this.props];
+
+
 
 		//ensure we have what we need
-		if (!this.props.url || this.props.url == "") {
+		if (!this.props.postURL || this.props.postURL == "") {
 			return (
 				<p>Please ensure a submission URL has been specified.</p>
 			);
@@ -243,7 +253,8 @@ class Form extends React.Component {
 		if (this.state.isSuccess) {
 			return this._renderSuccessMessage();
 		} else {
-			return this._renderForm(props);
+
+			return this._renderForm(this.props);
 		}
 	}
 }

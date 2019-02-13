@@ -28,6 +28,7 @@ import FeaturedResources from './components/featured-resources.jsx'
 import FeaturedCaseStudies from './components/featured-case-studies.jsx'
 import FAQs from './components/faqs.jsx'
 import FormPage from './components/form.jsx'
+import RequestADemo from './components/request-a-demo.jsx'
 import InfoBox from './components/info-box.jsx'
 import LogoListing from './components/logo-listing.jsx'
 import LatestResources from './components/latest-resources.jsx'
@@ -64,6 +65,7 @@ global['Components'] = {
   FeaturedCaseStudies,
   FAQs,
   FormPage,
+  RequestADemo,
   InfoBox,
   ContentPanel,
   TabPanels,

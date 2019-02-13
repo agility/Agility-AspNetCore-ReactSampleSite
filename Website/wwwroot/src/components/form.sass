@@ -1,4 +1,6 @@
-#form-page
+@import ./_variables.sass
+
+.form-container
   &.purple 
     .form-title
       color: #2a3846
@@ -36,8 +38,7 @@
             -moz-box-sizing: 0 5px 35px 0 rgba(0, 0, 0, 0.25)
             box-sizing: 0 5px 35px 0 rgba(0, 0, 0, 0.25)
 .form-container
-  #canvas-1
-    top: 98px
+  
   padding-top: 98px
   padding-bottom: 128px
   .form-left
@@ -169,6 +170,9 @@
         text-align: right
         .btn
           width: 152px
+          &.submitting
+            color: $gray
+            background-color: $inactive
       .inputs
         flex-wrap: wrap
         -ms-flex-wrap: wrap
@@ -253,3 +257,10 @@
             &.checked
               .after
                 display: block
+  .invalid-feedback 
+    font-size: 13px
+    color: $invalid
+    margin-top: 12px
+    float: right
+  .alert 
+    color: $warning

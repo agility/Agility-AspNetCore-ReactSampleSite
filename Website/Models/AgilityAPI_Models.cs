@@ -175,9 +175,6 @@ namespace Website.AgilityModels
 		private string __url = null;
 		private bool __url_set = false;
 		public virtual string URL { get { if (!__url_set) __url = GetFieldValue<string>("URL"); __url_set = true; return __url; } set { __url = value; __url_set = true; } }
-		private string __subtitle = null;
-		private bool __subtitle_set = false;
-		public virtual string Subtitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("Subtitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true; } }
 		private Attachment __image = null;
 		public virtual Attachment Image { get { if (__image == null) __image = GetAttachment("Image"); return __image; } set { __image = value; } }
 		private Attachment __customerlogo = null;
@@ -193,14 +190,9 @@ namespace Website.AgilityModels
 		public virtual string Quote { get { if (!__quote_set) __quote = GetFieldValue<string>("Quote"); __quote_set = true; return __quote; } set { __quote = value; __quote_set = true; } }
 		private IAgilityContentRepository<KeyValuePair> __metrics = null;
 		public virtual IAgilityContentRepository<KeyValuePair> Metrics { get { if (__metrics == null) __metrics = GetLinkedContent<KeyValuePair>("Metrics"); return __metrics; } set { __metrics = value; } }
-		private string __productids = null;
-		private bool __productids_set = false;
-		public virtual string ProductIDs { get { if (!__productids_set) __productids = GetFieldValue<string>("ProductIDs"); __productids_set = true; return __productids; } set { __productids = value; __productids_set = true; } }
-		private string __productnames = null;
-		private bool __productnames_set = false;
-		public virtual string ProductNames { get { if (!__productnames_set) __productnames = GetFieldValue<string>("ProductNames"); __productnames_set = true; return __productnames; } set { __productnames = value; __productnames_set = true; } }
-		private IAgilityContentRepository<CaseStudyProducts> __products = null;
-		public virtual IAgilityContentRepository<CaseStudyProducts> Products { get { if (__products == null) __products = GetLinkedContent<CaseStudyProducts>("Products"); return __products; } set { __products = value; } }
+		private string __contentpanelcopy = null;
+		private bool __contentpanelcopy_set = false;
+		public virtual string ContentPanelCopy { get { if (!__contentpanelcopy_set) __contentpanelcopy = GetFieldValue<string>("ContentPanelCopy"); __contentpanelcopy_set = true; return __contentpanelcopy; } set { __contentpanelcopy = value; __contentpanelcopy_set = true; } }
 		private string __brandfgcolor = null;
 		private bool __brandfgcolor_set = false;
 		public virtual string BrandFGColor { get { if (!__brandfgcolor_set) __brandfgcolor = GetFieldValue<string>("BrandFGColor"); __brandfgcolor_set = true; return __brandfgcolor; } set { __brandfgcolor = value; __brandfgcolor_set = true; } }
@@ -210,15 +202,32 @@ namespace Website.AgilityModels
 		private string __imageposition = null;
 		private bool __imageposition_set = false;
 		public virtual string ImagePosition { get { if (!__imageposition_set) __imageposition = GetFieldValue<string>("ImagePosition"); __imageposition_set = true; return __imageposition; } set { __imageposition = value; __imageposition_set = true; } }
+		private string __productsheading = null;
+		private bool __productsheading_set = false;
+		public virtual string ProductsHeading { get { if (!__productsheading_set) __productsheading = GetFieldValue<string>("ProductsHeading"); __productsheading_set = true; return __productsheading; } set { __productsheading = value; __productsheading_set = true; } }
+		private string __productssubheading = null;
+		private bool __productssubheading_set = false;
+		public virtual string ProductsSubHeading { get { if (!__productssubheading_set) __productssubheading = GetFieldValue<string>("ProductsSubHeading"); __productssubheading_set = true; return __productssubheading; } set { __productssubheading = value; __productssubheading_set = true; } }
+		private IAgilityContentRepository<CaseStudyProduct> __products = null;
+		public virtual IAgilityContentRepository<CaseStudyProduct> Products { get { if (__products == null) __products = GetLinkedContent<CaseStudyProduct>("Products"); return __products; } set { __products = value; } }
+		private string __productids = null;
+		private bool __productids_set = false;
+		public virtual string ProductIDs { get { if (!__productids_set) __productids = GetFieldValue<string>("ProductIDs"); __productids_set = true; return __productids; } set { __productids = value; __productids_set = true; } }
+		private string __productnames = null;
+		private bool __productnames_set = false;
+		public virtual string ProductNames { get { if (!__productnames_set) __productnames = GetFieldValue<string>("ProductNames"); __productnames_set = true; return __productnames; } set { __productnames = value; __productnames_set = true; } }
+		private string __productsrendertype = null;
+		private bool __productsrendertype_set = false;
+		public virtual string ProductsRenderType { get { if (!__productsrendertype_set) __productsrendertype = GetFieldValue<string>("ProductsRenderType"); __productsrendertype_set = true; return __productsrendertype; } set { __productsrendertype = value; __productsrendertype_set = true; } }
 
 	}
-	public partial class CaseStudyProducts : Agility.Web.AgilityContentItem
+	public partial class CaseStudyProduct : Agility.Web.AgilityContentItem
 	{
 		private string __title = null;
 		private bool __title_set = false;
 		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true; } }
-		private Attachment __icon = null;
-		public virtual Attachment Icon { get { if (__icon == null) __icon = GetAttachment("Icon"); return __icon; } set { __icon = value; } }
+		private Attachment __logo = null;
+		public virtual Attachment Logo { get { if (__logo == null) __logo = GetAttachment("Logo"); return __logo; } set { __logo = value; } }
 		private string __url = null;
 		private bool __url_set = false;
 		public virtual string URL { get { if (!__url_set) __url = GetFieldValue<string>("URL"); __url_set = true; return __url; } set { __url = value; __url_set = true; } }
@@ -645,6 +654,10 @@ namespace Website.AgilityModels
 	{
 
 	}
+	public partial class Module_CaseStudyTechStack : Agility.Web.AgilityContentItem
+	{
+
+	}
 	public partial class Module_ContactUsForm : Agility.Web.AgilityContentItem
 	{
 		private string __heading = null;
@@ -983,6 +996,31 @@ namespace Website.AgilityModels
 		private int __postcount;
 		private bool __postcount_set = false;
 		public virtual int PostCount { get { if (!__postcount_set) __postcount = GetFieldValue<int>("PostCount"); __postcount_set = true; return __postcount; } set { __postcount = value; __postcount_set = true; } }
+
+	}
+	public partial class Module_RequestADemo : Agility.Web.AgilityContentItem
+	{
+		private string __leftcolumntitle = null;
+		private bool __leftcolumntitle_set = false;
+		public virtual string LeftColumnTitle { get { if (!__leftcolumntitle_set) __leftcolumntitle = GetFieldValue<string>("LeftColumnTitle"); __leftcolumntitle_set = true; return __leftcolumntitle; } set { __leftcolumntitle = value; __leftcolumntitle_set = true; } }
+		private string __leftcolumnbody = null;
+		private bool __leftcolumnbody_set = false;
+		public virtual string LeftColumnBody { get { if (!__leftcolumnbody_set) __leftcolumnbody = GetFieldValue<string>("LeftColumnBody"); __leftcolumnbody_set = true; return __leftcolumnbody; } set { __leftcolumnbody = value; __leftcolumnbody_set = true; } }
+		private string __rightcolumntitle = null;
+		private bool __rightcolumntitle_set = false;
+		public virtual string RightColumnTitle { get { if (!__rightcolumntitle_set) __rightcolumntitle = GetFieldValue<string>("RightColumnTitle"); __rightcolumntitle_set = true; return __rightcolumntitle; } set { __rightcolumntitle = value; __rightcolumntitle_set = true; } }
+		private string __thanksmessage = null;
+		private bool __thanksmessage_set = false;
+		public virtual string ThanksMessage { get { if (!__thanksmessage_set) __thanksmessage = GetFieldValue<string>("ThanksMessage"); __thanksmessage_set = true; return __thanksmessage; } set { __thanksmessage = value; __thanksmessage_set = true; } }
+		private string __conversionscript = null;
+		private bool __conversionscript_set = false;
+		public virtual string ConversionScript { get { if (!__conversionscript_set) __conversionscript = GetFieldValue<string>("ConversionScript"); __conversionscript_set = true; return __conversionscript; } set { __conversionscript = value; __conversionscript_set = true; } }
+		private string __backgroundcolour = null;
+		private bool __backgroundcolour_set = false;
+		public virtual string BackgroundColour { get { if (!__backgroundcolour_set) __backgroundcolour = GetFieldValue<string>("BackgroundColour"); __backgroundcolour_set = true; return __backgroundcolour; } set { __backgroundcolour = value; __backgroundcolour_set = true; } }
+		private string __submissionposturl = null;
+		private bool __submissionposturl_set = false;
+		public virtual string SubmissionPOSTURL { get { if (!__submissionposturl_set) __submissionposturl = GetFieldValue<string>("SubmissionPOSTURL"); __submissionposturl_set = true; return __submissionposturl; } set { __submissionposturl = value; __submissionposturl_set = true; } }
 
 	}
 	public partial class Module_ResourceDetails : Agility.Web.AgilityContentItem
