@@ -12,7 +12,7 @@ class Callout extends React.Component {
         return (
 
             <section className={calloutClasses}>
-                <h3 className="h3">{this.props.title}</h3>
+                <h3>{this.props.title}</h3>
                 <p>{this.props.caption}</p>
                 <a href={this.props.link.href} className={buttonClasses} target={this.props.link.target}>{this.props.link.text}</a>
             </section>
