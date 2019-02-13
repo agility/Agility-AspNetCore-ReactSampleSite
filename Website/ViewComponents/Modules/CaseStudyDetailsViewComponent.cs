@@ -20,6 +20,9 @@ namespace Website.ViewComponents.Modules
 			{
 				var caseStudy = Agility.Web.AgilityContext.GetDynamicPageItem<CaseStudy>();
 
+				if(caseStudy == null)
+					throw new ArgumentNullException();
+
 				var currentPage = AgilityContext.Page;
 
 				ResourceType resourceType = new ResourceType()
@@ -48,8 +51,15 @@ namespace Website.ViewComponents.Modules
 
 				var viewModel = new
 				{
-					resource = caseStudy.ToFrontendProps(),
-					resourceType = resourceType
+					Metrics = caseStudy.Metrics.Items().Select(i => new { 
+						Title = i.Key,
+						i.Value
+					}					
+					),
+					fgColor = caseStudy.BrandFGColor,
+					Body = caseStudy.TextBlob,
+					RightContentCopy = caseStudy.RightContentCopy,
+					Quote = caseStudy.Quote
 				};
 
 				return new ReactViewComponentResult("Components.CaseStudyDetails", viewModel);

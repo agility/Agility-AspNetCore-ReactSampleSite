@@ -63,13 +63,13 @@ class CaseDetails extends React.Component {
                     </div>
                     <div className="col-md-8">
                         <div className="case-study-left">
-                            <div className="rich-text" dangerouslySetInnerHTML={{__html: this.props.contentLeft}}></div>
+                            <div className="rich-text" dangerouslySetInnerHTML={{__html: this.props.body}}></div>
                         </div>
                     </div>
                     <div className="col-md-4">
                         <div className="case-study-right">
-                            <div className="rich-text" dangerouslySetInnerHTML={{__html: this.props.contentRight}}></div>
-                            <div className="color-text"><p>{this.props.colorText}</p></div>
+                            <div className="rich-text" dangerouslySetInnerHTML={{__html: this.props.rightContentCopy}}></div>
+                            <div className="color-text"><p>{this.props.quote}</p></div>
                         </div>
                     </div>
                 </div>
