@@ -2,7 +2,7 @@ import React from 'react';
 import { hot } from 'react-hot-loader/root'
 import PostUtil from '../utils/post-util.js';
 
-import './footer.sass'
+import './footer.scss'
 
 
 class Footer extends React.Component {

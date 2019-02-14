@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './logo-cloud.sass'
+import './logo-cloud.scss'
 
 class LogoListing extends React.Component {
     render() {

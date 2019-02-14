@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './people-listing.sass'
+import './people-listing.scss'
 
 class PeopleListing extends React.Component {
 

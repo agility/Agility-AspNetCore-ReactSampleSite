@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './tab-panels.sass'
+import './tab-panels.scss'
 
 class TabPanels extends React.Component {
     constructor() {

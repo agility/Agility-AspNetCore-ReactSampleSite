@@ -1,0 +1,81 @@
+.featured-case-studies {
+  text-align: center;
+
+  h2.title-component {
+    margin-bottom: 66px;
+    max-width: 1008px;
+    display: block;
+    margin: 0 auto 42px;
+    font-size: 36px;
+    line-height: 1.56;
+    font-family: "Muli-bold", sans-serif;
+    color: #2a3846;
+    text-align: center;
+
+    @media (max-width: 767px) {
+      font-size: 30px;
+      margin-bottom: 90px;
+    }
+
+    @media (max-width: 480px) {
+      margin-bottom: 40px;
+    }
+  }
+
+  .case-item {
+    @media (max-width: 991px) {
+      margin-bottom: 50px;
+    }
+
+    .image {
+      margin-bottom: 40px;
+    }
+
+    .app-name {
+      margin-bottom: 38px;
+      text-align: center;
+
+      img {
+        height: 48px;
+        width: auto;
+      }
+    }
+
+    .content {
+      margin-bottom: 15px;
+      padding-left: 40px;
+      padding-right: 40px;
+
+      @media (max-width: 480px) {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        font-family: "Muli-Regular", sans-serif;
+        color: #484b4d;
+        text-align: center;
+      }
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+
+      img {
+        height: 32px;
+        width: auto;
+        margin-left: 12px;
+        margin-right: 12px;
+      }
+    }
+  }
+
+  > a {
+    margin-top: 80px;
+    min-width: 176px;
+  }
+}

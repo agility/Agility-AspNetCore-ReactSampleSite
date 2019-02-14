@@ -1,0 +1,197 @@
+.latest-resources {
+  h2.title-component {
+    max-width: 1008px;
+    display: block;
+    margin: 0 auto 42px;
+    font-size: 36px;
+    line-height: 1.56;
+    font-family: "Muli-bold", sans-serif;
+    color: #2a3846;
+    text-align: center;
+
+    @media (max-width: 767px) {
+      font-size: 30px;
+    }
+  }
+
+  p.intro {
+    max-width: 1008px;
+    display: block;
+    margin: 0 auto 88px;
+    font-size: 20px;
+    line-height: 1.6;
+    font-family: "Muli-SemiBold", sans-serif;
+    color: #484b4d;
+    text-align: center;
+  }
+
+  .latest-wrapper {
+    .row-my {
+      .col-md-4 {
+        @media (max-width: 991px) {
+          max-width: 100%;
+          -webkit-box: 0 0 100%;
+          -moz-box: 0 0 100%;
+          -webkit-flex: 0 0 100%;
+          -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+        }
+      }
+    }
+  }
+
+  .latest-left {
+    margin-bottom: 32px;
+    padding: 32px;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+
+    @media (max-width: 480px) {
+      padding: 20px;
+    }
+
+    .h3 {
+      margin-bottom: 40px;
+      font-size: 24px;
+      line-height: 40px;
+      font-family: "Muli-bold", sans-serif;
+      color: #2a3846;
+    }
+
+    a {
+      width: 152px;
+    }
+
+    .assets {
+      padding-bottom: 58px;
+      margin-bottom: 66px;
+      border-bottom: 1px solid #ebeef0;
+
+      @media (max-width: 991px) {
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+      }
+
+      button {
+        position: relative;
+        margin-bottom: 16px;
+        display: block;
+        padding: 0;
+        padding-left: 40px;
+        border: none;
+        background: none;
+        font-size: 16px;
+        height: 24px;
+        line-height: 24px;
+        font-family: "Muli-Regular", sans-serif;
+        color: #484b4d;
+        cursor: pointer;
+
+        &:before {
+          position: absolute;
+          left: 0;
+          top: 0;
+          display: block;
+          content: "";
+          width: 22px;
+          height: 22px;
+          border-radius: 2px;
+          border: 1px solid #d0dce8;
+          transition: all 0.15s ease-out;
+        }
+
+        &.active {
+          &:before {
+            background-color: #4600a8;
+            border: 1px solid #4600a8;
+          }
+        }
+
+        &:hover {
+          &:before {
+            border: 1px solid #4600a8;
+          }
+        }
+      }
+    }
+  }
+
+  .col-md-6 {
+    .latest-item {
+      margin-top: 32px;
+      border-radius: 5px;
+      box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+
+      .image {
+        position: relative;
+
+        img {
+          display: block;
+          margin: 0 auto;
+        }
+
+        span {
+          position: absolute;
+          left: 0;
+          bottom: 8px;
+          display: inline-block;
+          height: 32px;
+          line-height: 32px;
+          padding-left: 24px;
+          padding-right: 20px;
+          border-radius: 0 3px 3px 0;
+          background-color: #ffcb28;
+          font-size: 16px;
+          font-family: "Muli-bold", sans-serif;
+          color: #fff;
+        }
+      }
+
+      .content {
+        padding: 20px 24px 28px;
+        text-align: center;
+
+        @media (max-width: 480px) {
+          padding: 20px 15px;
+        }
+
+        .h4 {
+          margin-bottom: 17px;
+          font-size: 20px;
+          font-family: "Muli-ExtraBold", sans-serif;
+          color: #2a3846;
+          text-align: left;
+        }
+
+        p {
+          margin-bottom: 27px;
+          font-size: 16px;
+          line-height: 24px;
+          font-family: "Muli-Regular", sans-serif;
+          color: #6d7882;
+          text-align: left;
+        }
+
+        a {
+          font-size: 14px;
+          font-family: "Muli-bold", sans-serif;
+          color: #484b4d;
+        }
+      }
+    }
+
+    &:first-child,
+    &:nth-child(2) {
+      .latest-item {
+        margin-top: 0;
+
+        @media (max-width: 991px) {
+          margin-top: 32px;
+        }
+      }
+    }
+  }
+}

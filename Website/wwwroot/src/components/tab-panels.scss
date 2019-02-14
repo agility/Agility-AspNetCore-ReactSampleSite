@@ -1,0 +1,172 @@
+@import "./_variables.scss";
+
+.features {
+  padding-top: 80px;
+  padding-bottom: 95px;
+  position: relative;
+  overflow: hidden;
+
+  .rotated-bg {
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-image: url("https://static.agilitycms.com/layout/img/bg/Triangle_2.png");
+    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  h2 {
+    margin-bottom: 42px;
+  }
+
+  > span {
+    font-family: $semibold;
+    font-size: 20px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.6;
+    letter-spacing: normal;
+    display: block;
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  .features-tabs {
+    max-width: 417px;
+    display: flex;
+    margin: 0 auto 60px auto;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #ebeef0;
+
+    .features-tab {
+      font-size: 18px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $inactive;
+      padding-bottom: 10px;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.24, 0.35, 0, 1.01);
+
+      &:hover {
+        color: $colorBasic;
+      }
+    }
+
+    .features-tab.active {
+      color: $act;
+      font-family: $bold;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: $act;
+      }
+    }
+  }
+
+  .features-toggle-tab-items {
+    .features-toggle-tab-item {
+      display: none;
+      position: relative;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 0.2s cubic-bezier(0.24, 0.35, 0, 1.01);
+
+      .img {
+        max-width: 416px;
+        min-width: 416px;
+        line-height: 0;
+        margin-right: 5.4166666667%;
+      }
+
+      .content {
+        .feature-title {
+          font-size: 20px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.6;
+          letter-spacing: normal;
+          margin-top: 5px;
+          margin-bottom: 41px;
+        }
+
+        li {
+          position: relative;
+          font-size: 16px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.5;
+          letter-spacing: normal;
+          color: $gray;
+          margin-bottom: 20px;
+          padding-left: 32px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            display: block;
+            width: 12px;
+            height: 12px;
+            background-image: url("https://static.agilitycms.com/layout/img/ico/ico.png");
+            -webkit-background-size: contain;
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+        }
+
+        button {
+          margin-top: 18px;
+        }
+
+        .btn {
+          display: inline-block;
+          margin-top: 18px;
+          height: 48px;
+          line-height: 48px;
+        }
+      }
+    }
+
+    .features-toggle-tab-item.active {
+      display: flex;
+    }
+
+    .features-toggle-tab-item.active.visible {
+      opacity: 1;
+      transition: opacity 0.2s cubic-bezier(0.24, 0.35, 0, 1.01);
+    }
+  }
+}
+
+#product-page {
+  #sec-3 {
+    #canvas-3 {
+      top: 150px;
+    }
+
+    .features-tabs {
+      max-width: 470px;
+    }
+  }
+}

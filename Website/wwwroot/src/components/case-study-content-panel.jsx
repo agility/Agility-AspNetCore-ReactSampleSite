@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './case-study-content-panel.sass'
+import './case-study-content-panel.scss'
 
 class CaseStudyContentPanel extends React.Component {
 
