@@ -7,6 +7,9 @@ import BlogPostDetailsProps from '../data/blog-post-details.json'
 class BlogPost extends Component {
     render() {
 
+        var body = document.getElementById('frontend-only');
+        body.classList.add('shadow');
+
         return (
             <div id="blog-post-details">
                 <BlogPostDetails {...BlogPostDetailsProps } />
