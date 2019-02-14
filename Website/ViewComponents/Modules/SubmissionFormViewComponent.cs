@@ -9,16 +9,18 @@ using Agility.Web.Extensions;
 
 namespace Website.ViewComponents.Modules
 {
-	public class RequestADemo : ViewComponent
+	public class FormSubmission : ViewComponent
 	{
 
-		public Task<IViewComponentResult> InvokeAsync(Module_RequestADemo module)
+		public Task<IViewComponentResult> InvokeAsync(Module_SubmissionForm module)
 		{
 			return Task.Run<IViewComponentResult>(() =>
 			{
-				return new ReactViewComponentResult("Components.RequestADemo", module.ToFrontendProps())
+				string componentName = $"Components.{module.ComponentName}";
+
+				return new ReactViewComponentResult(componentName, module.ToFrontendProps())
 				{
-					ClientOnly = true //HACK - remove 
+					ClientOnly = true
 				};
 			});
 		}

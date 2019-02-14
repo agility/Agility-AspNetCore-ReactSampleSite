@@ -11,7 +11,8 @@ class RequestADemo extends React.Component {
 
     componentDidMount() {
         if (window != undefined && window) {
-            document.getElementById("firstname").focus();
+            var elem = document.getElementById("firstname");
+            if (elem) elem.focus();
         }
     }
 
