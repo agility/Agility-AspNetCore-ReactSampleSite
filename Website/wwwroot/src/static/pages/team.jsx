@@ -8,6 +8,10 @@ import PeopleListingBoardProps from '../data/people-listing-advisory-board.json'
 class Team extends Component {
     render() {
 
+        var body = document.getElementById('frontend-only');
+        body.classList.add('shadow');
+
+
         return (
             <div id="team-page">
                 <div className="team-top">

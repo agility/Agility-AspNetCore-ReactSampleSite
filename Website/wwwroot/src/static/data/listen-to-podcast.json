@@ -1,0 +1,33 @@
+{
+  "title": "Subscribe to Podcast",
+  "items": [
+    {
+      "ico": {
+        "url": "dist/img/spotify_new.png"
+      },
+      "href": "#",
+      "title": ""
+    },
+    {
+      "ico": {
+        "url": "dist/img/listen_stitcher_new.png"
+      },
+      "href": "#",
+      "title": ""
+    },
+    {
+      "ico": {
+        "url": "dist/img/google_podcast_new.png"
+      },
+      "href": "#",
+      "title": ""
+    },
+    {
+      "ico": {
+        "url": "dist/img/apple_podcast.png"
+      },
+      "href": "#",
+      "title": ""
+    }
+  ]
+}
