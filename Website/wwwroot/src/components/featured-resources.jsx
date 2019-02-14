@@ -1,7 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
 import './featured-resources.sass'
-
+import ResponsiveImage from './responsive-image.jsx'
 class FeaturedResources extends React.Component {
 
 
@@ -39,7 +39,10 @@ class FeaturedResContent extends React.Component {
         return (
             <div className="col-md-4">
                 <div className="featured-item">
-                    <div className="image"><img src={this.props.item.image.url} alt="" /></div>
+                    <div className="image">
+                        <ResponsiveImage img={this.props.item.image}
+                                breaks={[{ w: 640, h: 305, max: 640 }, { w: 768, h: 366, min: 800 }, { w: 480, h: 229, min: 1190 }]} />
+                    </div>
                     <div className="content">
                         <h3>{this.props.item.title}</h3>
                         <p>{this.props.item.text}</p>
