@@ -1,15 +1,16 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
 import './latest-blog-posts.sass'
+import ResponsiveImage from './responsive-image.jsx'
+
 
 class LatestBlogPosts extends React.Component {
 
     render() {
 
-        console.log(this.props);
         var self = this;
         var four = this.props.items.map(function (item) {
-            return <LatestBlogPostsContent item={item} readMoreText={self.props.readMoreLabel} />
+            return <LatestBlogPostsContent item={item} key={item.key} readMoreText={self.props.readMoreLabel} />
         });
 
         return (
@@ -42,8 +43,9 @@ class LatestBlogPostsContent extends React.Component {
             <div class="col-md-4">
                 <div className="blog-item">
                     {this.props.item.image != null &&
-                        <div className="image">
-                            <img src={this.props.item.image.url} alt="" />
+                        <div className="image"><a href={this.props.item.url} >
+                            <ResponsiveImage img={this.props.item.image}
+                                breaks={[{ w: 640, max: 640 }, { w: 768, min: 800 }, { w: 480, min: 1190 }]} /></a>
                         </div>
                     }
                     <div className="content">
