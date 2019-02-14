@@ -52,7 +52,7 @@ class TestimonialsListing extends React.Component {
                 </div>
 
                 <h2 className="title-conponent">{this.props.header}</h2>
-                <p>{this.props.subHeading}</p>
+                <h3 className="testimonials-subtitle">{this.props.subHeading}</h3>
                 <div className="products-staff">
                     <div className="row-my">
                         {testimonials}
