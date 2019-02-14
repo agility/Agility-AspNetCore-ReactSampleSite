@@ -13,8 +13,6 @@ import Footer from './components/footer.jsx'
 import AnimatedBg from './components/animated-bg.jsx'
 
 // -- modules
-import BlogListing from './components/blog-listing.jsx'
-import BlogPostDetails from './components/blog-post-details.jsx'
 import CaseDetails from './components/case-study-details.jsx'
 import CaseStudyContentPanel from './components/case-study-content-panel.jsx'
 import ContentPanel from './components/content-panel.jsx'
@@ -52,8 +50,6 @@ import Blank from './components/blank.jsx'
 
 global['Components'] = {
   Blank,
-  BlogListing,
-  BlogPostDetails,
   FeatureBlocks,
   CaseDetails,
   CaseStudyContentPanel,

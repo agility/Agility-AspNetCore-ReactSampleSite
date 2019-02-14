@@ -11,7 +11,7 @@ class RichTextPage extends Component {
         body.classList.add('shadow');
 
         return (
-            <div id="rich-text-page">
+            <div>
                 <RichText {...RichTextProps } />
             </div>
         );

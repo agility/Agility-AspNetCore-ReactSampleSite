@@ -7,7 +7,7 @@ class ResourceDetails extends React.Component {
     render() {
 
         return (
-            <section className="blog-post-details">
+            <section className="resource-details">
                 <div className="rich-text">
                     <div className="container p-w-small">
                         <h1 className="h1">{this.props.resource.title}</h1>
