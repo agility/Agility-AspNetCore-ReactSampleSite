@@ -128,7 +128,7 @@ class RequestADemo extends React.Component {
                     </div>
 
                 </FormField>
-                <input type="hidden" id="leadsourcedetail" name="leadsourcedetail" />
+                <input type="hidden" id="leadsourcedetail" name="leadsourcedetail" value="Request for Demo" />
                 <input type="hidden" name="_autopilot_session_id" />
             </FullPageForm>
 

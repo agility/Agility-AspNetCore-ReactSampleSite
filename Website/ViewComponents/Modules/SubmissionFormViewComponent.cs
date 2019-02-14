@@ -9,7 +9,7 @@ using Agility.Web.Extensions;
 
 namespace Website.ViewComponents.Modules
 {
-	public class FormSubmission : ViewComponent
+	public class SubmissionForm : ViewComponent
 	{
 
 		public Task<IViewComponentResult> InvokeAsync(Module_SubmissionForm module)
