@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { hot } from 'react-hot-loader/root'
 
-import BlogPostDetails from '../../components/blog-post-details.jsx'
-import BlogPostDetailsProps from '../data/blog-post-details.json'
+import PostDetails from '../../components/post-details.jsx'
+import PostDetailsProps from '../data/blog-post-details.json'
 
 class BlogPost extends Component {
     render() {
@@ -12,7 +12,7 @@ class BlogPost extends Component {
 
         return (
             <div id="blog-post-details">
-                <BlogPostDetails {...BlogPostDetailsProps } />
+                <PostDetails {...PostDetailsProps } />
             </div>
         );
     }

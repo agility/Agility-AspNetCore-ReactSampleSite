@@ -1,91 +1,137 @@
 {
+  "fetchUrl": "/Listing/Resources",
+  "types": [
+    {
+      "title": "Guide",
+      "key": 401
+    },
+    {
+      "title": "Webinar",
+      "key": 402
+    },
+    {
+      "title": "Video",
+      "key": 403
+    }
+  ],
   "title": "Latest Resources",
   "subTitle": "Well educated, intellectual people, especially scientists at all times demonstrate considerably smaller adherence to religiosity than others. ",
-  "leftTopTitle": "Type of asset",
-  "leftBottomTitle": "Nothing is more important then connection!",
   "leftButton": {
     "text": "Request a Demo",
-    "href": "#",
+    "href": "~/request-demo",
     "target": "_self"
   },
+  "leftBottomTitle": "Resource Types",
   "items": [
     {
+      "key": 480,
       "image": {
-        "url": "dist/img/latest-resources1.png"
-      },
-      "label": "Whitepaper",
-      "title": "Put Wings On Your Dreams",
-      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
-      "primaryButton": {
-        "text": "Read Now",
-        "href": "#",
-        "target": "_self"
-      }
-    },
-    {
-      "image": {
-        "url": "dist/img/latest-resources2.png"
-      },
-      "label": "Ebook",
-      "title": "Put Wings On Your Dreams",
-      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
-      "primaryButton": {
-        "text": "Read Now",
-        "href": "#",
-        "target": "_self"
-      }
-    },
-    {
-      "image": {
-        "url": "dist/img/latest-resources1.png"
-      },
-      "label": "Whitepaper",
-      "title": "Put Wings On Your Dreams",
-      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
-      "primaryButton": {
-        "text": "Read Now",
-        "href": "#",
-        "target": "_self"
-      }
-    },
-    {
-      "image": {
-        "url": "dist/img/latest-resources2.png"
-      },
-      "label": "Report",
-      "title": "Put Wings On Your Dreams",
-      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
-      "primaryButton": {
-        "text": "Read Now",
-        "href": "#",
-        "target": "_self"
-      }
-    },
-    {
-      "image": {
-        "url": "dist/img/latest-resources1.png"
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/resources/images/ai-artificial-intelligence-code-34676.jpg",
+        "label": "Image Upload",
+        "target": "",
+        "url": "https://static.agilitycms.com/resources/images/ai-artificial-intelligence-code-34676.jpg",
+        "fileSize": 0,
+        "height": 3648,
+        "width": 5472,
+        "thumbnails": {}
       },
       "label": "Webinar",
-      "title": "Put Wings On Your Dreams",
-      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
-      "primaryButton": {
-        "text": "Read Now",
-        "href": "#",
-        "target": "_self"
-      }
+      "resourceTypeID": 402,
+      "title": "Res Test 2 With Longer Title That Might Wrap",
+      "text": "This is the excerpt of the resource.",
+      "url": "/resources/res-test-2"
     },
     {
+      "key": 481,
       "image": {
-        "url": "dist/img/latest-resources2.png"
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 2,
+        "fileName": "https://static.agilitycms.com/resources/images/react-agility_20190208142910_0.jpg",
+        "label": "Image Upload",
+        "target": "",
+        "url": "https://static.agilitycms.com/resources/images/react-agility_20190208142910_0.jpg",
+        "fileSize": 0,
+        "height": 676,
+        "width": 1200,
+        "thumbnails": {}
       },
-      "label": "Ebook",
-      "title": "Put Wings On Your Dreams",
-      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
-      "primaryButton": {
-        "text": "Read Now",
-        "href": "#",
-        "target": "_self"
-      }
+      "label": "Webinar",
+      "resourceTypeID": 402,
+      "title": "Res Test 3",
+      "text": "This is the excerpt of the resource. It\u0027s really long, and it should be...",
+      "url": "/resources/res-test-3"
+    },
+    {
+      "key": 482,
+      "image": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/resources/images/ai-artificial-intelligence-code-34676.jpg",
+        "label": "Image Upload",
+        "target": "",
+        "url": "https://static.agilitycms.com/resources/images/ai-artificial-intelligence-code-34676.jpg",
+        "fileSize": 0,
+        "height": 3648,
+        "width": 5472,
+        "thumbnails": {}
+      },
+      "label": "Video",
+      "resourceTypeID": 403,
+      "title": "Res Test 4",
+      "text": "This is the excerpt of the resource.",
+      "url": "/resources/res-test-4"
+    },
+    {
+      "key": 483,
+      "image": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/resources/images/react-agility_20190208142910_0.jpg",
+        "label": "Image Upload",
+        "target": "",
+        "url": "https://static.agilitycms.com/resources/images/react-agility_20190208142910_0.jpg",
+        "fileSize": 0,
+        "height": 676,
+        "width": 1200,
+        "thumbnails": {}
+      },
+      "label": "Webinar",
+      "resourceTypeID": 402,
+      "title": "Res Test 5",
+      "text": "This is the excerpt of the resource. It\u0027s really long, and it should be...",
+      "url": "/resources/res-test-5"
+    },
+    {
+      "key": 404,
+      "image": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 2,
+        "fileName": "https://static.agilitycms.com/resources/images/architecture-scaffold.jpg",
+        "label": "How To Future-proof your Content Stack",
+        "target": "",
+        "url": "https://static.agilitycms.com/resources/images/architecture-scaffold.jpg",
+        "fileSize": 0,
+        "height": 614,
+        "width": 1217,
+        "thumbnails": {}
+      },
+      "label": "Guide",
+      "resourceTypeID": 401,
+      "title": "How To Future-proof your Content Stack",
+      "text": "When you look at all the output that your marketing and business teams...",
+      "url": "/resources/how-to-future-proof-your-content-stack"
     }
   ]
 }

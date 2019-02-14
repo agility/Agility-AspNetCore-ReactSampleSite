@@ -3,7 +3,7 @@ import moment from 'moment'
 import { hot } from 'react-hot-loader/root'
 import ResponsiveImage from './responsive-image.jsx'
 import './post-details.sass'
-import './rich-text.sass'
+import RichText from './rich-text.jsx'
 
 class PostDetails extends React.Component {
     render() {
@@ -11,8 +11,8 @@ class PostDetails extends React.Component {
         return (
 
             <section className="blog-post-details">
-                <div className="rich-text">
-                    <div className="container p-w-small">
+                <div className="">
+                    <div className="container p-w-small rich-text">
                         <h1 className="h1">{this.props.post.title}</h1>
                         {this.props.post.subTitle &&
                             <h4 className="h4">{this.props.post.subTitle}</h4>
@@ -33,11 +33,14 @@ class PostDetails extends React.Component {
                                     breaks={[{ w: 640, max: 640 }, { w: 780, max: 800 }, { w: 1200, max: 1920 }]} />
                             </div>
                         }
-
-                        <div className="content" dangerouslySetInnerHTML={{ __html: this.props.post.textBlob }} />
-
+                        
+                    </div>
+                    <RichText html={this.props.post.textBlob} />
+                    
+                    <div className="container p-w-small">
                         <a href="/posts" className="back d-flex ai-center"><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt="" /><span>Back to All Articles</span></a>
                     </div>
+
                 </div>
             </section>
 

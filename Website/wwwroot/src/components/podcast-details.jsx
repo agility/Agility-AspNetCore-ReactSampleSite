@@ -9,7 +9,7 @@ class BlogPostDetails extends React.Component {
 
         return (
 
-            <section className="blog-post-details">
+            <section className="podcast-details">
                 <div className="rich-text">
                     <div className="container p-w-small">
                         <h1 className="h1">{this.props.title}</h1>

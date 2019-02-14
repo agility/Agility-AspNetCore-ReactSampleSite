@@ -15,6 +15,7 @@ import LogoListingProps from '../data/logo-listing.json'
 
 import Callout from '../../components/callout.jsx'
 import CalloutProps from '../data/callout.json'
+import CalloutPurpleProps from '../data/callout-purple.json'
 
 class Partners extends Component {
   render() {
@@ -25,6 +26,7 @@ class Partners extends Component {
         <TabPanels {...TabPanelsProps} />
         <LogoListing {...LogoListingProps} />
         <FAQs {...FAQsProps} />
+        <Callout {...CalloutPurpleProps} />
         <Callout {...CalloutProps} />
       </div>
     );

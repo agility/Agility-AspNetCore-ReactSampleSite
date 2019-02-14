@@ -49,8 +49,8 @@ ReactDOM.render((
                         <Route path="/case-study-details-page" component={CaseStudyDetails} />
                         <Route path="/form-page-purple" component={Form} />
                         <Route path="/form-page-yellow" component={FormYellow} />
-                        <Route path="/podcast-listing" component={Podcast} />
-                        <Route path="/podcast-listing-detail" component={PodcastDetailsPage} />
+                        <Route path="/podcast-listing-page" component={Podcast} />
+                        <Route path="/podcast-details-page" component={PodcastDetailsPage} />
 
                         <Route component={NotFound} />
                     </Switch>

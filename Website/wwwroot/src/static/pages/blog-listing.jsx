@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { hot } from 'react-hot-loader/root'
 
-import BlogListingTemplate from '../../components/blog-listing.jsx'
-import BlogListingTemplateProps from '../data/blog-listing.json'
+import PostListing from '../../components/post-listing.jsx'
+import PostListingProps from '../data/blog-listing.json'
 
 import StayInTouchBox from '../../components/stay-in-touch-box.jsx'
 import StayInTouchBoxProps from '../data/stay-in-touch-box.json'
@@ -17,17 +17,16 @@ class BlogListing extends Component {
         body.classList.add('shadow');
 
         return (
-            <div id="blog-listing-page">
-                <div className="p-w blog-listing-page">
-                    <div className="row-my">
-                        <div className="col-md-7">
-                            <BlogListingTemplate {...BlogListingTemplateProps } />
-                        </div>
-                        <div className="col-md-5">
-                            <div className="right-col">
-                                <StayInTouchBox {...StayInTouchBoxProps } />
-                                <InfoBox {...InfoBoxProps } />
-                            </div>
+
+            <div className="p-w two-column-page">
+                <div className="row-my">
+                    <div className="col-md-7">
+                        <PostListing {...PostListingProps } />
+                    </div>
+                    <div className="col-md-5">
+                        <div className="right-col">
+                            <StayInTouchBox {...StayInTouchBoxProps } />
+                            <InfoBox {...InfoBoxProps } />
                         </div>
                     </div>
                 </div>
