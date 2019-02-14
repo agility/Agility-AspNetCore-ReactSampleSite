@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './testimonials-listing.sass'
+import './testimonials-listing.scss'
 
 class TestimonialsListing extends React.Component {
     constructor() {

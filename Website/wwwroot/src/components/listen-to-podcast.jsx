@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './listen-to-podcast.sass'
+import './listen-to-podcast.scss'
 
 class StayInTouchBox extends React.Component {
 

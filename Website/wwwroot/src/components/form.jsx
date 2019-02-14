@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './form.sass'
+import './form.scss'
 
 class FormPage extends React.Component {
     constructor() {

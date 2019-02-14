@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './rich-text.sass'
+import './rich-text.scss'
 
 class RichText extends React.Component {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './info-box.sass'
+import './info-box.scss'
 
 class InfoBox extends React.Component {
 
