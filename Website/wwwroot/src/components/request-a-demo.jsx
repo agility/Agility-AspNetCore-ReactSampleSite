@@ -9,6 +9,12 @@ class RequestADemo extends React.Component {
         super()
     }
 
+    componentDidMount() {
+        if (window != undefined && window) {
+            document.getElementById("firstname").focus();
+        }
+    }
+
     render() {
 
         var countryOptions = Countries.map(country => {
@@ -77,7 +83,7 @@ class RequestADemo extends React.Component {
                     <input id="lastname" className="changed" type="text" placeholder="Last Name" required />
                 </FormField>
                 <FormField id="phonenumber" label="Phone">
-                    <input id="phonenumber" className="changed" type="tel" placeholder="XXX-XXX-XXXX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required />
+                    <input id="phonenumber" className="changed" type="tel" placeholder="XXX-XXX-XXXX" minLength="9" maxLength="20" required />
                 </FormField>
                 <FormField id="email" label="Email">
                     <input id="email" className="changed" type="email" placeholder="Email" required />
@@ -121,6 +127,8 @@ class RequestADemo extends React.Component {
                     </div>
 
                 </FormField>
+                <input type="hidden" id="leadsourcedetail" name="leadsourcedetail" />
+                <input type="hidden" name="_autopilot_session_id" />
             </FullPageForm>
 
 

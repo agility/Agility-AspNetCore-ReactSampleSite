@@ -17,7 +17,7 @@ class Form extends React.Component {
 
 		this.validate = this.validate.bind(this);
 		this.submitHandler = this.submitHandler.bind(this);
-		this.submit = this.submit.bind(this);
+		this.submitData = this.submitData.bind(this);
 
 		this._renderErrorMessage = this._renderErrorMessage.bind(this);
 		this._renderForm = this._renderForm.bind(this);
@@ -100,38 +100,48 @@ class Form extends React.Component {
 	submitHandler(event) {
 
 		event.preventDefault();
+		try {
+			//If the call of the validate method was successful, we can proceed with form submission. Otherwise we do nothing.
+			if (this.validate()) {
 
-		//If the call of the validate method was successful, we can proceed with form submission. Otherwise we do nothing.
-		if (this.validate()) {
+				const form = event.target;
+				let data = {};
 
-			const form = event.target;
-			let data = {};
+				//grab all the name/value pairs for the inputs in this form
+				var elems = form.elements;
 
-			//grab all the name/value pairs for the inputs in this form
-			[...form.elements].forEach((input) => {
-				if (!input.value || input.value == "") return;
-				if (!input.name) return;
-				data[input.name] = input.value;
-			});
+				[...form.elements].forEach((input) => {
 
-			if (this.props.beforeSubmit) {
-				//hit the callback beforeSubmit
-				if (!this.props.beforeSubmit(data)) {
-					//actually do the submission
-					this.submit(data);
+					if (!input.value || input.value == "") return;
+
+					let name = (!input.name) ? input.id : input.name;
+
+					if (!name) return;
+					data[name] = input.value;
+				});
+
+				if (this.props.beforeSubmit) {
+					//hit the callback beforeSubmit
+					if (!this.props.beforeSubmit(data)) {
+						//actually do the submission
+						this.submitData(data);
+					}
+				} else {
+					this.submitData(data);
 				}
+
 			} else {
-				this.submit(data);
+				this.setState({ isSuccess: false, isValidated: true, isInvalid: true, isError: false });
+
 			}
-
-		} else {
-			this.setState({ isSuccess: false, isValidated: true, isInvalid: true, isError: false });
-
+		} catch (err) {
+			console.warn("Error submitting data", err);
+			this.setState({ isSuccess: false, isValidated: true, isInvalid: false, isError: true });
 		}
-
+		return false;
 	};
 
-	submit(data) {
+	submitData(data) {
 
 		this.setState({ isSubmitting: true });
 
@@ -156,7 +166,7 @@ class Form extends React.Component {
 
 	_renderSuccessMessage() {
 		return (
-			<div className={"alert alert-success mt-4"} role="alert">
+			<div className="form-success">
 				<div dangerouslySetInnerHTML={{ __html: this.props.thanksMessage }} />
 			</div>
 		);
@@ -178,7 +188,7 @@ class Form extends React.Component {
 
 		return (
 			<div className={"alert"} role="alert">
-				<div dangerouslySetInnerHTML={{ __html: this.props.errorMessage }} />
+				<div dangerouslySetInnerHTML={{ __html: msg }} />
 			</div>
 		);
 	}
@@ -211,6 +221,10 @@ class Form extends React.Component {
 		}
 
 		let btnClass = "btn " + (this.state.isSubmitting ? "submitting" : "");
+		if (this.state.isSubmitting) {
+			btnClass += "submitting";
+			classNames.push("submitting");
+		}
 
 		return (
 			<form

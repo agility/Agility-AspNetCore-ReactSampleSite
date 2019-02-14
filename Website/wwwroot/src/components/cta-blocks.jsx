@@ -6,7 +6,7 @@ import './cta-blocks.sass'
 class CtaBlocks extends React.Component {
 
     render() {
-        console.log(this.props)
+
         const blocks = this.props.items.map(function (item) {
             return <CtaBlock item={item} key={item.key} />
         })

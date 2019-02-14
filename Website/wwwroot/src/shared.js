@@ -11,6 +11,8 @@ global['ReactDOMServer'] = ReactDOMServer;
 import Header from './components/header.jsx'
 import Footer from './components/footer.jsx'
 import AnimatedBg from './components/animated-bg.jsx'
+import GlobalScripts from './components/global-scripts.jsx'
+
 
 // -- modules
 import BlogListing from './components/blog-listing.jsx'
@@ -85,7 +87,8 @@ global['Components'] = {
   Header,
   Footer,
   StayInTouchBox,
-  AnimatedBg
+  AnimatedBg,
+  GlobalScripts
 }
 
 

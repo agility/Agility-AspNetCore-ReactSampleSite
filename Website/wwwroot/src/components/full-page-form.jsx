@@ -13,7 +13,7 @@ class FullPageForm extends React.Component {
 
         var overallColour = this.props.colour;
         var colourObj = FormColours[overallColour];
-        console.log(this.props, FormColours, colourObj)
+
         var pageBg = colourObj.pageBg;
         var textColor = colourObj.textColor;
         var btnStyles = { backgroundColor: colourObj.btnBGColor, color: colourObj.btnTextColour }
