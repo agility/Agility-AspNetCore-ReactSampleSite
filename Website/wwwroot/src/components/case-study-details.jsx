@@ -7,19 +7,18 @@ class CaseDetails extends React.Component {
 
     render() {
 
-        var fgColor = this.props.fgColor;
+        var bgColor = this.props.bgColor;
         const metrics = this.props.metrics.map(function (item) {
             return (
-                <div class="metrics-item" style={{color: fgColor}}>
+                <div class="metrics-item" style={{color: bgColor}}>
                     <h4 className="h4" dangerouslySetInnerHTML={{__html: item.value}}></h4>
-                    <hr style={{backgroundColor: fgColor}}/>
+                    <hr style={{backgroundColor: bgColor}}/>
                     <span>{item.title}</span>
                 </div>
             );
         });
 
         return (
-
             <section className="p-w case-study-details">
                 <div className="canvas" id="canvas-4">
                     <div className="img">
@@ -56,22 +55,31 @@ class CaseDetails extends React.Component {
                     </div>
                 </div>
                 <div className="row-my">
-                    <div className="col-md-12">
-                        <div className="case-study-top d-flex jc-sb">
-                            {metrics}
+                    {
+                        metrics && metrics.length > 0 &&
+                        <div className="col-md-12">
+                            <div className="case-study-top d-flex jc-sb">
+                                {metrics}
+                            </div>
                         </div>
-                    </div>
-                    <div className="col-md-8">
+                    }
+
+                    <div className={this.props.rightContentCopy || this.props.quote ? "col-md-8" : "col-md-12"}>
                         <div className="case-study-left">
-                            <div className="rich-text" dangerouslySetInnerHTML={{__html: this.props.contentLeft}}></div>
+                            <div className="rich-text" dangerouslySetInnerHTML={{__html: this.props.body}}></div>
                         </div>
                     </div>
-                    <div className="col-md-4">
-                        <div className="case-study-right">
-                            <div className="rich-text" dangerouslySetInnerHTML={{__html: this.props.contentRight}}></div>
-                            <div className="color-text"><p>{this.props.colorText}</p></div>
+
+                    {
+                        (this.props.rightContentCopy || this.props.quote) &&
+                        <div className="col-md-4">
+                            <div className="case-study-right">
+                                <div className="rich-text" dangerouslySetInnerHTML={{__html: this.props.rightContentCopy}}></div>
+                                <div className="color-text"><p>{this.props.quote}</p></div>
+                            </div>
                         </div>
-                    </div>
+                    }
+                    
                 </div>
             </section>
 

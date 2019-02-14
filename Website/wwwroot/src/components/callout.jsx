@@ -5,17 +5,16 @@ import './callout.sass'
 class Callout extends React.Component {
 
     render() {
+        var isPrimaryTheme = this.props.theme === 'primary';
+        var calloutClasses = 'features p-w callout' + (!isPrimaryTheme ? ' callout-secondary' : '');
+        var buttonClasses = 'btn' + (isPrimaryTheme ? ' btn-secondary' : '');
 
-        var bgColor = this.props.bgColor;
-        var buttonColor = this.props.buttonColor;
-        var bgColorStyle = {background: bgColor};
-        var buttonBG = {background: buttonColor};
         return (
 
-            <section className="features p-w callout" style={bgColorStyle}>
-                <h3 className="h3">{this.props.title}</h3>
-                <p>{this.props.subTitle}</p>
-                <a href={this.props.primaryButton.href} className="btn" target={this.props.primaryButton.target} style={buttonBG}>{this.props.primaryButton.text}</a>
+            <section className={calloutClasses}>
+                <h3>{this.props.title}</h3>
+                <p>{this.props.caption}</p>
+                <a href={this.props.link.href} className={buttonClasses} target={this.props.link.target}>{this.props.link.text}</a>
             </section>
 
 
