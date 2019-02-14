@@ -4,13 +4,13 @@ import { hot } from 'react-hot-loader/root'
 import ContentPanel from '../../components/content-panel.jsx'
 import ContentPanelProps from '../data/content-panel-right.json'
 
-import BlogListingTemplate from '../../components/blog-listing.jsx'
-import BlogListingTemplateProps from '../data/podcast-listing.json'
+import PodcastListing from '../../components/podcast-listing.jsx'
+import PodcastListingProps from '../data/podcast-listing.json'
 
-import StayInTouchBox from '../../components/stay-in-touch-box.jsx'
-import StayInTouchBoxProps from '../data/subscribe-to-podcast.json'
+import ListenToPodcast from '../../components/listen-to-podcast.jsx'
+import ListenToPodcastProps from '../data/listen-to-podcast.json'
 
-class PodcastListing extends Component {
+class Podcast extends Component {
     render() {
 
         return (
@@ -19,14 +19,14 @@ class PodcastListing extends Component {
                 <div className="p-w blog-listing-page">
                     <div className="row-my">
                         <div className="col-md-7">
-                            <BlogListingTemplate {...BlogListingTemplateProps } />
+                            <PodcastListing {...PodcastListingProps } />
                             <div className="load-more">
                                 <a href="#">Load more</a>
                             </div>
                         </div>
                         <div className="col-md-5">
                             <div className="right-col">
-                                <StayInTouchBox {...StayInTouchBoxProps } />
+                                <ListenToPodcast {...ListenToPodcastProps } />
                             </div>
                         </div>
                     </div>
@@ -36,4 +36,4 @@ class PodcastListing extends Component {
     }
 }
 
-export default hot(PodcastListing);
+export default hot(Podcast);

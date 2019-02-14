@@ -20,7 +20,7 @@ class Header extends React.Component {
 
     render() {
 
-        let headerClass = "header p-w shadow";
+        let headerClass = "header p-w";
 
         //MOD: JOEL V - THIS BREAKS SERVER RENDERING - should be handled in css
         // var url = "";//document.location;
@@ -32,9 +32,6 @@ class Header extends React.Component {
         // } else  {
         //     ;
         // }
-
-
-        //header must have different className to apply different style on pages
 
         const renderMenu = (menu, level) => {
             let links = []

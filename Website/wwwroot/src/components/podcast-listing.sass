@@ -1,6 +1,9 @@
+.jc-c
+  justify-content: center
+  -webkit-box-pack: center
+  -moz-box-pack: center
+  -ms-flex-pack: center
 #podcast-listing-page
-  .rotated-bg
-    display: none
   .load-more
     margin: 64px auto 0
     text-align: center
@@ -15,33 +18,48 @@
       .blog-post
         .image
           position: relative
+          height: 400px
+          @media (max-width: 1199px)
+            height: 320px
+          @media (max-width: 991px)
+            height: 260px
+          @media (max-width: 480px)
+            height: 220px
+          @media (max-width: 360px)
+            height: 200px
+          iframe
+            width: 100%
+            height: 100%
+          .block-hover
+            position: absolute
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            > img
+              height: 100%
+              width: 100%
+            .play
+              position: absolute
+              left: 0
+              top: 0
+              width: 100%
+              height: 100%
+              background-color: rgba(0,0,0,.22)
+              z-index: 2
+              img
+                cursor: pointer
           .podcast
             position: absolute
             right: 20px
             top: 20px
             display: block
             width: 39px
+            z-index: 5
         .content
           .author
-            .author-image
-              display: none
             .h5
               font-size: 14px
               font-family: "Muli-Bold", sans-serif
               text-transform: uppercase
               color: #717171
-    .right-col
-      > div
-        .social
-          display: flex
-          flex-wrap: wrap
-          margin-left: -13px
-          margin-right: -13px
-          a
-            max-width: 50%
-            flex: 0 0 50%
-            padding-left: 13px
-            padding-right: 13px
-            img
-              margin: 0
-              max-height: 48px

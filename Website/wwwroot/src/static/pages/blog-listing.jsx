@@ -13,6 +13,9 @@ import InfoBoxProps from '../data/info-box.json'
 class BlogListing extends Component {
     render() {
 
+        var body = document.getElementById('frontend-only');
+        body.classList.add('shadow');
+
         return (
             <div id="blog-listing-page">
                 <div className="p-w blog-listing-page">
