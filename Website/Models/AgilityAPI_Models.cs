@@ -415,6 +415,21 @@ namespace Website.AgilityModels
 		public virtual string PreHeaderLinkSortIDs { get { if (!__preheaderlinksortids_set) __preheaderlinksortids = GetFieldValue<string>("PreHeaderLinkSortIDs"); __preheaderlinksortids_set = true; return __preheaderlinksortids; } set { __preheaderlinksortids = value; __preheaderlinksortids_set = true;  } }
 
 	}
+	public partial class Job : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true;  } }
+		private string __textblob = null;
+		private bool __textblob_set = false;
+		public virtual string TextBlob { get { if (!__textblob_set) __textblob = GetFieldValue<string>("TextBlob"); __textblob_set = true; return __textblob; } set { __textblob = value; __textblob_set = true;  } }
+		private Attachment __icon = null;
+		public virtual Attachment Icon { get {  if (__icon == null) __icon = GetAttachment("Icon"); return __icon; } set { __icon = value; } }
+		private string __bottomlink = null;
+		private bool __bottomlink_set = false;
+		public virtual string BottomLink { get { if (!__bottomlink_set) __bottomlink = GetFieldValue<string>("BottomLink"); __bottomlink_set = true; return __bottomlink; } set { __bottomlink = value; __bottomlink_set = true;  } }
+
+	}
 	public partial class KeyValuePair : Agility.Web.AgilityContentItem
 	{
 		private string __key = null;
@@ -868,6 +883,24 @@ namespace Website.AgilityModels
 		private string __heading = null;
 		private bool __heading_set = false;
 		public virtual string Heading { get { if (!__heading_set) __heading = GetFieldValue<string>("Heading"); __heading_set = true; return __heading; } set { __heading = value; __heading_set = true;  } }
+
+	}
+	public partial class Module_JobListing : Agility.Web.AgilityContentItem
+	{
+		private string __title = null;
+		private bool __title_set = false;
+		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true;  } }
+		private string __sidetitle = null;
+		private bool __sidetitle_set = false;
+		public virtual string SideTitle { get { if (!__sidetitle_set) __sidetitle = GetFieldValue<string>("SideTitle"); __sidetitle_set = true; return __sidetitle; } set { __sidetitle = value; __sidetitle_set = true;  } }
+		private string __sidebody = null;
+		private bool __sidebody_set = false;
+		public virtual string SideBody { get { if (!__sidebody_set) __sidebody = GetFieldValue<string>("SideBody"); __sidebody_set = true; return __sidebody; } set { __sidebody = value; __sidebody_set = true;  } }
+		private string __sidelink = null;
+		private bool __sidelink_set = false;
+		public virtual string SideLink { get { if (!__sidelink_set) __sidelink = GetFieldValue<string>("SideLink"); __sidelink_set = true; return __sidelink; } set { __sidelink = value; __sidelink_set = true;  } }
+		private IAgilityContentRepository<Job> __jobs = null;
+		public virtual IAgilityContentRepository<Job> Jobs { get { if (__jobs == null) __jobs = GetLinkedContent<Job>("Jobs", "", "Title ", ""); return __jobs; } set { __jobs = value; }}
 
 	}
 	public partial class Module_LatestPosts : Agility.Web.AgilityContentItem

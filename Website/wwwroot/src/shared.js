@@ -22,6 +22,7 @@ import EventListing from './components/event-listing.jsx'
 import CtaBlocks from './components/cta-blocks.jsx'
 import FeatureBlocks from './components/feature-blocks.jsx'
 import FeatureBlocksWithText from './components/feature-blocks-w-text.jsx'
+import JobListing from './components/job-listing.jsx'
 import FeaturedResources from './components/featured-resources.jsx'
 import FeaturedCaseStudies from './components/featured-case-studies.jsx'
 import FAQs from './components/faqs.jsx'
@@ -58,6 +59,7 @@ global['Components'] = {
   EventListing,
   CtaBlocks,
   FeatureBlocksWithText,
+  JobListing,
   FeaturedResources,
   FeaturedCaseStudies,
   FAQs,
