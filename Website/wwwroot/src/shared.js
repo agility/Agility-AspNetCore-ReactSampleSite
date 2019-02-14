@@ -11,6 +11,8 @@ global['ReactDOMServer'] = ReactDOMServer;
 import Header from './components/header.jsx'
 import Footer from './components/footer.jsx'
 import AnimatedBg from './components/animated-bg.jsx'
+import GlobalScripts from './components/global-scripts.jsx'
+
 
 // -- modules
 import CaseDetails from './components/case-study-details.jsx'
@@ -26,6 +28,7 @@ import FeaturedResources from './components/featured-resources.jsx'
 import FeaturedCaseStudies from './components/featured-case-studies.jsx'
 import FAQs from './components/faqs.jsx'
 import FormPage from './components/form.jsx'
+import RequestADemo from './components/request-a-demo.jsx'
 import InfoBox from './components/info-box.jsx'
 import LogoListing from './components/logo-listing.jsx'
 import LatestResources from './components/latest-resources.jsx'
@@ -62,6 +65,7 @@ global['Components'] = {
   FeaturedCaseStudies,
   FAQs,
   FormPage,
+  RequestADemo,
   InfoBox,
   ContentPanel,
   TabPanels,
@@ -83,7 +87,8 @@ global['Components'] = {
   Header,
   Footer,
   StayInTouchBox,
-  AnimatedBg
+  AnimatedBg,
+  GlobalScripts
 }
 
 
