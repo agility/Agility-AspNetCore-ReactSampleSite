@@ -7,8 +7,11 @@ import RichTextProps from '../data/rich-text.json'
 class RichTextPage extends Component {
     render() {
 
+        var body = document.getElementById('frontend-only');
+        body.classList.add('shadow');
+
         return (
-            <div id="rich-text-page">
+            <div>
                 <RichText {...RichTextProps } />
             </div>
         );

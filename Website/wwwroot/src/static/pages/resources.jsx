@@ -16,6 +16,9 @@ import LatestBlogPostsProps from '../data/latest-blog-posts.json'
 class Resources extends Component {
     render() {
 
+        var body = document.getElementById('frontend-only');
+        body.classList.add('shadow');
+
         return (
             <div id="resource-page">
                 <FeaturedResources {...FeaturedResourcesProps } />

@@ -5,7 +5,7 @@
     "url": "dist/img/spotify_white.png"
   },
   "title": "Case Study Name",
-  "textBlob": "<p>Agility is a content first Headless CMS. Start with your most valuable asset, your content. Then Build, Deploy and Engage your customers with a platform that manages your content across all your digital channels.</p>",
+  "contentPanelCopy": "<p>Agility is a content first Headless CMS. Start with your most valuable asset, your content. Then Build, Deploy and Engage your customers with a platform that manages your content across all your digital channels.</p>",
   "image": {
     "guid": null,
     "managerID": null,

@@ -15,8 +15,6 @@ import GlobalScripts from './components/global-scripts.jsx'
 
 
 // -- modules
-import BlogListing from './components/blog-listing.jsx'
-import BlogPostDetails from './components/blog-post-details.jsx'
 import CaseDetails from './components/case-study-details.jsx'
 import CaseStudyContentPanel from './components/case-study-content-panel.jsx'
 import ContentPanel from './components/content-panel.jsx'
@@ -35,10 +33,12 @@ import InfoBox from './components/info-box.jsx'
 import LogoListing from './components/logo-listing.jsx'
 import LatestResources from './components/latest-resources.jsx'
 import LatestBlogPosts from './components/latest-blog-posts.jsx'
+import ListenToPodcast from './components/listen-to-podcast.jsx'
 import TabPanels from './components/tab-panels.jsx'
 import PeopleListing from './components/people-listing.jsx'
 import LogoCloud from './components/logo-cloud.jsx'
 import PostDetails from './components/post-details.jsx'
+import PodcastDetails from './components/podcast-details.jsx'
 import PostListing from './components/post-listing.jsx'
 import ResourceDetails from './components/resource-details.jsx'
 import CaseStudyDetails from './components/case-study-details.jsx'
@@ -53,8 +53,6 @@ import Blank from './components/blank.jsx'
 
 global['Components'] = {
   Blank,
-  BlogListing,
-  BlogPostDetails,
   FeatureBlocks,
   CaseDetails,
   CaseStudyContentPanel,
@@ -73,11 +71,13 @@ global['Components'] = {
   TabPanels,
   LatestResources,
   LatestBlogPosts,
+  ListenToPodcast,
   LogoCloud,
   LogoListing,
   PeopleListing,
   PostDetails,
   PostListing,
+  PodcastDetails,
   CaseStudyDetails,
   ResourceDetails,
   TestimonialsListing,

@@ -45,7 +45,7 @@ class LatestBlogPostsContent extends React.Component {
                     {this.props.item.image != null &&
                         <div className="image"><a href={this.props.item.url} >
                             <ResponsiveImage img={this.props.item.image}
-                                breaks={[{ w: 640, max: 640 }, { w: 768, min: 800 }, { w: 480, min: 1190 }]} /></a>
+                                breaks={[{ w: 640, h: 369, max: 640 }, { w: 768, h: 433, min: 800 }, { w: 480, h: 277, min: 1190 }]} /></a>
                         </div>
                     }
                     <div className="content">

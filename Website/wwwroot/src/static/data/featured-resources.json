@@ -1,48 +1,73 @@
 {
-  "title": "Featured Resources (Guides, Blogs etc)",
-  "subTitle": "Well educated, intellectual people, especially scientists at all times demonstrate considerably smaller adherence to religiosity than others. ",
+  "title": "Featured Resources",
+  "subTitle": "Learn how Agility can help you grow your business",
+  "readMoreLabel": "Read More",
   "items": [
     {
+      "key": 481,
       "image": {
-        "url": "dist/img/featured-resources.png"
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 2,
+        "fileName": "https://static.agilitycms.com/resources/images/react-agility_20190208142910_0.jpg",
+        "label": "Image Upload",
+        "target": "",
+        "url": "https://static.agilitycms.com/resources/images/react-agility_20190208142910_0.jpg",
+        "fileSize": 0,
+        "height": 676,
+        "width": 1200,
+        "thumbnails": {}
       },
-      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
-      "primaryButton": {
-        "text": "Download Whitepaper",
-        "href": "#",
-        "target": "_self",
-        "ico": {
-          "url": "dist/img/download.svg"
-        }
-      }
+      "label": "Webinar",
+      "resourceTypeID": 402,
+      "title": "Res Test 3",
+      "text": "This is the excerpt of the resource. It\u0027s really long, and it should be...",
+      "url": "/resources/res-test-3"
     },
     {
+      "key": 404,
       "image": {
-        "url": "dist/img/featured-resources.png"
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 2,
+        "fileName": "https://static.agilitycms.com/resources/images/architecture-scaffold.jpg",
+        "label": "How To Future-proof your Content Stack",
+        "target": "",
+        "url": "https://static.agilitycms.com/resources/images/architecture-scaffold.jpg",
+        "fileSize": 0,
+        "height": 614,
+        "width": 1217,
+        "thumbnails": {}
       },
-      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
-      "primaryButton": {
-        "text": "Download Whitepaper",
-        "href": "#",
-        "target": "_self",
-        "ico": {
-          "url": "dist/img/download.svg"
-        }
-      }
+      "label": "Guide",
+      "resourceTypeID": 401,
+      "title": "How To Future-proof your Content Stack",
+      "text": "When you look at all the output that your marketing and business teams...",
+      "url": "/resources/how-to-future-proof-your-content-stack"
     },
     {
+      "key": 482,
       "image": {
-        "url": "dist/img/featured-resources.png"
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/resources/images/ai-artificial-intelligence-code-34676.jpg",
+        "label": "Image Upload",
+        "target": "",
+        "url": "https://static.agilitycms.com/resources/images/ai-artificial-intelligence-code-34676.jpg",
+        "fileSize": 0,
+        "height": 3648,
+        "width": 5472,
+        "thumbnails": {}
       },
-      "text": "There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).",
-      "primaryButton": {
-        "text": "Download Whitepaper",
-        "href": "#",
-        "target": "_self",
-        "ico": {
-          "url": "dist/img/download.svg"
-        }
-      }
+      "label": "Video",
+      "resourceTypeID": 403,
+      "title": "Res Test 4",
+      "text": "This is the excerpt of the resource.",
+      "url": "/resources/res-test-4"
     }
   ]
 }

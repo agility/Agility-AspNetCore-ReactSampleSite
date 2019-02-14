@@ -50,8 +50,6 @@ namespace Website.ViewComponents.Modules
 					image: post.PostImage
 				);
 
-
-
 				return new ReactViewComponentResult("Components.PostDetails", viewModel);
 			});
 		}

@@ -10,7 +10,7 @@ class RichText extends React.Component {
 
             <section className="rich-text">
                 <div className="container p-w-small">
-                    <div className="content" dangerouslySetInnerHTML={{__html: this.props.content}}></div>
+                    <div className="content" dangerouslySetInnerHTML={{__html: this.props.html}}></div>
                 </div>
             </section>
 
