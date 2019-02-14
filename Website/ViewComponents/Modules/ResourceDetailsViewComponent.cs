@@ -61,7 +61,8 @@ namespace Website.ViewComponents.Modules
 
 					resource = resource.ToFrontendProps(),
 					author = author,
-					resourceType = resourceType
+					resourceType = resourceType,
+					backButton = module.BackButton.ParseUrl()
 				};
 
 
