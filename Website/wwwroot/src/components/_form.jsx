@@ -17,15 +17,14 @@ class Form extends React.Component {
 
 		this.validate = this.validate.bind(this);
 		this.submitHandler = this.submitHandler.bind(this);
-		this.submit = this.submit.bind(this);
-		this.postData = this.postData.bind(this);
+		this.submitData = this.submitData.bind(this);
 
 		this._renderErrorMessage = this._renderErrorMessage.bind(this);
 		this._renderForm = this._renderForm.bind(this);
 		this._renderInvalidMessage = this._renderInvalidMessage.bind(this);
 		this._renderSuccessMessage = this._renderSuccessMessage.bind(this);
 
-		if (!this.props.beforeSubmit) this.props.beforeSubmit = () => { return true; }
+
 
 	}
 
@@ -35,6 +34,7 @@ class Form extends React.Component {
 	 * @returns bool Returns a boolean showing if the form is valid for submission or not.
 	 **/
 	validate() {
+
 		//this.formEl is a reference in the component to the form DOM element.
 		const formEl = this.formEl;
 		const formLength = formEl.length;
@@ -100,40 +100,54 @@ class Form extends React.Component {
 	submitHandler(event) {
 
 		event.preventDefault();
+		try {
+			//If the call of the validate method was successful, we can proceed with form submission. Otherwise we do nothing.
+			if (this.validate()) {
 
-		//If the call of the validate method was successful, we can proceed with form submission. Otherwise we do nothing.
-		if (this.validate()) {
+				const form = event.target;
+				let data = {};
 
-			const form = event.target;
-			let data = {};
+				//grab all the name/value pairs for the inputs in this form
+				var elems = form.elements;
 
-			//grab all the name/value pairs for the inputs in this form
-			[...form.elements].forEach((input) => {
-				if (!input.value || input.value == "") return;
-				if (!input.name) return;
-				data[input.name] = input.value;
-			});
+				[...form.elements].forEach((input) => {
 
-			//hit the callback beforeSubmit
-			if (this.props.beforeSubmit(data)) {
-				//actually do the submission
-				this.submit(data);
+					if (!input.value || input.value == "") return;
+
+					let name = (!input.name) ? input.id : input.name;
+
+					if (!name) return;
+					data[name] = input.value;
+				});
+
+				if (this.props.beforeSubmit) {
+					//hit the callback beforeSubmit
+					if (!this.props.beforeSubmit(data)) {
+						//actually do the submission
+						this.submitData(data);
+					}
+				} else {
+					this.submitData(data);
+				}
+
+			} else {
+				this.setState({ isSuccess: false, isValidated: true, isInvalid: true, isError: false });
+
 			}
-
-		} else {
-			this.setState({ isSuccess: false, isValidated: true, isInvalid: true, isError: false });
-
+		} catch (err) {
+			console.warn("Error submitting data", err);
+			this.setState({ isSuccess: false, isValidated: true, isInvalid: false, isError: true });
 		}
-
+		return false;
 	};
 
-	submit(data) {
+	submitData(data) {
 
 		this.setState({ isSubmitting: true });
 
 
 		PostUtil.postData(
-			this.props.url,
+			this.props.postURL,
 			data
 		).then(response => {
 
@@ -152,24 +166,29 @@ class Form extends React.Component {
 
 	_renderSuccessMessage() {
 		return (
-			<div className={"alert alert-success mt-4"} role="alert">
+			<div className="form-success">
 				<div dangerouslySetInnerHTML={{ __html: this.props.thanksMessage }} />
 			</div>
 		);
 	}
 
 	_renderInvalidMessage() {
+		let msg = this.props.validationMessage;
+		if (!msg) msg = "Please check your values and try again.";
 		return (
-			<div className={"alert alert-success mt-4"} role="alert">
-				<div dangerouslySetInnerHTML={{ __html: this.props.validationMessage }} />
+			<div className={"alert"} role="alert">
+				<div dangerouslySetInnerHTML={{ __html: msg }} />
 			</div>
 		);
 	}
 
 	_renderErrorMessage() {
+		let msg = this.props.errorMessage;
+		if (!msg) msg = "An error occurred while submitting the form.  Please try again.";
+
 		return (
-			<div className={"alert alert-error mt-4"} role="alert">
-				<div dangerouslySetInnerHTML={{ __html: this.props.errorMessage }} />
+			<div className={"alert"} role="alert">
+				<div dangerouslySetInnerHTML={{ __html: msg }} />
 			</div>
 		);
 	}
@@ -177,12 +196,12 @@ class Form extends React.Component {
 	_renderForm(props) {
 
 		//Add bootstrap's 'was-validated' class to the forms classes to support its styling
-		let classNames = [];
+		var classNames = [];
 
-		if (props.className) {
-			classNames = [props.className];
-			delete props.className;
-		}
+		// if (props.className) {
+		// 	classNames = [props.className];
+		// 	delete props.className;
+		// }
 
 		if (this.state.isValidated) {
 			classNames.push("was-validated");
@@ -201,7 +220,11 @@ class Form extends React.Component {
 			errorMessage = this._renderErrorMessage();
 		}
 
-		const btnClass = "btn " + this.state.isSubmitting ? "submitting" : "";
+		let btnClass = "btn " + (this.state.isSubmitting ? "submitting" : "");
+		if (this.state.isSubmitting) {
+			btnClass += "submitting";
+			classNames.push("submitting");
+		}
 
 		return (
 			<form
@@ -212,14 +235,14 @@ class Form extends React.Component {
 				onSubmit={this.submitHandler}
 
 			>
-				{invalidMessage}
-				{errorMessage}
-
 				{this.props.children}
 
-				<div>
-					<button type="submit" className={btnClass} disabled={this.state.isSubmitting}>Submit</button>
+				<div className="form-item submit">
+					<button type="submit" className={btnClass} disabled={this.state.isSubmitting} >Submit</button>
 				</div>
+
+				{invalidMessage}
+				{errorMessage}
 
 			</form >
 		);
@@ -229,10 +252,11 @@ class Form extends React.Component {
 	* Render the component as a regular form element with appended children from props.
 	**/
 	render() {
-		const props = [this.props];
+
+
 
 		//ensure we have what we need
-		if (!this.props.url || this.props.url == "") {
+		if (!this.props.postURL || this.props.postURL == "") {
 			return (
 				<p>Please ensure a submission URL has been specified.</p>
 			);
@@ -243,7 +267,8 @@ class Form extends React.Component {
 		if (this.state.isSuccess) {
 			return this._renderSuccessMessage();
 		} else {
-			return this._renderForm(props);
+
+			return this._renderForm(this.props);
 		}
 	}
 }
