@@ -1,95 +1,218 @@
 {
   "title": "Featured Case Studies",
   "primaryButton": {
-    "text": "More Success Stories",
-    "href": "#",
+    "text": "See More Success Stories",
+    "href": "~/case-studies",
     "target": "_self"
   },
   "items": [
     {
+      "key": 498,
       "image": {
-        "url": "dist/img/case1.png"
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/case-studies/images/react-agility_20190208142910_0.jpg",
+        "label": "Test Study 1 Img Alt",
+        "target": "",
+        "url": "https://static.agilitycms.com/case-studies/images/react-agility_20190208142910_0.jpg",
+        "fileSize": 0,
+        "height": 676,
+        "width": 1200,
+        "thumbnails": {}
       },
-      "app": {
-        "href": "/case-study-details-page",
-        "target": "_self",
-        "image": {
-          "url": "dist/img/spotify.png"
-        }
+      "label": "Case Study",
+      "resourceTypeID": -1,
+      "title": "Test Study 1",
+      "text": "This is the excerpt for the case study.  We studied a lot of things.",
+      "url": "/case-studies/test-study-1",
+      "logo": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+        "label": "Playstation",
+        "target": "",
+        "url": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+        "fileSize": 0,
+        "height": 0,
+        "width": 0,
+        "thumbnails": {}
       },
-      "text": "With the exception of Nietzsche, no other madman has contributed so much to human sanity Althusser.",
       "products": [
         {
-          "name": "PHP",
-          "image": {
-            "url": "dist/img/php.png"
-          }
+          "title": "Ecommerce",
+          "icon": {
+            "guid": null,
+            "managerID": null,
+            "blob": null,
+            "itemOrder": 1,
+            "fileName": "https://static.agilitycms.com/case-studies/icons/money-check_20190213142643_0.svg",
+            "label": "Ecommerce",
+            "target": "",
+            "url": "https://static.agilitycms.com/case-studies/icons/money-check_20190213142643_0.svg",
+            "fileSize": 0,
+            "height": 0,
+            "width": 0,
+            "thumbnails": {}
+          },
+          "url": {
+            "text": "Learn about Ecommerce",
+            "href": "/home",
+            "target": "_self"
+          },
+          "referenceName": "CaseStudyProducts",
+          "key": 502
         },
         {
-          "name": "Node JS",
-          "image": {
-            "url": "dist/img/js.png"
-          }
+          "title": "Ticketing",
+          "icon": {
+            "guid": null,
+            "managerID": null,
+            "blob": null,
+            "itemOrder": 1,
+            "fileName": "https://static.agilitycms.com/case-studies/icons/ticket-alt_20190213142709_0.svg",
+            "label": "Ticketing",
+            "target": "",
+            "url": "https://static.agilitycms.com/case-studies/icons/ticket-alt_20190213142709_0.svg",
+            "fileSize": 0,
+            "height": 0,
+            "width": 0,
+            "thumbnails": {}
+          },
+          "url": {
+            "text": "Learn about Ticketing",
+            "href": "/partners",
+            "target": "_self"
+          },
+          "referenceName": "CaseStudyProducts",
+          "key": 503
         }
       ]
     },
     {
+      "key": 500,
       "image": {
-        "url": "dist/img/case2.png"
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/case-studies/images/react-agility_20190208142910_0.jpg",
+        "label": "Test Study 1 Img Alt",
+        "target": "",
+        "url": "https://static.agilitycms.com/case-studies/images/react-agility_20190208142910_0.jpg",
+        "fileSize": 0,
+        "height": 676,
+        "width": 1200,
+        "thumbnails": {}
       },
-      "app": {
-        "href": "/case-study-details-page",
-        "target": "_self",
-        "image": {
-          "url": "dist/img/lyat.png"
-        }
+      "label": "Case Study",
+      "resourceTypeID": -1,
+      "title": "Test Study 2",
+      "text": "This is the excerpt for the case study.  We studied a lot of things.",
+      "url": "/case-studies/test-study-2",
+      "logo": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/logos/test/Hexagon_AB_Logo_Color.svg",
+        "label": "Hexagon",
+        "target": "",
+        "url": "https://static.agilitycms.com/logos/test/Hexagon_AB_Logo_Color.svg",
+        "fileSize": 0,
+        "height": 0,
+        "width": 0,
+        "thumbnails": {}
       },
-      "text": "With the exception of Nietzsche, no other madman has contributed so much to human sanity Althusser.",
       "products": [
         {
-          "name": "PHP",
-          "image": {
-            "url": "dist/img/php.png"
-          }
-        },
-        {
-          "name": "Node JS",
-          "image": {
-            "url": "dist/img/js.png"
-          }
-        },
-        {
-          "name": "React JS",
-          "image": {
-            "url": "dist/img/react.png"
-          }
+          "title": "Ecommerce",
+          "icon": {
+            "guid": null,
+            "managerID": null,
+            "blob": null,
+            "itemOrder": 1,
+            "fileName": "https://static.agilitycms.com/case-studies/icons/money-check_20190213142643_0.svg",
+            "label": "Ecommerce",
+            "target": "",
+            "url": "https://static.agilitycms.com/case-studies/icons/money-check_20190213142643_0.svg",
+            "fileSize": 0,
+            "height": 0,
+            "width": 0,
+            "thumbnails": {}
+          },
+          "url": {
+            "text": "Learn about Ecommerce",
+            "href": "/home",
+            "target": "_self"
+          },
+          "referenceName": "CaseStudyProducts",
+          "key": 502
         }
       ]
     },
     {
+      "key": 501,
       "image": {
-        "url": "dist/img/case3.png"
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/case-studies/images/react-agility_20190208142910_0.jpg",
+        "label": "Test Study 1 Img Alt",
+        "target": "",
+        "url": "https://static.agilitycms.com/case-studies/images/react-agility_20190208142910_0.jpg",
+        "fileSize": 0,
+        "height": 676,
+        "width": 1200,
+        "thumbnails": {}
       },
-      "app": {
-        "href": "/case-study-details-page",
-        "target": "_self",
-        "image": {
-          "url": "dist/img/m2m.jpg"
-        }
+      "label": "Case Study",
+      "resourceTypeID": -1,
+      "title": "Test Study 3",
+      "text": "This is the excerpt for the case study.  We studied a lot of things.",
+      "url": "/case-studies/test-study-3",
+      "logo": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+        "label": "Playstation",
+        "target": "",
+        "url": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+        "fileSize": 0,
+        "height": 0,
+        "width": 0,
+        "thumbnails": {}
       },
-      "text": "With the exception of Nietzsche, no other madman has contributed so much to human sanity Althusser.",
       "products": [
         {
-          "name": "PHP",
-          "image": {
-            "url": "dist/img/php.png"
-          }
-        },
-        {
-          "name": "Node JS",
-          "image": {
-            "url": "dist/img/js.png"
-          }
+          "title": "Ticketing",
+          "icon": {
+            "guid": null,
+            "managerID": null,
+            "blob": null,
+            "itemOrder": 1,
+            "fileName": "https://static.agilitycms.com/case-studies/icons/ticket-alt_20190213142709_0.svg",
+            "label": "Ticketing",
+            "target": "",
+            "url": "https://static.agilitycms.com/case-studies/icons/ticket-alt_20190213142709_0.svg",
+            "fileSize": 0,
+            "height": 0,
+            "width": 0,
+            "thumbnails": {}
+          },
+          "url": {
+            "text": "Learn about Ticketing",
+            "href": "/partners",
+            "target": "_self"
+          },
+          "referenceName": "CaseStudyProducts",
+          "key": 503
         }
       ]
     }

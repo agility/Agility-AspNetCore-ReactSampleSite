@@ -1,5 +1,5 @@
 {
-  "title": "Evebts",
+  "title": "Events",
   "subTitle": "Well educated, intellectual people, especially scientists at all times demonstrate considerably smaller adherence to religiosity than others.",
   "items": [
     {
@@ -23,6 +23,7 @@
           "width": 0,
           "thumbnails": {}
         },
+        "referenceName": "BlogAuthors",
         "key": 98
       },
       "address": "736 Hayes Throughway, London",
@@ -65,6 +66,7 @@
           "width": 0,
           "thumbnails": {}
         },
+        "referenceName": "BlogAuthors",
         "key": 98
       },
       "address": "736 Hayes Throughway, London",
@@ -107,6 +109,7 @@
           "width": 0,
           "thumbnails": {}
         },
+        "referenceName": "BlogAuthors",
         "key": 98
       },
       "address": "736 Hayes Throughway, London",
@@ -149,6 +152,7 @@
           "width": 0,
           "thumbnails": {}
         },
+        "referenceName": "BlogAuthors",
         "key": 98
       },
       "address": "736 Hayes Throughway, London",
@@ -191,6 +195,7 @@
           "width": 0,
           "thumbnails": {}
         },
+        "referenceName": "BlogAuthors",
         "key": 98
       },
       "address": "736 Hayes Throughway, London",

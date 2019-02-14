@@ -28,8 +28,13 @@ class ResponsiveImage extends React.Component {
 				media = "(min-width: " + res.min + "px)";
 			}
 
+			let thumbStr = "?w=" + res.w;
+			if(res.h) {
+				thumbStr+= "&h=" + res.h;
+			}
+
 			return (
-				<source key={index + '-img'} srcSet={urlNoQuery + "?w=" + res.w} media={media} />
+				<source key={index + '-img'} srcSet={urlNoQuery + thumbStr} media={media} />
 			)
 		});
 

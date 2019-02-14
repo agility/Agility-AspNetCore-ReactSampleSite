@@ -1,42 +1,78 @@
 {
-  "title": "Learn and Connect With Our Community",
-  "titleBold": "Well educated, intellectual people, especially scientists at all times demonstrate considerably smaller adherence to religiosity than others. ",
+  "heading": "Visit these Calls to Action",
+  "subHeading": "They will be worth the click",
   "items": [
     {
+      "title": "Link 1",
       "image": {
-        "url": "/dist/img/Bitmap-min.png"
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/layout/img/friends/Bitmap2.png",
+        "label": "",
+        "target": "",
+        "url": "https://static.agilitycms.com/layout/img/friends/Bitmap2.png",
+        "fileSize": 0,
+        "height": 0,
+        "width": 0,
+        "thumbnails": {}
       },
-      "title": "Hypnosis Quit Smoking Techniques"
+      "link": {
+        "text": "Partners",
+        "href": "/partners",
+        "target": "_self"
+      },
+      "referenceName": "community_CTABlocks_CTABlock",
+      "key": 461
     },
     {
+      "title": "Posts",
       "image": {
-        "url": "/dist/img/facebook-min.png"
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/layout/img/friends/Bitmap3.png",
+        "label": "",
+        "target": "",
+        "url": "https://static.agilitycms.com/layout/img/friends/Bitmap3.png",
+        "fileSize": 0,
+        "height": 128,
+        "width": 128,
+        "thumbnails": {}
       },
-      "title": "Hypnosis Quit Smoking Techniques"
+      "link": {
+        "text": "Posts",
+        "href": "/posts",
+        "target": "_self"
+      },
+      "referenceName": "community_CTABlocks_CTABlock",
+      "key": 462
     },
     {
+      "title": "Decoupled or Headless",
       "image": {
-        "url": "/dist/img/GitHub-min.png"
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/layout/img/friends/Bitmap4.png",
+        "label": "",
+        "target": "",
+        "url": "https://static.agilitycms.com/layout/img/friends/Bitmap4.png",
+        "fileSize": 0,
+        "height": 0,
+        "width": 0,
+        "thumbnails": {}
       },
-      "title": "Hypnosis Quit Smoking Techniques"
-    },
-    {
-      "image": {
-        "url": "/dist/img/Slack-min.png"
+      "link": {
+        "text": "Decoupled or Headless",
+        "href": "/posts/post-details?ContentID=268",
+        "target": "_self"
       },
-      "title": "Hypnosis Quit Smoking Techniques"
-    },
-    {
-      "image": {
-        "url": "/dist/img/Stripe-min.png"
-      },
-      "title": "Hypnosis Quit Smoking Techniques"
-    },
-    {
-      "image": {
-        "url": "/dist/img/zapier-min.png"
-      },
-      "title": "Hypnosis Quit Smoking Techniques"
+      "referenceName": "community_CTABlocks_CTABlock",
+      "key": 463
     }
   ]
 }

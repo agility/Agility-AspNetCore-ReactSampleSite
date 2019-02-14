@@ -1,6 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
 import './latest-resources.sass'
+import ResponsiveImage from './responsive-image.jsx'
 
 class LatestResources extends React.Component {
 
@@ -148,7 +149,8 @@ class LatestResContent extends React.Component {
             <div className="col-md-6">
                 <div className="latest-item">
                     <div className="image">
-                        <img src={this.props.item.image.url} alt="" />
+                            <ResponsiveImage img={this.props.item.image}
+                                breaks={[{ w: 640, h: 369, max: 640 }, { w: 768, h: 433, min: 800 }, { w: 480, h: 277, min: 1190 }]} />
                         {this.props.item.label &&
                             <span>{this.props.item.label}</span>
                         }
