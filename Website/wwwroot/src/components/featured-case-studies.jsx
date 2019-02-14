@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './featured-case-studies.sass'
+import './featured-case-studies.scss'
 import ResponsiveImage from './responsive-image.jsx'
 
 

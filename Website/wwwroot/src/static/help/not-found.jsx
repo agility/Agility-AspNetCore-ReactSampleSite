@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { hot } from 'react-hot-loader/root'
 import SamplePageCode from './_boilerplate-page.txt'
 import SamplePageRoute from './_boilerplate-route.txt'
-import './not-found.sass'
+import './not-found.scss'
 
 class NotFound extends Component {
   render() {

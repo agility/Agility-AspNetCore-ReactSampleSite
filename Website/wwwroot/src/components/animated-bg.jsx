@@ -1,7 +1,7 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 import { hot } from 'react-hot-loader/root'
-import './animated-bg.sass'
+import './animated-bg.scss'
 
 class AnimatedBg extends React.Component {
 	constructor() {

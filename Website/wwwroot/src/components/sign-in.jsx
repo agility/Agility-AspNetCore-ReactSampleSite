@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './sign-in.sass'
+import './sign-in.scss'
 import { debug } from 'util';
 
 

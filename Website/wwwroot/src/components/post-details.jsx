@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment'
 import { hot } from 'react-hot-loader/root'
 import ResponsiveImage from './responsive-image.jsx'
-import './post-details.sass'
+import './post-details.scss'
 import RichText from './rich-text.jsx'
 
 class PostDetails extends React.Component {

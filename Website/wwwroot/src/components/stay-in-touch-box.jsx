@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './stay-in-touch-box.sass'
+import './stay-in-touch-box.scss'
 
 class StayInTouchBox extends React.Component {
 

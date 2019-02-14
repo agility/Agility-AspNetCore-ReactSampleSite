@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './feature-blocks-w-text.sass'
+import './feature-blocks-w-text.scss'
 
 class FeatureBlocksWithText extends React.Component {
     constructor() {

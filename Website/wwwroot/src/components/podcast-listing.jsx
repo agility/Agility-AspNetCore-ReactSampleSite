@@ -1,7 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './post-listing.sass'
-import './podcast-listing.sass'
+import './post-listing.scss'
+import './podcast-listing.scss'
 
 class BlogListing extends React.Component {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './faqs.sass'
+import './faqs.scss'
 
 class FAQs extends React.Component {
 

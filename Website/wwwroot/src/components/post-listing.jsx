@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment'
 import { hot } from 'react-hot-loader/root'
-import './post-listing.sass'
+import './post-listing.scss'
 import ResponsiveImage from './responsive-image.jsx'
 
 

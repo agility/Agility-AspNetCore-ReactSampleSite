@@ -1,7 +1,7 @@
 import React from 'react';
 import moment from 'moment';
 import { hot } from 'react-hot-loader/root'
-import './resource-details.sass'
+import './resource-details.scss'
 
 class ResourceDetails extends React.Component {
     render() {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './callout.sass'
+import './callout.scss'
 
 class Callout extends React.Component {
 
