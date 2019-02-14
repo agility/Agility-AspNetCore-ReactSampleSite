@@ -5,10 +5,6 @@ import './stay-in-touch-box.sass'
 class StayInTouchBox extends React.Component {
 
     render() {
-<<<<<<< HEAD
-
-=======
->>>>>>> 207af8e14e95088df41879437331294ed9dec13c
         var four = this.props.links.map(function (item) {
             return <StayInTouchBoxContent item={item} key={item.key} />
         });
