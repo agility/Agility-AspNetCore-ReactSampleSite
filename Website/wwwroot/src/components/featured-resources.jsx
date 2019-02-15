@@ -18,8 +18,10 @@ class FeaturedResources extends React.Component {
                 <h2 className="title-component">{this.props.title}</h2>
                 <p className="intro">{this.props.subTitle}</p>
                 <div className="featured-wrapper">
-                    <div className="row-my">
-                        {featuredRes}
+                    <div className="container-my">
+                        <div className="row-my">
+                            {featuredRes}
+                        </div>
                     </div>
                 </div>
             </section>

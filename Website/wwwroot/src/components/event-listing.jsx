@@ -55,8 +55,10 @@ class ComunityEvents extends React.Component {
                 <h2 className="title-conponent">{this.props.title}</h2>
                 <p className="intro">{this.props.subTitle}</p>
                 <div className="events-content">
-                    <div className="row-my">
-                        {comunityEvents}
+                    <div className="container-my">
+                        <div className="row-my">
+                            {comunityEvents}
+                        </div>
                     </div>
                 </div>
             </section>

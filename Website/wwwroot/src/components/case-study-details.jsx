@@ -54,32 +54,34 @@ class CaseDetails extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="row-my">
-                    {
-                        metrics && metrics.length > 0 &&
-                        <div className="col-md-12">
-                            <div className="case-study-top d-flex jc-sb">
-                                {metrics}
+                <div className="container-my">
+                    <div className="row-my">
+                        {
+                            metrics && metrics.length > 0 &&
+                            <div className="col-md-12">
+                                <div className="case-study-top d-flex jc-sb">
+                                    {metrics}
+                                </div>
+                            </div>
+                        }
+
+                        <div className={this.props.rightContentCopy || this.props.quote ? "col-md-8" : "col-md-12"}>
+                            <div className="case-study-left">
+                                <div className="rich-text" dangerouslySetInnerHTML={{__html: this.props.body}}></div>
                             </div>
                         </div>
-                    }
 
-                    <div className={this.props.rightContentCopy || this.props.quote ? "col-md-8" : "col-md-12"}>
-                        <div className="case-study-left">
-                            <div className="rich-text" dangerouslySetInnerHTML={{__html: this.props.body}}></div>
-                        </div>
+                        {
+                            (this.props.rightContentCopy || this.props.quote) &&
+                            <div className="col-md-4">
+                                <div className="case-study-right">
+                                    <div className="rich-text" dangerouslySetInnerHTML={{__html: this.props.rightContentCopy}}></div>
+                                    <div className="color-text"><p>{this.props.quote}</p></div>
+                                </div>
+                            </div>
+                        }
+
                     </div>
-
-                    {
-                        (this.props.rightContentCopy || this.props.quote) &&
-                        <div className="col-md-4">
-                            <div className="case-study-right">
-                                <div className="rich-text" dangerouslySetInnerHTML={{__html: this.props.rightContentCopy}}></div>
-                                <div className="color-text"><p>{this.props.quote}</p></div>
-                            </div>
-                        </div>
-                    }
-                    
                 </div>
             </section>
 

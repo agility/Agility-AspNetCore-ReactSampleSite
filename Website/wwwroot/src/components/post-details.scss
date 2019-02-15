@@ -3,10 +3,6 @@
 .blog-post-details {
   padding-bottom: 80px;
 
-  @media (max-width: 767px) {
-    padding-bottom: 0;
-  }
-
   .container.p-w-small {
     > .h4 {
       margin-bottom: 42px;
@@ -40,6 +36,7 @@
         }
 
         .h5 {
+          margin-bottom: 0;
           font-size: 16px;
           font-family: "Muli-Regular", sans-serif;
           color: #484b4d;

@@ -27,9 +27,32 @@
     background-position: center;
   }
 
+  .container-my {
+    @media (max-width: 767px) {
+      flex-direction: row-reverse;
+    }
+  }
+
   .start-content {
     position: relative;
     z-index: 1;
+    padding-right: 40px;
+    max-width: 60%;
+    -webkit-box: 0 0 60%;
+    -moz-box: 0 0 60%;
+    -webkit-flex: 0 0 60%;
+    -ms-flex: 0 0 60%;
+    flex: 0 0 60%;
+
+    @media (max-width: 767px) {
+      padding-right: 0;
+      max-width: 100%;
+      -webkit-box: 0 0 100%;
+      -moz-box: 0 0 100%;
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+    }
 
     h1 {
       font-family: $bold;
@@ -118,15 +141,51 @@
   }
 
   .start-image {
-    width: 456px;
-    min-width: 456px;
     line-height: 0;
     margin-top: 86px;
     box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15);
+    width: 40%;
+    min-width: 40%;
+    max-width: 40%;
+    -webkit-box: 0 0 40%;
+    -moz-box: 0 0 40%;
+    -webkit-flex: 0 0 40%;
+    -ms-flex: 0 0 40%;
+    flex: 0 0 40%;
+    margin-left: 0;
+
+    @media (max-width: 767px) {
+      padding-right: 0;
+      max-width: 100%;
+      -webkit-box: 0 0 100%;
+      -moz-box: 0 0 100%;
+      -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
+    }
 
     &.left {
       margin-top: 0;
-      margin-right: 80px;
+      margin-right: 0;
+    }
+    &.left + .start-content {
+      max-width: 60%;
+      -webkit-box: 0 0 60%;
+      -moz-box: 0 0 60%;
+      -webkit-flex: 0 0 60%;
+      -ms-flex: 0 0 60%;
+      flex: 0 0 60%;
+      padding-left: 80px;
+      padding-right: 0;
+      @media (max-width: 767px) {
+        padding-left: 0;
+        max-width: 100%;
+        -webkit-box: 0 0 100%;
+        -moz-box: 0 0 100%;
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+      }
     }
   }
 }

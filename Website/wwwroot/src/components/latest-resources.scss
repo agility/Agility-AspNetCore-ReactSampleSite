@@ -119,11 +119,12 @@
   }
 
   .col-md-6 {
+    margin-top: 32px;
     .latest-item {
-      margin-top: 32px;
       border-radius: 5px;
       box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
       background-color: #ffffff;
+      height: 100%;
 
       .image {
         position: relative;
@@ -185,12 +186,9 @@
 
     &:first-child,
     &:nth-child(2) {
-      .latest-item {
-        margin-top: 0;
-
-        @media (max-width: 991px) {
-          margin-top: 32px;
-        }
+      margin-top: 0;
+      @media (max-width: 991px) {
+        margin-top: 32px;
       }
     }
   }

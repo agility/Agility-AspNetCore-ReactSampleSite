@@ -1,77 +1,87 @@
 @import "./_variables.scss";
-
-.form-container {
+#form-page {
+  .container-my {
+    display: block;
+  }
   &.purple {
-    .form-title {
-      color: #2a3846;
-    }
+    .form-container {
+      .form-title {
+        color: #2a3846;
+      }
 
-    .form-success {
-      font-size: 16px;
-      color: $colorBasic;
+      .form-success {
+        font-size: 16px;
+        color: $colorBasic;
+      }
     }
   }
-
   &.yellow {
-    .form-title {
-      color: #fff;
-    }
+    .form-container {
+      .form-title {
+        color: #fff;
+      }
 
-    .form-success {
-      font-size: 16px;
-      color: #fff;
-    }
+      .form-success {
+        font-size: 16px;
+        color: #fff;
+      }
 
-    .form-right {
-      .form-item {
-        .inputs {
-          .input-item {
-            label {
-              color: #fff;
-
-              &:before {
-                border-color: #fff;
-              }
-            }
-
-            input:checked + label {
-              &:before {
-                border: 1px solid #ffcb28;
-              }
-
-              &:after {
-                background-color: #ffcb28;
-              }
-            }
-          }
-
-          &.checkbox {
+      .form-right {
+        .form-item {
+          .inputs {
             .input-item {
-              input:checked + label {
-                &:after {
-                  background-color: transparent;
+              label {
+                color: #fff;
+
+                &:before {
+                  border-color: #fff;
                 }
               }
 
-              .after {
-                svg {
-                  path {
-                    fill: #ffcb28;
-                    stroke: #ffcb28;
+              input:checked + label {
+                &:before {
+                  border: 1px solid #ffcb28;
+                }
+
+                &:after {
+                  background-color: #ffcb28;
+                }
+              }
+            }
+
+            &.checkbox {
+              .input-item {
+                input:checked + label {
+                  &:after {
+                    background-color: transparent;
+                  }
+                }
+
+                .after {
+                  svg {
+                    path {
+                      fill: #ffcb28;
+                      stroke: #ffcb28;
+                    }
                   }
                 }
               }
             }
           }
-        }
 
-        &.submit {
-          .btn {
-            background-color: #ffcb28;
-            color: #484b4d;
-            -webkit-box-sizing: 0 5px 35px 0 rgba(0, 0, 0, 0.25);
-            -moz-box-sizing: 0 5px 35px 0 rgba(0, 0, 0, 0.25);
-            box-sizing: 0 5px 35px 0 rgba(0, 0, 0, 0.25);
+          &.submit {
+            .btn {
+              background-color: #ffcb28;
+              color: #484b4d;
+              -webkit-box-shadow: 0 5px 35px 0 rgba(255, 255, 255, 0.25);
+              -moz-box-shadow: 0 5px 35px 0 rgba(255, 255, 255, 0.25);
+              box-shadow: 0 5px 35px 0 rgba(255, 255, 255, 0.25);
+              &:hover {
+                -webkit-box-shadow: 0 5px 46px 0 rgba(255, 255, 255, 0.6);
+                -moz-box-shadow: 0 5px 46px 0 rgba(255, 255, 255, 0.6);
+                box-shadow: 0 5px 46px 0 rgba(255, 255, 255, 0.6);
+              }
+            }
           }
         }
       }
@@ -82,6 +92,10 @@
 .form-container {
   padding-top: 98px;
   padding-bottom: 128px;
+  @media (max-width: 767px) {
+    padding-top: 50px;
+    padding-bottom: 100px;
+  }
 
   form.submitting {
     .form-item {

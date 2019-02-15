@@ -18,8 +18,10 @@ class CtaBlocks extends React.Component {
                 <h2 className="title-conponent">{this.props.heading}</h2>
                 <p className="intro">{this.props.subHeading}</p>
                 <div className="apps-content">
-                    <div className="row-my">
-                        {blocks}
+                    <div className="container-my">
+                        <div className="row-my">
+                            {blocks}
+                        </div>
                     </div>
                 </div>
             </section>

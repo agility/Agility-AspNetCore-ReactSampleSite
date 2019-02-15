@@ -33,11 +33,18 @@
   }
 
   .left-col {
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+    > div {
+      text-align: center;
+    }
     .blog-post {
       margin-bottom: 24px;
       border-radius: 5px;
       box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
       background-color: #ffffff;
+      text-align: left;
 
       .image {
         max-height: 408px;
