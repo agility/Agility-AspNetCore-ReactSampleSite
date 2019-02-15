@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './latest-resources.sass'
+import './latest-resources.scss'
 import ResponsiveImage from './responsive-image.jsx'
 
 class LatestResources extends React.Component {

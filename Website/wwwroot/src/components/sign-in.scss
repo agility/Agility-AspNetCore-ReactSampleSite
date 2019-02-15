@@ -1,0 +1,61 @@
+@import "./_variables.scss";
+
+.sign-in {
+  position: relative;
+  box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.09);
+  background-color: #ffcb28;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 0;
+  z-index: 50;
+
+  .sign-in-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    li {
+      margin-left: 53px;
+    }
+
+    a {
+      font-family: $regular;
+      font-size: 16px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: $colorBasic;
+      transition: all 0.2s ease-out;
+
+      &:hover {
+        text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+        color: #000;
+      }
+    }
+
+    .sign-in-log {
+      font-family: $bold;
+      font-weight: bold;
+
+      &:hover {
+        color: #000;
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      height: 28px;
+      font-size: 13px;
+      line-height: 28px;
+      font-family: "Muli-bold", sans-serif;
+      color: #fff;
+
+      &:hover {
+        text-shadow: none;
+        color: #fff;
+      }
+    }
+  }
+}

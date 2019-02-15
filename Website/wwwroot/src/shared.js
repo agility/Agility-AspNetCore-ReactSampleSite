@@ -30,6 +30,8 @@ import FeaturedCaseStudies from './components/featured-case-studies.jsx'
 import FAQs from './components/faqs.jsx'
 import FormPage from './components/form.jsx'
 import RequestADemo from './components/request-a-demo.jsx'
+import BecomeAPartner from './components/become-a-partner.jsx'
+
 import InfoBox from './components/info-box.jsx'
 import LogoListing from './components/logo-listing.jsx'
 import LatestResources from './components/latest-resources.jsx'
@@ -68,6 +70,7 @@ global['Components'] = {
   FAQs,
   FormPage,
   RequestADemo,
+  BecomeAPartner,
   InfoBox,
   ContentPanel,
   TabPanels,

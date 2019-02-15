@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './header.sass'
+import './header.scss'
 import SignIn from './sign-in.jsx'
 import Hamburger from './hamburger.jsx'
 

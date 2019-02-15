@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './section-heading.sass'
+import './section-heading.scss'
 
 class SectionHeading extends React.Component {
     constructor(props) {

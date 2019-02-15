@@ -1,7 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
 import ResponsiveImage from './responsive-image.jsx'
-import './cta-blocks.sass'
+import './cta-blocks.scss'
 
 class CtaBlocks extends React.Component {
 

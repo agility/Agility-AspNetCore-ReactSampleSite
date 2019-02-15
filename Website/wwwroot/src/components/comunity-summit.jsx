@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './comunity-summit.sass'
+import './comunity-summit.scss'
 
 class ComunitySummit extends React.Component {
     render() {

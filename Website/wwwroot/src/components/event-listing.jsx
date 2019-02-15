@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './event-listing.sass'
+import './event-listing.scss'
 import moment from 'moment'
 
 class ComunityEvents extends React.Component {

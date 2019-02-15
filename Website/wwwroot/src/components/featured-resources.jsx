@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './featured-resources.sass'
+import './featured-resources.scss'
 import ResponsiveImage from './responsive-image.jsx'
 class FeaturedResources extends React.Component {
 

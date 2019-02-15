@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './latest-blog-posts.sass'
+import './latest-blog-posts.scss'
 import ResponsiveImage from './responsive-image.jsx'
 
 

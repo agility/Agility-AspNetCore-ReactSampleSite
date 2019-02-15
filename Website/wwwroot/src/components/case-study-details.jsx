@@ -1,7 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './case-study-details.sass'
-import './rich-text.sass'
+import './case-study-details.scss'
+import './rich-text.scss'
 
 class CaseDetails extends React.Component {
 

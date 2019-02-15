@@ -161,13 +161,27 @@ class Form extends React.Component {
 		}).catch(err => {
 			this.setState({ isError: true, isSubmitting: false, isSuccess: false, isInvalid: false });
 		});
-
 	}
 
 	_renderSuccessMessage() {
+
+		var self = this;
+
+		if (self.props.conversionScript) {
+			//dynamically inject the conversion script
+			const idStr = "conversion-script"
+			if (document.getElementById(idStr) == null) {
+				let s = document.createElement('script');
+				s.setAttribute("id", idStr);
+				s.innerHTML = self.props.conversionScript;
+				document.body.appendChild(s);
+			}
+		}
+
 		return (
 			<div className="form-success">
 				<div dangerouslySetInnerHTML={{ __html: this.props.thanksMessage }} />
+
 			</div>
 		);
 	}
@@ -261,7 +275,6 @@ class Form extends React.Component {
 				<p>Please ensure a submission URL has been specified.</p>
 			);
 		}
-
 
 
 		if (this.state.isSuccess) {

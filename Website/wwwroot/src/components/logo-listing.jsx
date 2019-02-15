@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './logo-listing.sass'
+import './logo-listing.scss'
 
 class LogoListing extends React.Component {
     render() {
