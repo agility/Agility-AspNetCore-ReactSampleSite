@@ -67,6 +67,46 @@ namespace Website.AgilityModels
 
 	}
 
+	public partial class FeatureBlock 
+	{
+		public bool MatchesWith(string[] thoseIDs)
+		{
+			if (thoseIDs == null || thoseIDs.Length == 0) return true;
+			if (string.IsNullOrWhiteSpace(this.TagIDs)) return false;
+
+			string[] thisIDs = this.TagIDs.Split(',');
+
+			var ret = thisIDs.Any(i => thoseIDs.Contains(i));
+			return ret;
+
+		}
+
+		public dynamic GetFeatureListingViewModel(string labelIDs)
+		{
+			IList<LogoTags> tags = null;
+			LogoTags logoTag = null;
+			if (!string.IsNullOrWhiteSpace(this.TagIDs))
+			{
+				tags = this.Tags.GetByIDs(this.TagIDs);
+				var tagIDsForLabel = labelIDs.Split(',');
+				logoTag = tags.FirstOrDefault(tag => tagIDsForLabel.Contains(tag.ContentID.ToString()));
+			}
+
+			var viewModel = new
+			{
+				key = this.ContentID,
+				image = this.Icon?.ToFrontendProps(),
+				label = logoTag?.Title,
+				resourceTypeID = logoTag?.ContentID,
+				title = this.Title,
+				text = this.TextBlob.Truncate(75, "...", true, true),
+				url = this.BottomLink?.ParseUrl()?.Href
+			};
+
+			return viewModel;
+		}
+	}
+
 	public partial class Logo
 	{
 		public bool MatchesWith(string[] thoseIDs)

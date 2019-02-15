@@ -83,6 +83,30 @@ namespace Website.Controllers
 			return Json(viewModel);
 		}
 
+		public IActionResult Features(string refName, string labelIDs, string ids = null, int skip = 0, int take = 100)
+		{
+			var repo = new AgilityContentRepository<FeatureBlock>(refName);
+			var items = repo.Items().AsQueryable();
+			if (!string.IsNullOrWhiteSpace(ids))
+			{
+				string[] lstIds = ids.Split(',');
+				items = items.Where(l => l.MatchesWith(lstIds));
+			}
+
+			if (skip > 0) items = items.Skip(skip);
+			if (take > 0) items = items.Take(take);
+
+			var viewModel = new
+			{
+				items = items.Select(l => l.GetFeatureListingViewModel(labelIDs)),
+				skip = skip,
+				take = take,
+				ids = ids
+			};
+
+			return Json(viewModel);
+		}
+
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
 		public IActionResult Error()
