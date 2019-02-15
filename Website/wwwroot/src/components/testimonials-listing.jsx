@@ -52,10 +52,12 @@ class TestimonialsListing extends React.Component {
                 </div>
 
                 <h2 className="title-conponent">{this.props.header}</h2>
-                <h3 className="testimonials-subtitle">{this.props.subHeading}</h3>
+                <p className="intro">{this.props.subHeading}</p>
                 <div className="products-staff">
-                    <div className="row-my">
-                        {testimonials}
+                    <div className="container-my">
+                        <div className="row-my">
+                            {testimonials}
+                        </div>
                     </div>
                     <div className="button-wrap">
                         <a className="btn" href={this.props.bottomlink.href} target={this.props.bottomlink.target}>{this.props.bottomlink.text}</a>

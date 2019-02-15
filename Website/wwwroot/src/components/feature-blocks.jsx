@@ -132,13 +132,15 @@ class FeatureBlocks extends React.Component {
                 <h2 className="title-conponent">{this.props.title}</h2>
 
                 <div className="ben-items container">
-                    <div className="ben-items-forslider my-slider" id="slider">
-                        {features}
-                    </div>
-                    <div id="slider-nav">
-                        <button data-slide="0" className="current"></button>
-                        <button data-slide="1"></button>
-                        <button data-slide="2"></button>
+                    <div className="container-my">
+                        <div className="ben-items-forslider my-slider" id="slider">
+                            {features}
+                        </div>
+                        <div id="slider-nav">
+                            <button data-slide="0" className="current"></button>
+                            <button data-slide="1"></button>
+                            <button data-slide="2"></button>
+                        </div>
                     </div>
                 </div>
 

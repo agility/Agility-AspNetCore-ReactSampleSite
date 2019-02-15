@@ -19,8 +19,10 @@ class LatestBlogPosts extends React.Component {
 
                 <h2 className="title-component">{this.props.title}</h2>
                 <div className="blog-wrapper">
-                    <div className="row-my">
-                        {four}
+                    <div className="container-my">
+                        <div className="row-my">
+                            {four}
+                        </div>
                     </div>
                 </div>
             </section>

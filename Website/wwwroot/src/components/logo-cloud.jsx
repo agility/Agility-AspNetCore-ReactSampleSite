@@ -7,7 +7,7 @@ class LogoListing extends React.Component {
 
         const renderLogo = (logo, index) => {
             //render one logo
-            var className = "friend-item delay-" + (index + 1);
+            var className = "friend-item d-flex ai-center delay-" + (index + 1);
 
             return (
                 <li className={className} key={logo.key}>
@@ -63,15 +63,17 @@ class LogoListing extends React.Component {
                 <h2 className="title-conponent">{this.props.heading}</h2>
                 <p>{this.props.subHeading}</p>
 
-                <ul className="friends-list">
-                    {logos}
-                    {/* <li className="friend-item delay-2"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap2.png" alt="" /></li>
-                    <li className="friend-item delay-5"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap3.png" alt="" /></li>
-                    <li className="friend-item delay-4"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap4.png" alt="" /></li>
-                    <li className="friend-item delay-6"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap5.png" alt="" /></li>
-                    <li className="friend-item delay-3"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap6.png" alt="" /></li>
-                    <li className="friend-item delay-4"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap7.png" alt="" /></li> */}
-                </ul>
+                <div className="container-my">
+                    <ul className="friends-list">
+                        {logos}
+                        {/* <li className="friend-item delay-2"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap2.png" alt="" /></li>
+                        <li className="friend-item delay-5"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap3.png" alt="" /></li>
+                        <li className="friend-item delay-4"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap4.png" alt="" /></li>
+                        <li className="friend-item delay-6"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap5.png" alt="" /></li>
+                        <li className="friend-item delay-3"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap6.png" alt="" /></li>
+                        <li className="friend-item delay-4"><img src="https://static.agilitycms.com/layout/img/friends/Bitmap7.png" alt="" /></li> */}
+                    </ul>
+                </div>
 
                 <div className="buttons">
                     <a href={this.props.primaryButton.href} className="btn" target={this.props.primaryButton.target}>{this.props.primaryButton.text}</a>

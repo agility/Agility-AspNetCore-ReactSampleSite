@@ -1,5 +1,10 @@
 .event-listing {
   text-align: center;
+  padding-top: 80px;
+
+  .container-my {
+    display: block;
+  }
 
   p.intro {
     display: inline-block;
@@ -12,23 +17,25 @@
     color: #484b4d;
   }
 
-  .col-md-4 {
-    @media (max-width: 991px) {
-      max-width: 50%;
-      -webkit-flex: 0 0 50%;
-      -moz-flex: 0 0 50%;
-      -ms-flex: 0 0 50%;
-      -o-flex: 0 0 50%;
-      flex: 0 0 50%;
-    }
+  .row-my {
+    .col-md-4 {
+      @media (max-width: 991px) {
+        max-width: 50%;
+        -webkit-flex: 0 0 50%;
+        -moz-flex: 0 0 50%;
+        -ms-flex: 0 0 50%;
+        -o-flex: 0 0 50%;
+        flex: 0 0 50%;
+      }
 
-    @media (max-width: 767px) {
-      max-width: 100%;
-      -webkit-flex: 0 0 100%;
-      -moz-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-      -o-flex: 0 0 100%;
-      flex: 0 0 100%;
+      @media (max-width: 767px) {
+        max-width: 100%;
+        -webkit-flex: 0 0 100%;
+        -moz-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        -o-flex: 0 0 100%;
+        flex: 0 0 100%;
+      }
     }
   }
 
@@ -61,9 +68,8 @@
       top: 0;
       z-index: 2;
       border-radius: 5px;
-      -webkit-box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1) {
+      -webkit-box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
         box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
-      };
       background-color: #ffffff;
       overflow: hidden;
       height: 100%;
@@ -75,6 +81,7 @@
 
         img {
           display: block;
+          width: 100%;
         }
       }
 
@@ -105,6 +112,9 @@
       .inner-content {
         padding: 28px 24px;
         text-align: center;
+        @media (max-width: 1199px) {
+          padding: 20px;
+        }
 
         .h4 {
           margin-bottom: 15px;
@@ -169,9 +179,8 @@
       height: 100%;
       text-align: center;
       border-radius: 5px;
-      -webkit-box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1) {
-        box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
-      };
+      -webkit-box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
+              box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
       background-color: #ffffff;
       overflow: hidden;
       -webkit-transform: rotateY(180deg);
@@ -180,6 +189,20 @@
       -o-transform: rotateY(180deg);
       transform: rotateY(180deg);
       transition: all 0.15s ease-out;
+      @media (max-width: 1199px) {
+        padding: 20px;
+      }
+
+      .inner-content {
+        br {
+          display: none;
+        }
+        > a {
+          margin-left: 10px;
+          margin-right: 10px;
+          display: inline-flex;
+        }
+      }
 
       .title {
         margin-bottom: 20px;
@@ -233,6 +256,10 @@
         -o-transform: rotateY(-180deg);
         transform: rotateY(-180deg);
         z-index: -4;
+        padding-left: 1px;
+        .front-date {
+          left: 1px;
+        }
       }
 
       .item-back {

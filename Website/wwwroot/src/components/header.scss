@@ -8,12 +8,76 @@ body.shadow {
     z-index: 5;
   }
 }
-
+.search-frame {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding-top: 40px;
+  z-index: 10;
+  height: 0;
+  -webkit-transition: height .3s ease-out;
+  -moz-transition: height .3s ease-out;
+  -ms-transition: height .3s ease-out;
+  -o-transition: height .3s ease-out;
+  transition: height .3s ease-out;
+  overflow: hidden;
+  &.open {
+    height: 100%;
+  }
+  .search-inner {
+    height: 100%;
+    padding-top: 8px;
+    background-color: rgba(0, 0, 0, 0.54);
+    text-align: center;
+    form {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      max-width: 800px;
+      &:before {
+        position: absolute;
+        right: 24px;
+        top: 16px;
+        display: block;
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url(../../dist/img/gray.svg) 0 0 no-repeat;
+      }
+      input {
+        display: block;
+        width: 100%;
+        border: none;
+        padding: 0;
+        height: 56px;
+        line-height: 56px;
+        border-radius: 3px;
+        background-color: #ffffff;
+        padding-left: 24px;
+        padding-right: 64px;
+        font-size: 14px;
+        font-family: "Muli-Regular", sans-serif;
+        color: #484b4d;
+        &::-webkit-input-placeholder{
+          color: #c0c0c0;
+        }
+        &:-moz-placeholder{
+          color: #c0c0c0;
+        }
+        &::-moz-placeholder{
+          color: #c0c0c0;
+          opacity: 1;
+        }
+        &:-ms-input-placeholder{
+          color: #c0c0c0;
+        }
+      }
+    }
+  }
+}
 .header {
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding-top: 36px;
   padding-bottom: 70px;
   background-color: #ffcb28;
@@ -33,6 +97,10 @@ body.shadow {
     justify-content: center;
     flex-grow: 1;
     margin: 0 55px 0 35px;
+    @media (max-width: 1199px) {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
 
     li {
       margin-left: 30px;

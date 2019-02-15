@@ -45,8 +45,25 @@
     margin-bottom: 193px;
     position: relative;
     z-index: 1;
+    flex-wrap: wrap;
 
-    .work-item {}
+    .work-item {
+      max-width: 20%;
+      -webkit-box: 0 0 20%;
+      -moz-box: 0 0 20%;
+      -webkit-flex: 0 0 20%;
+      -ms-flex: 0 0 20%;
+      flex: 0 0 20%;
+      margin-bottom: 30px;
+      a {
+        display: block;
+        text-align: center;
+        img {
+          display: inline-block;
+          max-height: 120px;
+        }
+      }
+    }
   }
 
   .buttons {

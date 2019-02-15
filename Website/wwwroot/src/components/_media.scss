@@ -4,25 +4,14 @@
   .canvas {
     display: none;
   }
-
-  .p-w {
-    padding-left: 12.3333333333%;
-    padding-right: 12.3333333333%;
-  }
 }
 
 @media screen and (max-width: $xl-width) {
-  .p-w {
-    padding-left: 6.3333333333%;
-    padding-right: 6.3333333333%;
-  }
+
 }
 
 @media screen and (max-width: $lg-width) {
-  .p-w {
-    padding-left: 2.3333333333%;
-    padding-right: 2.3333333333%;
-  }
+
 }
 
 @media (max-width: $lg-width-plus-99) {
@@ -33,10 +22,6 @@
 }
 
 @media screen and (max-width: $md-width) {
-  .p-w {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
 
   .canvas {
     opacity: 0.3;
@@ -48,12 +33,6 @@
 
   .header .header-logo {
     width: 180px;
-  }
-
-  .front-start .start-image {
-    width: 386px;
-    min-width: 386px;
-    margin-left: 30px;
   }
 
   .header {

@@ -1,5 +1,14 @@
 .latest-blog-posts {
   margin-bottom: 90px;
+  @media (max-width: 991px) {
+    margin-bottom: 0;
+  }
+
+  .col-md-4 {
+    @media (max-width: 991px) {
+      margin-bottom: 30px;
+    }
+  }
 
   @media (max-width: 480px) {
     margin-bottom: 0;
@@ -29,9 +38,13 @@
     border-radius: 5px;
     box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
+    height: 100%;
 
     @media (max-width: 991px) {
       margin-bottom: 32px;
+    }
+    @media (max-width: 480px) {
+      height: auto;
     }
 
     .image {

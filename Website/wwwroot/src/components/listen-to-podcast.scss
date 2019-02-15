@@ -1,5 +1,5 @@
 #podcast-listing-page {
-  .blog-listing-page {
+  .podcast-listing {
     .right-col {
       > div {
         .social {
@@ -46,6 +46,7 @@
 
             img {
               margin: 0;
+              max-height: 54px;
             }
           }
         }

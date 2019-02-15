@@ -84,7 +84,9 @@ class PeopleListing extends React.Component {
                 <h2 className="title-conponent">{this.props.title}</h2>
                 <p className="intro">{this.props.subtitle}</p>
                 <div className="team-content">
-                    {team}
+                    <div className="container-my">
+                        {team}
+                    </div>
                 </div>
             </section>
 

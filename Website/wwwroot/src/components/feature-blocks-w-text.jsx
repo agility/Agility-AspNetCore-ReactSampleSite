@@ -58,18 +58,20 @@ class FeatureBlocksWithText extends React.Component {
 
                 <h2 className="title-conponent">{this.props.title}</h2>
                 <div className="products-features">
-                    <div className="row-my">
-                        <div className="col-md-4">
-                            <div className="features-left">
-                                <h3>{this.props.sideTitle}</h3>
-                                <div className="text" dangerouslySetInnerHTML={{ __html: this.props.sideBody }} />
-                                <a class="btn" href={this.props.sideLink.href} target={this.props.sideLink.target}>{this.props.sideLink.text}</a>
+                    <div className="container-my">
+                        <div className="row-my">
+                            <div className="col-md-4">
+                                <div className="features-left">
+                                    <h3>{this.props.sideTitle}</h3>
+                                    <div className="text" dangerouslySetInnerHTML={{ __html: this.props.sideBody }} />
+                                    <a class="btn" href={this.props.sideLink.href} target={this.props.sideLink.target}>{this.props.sideLink.text}</a>
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-md-8">
-                            <div className="features-right">
-                                <div className="row-my">
-                                    {features}
+                            <div className="col-md-8">
+                                <div className="features-right">
+                                    <div className="row-my">
+                                        {features}
+                                    </div>
                                 </div>
                             </div>
                         </div>

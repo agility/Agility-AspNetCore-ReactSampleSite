@@ -1,10 +1,7 @@
 {
   "items": [
     {
-      "video": {
-        "url": "http://html5-player.libsyn.com/embed/episode/id/8157878/height/50/theme/legacy/autoplay/yes/autonext/no/thumbnail/no/preload/no/no_addthis/no/direction/backward/"
-      },
-      "href": "/podcast-listing-detail",
+      "href": "/podcast-details-page",
       "image": {
         "url": "dist/img/pic.png"
       },
@@ -14,10 +11,7 @@
       "date": "09 Jun 2019"
     },
     {
-      "video": {
-        "url": "http://html5-player.libsyn.com/embed/episode/id/8157878/height/50/theme/legacy/autoplay/yes/autonext/no/thumbnail/no/preload/no/no_addthis/no/direction/backward/"
-      },
-      "href": "/podcast-listing-detail",
+      "href": "/podcast-details-page",
       "image": {
         "url": "dist/img/pic.png"
       },
@@ -27,10 +21,7 @@
       "date": "09 Jun 2019"
     },
     {
-      "video": {
-        "url": "http://html5-player.libsyn.com/embed/episode/id/8157878/height/50/theme/legacy/autoplay/yes/autonext/no/thumbnail/no/preload/no/no_addthis/no/direction/backward/"
-      },
-      "href": "/podcast-listing-detail",
+      "href": "/podcast-details-page",
       "image": {
         "url": "dist/img/pic.png"
       },

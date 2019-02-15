@@ -73,15 +73,17 @@ class LogoListing extends React.Component {
 
                 {
                     logos && logos.length > 0 &&
-                    <ul className="work-list">
-                        {logos}
+                    <div className="container-my">
+                        <ul className="work-list">
+                            {logos}
 
-                        {/* <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img2.png" alt="" /></li>
-                        <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img3.png" alt="" /></li>
-                        <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img4.png" alt="" /></li>
-                        <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img5.png" alt="" /></li>
-                        <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img6.png" alt="" /></li> */}
-                    </ul>
+                            {/* <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img2.png" alt="" /></li>
+                            <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img3.png" alt="" /></li>
+                            <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img4.png" alt="" /></li>
+                            <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img5.png" alt="" /></li>
+                            <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img6.png" alt="" /></li> */}
+                        </ul>
+                    </div>
                 }
                 
                 {

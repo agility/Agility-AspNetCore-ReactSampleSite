@@ -18,8 +18,10 @@ class FeaturedCaseStudies extends React.Component {
 
                 <h2 className="title-component">{this.props.title}</h2>
                 <div className="case-wrapper">
-                    <div className="row-my">
-                        {items}
+                    <div className="container-my">
+                        <div className="row-my">
+                            {items}
+                        </div>
                     </div>
                 </div>
                 <a className="btn" href={this.props.primaryButton.href} target={this.props.primaryButton.target}>{this.props.primaryButton.text}</a>

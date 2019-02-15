@@ -42,11 +42,17 @@
   }
 
   .featured-wrapper {
+    .col-md-4 {
+      @media (max-width: 991px) {
+        margin-bottom: 30px;
+      }
+    }
     .featured-item {
       border-radius: 5px;
       overflow: hidden;
       box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
       background-color: #fff;
+      height: 100%;
 
       @media (max-width: 991px) {
         margin-bottom: 32px;
