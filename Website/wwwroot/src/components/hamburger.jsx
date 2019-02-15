@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './hamburger.sass'
+import './hamburger.scss'
 
 
 class Hamburger extends React.Component {

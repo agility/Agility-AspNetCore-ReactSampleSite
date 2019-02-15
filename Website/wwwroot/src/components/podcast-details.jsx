@@ -1,7 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './podcast-details.sass'
-import './rich-text.sass'
+import './podcast-details.scss'
+import './rich-text.scss'
 
 class BlogPostDetails extends React.Component {
 
@@ -9,7 +9,7 @@ class BlogPostDetails extends React.Component {
 
         return (
 
-            <section className="blog-post-details">
+            <section className="podcast-details">
                 <div className="rich-text">
                     <div className="container p-w-small">
                         <h1 className="h1">{this.props.title}</h1>

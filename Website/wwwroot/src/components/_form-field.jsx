@@ -18,13 +18,14 @@ class FormField extends React.Component {
 
 		return (
 
-			<div className="form-group">
+			<div className="form-item">
+				<div className="invalid-feedback"></div>
 				<label htmlFor={this.props.id} >{this.props.label}</label>
 				{this.props.children}
 
 				{/* <input id={this.props.id} className="form-control" required={this.props.required} name={this.props.label} type={type} />
 				 */}
-				<div className="invalid-feedback"></div>
+
 			</div>
 		);
 	}

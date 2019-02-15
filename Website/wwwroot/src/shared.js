@@ -11,10 +11,10 @@ global['ReactDOMServer'] = ReactDOMServer;
 import Header from './components/header.jsx'
 import Footer from './components/footer.jsx'
 import AnimatedBg from './components/animated-bg.jsx'
+import GlobalScripts from './components/global-scripts.jsx'
+
 
 // -- modules
-import BlogListing from './components/blog-listing.jsx'
-import BlogPostDetails from './components/blog-post-details.jsx'
 import CaseDetails from './components/case-study-details.jsx'
 import CaseStudyContentPanel from './components/case-study-content-panel.jsx'
 import ContentPanel from './components/content-panel.jsx'
@@ -28,6 +28,7 @@ import FeaturedResources from './components/featured-resources.jsx'
 import FeaturedCaseStudies from './components/featured-case-studies.jsx'
 import FAQs from './components/faqs.jsx'
 import FormPage from './components/form.jsx'
+import RequestADemo from './components/request-a-demo.jsx'
 import InfoBox from './components/info-box.jsx'
 import LogoListing from './components/logo-listing.jsx'
 import LatestResources from './components/latest-resources.jsx'
@@ -47,11 +48,11 @@ import RichText from './components/rich-text.jsx'
 import SectionHeading from './components/section-heading.jsx'
 import StayInTouchBox from './components/stay-in-touch-box.jsx'
 import ContactUs from './components/contact-us.jsx'
+import Blank from './components/blank.jsx'
 
 
 global['Components'] = {
-  BlogListing,
-  BlogPostDetails,
+  Blank,
   FeatureBlocks,
   CaseDetails,
   CaseStudyContentPanel,
@@ -64,6 +65,7 @@ global['Components'] = {
   FeaturedCaseStudies,
   FAQs,
   FormPage,
+  RequestADemo,
   InfoBox,
   ContentPanel,
   TabPanels,
@@ -85,7 +87,8 @@ global['Components'] = {
   Header,
   Footer,
   StayInTouchBox,
-  AnimatedBg
+  AnimatedBg,
+  GlobalScripts
 }
 
 

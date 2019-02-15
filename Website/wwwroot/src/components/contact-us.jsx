@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './contact-us.sass'
+import './contact-us.scss'
 import Form from './_form.jsx'
 import FormField from './_form-field.jsx'
 

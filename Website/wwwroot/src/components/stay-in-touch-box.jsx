@@ -1,13 +1,12 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './stay-in-touch-box.sass'
+import './stay-in-touch-box.scss'
 
 class StayInTouchBox extends React.Component {
 
     render() {
-
-        var four = this.props.items.map(function (items){
-            return <StayInTouchBoxContent item={items} />
+        var four = this.props.links.map(function (item) {
+            return <StayInTouchBoxContent item={item} key={item.key} />
         });
 
         return (
@@ -28,7 +27,12 @@ class StayInTouchBoxContent extends React.Component {
     render() {
 
         return (
-            <a href={this.props.item.href} target="_blank"><img src={this.props.item.ico.url} alt=""/><span>{this.props.item.title}</span></a>
+            <a
+                href={this.props.item.followURL.href}
+                target={this.props.item.followURL.target}>
+                <img src={this.props.item.logo.url} alt="" />
+                <span>{this.props.item.title}</span>
+            </a>
         );
     }
 }

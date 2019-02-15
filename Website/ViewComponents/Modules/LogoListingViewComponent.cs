@@ -17,9 +17,6 @@ namespace Website.ViewComponents.Modules
 			return Task.Run<IViewComponentResult>(() =>
 			{
 				//TODO: implement viewmodel
-
-
-
 				var viewModel = new
 				{
 					heading = module.Heading,

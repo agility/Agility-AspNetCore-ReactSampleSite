@@ -29,27 +29,23 @@ namespace Website.Extensions
         public static dynamic ToDynamic(this AgilityContentItem ci, bool removeHrefTilde = false)
         {
             var dynamicObj = new ExpandoObject() as IDictionary<string, Object>;
-            DataColumnCollection columns = ci.Row.Table.Columns;
-            
-            //write each column into our dynamic obj
-            foreach (var col in columns)
-            {
-                string colName = col.ToString();
-                var objValue = ci[colName];
 
+
+            //write each column into our dynamic obj
+            foreach (var col in ci.GetType().GetProperties())
+            {
+                if(col.GetIndexParameters().Length > 0) {
+                    continue;
+                }
+                string colName = col.Name;
+                var objValue = ci.GetType().GetProperty(colName).GetValue(ci);
+                
                 //specific cases with a string
                 if (objValue is string)
                 {
-                    //have to test whether this is an attachment
-                    //TODO: need a more performant way to do this
-                    var attachment = ci.GetAttachment(colName);
 
-                    if (attachment != null)
-                    {
-                        objValue = attachment;
-                    }
                     //test whether this is a UrlField
-                    else if (IsAnchorTag(objValue as string))
+                    if (IsAnchorTag(objValue as string))
                     {
                         if (removeHrefTilde)
                         {

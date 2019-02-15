@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './people-listing.sass'
+import './people-listing.scss'
 
 class PeopleListing extends React.Component {
 
@@ -82,7 +82,7 @@ class PeopleListing extends React.Component {
                     </div>
                 </div>
                 <h2 className="title-conponent">{this.props.title}</h2>
-                <p className="intro">{this.props.titleBold}</p>
+                <p className="intro">{this.props.subtitle}</p>
                 <div className="team-content">
                     {team}
                 </div>
@@ -104,14 +104,17 @@ class PeopleListingContent extends React.Component {
                 <div class="row-my jc-sb">
                     <div className="col-md-4">
                         <div className="image">
-                            <img src={this.props.item.foto.url} alt=""/>
+                            { this.props.item.headshot && this.props.item.headshot != null && this.props.item.headshot.url
+                                ? <img src={this.props.item.headshot.url} alt=""/>
+                                : null
+                            }
                         </div>
                     </div>
                     <div className="col-md-7 d-flex ai-center">
                         <div className="content">
-                            <h4 className="h4">{this.props.item.name}</h4>
-                            <em>{this.props.item.position}</em>
-                            <div className="text" dangerouslySetInnerHTML={{__html: this.props.item.text}}></div>
+                            <h4 className="h4">{this.props.item.fullName}</h4>
+                            <em>{this.props.item.jobTitle}</em>
+                            <div className="text" dangerouslySetInnerHTML={{__html: this.props.item.summary}}></div>
                         </div>
                     </div>
                 </div>

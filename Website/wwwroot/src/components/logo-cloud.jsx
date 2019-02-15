@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './logo-cloud.sass'
+import './logo-cloud.scss'
 
 class LogoListing extends React.Component {
     render() {
@@ -11,20 +11,10 @@ class LogoListing extends React.Component {
 
             return (
                 <li className={className} key={logo.key}>
-                    <a href={logo.url.href} target={logo.url.target}><img src={logo.logo.url} alt={logo.logo.label} /></a>
+                    <a href={logo.url.href} target={logo.url.target}><img src={logo._Logo.url} alt={logo._Logo.label} /></a>
                 </li>
             );
-            // <div key={logo.key}>
-            //     <h3>{logo.title}</h3>
-            //     <div>{logo.shortDescription}</div>
-            //     <div dangerouslySetInnerHTML={{ __html: logo.textBlob }} />
-            //     <div>
-            //         <img src={logo.logo.url} alt={logo.logo.label} />
-            //     </div>
-            //     <div>
-            //         <a href={logo.url.href} target={logo.url.target}>{logo.url.text}</a>
-            //     </div>
-            // </div>
+
         }
 
         //loop all the logos and render them

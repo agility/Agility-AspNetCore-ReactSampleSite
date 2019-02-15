@@ -2,12 +2,13 @@
 import './shared'
 
 //load global styles
-import './components/_components.sass'
-import './components/_reset.sass'
-import './components/_media.sass'
-import './components/_canvas.sass'
-import './components/_fontface.sass'
-import './components/_previewbar.sass'
+import './components/_react-debug.scss'
+import './components/_components.scss'
+import './components/_reset.scss'
+import './components/_media.scss'
+import './components/_canvas.scss'
+import './components/_fontface.scss'
+import './components/_previewbar.scss'
 
 //register any client specific Agility Module react components (not SSR)
 import UGCTestComponent from './components/ugc-test.jsx'

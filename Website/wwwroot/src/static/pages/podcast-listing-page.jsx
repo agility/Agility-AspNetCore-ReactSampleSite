@@ -16,7 +16,7 @@ class Podcast extends Component {
         return (
             <div id="podcast-listing-page">
                 <ContentPanel {...ContentPanelProps } />
-                <div className="p-w blog-listing-page">
+                <div className="p-w podcast-listing">
                     <div className="row-my">
                         <div className="col-md-7">
                             <PodcastListing {...PodcastListingProps } />

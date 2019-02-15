@@ -1,132 +1,224 @@
 {
   "title": "Events",
-  "titleBold": "Well educated, intellectual people, especially scientists at all times demonstrate considerably smaller adherence to religiosity than others.",
+  "subTitle": "Well educated, intellectual people, especially scientists at all times demonstrate considerably smaller adherence to religiosity than others.",
   "items": [
     {
-      "image": {
-        "guid": null,
-        "managerID": null,
-        "blob": null,
-        "url": "/dist/img/Rectangle_4-min.png"
-      },
-      "title": "Put Wings On Your Dreams",
-      "event": {
-        "foto": {
+      "title": "Put Wings on Your Dreams",
+      "subTitle": "There are many kinds of narratives and organizing principles.",
+      "organizer": {
+        "title": "James Vidler",
+        "textBlob": null,
+        "jobTitle": null,
+        "image": {
           "guid": null,
           "managerID": null,
           "blob": null,
-          "url": "/dist/img/team3-min.jpg"
+          "itemOrder": 1,
+          "fileName": "http://media.agilitycms.com/JamesVidler2015.jpg",
+          "label": "",
+          "target": "",
+          "url": "http://media.agilitycms.com/JamesVidler2015.jpg",
+          "fileSize": 0,
+          "height": 0,
+          "width": 0,
+          "thumbnails": {}
         },
-        "name": "Marc Moody",
-        "content": "There are many kinds of narratives and organizing principles. Science is driven evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.)",
-        "date": "18 Feb 2019 at 3 PM",
-        "adres": "736 Hayes Throughway, London"
-      }
+        "referenceName": "BlogAuthors",
+        "key": 98
+      },
+      "address": "736 Hayes Throughway, London",
+      "date": "2019-03-01T18:00:00",
+      "thumbnail": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/Attachments/NewItems/rectangle_4-min_20190207160740_0.png",
+        "label": "",
+        "target": "",
+        "url": "https://static.agilitycms.com/Attachments/NewItems/rectangle_4-min_20190207160740_0.png",
+        "fileSize": 0,
+        "height": 288,
+        "width": 384,
+        "thumbnails": {}
+      },
+      "externalLink": "\u003ca href=\u0022https://www.eventbrite.com/e/intro-agility-developer-workshop-december-7-2018-tickets-51482672058\u0022 target=\u0022_blank\u0022\u003eRegister Now\u003c/a\u003e",
+      "description": "There are many kinds of narratives and organizing principles. Science is driven evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.)"
     },
     {
-      "image": {
-        "guid": null,
-        "managerID": null,
-        "blob": null,
-        "url": "/dist/img/Rectangle_5-min.png"
-      },
-      "title": "Put Wings On Your Dreams",
-      "event": {
-        "foto": {
+      "title": "Sample Event 2",
+      "subTitle": "There are many kinds of narratives and organizing principles.",
+      "organizer": {
+        "title": "James Vidler",
+        "textBlob": null,
+        "jobTitle": null,
+        "image": {
           "guid": null,
           "managerID": null,
           "blob": null,
-          "url": "/dist/img/team3-min.jpg"
+          "itemOrder": 1,
+          "fileName": "http://media.agilitycms.com/JamesVidler2015.jpg",
+          "label": "",
+          "target": "",
+          "url": "http://media.agilitycms.com/JamesVidler2015.jpg",
+          "fileSize": 0,
+          "height": 0,
+          "width": 0,
+          "thumbnails": {}
         },
-        "name": "Marc Moody",
-        "content": "There are many kinds of narratives and organizing principles. Science is driven evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.)",
-        "date": "18 Feb 2019 at 3 PM",
-        "adres": "736 Hayes Throughway, London"
-      }
+        "referenceName": "BlogAuthors",
+        "key": 98
+      },
+      "address": "736 Hayes Throughway, London",
+      "date": "2019-03-29T18:00:00",
+      "thumbnail": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/Attachments/NewItems/rectangle_4-min_20190207160740_0.png",
+        "label": "",
+        "target": "",
+        "url": "https://static.agilitycms.com/Attachments/NewItems/rectangle_4-min_20190207160740_0.png",
+        "fileSize": 0,
+        "height": 288,
+        "width": 384,
+        "thumbnails": {}
+      },
+      "externalLink": "\u003ca href=\u0022https://www.eventbrite.com/e/intro-agility-developer-workshop-december-7-2018-tickets-51482672058\u0022 target=\u0022_blank\u0022\u003eRegister Now\u003c/a\u003e",
+      "description": "There are many kinds of narratives and organizing principles. Science is driven evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.)"
     },
     {
-      "image": {
-        "guid": null,
-        "managerID": null,
-        "blob": null,
-        "url": "/dist/img/Rectangle_6-min.png"
-      },
-      "title": "Put Wings On Your Dreams",
-      "event": {
-        "foto": {
+      "title": "Sample Event 3",
+      "subTitle": "There are many kinds of narratives and organizing principles.",
+      "organizer": {
+        "title": "James Vidler",
+        "textBlob": null,
+        "jobTitle": null,
+        "image": {
           "guid": null,
           "managerID": null,
           "blob": null,
-          "url": "/dist/img/team3-min.jpg"
+          "itemOrder": 1,
+          "fileName": "http://media.agilitycms.com/JamesVidler2015.jpg",
+          "label": "",
+          "target": "",
+          "url": "http://media.agilitycms.com/JamesVidler2015.jpg",
+          "fileSize": 0,
+          "height": 0,
+          "width": 0,
+          "thumbnails": {}
         },
-        "name": "Marc Moody",
-        "content": "There are many kinds of narratives and organizing principles. Science is driven evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.)",
-        "date": "18 Feb 2019 at 3 PM",
-        "adres": "736 Hayes Throughway, London"
-      }
+        "referenceName": "BlogAuthors",
+        "key": 98
+      },
+      "address": "736 Hayes Throughway, London",
+      "date": "2019-04-25T18:00:00",
+      "thumbnail": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/Attachments/NewItems/rectangle_4-min_20190207160740_0.png",
+        "label": "",
+        "target": "",
+        "url": "https://static.agilitycms.com/Attachments/NewItems/rectangle_4-min_20190207160740_0.png",
+        "fileSize": 0,
+        "height": 288,
+        "width": 384,
+        "thumbnails": {}
+      },
+      "externalLink": "\u003ca href=\u0022https://www.eventbrite.com/e/intro-agility-developer-workshop-december-7-2018-tickets-51482672058\u0022 target=\u0022_blank\u0022\u003eRegister Now\u003c/a\u003e",
+      "description": "There are many kinds of narratives and organizing principles. Science is driven evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.)"
     },
     {
-      "image": {
-        "guid": null,
-        "managerID": null,
-        "blob": null,
-        "url": "/dist/img/Rectangle_4-min.png"
-      },
-      "title": "Put Wings On Your Dreams",
-      "event": {
-        "foto": {
+      "title": "Sample Event 4",
+      "subTitle": "There are many kinds of narratives and organizing principles.",
+      "organizer": {
+        "title": "James Vidler",
+        "textBlob": null,
+        "jobTitle": null,
+        "image": {
           "guid": null,
           "managerID": null,
           "blob": null,
-          "url": "/dist/img/team3-min.jpg"
+          "itemOrder": 1,
+          "fileName": "http://media.agilitycms.com/JamesVidler2015.jpg",
+          "label": "",
+          "target": "",
+          "url": "http://media.agilitycms.com/JamesVidler2015.jpg",
+          "fileSize": 0,
+          "height": 0,
+          "width": 0,
+          "thumbnails": {}
         },
-        "name": "Marc Moody",
-        "content": "There are many kinds of narratives and organizing principles. Science is driven evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.)",
-        "date": "18 Feb 2019 at 3 PM",
-        "adres": "736 Hayes Throughway, London"
-      }
+        "referenceName": "BlogAuthors",
+        "key": 98
+      },
+      "address": "736 Hayes Throughway, London",
+      "date": "2019-05-29T18:00:00",
+      "thumbnail": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/Attachments/NewItems/rectangle_4-min_20190207160740_0.png",
+        "label": "",
+        "target": "",
+        "url": "https://static.agilitycms.com/Attachments/NewItems/rectangle_4-min_20190207160740_0.png",
+        "fileSize": 0,
+        "height": 288,
+        "width": 384,
+        "thumbnails": {}
+      },
+      "externalLink": "\u003ca href=\u0022https://www.eventbrite.com/e/intro-agility-developer-workshop-december-7-2018-tickets-51482672058\u0022 target=\u0022_blank\u0022\u003eRegister Now\u003c/a\u003e",
+      "description": "There are many kinds of narratives and organizing principles. Science is driven evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.)"
     },
     {
-      "image": {
-        "guid": null,
-        "managerID": null,
-        "blob": null,
-        "url": "/dist/img/Rectangle_5-min.png"
-      },
-      "title": "Put Wings On Your Dreams",
-      "event": {
-        "foto": {
+      "title": "Sample Event 5",
+      "subTitle": "There are many kinds of narratives and organizing principles.",
+      "organizer": {
+        "title": "James Vidler",
+        "textBlob": null,
+        "jobTitle": null,
+        "image": {
           "guid": null,
           "managerID": null,
           "blob": null,
-          "url": "/dist/img/team3-min.jpg"
+          "itemOrder": 1,
+          "fileName": "http://media.agilitycms.com/JamesVidler2015.jpg",
+          "label": "",
+          "target": "",
+          "url": "http://media.agilitycms.com/JamesVidler2015.jpg",
+          "fileSize": 0,
+          "height": 0,
+          "width": 0,
+          "thumbnails": {}
         },
-        "name": "Marc Moody",
-        "content": "There are many kinds of narratives and organizing principles. Science is driven evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.)",
-        "date": "18 Feb 2019 at 3 PM",
-        "adres": "736 Hayes Throughway, London"
-      }
-    },
-    {
-      "image": {
+        "referenceName": "BlogAuthors",
+        "key": 98
+      },
+      "address": "736 Hayes Throughway, London",
+      "date": "2019-07-24T18:00:00",
+      "thumbnail": {
         "guid": null,
         "managerID": null,
         "blob": null,
-        "url": "/dist/img/Rectangle_6-min.png"
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/Attachments/NewItems/rectangle_4-min_20190207160740_0.png",
+        "label": "",
+        "target": "",
+        "url": "https://static.agilitycms.com/Attachments/NewItems/rectangle_4-min_20190207160740_0.png",
+        "fileSize": 0,
+        "height": 288,
+        "width": 384,
+        "thumbnails": {}
       },
-      "title": "Put Wings On Your Dreams",
-      "event": {
-        "foto": {
-          "guid": null,
-          "managerID": null,
-          "blob": null,
-          "url": "/dist/img/team3-min.jpg"
-        },
-        "name": "Marc Moody",
-        "content": "There are many kinds of narratives and organizing principles. Science is driven evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.)",
-        "date": "18 Feb 2019 at 3 PM",
-        "adres": "736 Hayes Throughway, London"
-      }
+      "externalLink": "\u003ca href=\u0022https://www.eventbrite.com/e/intro-agility-developer-workshop-december-7-2018-tickets-51482672058\u0022 target=\u0022_blank\u0022\u003eRegister Now\u003c/a\u003e",
+      "description": "There are many kinds of narratives and organizing principles. Science is driven evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.)"
     }
-  ]
+  ],
+  "viewDetailsLabel": "View Details",
+  "backLabel": "Back",
+  "registerLabel": "Register"
 }
