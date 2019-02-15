@@ -1049,28 +1049,28 @@ namespace Website.AgilityModels
 	{
 		private string __leftcolumntitle = null;
 		private bool __leftcolumntitle_set = false;
-		public virtual string LeftColumnTitle { get { if (!__leftcolumntitle_set) __leftcolumntitle = GetFieldValue<string>("LeftColumnTitle"); __leftcolumntitle_set = true; return __leftcolumntitle; } set { __leftcolumntitle = value; __leftcolumntitle_set = true; } }
+		public virtual string LeftColumnTitle { get { if (!__leftcolumntitle_set) __leftcolumntitle = GetFieldValue<string>("LeftColumnTitle"); __leftcolumntitle_set = true; return __leftcolumntitle; } set { __leftcolumntitle = value; __leftcolumntitle_set = true;  } }
 		private string __leftcolumnbody = null;
 		private bool __leftcolumnbody_set = false;
-		public virtual string LeftColumnBody { get { if (!__leftcolumnbody_set) __leftcolumnbody = GetFieldValue<string>("LeftColumnBody"); __leftcolumnbody_set = true; return __leftcolumnbody; } set { __leftcolumnbody = value; __leftcolumnbody_set = true; } }
+		public virtual string LeftColumnBody { get { if (!__leftcolumnbody_set) __leftcolumnbody = GetFieldValue<string>("LeftColumnBody"); __leftcolumnbody_set = true; return __leftcolumnbody; } set { __leftcolumnbody = value; __leftcolumnbody_set = true;  } }
 		private string __rightcolumntitle = null;
 		private bool __rightcolumntitle_set = false;
-		public virtual string RightColumnTitle { get { if (!__rightcolumntitle_set) __rightcolumntitle = GetFieldValue<string>("RightColumnTitle"); __rightcolumntitle_set = true; return __rightcolumntitle; } set { __rightcolumntitle = value; __rightcolumntitle_set = true; } }
+		public virtual string RightColumnTitle { get { if (!__rightcolumntitle_set) __rightcolumntitle = GetFieldValue<string>("RightColumnTitle"); __rightcolumntitle_set = true; return __rightcolumntitle; } set { __rightcolumntitle = value; __rightcolumntitle_set = true;  } }
 		private string __thanksmessage = null;
 		private bool __thanksmessage_set = false;
-		public virtual string ThanksMessage { get { if (!__thanksmessage_set) __thanksmessage = GetFieldValue<string>("ThanksMessage"); __thanksmessage_set = true; return __thanksmessage; } set { __thanksmessage = value; __thanksmessage_set = true; } }
+		public virtual string ThanksMessage { get { if (!__thanksmessage_set) __thanksmessage = GetFieldValue<string>("ThanksMessage"); __thanksmessage_set = true; return __thanksmessage; } set { __thanksmessage = value; __thanksmessage_set = true;  } }
 		private string __conversionscript = null;
 		private bool __conversionscript_set = false;
-		public virtual string ConversionScript { get { if (!__conversionscript_set) __conversionscript = GetFieldValue<string>("ConversionScript"); __conversionscript_set = true; return __conversionscript; } set { __conversionscript = value; __conversionscript_set = true; } }
+		public virtual string ConversionScript { get { if (!__conversionscript_set) __conversionscript = GetFieldValue<string>("ConversionScript"); __conversionscript_set = true; return __conversionscript; } set { __conversionscript = value; __conversionscript_set = true;  } }
 		private string __backgroundcolour = null;
 		private bool __backgroundcolour_set = false;
-		public virtual string BackgroundColour { get { if (!__backgroundcolour_set) __backgroundcolour = GetFieldValue<string>("BackgroundColour"); __backgroundcolour_set = true; return __backgroundcolour; } set { __backgroundcolour = value; __backgroundcolour_set = true; } }
+		public virtual string BackgroundColour { get { if (!__backgroundcolour_set) __backgroundcolour = GetFieldValue<string>("BackgroundColour"); __backgroundcolour_set = true; return __backgroundcolour; } set { __backgroundcolour = value; __backgroundcolour_set = true;  } }
 		private string __submissionposturl = null;
 		private bool __submissionposturl_set = false;
-		public virtual string SubmissionPOSTURL { get { if (!__submissionposturl_set) __submissionposturl = GetFieldValue<string>("SubmissionPOSTURL"); __submissionposturl_set = true; return __submissionposturl; } set { __submissionposturl = value; __submissionposturl_set = true; } }
+		public virtual string SubmissionPOSTURL { get { if (!__submissionposturl_set) __submissionposturl = GetFieldValue<string>("SubmissionPOSTURL"); __submissionposturl_set = true; return __submissionposturl; } set { __submissionposturl = value; __submissionposturl_set = true;  } }
 		private string __componentname = null;
 		private bool __componentname_set = false;
-		public virtual string ComponentName { get { if (!__componentname_set) __componentname = GetFieldValue<string>("ComponentName"); __componentname_set = true; return __componentname; } set { __componentname = value; __componentname_set = true; } }
+		public virtual string ComponentName { get { if (!__componentname_set) __componentname = GetFieldValue<string>("ComponentName"); __componentname_set = true; return __componentname; } set { __componentname = value; __componentname_set = true;  } }
 
 	}
 	public partial class Module_TabPanels : Agility.Web.AgilityContentItem
