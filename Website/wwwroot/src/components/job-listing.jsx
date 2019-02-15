@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './job-listing.sass'
+import './job-listing.scss'
 
 class JobListing extends React.Component {
     constructor() {
@@ -20,7 +20,7 @@ class JobListing extends React.Component {
 
         return (
 
-            <section className="features p-w feature-block-w-text">
+            <section className="features p-w job-listing">
                 <div className="canvas" id="canvas-5">
                     <div className="img">
                         <div className="item item-tangle-top-3 twentyone w58">
