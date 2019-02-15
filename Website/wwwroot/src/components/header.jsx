@@ -20,6 +20,8 @@ class Header extends React.Component {
 
     render() {
 
+
+
         let headerClass = "header p-w";
 
         //MOD: JOEL V - THIS BREAKS SERVER RENDERING - should be handled in css
@@ -74,16 +76,25 @@ class Header extends React.Component {
         return (
 
             <div>
+                <div className="search-frame">
+                    <div className="search-inner">
+                        <form action="">
+                            <input type="text" placeholder="Search" />
+                        </form>
+                    </div>
+                </div>
                 <SignIn preHeaderLinks={this.props.preHeaderLinks} primaryButton={this.props.primaryButton} />
                 <Hamburger />
                 <header className={headerClass}>
-                    <div className="header-logo">
-                        <a href="/"><img src={this.props.logo.url} alt={this.props.logo.label} /></a>
+                    <div className="container-my">
+                        <div className="header-logo">
+                            <a href="/"><img src={this.props.logo.url} alt={this.props.logo.label} /></a>
+                        </div>
+
+                        {renderMenu(this.props.menu, 0)}
+
+                        <button href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</button>
                     </div>
-
-                    {renderMenu(this.props.menu, 0)}
-
-                    <button href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</button>
                 </header>
             </div>
 

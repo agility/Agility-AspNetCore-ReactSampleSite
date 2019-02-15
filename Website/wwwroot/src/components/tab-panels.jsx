@@ -127,8 +127,10 @@ class TabPanels extends React.Component {
                     {tabNav}
                 </ul>
 
-                <div className="features-toggle-tab-items">
-                    {tabs}
+                <div className="container-my">
+                    <div className="features-toggle-tab-items">
+                        {tabs}
+                    </div>
                 </div>
             </section>
 

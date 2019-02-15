@@ -112,23 +112,25 @@ class LatestResources extends React.Component {
                 <h2 className="title-component">{this.props.title}</h2>
                 <p className="intro">{this.props.subTitle}</p>
                 <div className="latest-wrapper">
-                    <div className="row-my">
-                        <div className="col-md-4">
-                            <div className="latest-left">
-                                <h3 className="h3">{this.props.leftTopTitle}</h3>
-                                <div className="assets">{labels}</div>
-                                <h3 className="h3">{this.props.leftBottomTitle}</h3>
-                                <a className="btn" href={this.props.leftButton.href} target={this.props.leftButton.target}>{this.props.leftButton.text}</a>
+                    <div className="container-my">
+                        <div className="row-my">
+                            <div className="col-md-4">
+                                <div className="latest-left">
+                                    <h3 className="h3">{this.props.leftTopTitle}</h3>
+                                    <div className="assets">{labels}</div>
+                                    <h3 className="h3">{this.props.leftBottomTitle}</h3>
+                                    <a className="btn" href={this.props.leftButton.href} target={this.props.leftButton.target}>{this.props.leftButton.text}</a>
+                                </div>
                             </div>
-                        </div>
-                        <div className="col-md-8">
-                            <div className="row-my">
-                                {this.state.loadingMore &&
-                                    <div>Loading... </div>
-                                }
-                                {!this.state.loadingMore &&
-                                    resources
-                                }
+                            <div className="col-md-8">
+                                <div className="row-my">
+                                    {this.state.loadingMore &&
+                                        <div>Loading... </div>
+                                    }
+                                    {!this.state.loadingMore &&
+                                        resources
+                                    }
+                                </div>
                             </div>
                         </div>
                     </div>

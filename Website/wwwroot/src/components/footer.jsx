@@ -86,43 +86,45 @@ class Footer extends React.Component {
 
             // </footer>
             <footer className="foter p-w">
-                <div className="foter-inner">
+                <div className="container-my">
+                    <div className="foter-inner">
 
-                    <ul className="foter-menu menu-product">
-                        <li className="foter-menu-li title"><span>{this.props.column1Title}</span></li>
-                        {outputLinks(this.props.column1Links)}
-                    </ul>
-                    <ul className="foter-menu menu-about">
-                        <li className="foter-menu-li title"><span>{this.props.column2Title}</span></li>
-                        {outputLinks(this.props.column2Links)}
-                    </ul>
-                    <ul className="foter-menu menu-information">
-                        <li className="foter-menu-li title"><span>{this.props.column3Title}</span></li>
-                        {outputLinks(this.props.column3Links)}
-                    </ul>
-                    <ul className="foter-menu menu-social">
-                        <li className="foter-menu-li title"><span>{this.props.followTitle}</span></li>
-                        {outputFollowLinks(this.props.followLinks)}
-                    </ul>
-                    <div className="foter-subscribe">
-                        <span>{this.props.subscribeTitle}</span>
-                        <p>{this.props.subscribeDescription}</p>
-                        <form onSubmit={this.submitHandler} action="" className="foter-subscribe-form">
-                            <input type="email" placeholder={this.props.subscribeEmailPlaceholder} name="email" />
-                            <input type="submit" placeholder={this.props.subscribeButtonLabel} />
-                            <input type="hidden" name="_autopilot_session_id" />
-                        </form>
+                        <ul className="foter-menu menu-product">
+                            <li className="foter-menu-li title"><span>{this.props.column1Title}</span></li>
+                            {outputLinks(this.props.column1Links)}
+                        </ul>
+                        <ul className="foter-menu menu-about">
+                            <li className="foter-menu-li title"><span>{this.props.column2Title}</span></li>
+                            {outputLinks(this.props.column2Links)}
+                        </ul>
+                        <ul className="foter-menu menu-information">
+                            <li className="foter-menu-li title"><span>{this.props.column3Title}</span></li>
+                            {outputLinks(this.props.column3Links)}
+                        </ul>
+                        <ul className="foter-menu menu-social">
+                            <li className="foter-menu-li title"><span>{this.props.followTitle}</span></li>
+                            {outputFollowLinks(this.props.followLinks)}
+                        </ul>
+                        <div className="foter-subscribe">
+                            <span>{this.props.subscribeTitle}</span>
+                            <p>{this.props.subscribeDescription}</p>
+                            <form onSubmit={this.submitHandler} action="" className="foter-subscribe-form">
+                                <input type="email" placeholder={this.props.subscribeEmailPlaceholder} name="email" />
+                                <input type="submit" placeholder={this.props.subscribeButtonLabel} />
+                                <input type="hidden" name="_autopilot_session_id" />
+                            </form>
+                        </div>
+
                     </div>
 
-                </div>
-
-                <div className="foter-copyright">
-                    <p>{this.props.bottomCopyright} {getYear()}</p>
-                    <ul className="foter-copyright-menu">
-                        <li dangerouslySetInnerHTML={{ __html: this.props.bottomPrivacyPolicyLink }}></li>
-                        <span>|</span>
-                        <li dangerouslySetInnerHTML={{ __html: this.props.bottomSecurityLink }}></li>
-                    </ul>
+                    <div className="foter-copyright">
+                        <p>{this.props.bottomCopyright} {getYear()}</p>
+                        <ul className="foter-copyright-menu">
+                            <li dangerouslySetInnerHTML={{ __html: this.props.bottomPrivacyPolicyLink }}></li>
+                            <span>|</span>
+                            <li dangerouslySetInnerHTML={{ __html: this.props.bottomSecurityLink }}></li>
+                        </ul>
+                    </div>
                 </div>
             </footer>
 

@@ -1,14 +1,18 @@
 //main-width "padding-width"
 @import "./_variables.scss";
 
-.p-w {
-  padding-left: 18.3333333333%;
-  padding-right: 18.3333333333%;
+.p-w
+  > p {
+    @media (max-width: 1440px) {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+    }
 }
 
 .p-w-small {
   padding-top: 70px;
-  padding-bottom: 75px;
+  padding-bottom: 0;
   width: 800px;
   margin: 0 auto;
 
@@ -87,4 +91,34 @@ i.more {
   left: 0;
   top: 0;
   z-index: 2;
+}
+
+.container-my {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  justify-content: space-between;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -ms-flex-pack: justify;
+  display: flex;
+  width: 1205px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  @media (max-width: 1440px) {
+    width: 1140px;
+  }
+  @media (max-width: 1199px) {
+    width: 940px;
+  }
+  @media (max-width: 991px) {
+    width: 720px;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }

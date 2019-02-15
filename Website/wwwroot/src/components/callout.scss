@@ -58,9 +58,27 @@
   .btn {
     width: 176px;
     background-color: $primaryColor;
+    color: #484b4d;
+    -webkit-box-shadow: 0 5px 35px 0 rgba(255, 255, 255, 0.25);
+    -moz-box-shadow: 0 5px 35px 0 rgba(255, 255, 255, 0.25);
+    box-shadow: 0 5px 35px 0 rgba(255, 255, 255, 0.25);
+    &:hover {
+      -webkit-box-shadow: 0 5px 46px 0 rgba(255, 255, 255, 0.6);
+      -moz-box-shadow: 0 5px 46px 0 rgba(255, 255, 255, 0.6);
+      box-shadow: 0 5px 46px 0 rgba(255, 255, 255, 0.6);
+    }
   }
 
   .btn-secondary {
     background-color: $secondaryColor;
+    color: #fff;
+    -webkit-box-shadow: 0 5px 35px 0 rgba(109, 6, 255, 0.25);
+    -moz-box-shadow: 0 5px 35px 0 rgba(109, 6, 255, 0.25);
+    box-shadow: 0 5px 35px 0 rgba(109, 6, 255, 0.25);
+    &:hover {
+      -webkit-box-shadow: 0 5px 46px 0 rgba(109, 6, 255, 0.39);
+      -moz-box-shadow: 0 5px 46px 0 rgba(109, 6, 255, 0.39);
+      box-shadow: 0 5px 46px 0 rgba(109, 6, 255, 0.39);
+    }
   }
 }

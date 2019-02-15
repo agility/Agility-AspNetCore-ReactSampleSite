@@ -1,6 +1,5 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './post-listing.scss'
 import './podcast-listing.scss'
 
 class BlogListing extends React.Component {
@@ -28,25 +27,16 @@ class BlogListingContent extends React.Component {
         eventContent = eventContent.substr(0, 240);
         eventContent = eventContent+'...';
 
-        var elemId = this.props.id;
-        elemId = 'frame-'+elemId;
-
-        function playVideo(e) {
-            var iframe = e.target.parentElement.parentElement.parentElement.children[0];
-            /*var iframeId = iframe.id;*/
-            e.target.parentElement.parentElement.remove();
-            /*var iframeDom = document.getElementById(iframeId);*/
-        }
-
         return (
             <div className="blog-post">
                 <div className="image">
-                    <iframe id={elemId} src={this.props.item.video.url} frameborder="0"></iframe>
                     <div className="block-hover">
-                        <img src={this.props.item.image.url} alt=""/>
-                        <div className="play d-flex jc-c ai-center"><img src="dist/img/Triangle.svg" onClick={playVideo} alt=""/></div>
+                        <a href={this.props.item.href}>
+                            <img src={this.props.item.image.url} alt=""/>
+                            <div className="play d-flex jc-c ai-center"><img src="dist/img/Triangle.svg" alt=""/></div>
+                        </a>
                     </div>
-                    <img className="podcast" src="dist/img/podcast.svg" alt="" />
+                    <img src="dist/img/podcast.svg" alt="" className="podcast"/>
                 </div>
                 <div className="content">
                     <h3 className="h3"><a href={this.props.item.href}>{this.props.item.title}</a></h3>

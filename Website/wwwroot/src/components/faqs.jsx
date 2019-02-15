@@ -50,8 +50,10 @@ class FAQs extends React.Component {
 
                 <h2 className="title-conponent">{this.props.title}</h2>
                 <div className="faqs-wrapper">
-                    <div className="row-my">
-                        {faqs}
+                    <div className="container-my">
+                        <div className="row-my">
+                            {faqs}
+                        </div>
                     </div>
                 </div>
 
