@@ -1,6 +1,17 @@
 //main-width "padding-width"
 @import "./_variables.scss";
 
+html.search-open {
+  overflow: hidden;
+}
+body.search-open {
+  overflow-y: scroll;
+}
+button {
+  &:focus {
+    outline: none !important;
+  }
+}
 .p-w
   > p {
     @media (max-width: 1440px) {

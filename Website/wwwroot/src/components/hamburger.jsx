@@ -58,6 +58,16 @@ class Hamburger extends React.Component {
     }
 
     render() {
+
+        function showSearch(b) {
+            b.target.classList.toggle('close');
+            var searchFrame = document.querySelector('.search-frame');
+            searchFrame.classList.toggle('open');
+            document.getElementById('frontend-only').classList.toggle('search-open');
+            document.querySelector('html').classList.toggle('search-open');
+
+        }
+
         return (
             <div>
                 <button className='Button-menu' id="nav-icon1"><span></span><span></span><span></span></button>
@@ -67,6 +77,11 @@ class Hamburger extends React.Component {
                     <div className="inner">
                         <div className="mobile-logo">
                             <a href="#"><img src="https://static.agilitycms.com/layout/img/logo-original.svg" alt="" /></a>
+                        </div>
+                        <div className="search-mobile">
+                            <div className="sign-in">
+                                <button className="open-search" onClick={showSearch}></button>
+                            </div>
                         </div>
                         <button className='Button-menu' id="nav-icon-close"><span></span><span></span><span></span></button>
                         <div className="mobile-menu-inner">

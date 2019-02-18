@@ -207,6 +207,26 @@
 
 .inner {
   position: relative;
+  .search-mobile {
+    position: absolute;
+    top: 27px;
+    padding-right: 45px;
+    width: 100%;
+    text-align: right;
+    .sign-in {
+      @media (max-width: 991px) {
+        display: inline-block;
+        background: none;
+        padding: 0;
+        box-shadow: none;
+      }
+      .open-search {
+        @media (max-width: 991px) {
+          margin: 0;
+        }
+      }
+    }
+  }
 
   #nav-icon-close {
     width: 24px;
