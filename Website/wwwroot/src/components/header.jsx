@@ -73,14 +73,49 @@ class Header extends React.Component {
             return <ul className={className}>{links}</ul>;
         };
 
+        function hideSearch() {
+            var searchFrame = document.querySelector('.search-frame');
+            searchFrame.classList.toggle('open');
+            document.querySelector('html').classList.toggle('search-open');
+            document.querySelector('.open-search').classList.toggle('close');
+            document.getElementById('frontend-only').classList.toggle('search-open');
+        }
+
+        document.addEventListener('keydown', function(event) {
+            var key = event.key;
+            if ("Escape" === key) {
+                hideSearch();
+            }
+        });
+
+        var searchResults = require('../static/data/search-results.json');
+        searchResults = searchResults.results;
+        var results = searchResults.map(function(res){
+            return <SearchResults result={res}/>
+        });
+
         return (
 
             <div>
                 <div className="search-frame">
-                    <div className="search-inner">
+                    <div className="search-inner" onClick={hideSearch}></div>
+                    <div className="search-form">
                         <form action="">
                             <input type="text" placeholder="Search" />
                         </form>
+                    </div>
+                    <div className="search-result">
+                        <div className="result-inner">
+                            <div className="results-quant">
+                                <p>Results for Hello (<span>3</span>)</p>
+                            </div>
+                            <div className="search-items">
+                                {results}
+                            </div>
+                            <div className="result-footer">
+                                <p>Like our search? Get <a href="" target="_blank">Agility Search</a> for your website today.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <SignIn preHeaderLinks={this.props.preHeaderLinks} primaryButton={this.props.primaryButton} />
@@ -102,4 +137,24 @@ class Header extends React.Component {
     }
 }
 export default hot(Header);
+
+class SearchResults extends React.Component{
+    render() {
+
+        var label = this.props.result.label;
+        var labelClass = 'label '+label;
+
+        return(
+            <div className="search-item d-flex ai-center">
+                <div className="si-left">
+                    <h3 className="h3"><a href={this.props.result.href}>{this.props.result.title}</a></h3>
+                    <div className="text" dangerouslySetInnerHTML={{__html: this.props.result.text}}></div>
+                </div>
+                <div className="si-right">
+                    <div className={labelClass}>{label}</div>
+                </div>
+            </div>
+        );
+    }
+}
 

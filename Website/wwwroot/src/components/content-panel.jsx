@@ -76,7 +76,7 @@ class ContentPanel extends React.Component {
 
                 <div className={this.props.enableBackgroundImage ? 'rotated-bg' : ''}></div>
 
-                <div class="container-my">
+                <div className="container-my">
                 {this.props.imagePosition === 'left' &&
                     <div className="start-image left">
                         <img src={this.props.image.url + '?w=500&h=500'} alt={this.props.image.label} />

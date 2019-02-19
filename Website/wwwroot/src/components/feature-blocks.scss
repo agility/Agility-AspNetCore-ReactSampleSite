@@ -18,6 +18,9 @@
 
   .container-my {
     display: block;
+    @media (max-width: 991px) {
+      width: 100%;
+    }
   }
 
   .ben-items-forslider {

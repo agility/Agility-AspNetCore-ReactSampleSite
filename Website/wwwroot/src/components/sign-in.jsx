@@ -17,19 +17,23 @@ class SignIn extends React.Component {
     }
     render() {
 
-        function showSearch() {
+        function showSearch(b) {
+            b.target.classList.toggle('close');
             var searchFrame = document.querySelector('.search-frame');
             searchFrame.classList.toggle('open');
+            document.getElementById('frontend-only').classList.toggle('search-open');
+            document.querySelector('html').classList.toggle('search-open');
+
         }
 
         return (
             <div className="sign-in p-w">
                 <div className="container-my">
-                    <button className="open-search" onClick={showSearch}><img src="dist/img/search_black.svg" alt=""/></button>
                     <ul className="sign-in-list">
                         <li><a href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</a></li>
                         {this.outputLinks()}
                     </ul>
+                    <button className="open-search" onClick={showSearch}></button>
                 </div>
             </div>
         );
