@@ -15,6 +15,15 @@ class Header extends React.Component {
             hiddenParent.addEventListener('click', function (e) {
                 this.classList.toggle('open');
             });
+
+            //search    
+            document.addEventListener('keydown', function(event) {
+                var key = event.key;
+                if ("Escape" === key) {
+                    hideSearch();
+                }
+            });
+
         }
     }
 
@@ -80,13 +89,6 @@ class Header extends React.Component {
             document.querySelector('.open-search').classList.toggle('close');
             document.getElementById('frontend-only').classList.toggle('search-open');
         }
-
-        document.addEventListener('keydown', function(event) {
-            var key = event.key;
-            if ("Escape" === key) {
-                hideSearch();
-            }
-        });
 
         var searchResults = require('../static/data/search-results.json');
         searchResults = searchResults.results;
