@@ -38,7 +38,7 @@ namespace Website.Extensions
                     continue;
                 }
                 string colName = col.Name;
-                var objValue = ci.GetType().GetProperty(colName).GetValue(ci);
+                var objValue = ci.GetType().GetProperty(colName).GetValue(ci, null);
                 
                 //specific cases with a string
                 if (objValue is string)
