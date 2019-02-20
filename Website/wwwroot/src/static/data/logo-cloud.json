@@ -14,9 +14,12 @@
     },
     "logos": [
         {
-            "title": "Customer 1",
-            "textBlob": null,
-            "_Logo": {
+            "url": {
+                "text": "AgilityCMS.com",
+                "href": "https://agilitycms.com",
+                "target": "_self"
+            },
+            "image": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -29,27 +32,15 @@
                 "height": 0,
                 "width": 0,
                 "thumbnails": {}
-            },
-            "shortDescription": "Short desc.",
-            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
+            }
+        },
+        {
             "url": {
                 "text": "AgilityCMS.com",
                 "href": "https://agilitycms.com",
                 "target": "_self"
             },
-            "dynamicPageMetaKeywords": null,
-            "dynamicPageMetaDescription": null,
-            "dynamicPageAdditionalHeaderCode": null,
-            "dynamicPageTopScript": null,
-            "dynamicPageBottomScript": null,
-            "dynamicPageVisibleOnSitemap": null,
-            "dynamicPageVisibleOnMenu": null,
-            "key": 31
-        },
-        {
-            "title": "Customer 2",
-            "textBlob": null,
-            "_Logo": {
+            "image": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -62,27 +53,15 @@
                 "height": 0,
                 "width": 0,
                 "thumbnails": {}
-            },
-            "shortDescription": "Short desc 2",
-            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
+            }
+        },
+        {
             "url": {
                 "text": "AgilityCMS.com",
                 "href": "https://agilitycms.com",
                 "target": "_self"
             },
-            "dynamicPageMetaKeywords": null,
-            "dynamicPageMetaDescription": null,
-            "dynamicPageAdditionalHeaderCode": null,
-            "dynamicPageTopScript": null,
-            "dynamicPageBottomScript": null,
-            "dynamicPageVisibleOnSitemap": null,
-            "dynamicPageVisibleOnMenu": null,
-            "key": 290
-        },
-        {
-            "title": "Customer 3",
-            "textBlob": null,
-            "_Logo": {
+            "image": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -95,27 +74,15 @@
                 "height": 0,
                 "width": 0,
                 "thumbnails": {}
-            },
-            "shortDescription": "Short desc.",
-            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
+            }
+        },
+        {
             "url": {
                 "text": "AgilityCMS.com",
                 "href": "https://agilitycms.com",
                 "target": "_self"
             },
-            "dynamicPageMetaKeywords": null,
-            "dynamicPageMetaDescription": null,
-            "dynamicPageAdditionalHeaderCode": null,
-            "dynamicPageTopScript": null,
-            "dynamicPageBottomScript": null,
-            "dynamicPageVisibleOnSitemap": null,
-            "dynamicPageVisibleOnMenu": null,
-            "key": 293
-        },
-        {
-            "title": "Customer 4",
-            "textBlob": null,
-            "_Logo": {
+            "image": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -128,27 +95,15 @@
                 "height": 0,
                 "width": 0,
                 "thumbnails": {}
-            },
-            "shortDescription": "Short desc 2",
-            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
+            }
+        },
+        {
             "url": {
                 "text": "AgilityCMS.com",
                 "href": "https://agilitycms.com",
                 "target": "_self"
             },
-            "dynamicPageMetaKeywords": null,
-            "dynamicPageMetaDescription": null,
-            "dynamicPageAdditionalHeaderCode": null,
-            "dynamicPageTopScript": null,
-            "dynamicPageBottomScript": null,
-            "dynamicPageVisibleOnSitemap": null,
-            "dynamicPageVisibleOnMenu": null,
-            "key": 294
-        },
-        {
-            "title": "Customer 5",
-            "textBlob": null,
-            "_Logo": {
+            "image": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -161,27 +116,15 @@
                 "height": 0,
                 "width": 0,
                 "thumbnails": {}
-            },
-            "shortDescription": "Short desc.",
-            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
+            }
+        },
+        {
             "url": {
                 "text": "AgilityCMS.com",
                 "href": "https://agilitycms.com",
                 "target": "_self"
             },
-            "dynamicPageMetaKeywords": null,
-            "dynamicPageMetaDescription": null,
-            "dynamicPageAdditionalHeaderCode": null,
-            "dynamicPageTopScript": null,
-            "dynamicPageBottomScript": null,
-            "dynamicPageVisibleOnSitemap": null,
-            "dynamicPageVisibleOnMenu": null,
-            "key": 295
-        },
-        {
-            "title": "Customer 6",
-            "textBlob": null,
-            "_Logo": {
+            "image": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -194,27 +137,15 @@
                 "height": 0,
                 "width": 0,
                 "thumbnails": {}
-            },
-            "shortDescription": "Short desc 2",
-            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
+            }
+        },
+        {
             "url": {
                 "text": "AgilityCMS.com",
                 "href": "https://agilitycms.com",
                 "target": "_self"
             },
-            "dynamicPageMetaKeywords": null,
-            "dynamicPageMetaDescription": null,
-            "dynamicPageAdditionalHeaderCode": null,
-            "dynamicPageTopScript": null,
-            "dynamicPageBottomScript": null,
-            "dynamicPageVisibleOnSitemap": null,
-            "dynamicPageVisibleOnMenu": null,
-            "key": 296
-        },
-        {
-            "title": "Customer 7",
-            "textBlob": null,
-            "_Logo": {
+            "image": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -227,27 +158,15 @@
                 "height": 0,
                 "width": 0,
                 "thumbnails": {}
-            },
-            "shortDescription": "Short desc.",
-            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
+            }
+        },
+        {
             "url": {
                 "text": "AgilityCMS.com",
                 "href": "https://agilitycms.com",
                 "target": "_self"
             },
-            "dynamicPageMetaKeywords": null,
-            "dynamicPageMetaDescription": null,
-            "dynamicPageAdditionalHeaderCode": null,
-            "dynamicPageTopScript": null,
-            "dynamicPageBottomScript": null,
-            "dynamicPageVisibleOnSitemap": null,
-            "dynamicPageVisibleOnMenu": null,
-            "key": 297
-        },
-        {
-            "title": "Customer 8",
-            "textBlob": null,
-            "_Logo": {
+            "image": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
@@ -260,22 +179,7 @@
                 "height": 0,
                 "width": 0,
                 "thumbnails": {}
-            },
-            "shortDescription": "Short desc 2",
-            "description": "\u003cp\u003eLong HTML Description.\u0026nbsp;\u003cstrong\u003eBold!\u003c/strong\u003e\u003c/p\u003e",
-            "url": {
-                "text": "AgilityCMS.com",
-                "href": "https://agilitycms.com",
-                "target": "_self"
-            },
-            "dynamicPageMetaKeywords": null,
-            "dynamicPageMetaDescription": null,
-            "dynamicPageAdditionalHeaderCode": null,
-            "dynamicPageTopScript": null,
-            "dynamicPageBottomScript": null,
-            "dynamicPageVisibleOnSitemap": null,
-            "dynamicPageVisibleOnMenu": null,
-            "key": 298
+            }
         }
     ]
 }

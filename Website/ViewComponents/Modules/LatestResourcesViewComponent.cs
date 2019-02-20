@@ -38,7 +38,7 @@ namespace Website.ViewComponents.Modules
 								  .Select(i => i.GetListingViewModel())
 				};
 
-				return new ReactViewComponentResult("Components.LatestResources", viewmodel);
+				return new ReactViewComponentResult("Components.FilteredListing", viewmodel);
 			});
 		}
 

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Agility.Web;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using Website.AgilityModels;
 using Website.Models;
 
@@ -57,11 +58,11 @@ namespace Website.Controllers
 			return Json(viewModel);
 		}
 
-		public IActionResult Partners(string refName, string labelIDs, string dynPagePath, string ids = null, int skip = 0, int take = 100)
+		public IActionResult Partners(string refName, string labelIDs, string ids = null, int skip = 0, int take = 100)
 		{
 
 
-			var repo = new AgilityContentRepository<Logo>(refName);
+			var repo = new AgilityContentRepository<Partner>(refName);
 			var items = repo.Items().AsQueryable();
 			if (!string.IsNullOrWhiteSpace(ids))
 			{
@@ -74,7 +75,7 @@ namespace Website.Controllers
 
 			var viewModel = new
 			{
-				items = items.Select(l => l.GetPartnerListingViewModel(labelIDs, dynPagePath)),
+				items = items.Select(l => l.GetPartnerListingViewModel(labelIDs)),
 				skip = skip,
 				take = take,
 				ids = ids

@@ -42,7 +42,7 @@ namespace Website.ViewComponents.Shared
 
 				var viewModel = new
 				{
-					logo = item.Logo,
+					logo = item.Logo.ToImage(),
 					preHeaderLinks = item.PreHeaderLinks.SortByIDs(item.PreHeaderLinkSortIDs).Select(a => a.ToFrontendProps()),
 					primaryButton = item.ParseUrl("PrimaryButton"),
 					menu = topLevelNodes

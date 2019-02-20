@@ -1,4 +1,4 @@
-.latest-resources {
+.filtered-listing {
   h2.title-component {
     max-width: 1008px;
     display: block;
@@ -25,7 +25,7 @@
     text-align: center;
   }
 
-  .latest-wrapper {
+  .listing-wrapper {
     .row-my {
       .col-md-4 {
         @media (max-width: 991px) {
@@ -40,7 +40,7 @@
     }
   }
 
-  .latest-left {
+  .listing-left {
     margin-bottom: 32px;
     padding: 32px;
     height: 100%;
@@ -120,7 +120,7 @@
 
   .col-md-6 {
     margin-top: 32px;
-    .latest-item {
+    .filtered-listing-item {
       border-radius: 5px;
       box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
       background-color: #ffffff;

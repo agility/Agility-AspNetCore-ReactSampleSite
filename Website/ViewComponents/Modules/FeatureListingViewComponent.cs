@@ -17,14 +17,14 @@ namespace Website.ViewComponents.Modules
 		{
 			return Task.Run<IViewComponentResult>(() =>
 			{
-				var tags = module.Tags.Items()
+				var tags = module.CustomTagstoHighlight.Items()
 					.Select(r => new
 					{
 						title = r.Title,
 						key = r.ContentID
 					});
 
-				string fetchUrl = $"/Listing/Features?refName={module.FeatureBlocks.ContentReferenceName}&labelIDs={HttpUtility.UrlEncode(module.TagIDs)}";
+				string fetchUrl = $"/Listing/Features?refName={module.FeatureBlocks.ContentReferenceName}&labelIDs={HttpUtility.UrlEncode(module.CustomTagsToHighlightIDs)}";
 
 				var viewmodel = new
 				{
@@ -35,10 +35,10 @@ namespace Website.ViewComponents.Modules
 					leftButton = module.ParseUrl("LeftButton"),
 					leftBottomTitle = module.LeftTypeTitle,
 					items = module.FeatureBlocks.Items(rowFilter: null, sort: null, take: 100, skip: 0)
-						.Select(i => i.GetFeatureListingViewModel(module.TagIDs))
+						.Select(i => i.GetFeatureListingViewModel(module.CustomTagsToHighlightIDs))
 				};
 
-				return new ReactViewComponentResult("Components.LatestResources", viewmodel);
+				return new ReactViewComponentResult("Components.FilteredListing", viewmodel);
 			});
 		}
 

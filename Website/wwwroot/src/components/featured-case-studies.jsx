@@ -9,7 +9,7 @@ class FeaturedCaseStudies extends React.Component {
     render() {
 
         var items = this.props.items.map(function (item) {
-            return <FeaturedCaseStudiesContent key={item.key} item={item} />
+            return <FeaturedCaseStudy key={item.key} item={item} />
         });
 
         return (
@@ -32,11 +32,11 @@ class FeaturedCaseStudies extends React.Component {
 }
 export default hot(FeaturedCaseStudies);
 
-class FeaturedCaseStudiesContent extends React.Component {
+class FeaturedCaseStudy extends React.Component {
     render() {
 
         var products = this.props.item.products.map(function (product) {
-            return (<img key={product.key} src={product.icon.url} alt={product.icon.label} />);
+            return (<img key={product.key} src={product.logo.url} alt={product.logo.label} />);
         });
 
         return (

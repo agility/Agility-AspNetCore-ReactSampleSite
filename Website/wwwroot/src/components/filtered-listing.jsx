@@ -1,9 +1,9 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './latest-resources.scss'
+import './filtered-listing.scss'
 import ResponsiveImage from './responsive-image.jsx'
 
-class LatestResources extends React.Component {
+class FilteredListing extends React.Component {
 
     constructor(props) {
         super(props)
@@ -96,7 +96,7 @@ class LatestResources extends React.Component {
     render() {
 
         let resources = this.state.items.map(function (item) {
-            return <LatestResContent item={item} key={item.key} />
+            return <FilteredListingItem item={item} key={item.key} />
         });
 
         var self = this;
@@ -107,15 +107,15 @@ class LatestResources extends React.Component {
 
         return (
 
-            <section className="features p-w latest-resources">
+            <section className="features p-w filtered-listing">
 
                 <h2 className="title-component">{this.props.title}</h2>
                 <p className="intro">{this.props.subTitle}</p>
-                <div className="latest-wrapper">
+                <div className="listing-wrapper">
                     <div className="container-my">
                         <div className="row-my">
                             <div className="col-md-4">
-                                <div className="latest-left">
+                                <div className="listing-left">
                                     <h3 className="h3">{this.props.leftTopTitle}</h3>
                                     <div className="assets">{labels}</div>
                                     <h3 className="h3">{this.props.leftBottomTitle}</h3>
@@ -139,9 +139,9 @@ class LatestResources extends React.Component {
         );
     }
 }
-export default hot(LatestResources);
+export default hot(FilteredListing);
 
-class LatestResContent extends React.Component {
+class FilteredListingItem extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -149,7 +149,7 @@ class LatestResContent extends React.Component {
 
         return (
             <div className="col-md-6">
-                <div className="latest-item">
+                <div className="filtered-listing-item">
                     <div className="image">
                             <ResponsiveImage img={this.props.item.image}
                                 breaks={[{ w: 640, h: 369, max: 640 }, { w: 768, h: 433, min: 800 }, { w: 480, h: 277, min: 1190 }]} />
