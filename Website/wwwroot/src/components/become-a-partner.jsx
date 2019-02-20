@@ -75,6 +75,7 @@ class BecomeAPartner extends React.Component {
                 formTitle={this.props.rightColumnTitle}
                 thanksMessage={this.props.thanksMessage}
                 conversionScript={this.props.conversionScript}
+                redirectURL={this.props.redirectURL}
                 postURL={this.props.submissionPOSTURL}
             >
                 <FormField id="firstname" label="First Name">

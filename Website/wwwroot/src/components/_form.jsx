@@ -156,6 +156,16 @@ class Form extends React.Component {
 				return;
 			}
 
+
+			//redirect if a redirect url has been set...
+			if (this.props.redirectURL != undefined
+				&& this.props.redirectURL
+				&& this.props.redirectURL.href) {
+				location.href = this.props.redirectURL.href;
+				return;
+			};
+
+			//otherwise, just set the state to success
 			this.setState({ isError: false, isSubmitting: false, isSuccess: true, isInvalid: false });
 
 		}).catch(err => {
@@ -166,6 +176,9 @@ class Form extends React.Component {
 	_renderSuccessMessage() {
 
 		var self = this;
+
+
+
 
 		if (self.props.conversionScript) {
 			//dynamically inject the conversion script
@@ -267,7 +280,7 @@ class Form extends React.Component {
 	**/
 	render() {
 
-
+		console.log(this.props);
 
 		//ensure we have what we need
 		if (!this.props.postURL || this.props.postURL == "") {
