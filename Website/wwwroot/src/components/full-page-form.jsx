@@ -24,8 +24,6 @@ class FullPageForm extends React.Component {
         var formColor = colourObj.formColor;
         var stylesForm = { backgroundColor: formBg, color: formColor }
 
-
-
         return (
 
             <section className={"p-w form-container " + overallColour} style={styles}>
@@ -45,6 +43,7 @@ class FullPageForm extends React.Component {
                                 postURL={this.props.postURL}
                                 thanksMessage={this.props.thanksMessage}
                                 conversionScript={this.props.conversionScript}
+                                redirectURL={this.props.redirectURL}
                                 errorMessage={this.props.errorMessage}
                                 validationMessage={this.props.validationMessage}
                                 btnStyles={btnStyles}
