@@ -17,6 +17,7 @@ using Agility.Web;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using System.Reflection;
 using Website.Middleware;
+using Newtonsoft.Json.Serialization;
 
 namespace Website
 {
@@ -43,7 +44,9 @@ namespace Website
 
 			services.AddMvc()
 				.AddApplicationPart(assembly)
-				.AddControllersAsServices();
+				.AddControllersAsServices()
+				.AddJsonOptions(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver());
+
 
 
 			AgilityContext.ConfigureServices(services, Configuration);

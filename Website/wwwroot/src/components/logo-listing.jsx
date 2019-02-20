@@ -10,7 +10,7 @@ class LogoListing extends React.Component {
             return (
 
                 <li className="work-item" key={logo.key}>
-                    <a href={logo.url.href} target={logo.url.target}><img src={logo._Logo.url} alt={logo._Logo.label} /></a>
+                    <a href={logo.url.href} target={logo.url.target}><img src={logo.image.url} alt={logo.image.label} /></a>
                 </li>
 
             );
@@ -76,12 +76,6 @@ class LogoListing extends React.Component {
                     <div className="container-my">
                         <ul className="work-list">
                             {logos}
-
-                            {/* <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img2.png" alt="" /></li>
-                            <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img3.png" alt="" /></li>
-                            <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img4.png" alt="" /></li>
-                            <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img5.png" alt="" /></li>
-                            <li className="work-item"><img src="https://static.agilitycms.com/layout/img/work/img6.png" alt="" /></li> */}
                         </ul>
                     </div>
                 }

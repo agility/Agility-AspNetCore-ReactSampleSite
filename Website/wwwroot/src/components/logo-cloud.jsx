@@ -11,7 +11,7 @@ class LogoListing extends React.Component {
 
             return (
                 <li className={className} key={logo.key}>
-                    <a href={logo.url.href} target={logo.url.target}><img src={logo._Logo.url} alt={logo._Logo.label} /></a>
+                    <a href={logo.url.href} target={logo.url.target}><img src={logo.image.url} alt={logo.image.label} /></a>
                 </li>
             );
 

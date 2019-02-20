@@ -34,7 +34,7 @@ import BecomeAPartner from './components/become-a-partner.jsx'
 
 import InfoBox from './components/info-box.jsx'
 import LogoListing from './components/logo-listing.jsx'
-import LatestResources from './components/latest-resources.jsx'
+import FilteredListing from './components/filtered-listing.jsx'
 import LatestBlogPosts from './components/latest-blog-posts.jsx'
 import ListenToPodcast from './components/listen-to-podcast.jsx'
 import TabPanels from './components/tab-panels.jsx'
@@ -74,7 +74,7 @@ global['Components'] = {
   InfoBox,
   ContentPanel,
   TabPanels,
-  LatestResources,
+  FilteredListing,
   LatestBlogPosts,
   ListenToPodcast,
   LogoCloud,

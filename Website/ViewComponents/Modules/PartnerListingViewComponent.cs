@@ -20,14 +20,14 @@ namespace Website.ViewComponents.Modules
 
 
 
-				var tags = module.Tags.Items()
+				var tags = module.CustomTagsToHighlight.Items()
 									   .Select(r => new
 									   {
 										   title = r.Title,
 										   key = r.ContentID
 									   });
 
-				string fetchUrl = $"/Listing/Partners?refName={module.Partners.ContentReferenceName}&labelIDs={HttpUtility.UrlEncode(module.TagIDs)}&dynPagePath={HttpUtility.UrlEncode(module.DynamicPagePath)}";
+				string fetchUrl = $"/Listing/Partners?refName={module.Partners.ContentReferenceName}&labelIDs={HttpUtility.UrlEncode(module.CustomTagsToHighlightIDs)}";
 
 				var viewmodel = new
 				{
@@ -39,10 +39,10 @@ namespace Website.ViewComponents.Modules
 					leftBottomTitle = module.LeftTypeTitle,
 					items = module.Partners
 								  .Items(rowFilter: null, sort: null, take: 100, skip: 0)
-								  .Select(i => i.GetPartnerListingViewModel(module.TagIDs, module.DynamicPagePath))
+								  .Select(i => i.GetPartnerListingViewModel(module.CustomTagsToHighlightIDs))
 				};
 
-				return new ReactViewComponentResult("Components.LatestResources", viewmodel);
+				return new ReactViewComponentResult("Components.FilteredListing", viewmodel);
 			});
 		}
 
