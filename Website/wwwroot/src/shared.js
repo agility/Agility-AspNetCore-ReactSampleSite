@@ -37,6 +37,8 @@ import LogoListing from './components/logo-listing.jsx'
 import FilteredListing from './components/filtered-listing.jsx'
 import LatestBlogPosts from './components/latest-blog-posts.jsx'
 import ListenToPodcast from './components/listen-to-podcast.jsx'
+import PodcastListing from './components/podcast-listing.jsx'
+
 import TabPanels from './components/tab-panels.jsx'
 import PeopleListing from './components/people-listing.jsx'
 import LogoCloud from './components/logo-cloud.jsx'
@@ -83,6 +85,7 @@ global['Components'] = {
   PostDetails,
   PostListing,
   PodcastDetails,
+  PodcastListing,
   CaseStudyDetails,
   ResourceDetails,
   TestimonialsListing,
