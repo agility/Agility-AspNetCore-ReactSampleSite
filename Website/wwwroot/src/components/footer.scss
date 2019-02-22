@@ -1,10 +1,12 @@
 @import "./_variables.scss";
 
 .foter {
+  position: relative;
   background-color: $act;
   color: $white;
   padding-top: 40px;
   padding-bottom: 13px;
+  z-index: 1;
 
   .container-my {
     display: block;

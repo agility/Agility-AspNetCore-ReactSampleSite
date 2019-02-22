@@ -76,6 +76,7 @@
       transition: all 0.15s ease-out;
 
       .image {
+        position: relative;
         max-height: 290px;
         overflow: hidden;
 
@@ -96,6 +97,7 @@
         text-align: center;
         background-color: #ffcb28;
         color: #fff;
+        z-index: 2;
 
         p {
           font-size: 14px;
@@ -106,6 +108,33 @@
             font-family: "Muli-bold", sans-serif;
             display: block;
           }
+        }
+      }
+
+      .passed-label {
+        display: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        background-color: rgba(0,0,0,.54);
+        text-align: right;
+        padding-top: 24px;
+        span {
+          display: inline-block;
+          padding-left: 24px;
+          padding-right: 24px;
+          height: 64px;
+          line-height: 64px;
+          font-size: 24px;
+          color: #fff;
+          font-family: "Muli-Bold", sans-serif;
+          background-color: #c21515;
+          text-align: center;
+          text-transform: capitalize;
+          border-radius: 5px 0 0 5px;
         }
       }
 
@@ -269,6 +298,12 @@
         -o-transform: rotateY(0deg);
         transform: rotateY(0deg);
         z-index: 2;
+      }
+    }
+
+    &.passed {
+      .passed-label {
+        display: block;
       }
     }
   }
