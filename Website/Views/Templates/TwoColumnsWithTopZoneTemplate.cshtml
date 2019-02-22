@@ -7,11 +7,11 @@
 @await Component.RenderContentZone("Top")
 
 <div class="p-w two-column-page">
-	<div class="row-my">
-		<div class="col-md-7">
-			@await Component.RenderContentZone("Main")
-		</div>
-		<div class="col-md-5">
+	<div class="container-my">
+		<div class="row-my">
+			<div class="left-col">
+				@await Component.RenderContentZone("Main")
+			</div>
 			<div class="right-col">
 				@await Component.RenderContentZone("RightColumn")	
 			</div>

@@ -217,8 +217,6 @@ namespace Website.AgilityModels
 
 		public dynamic GetListingViewModel(int excerptLength = 240)
 		{
-			DynamicPageItem dp = Data.GetDynamicPageItem("~/posts/post-details", this.ContentReferenceName, this.Row);
-			string url = $"/posts/{dp.Name}";
 
 			var image = this.PostImage;
 			BlogAuthor author = null;
@@ -250,11 +248,11 @@ namespace Website.AgilityModels
 			var post = new
 			{
 				key = ContentID,
-				title = dp.Title,
+				title = this.Title,
 				excerpt = excerpt,
 				date = this.Date,
 				author = author.ToFrontendProps(),
-				url = url,
+				url = this.ResolveDynamicPageItemUrl(),
 				image = image.ToImage()
 
 			};
@@ -269,8 +267,7 @@ namespace Website.AgilityModels
 
 		public dynamic GetListingViewModel(int excerptLength = 240)
 		{
-			DynamicPageItem dp = Data.GetDynamicPageItem("~/agileliving/podcast-details", this.ContentReferenceName, this.Row);
-			string url = $"/agileliving/{dp.Name}";
+
 
 			string excerpt = System.Web.HttpUtility.HtmlDecode(this.Excerpt.Truncate(excerptLength, "...", true, true));
 
@@ -280,9 +277,9 @@ namespace Website.AgilityModels
 				title = Title,
 				excerpt = excerpt,
 				date = this.Date,
-				url = url,
+				url = this.ResolveDynamicPageItemUrl(),
 				episodeNumber = this.EpisodeNumber,
-				image = MainImage
+				image = MainImage.ToImage()
 
 			};
 
