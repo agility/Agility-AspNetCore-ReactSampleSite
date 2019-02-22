@@ -11,11 +11,12 @@ class StayInTouchBox extends React.Component {
         });
 
         return (
-
-            <div className="stay-in-touch-box">
-                <h4 className="h4">{this.props.title}</h4>
-                <div className="social">
-                    {four}
+            <div className="right-col">
+                <div className="stay-in-touch-box">
+                    <h4 className="h4">{this.props.title}</h4>
+                    <div className="social">
+                        {four}
+                    </div>
                 </div>
             </div>
 

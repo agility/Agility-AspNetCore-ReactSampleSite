@@ -13,6 +13,9 @@ class BlogListing extends React.Component {
 
             <div className="left-col">
                 {four}
+                <div className="load-more">
+                    <a href="#">Load more</a>
+                </div>
             </div>
 
         );

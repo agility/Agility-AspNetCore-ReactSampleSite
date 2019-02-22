@@ -7,12 +7,16 @@ class ComunityEvents extends React.Component {
 
     render() {
 
+        var currentDate = new Date();
+        var currentMonth = currentDate.getMonth()+1;
+        var currentDay = currentDate.getDate();
+
         const registerLabel = this.props.registerLabel;
         const viewDetailsLabel = this.props.viewDetailsLabel;
         const backLabel = this.props.backLabel;
 
         const comunityEvents = this.props.items.map(function (item) {
-            return <ComunityEventsContent item={item} registerLabel={registerLabel} viewDetailsLabel={viewDetailsLabel} backLabel={backLabel} />
+            return <ComunityEventsContent item={item} registerLabel={registerLabel} viewDetailsLabel={viewDetailsLabel} backLabel={backLabel} curMonth={currentMonth} curDay={currentDay}/>
         })
 
         return (
@@ -86,15 +90,31 @@ class ComunityEventsContent extends React.Component {
         var dateMoment = new moment(this.props.item.date);
         var day = dateMoment.format("DD");
         var month = dateMoment.format("MMM");
-        var dateText = dateMoment.format("MMMM Do YYYY, h:mm a")
+        var monthNum = dateMoment.format("MM");
+        var dateText = dateMoment.format("MMMM Do YYYY, h:mm a");
+
+        var dayCurrent = this.props.curDay;
+        var monthCurrent = this.props.curMonth;
+        var itemClass;
+
+        if (monthCurrent < monthNum) {
+            itemClass = 'events-item future';
+        } else {
+            if (dayCurrent <= day) {
+                itemClass = 'events-item future';
+            } else {
+                itemClass = 'events-item passed';
+            }
+        }
 
  
         return (
             <div className="col-md-4">
-                <div className="events-item" onClick={rotateEvents}>
+                <div className={itemClass} onClick={rotateEvents}>
                     <div className="item-front">
                         <div className="image">
                             <img src={this.props.item.thumbnail.url} alt=""/>
+                            <div className="passed-label"><span>passed</span></div>
                         </div>
                         <div className="front-date"><p><span>{day}</span>{month}</p></div>
                         <div className="inner-content">
