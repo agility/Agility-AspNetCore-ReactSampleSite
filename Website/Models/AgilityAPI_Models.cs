@@ -1087,6 +1087,10 @@ namespace Website.AgilityModels
 		public virtual IAgilityContentRepository<Person> People { get { if (__people == null) __people = GetLinkedContent<Person>("People"); return __people; } set { __people = value; } }
 
 	}
+	public partial class Module_PodcastDetail : Agility.Web.AgilityContentItem
+	{
+
+	}
 	public partial class Module_PodcastListing : Agility.Web.AgilityContentItem
 	{
 		private IAgilityContentRepository<Podcast> __items = null;
