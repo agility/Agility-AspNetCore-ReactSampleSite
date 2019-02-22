@@ -9,6 +9,7 @@ import './components/_media.scss'
 import './components/_canvas.scss'
 import './components/_fontface.scss'
 import './components/_previewbar.scss'
+import './components/_two-column-template.scss'
 
 //register any client specific Agility Module react components (not SSR)
 import UGCTestComponent from './components/ugc-test.jsx'

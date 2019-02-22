@@ -105,7 +105,7 @@ class PostListing extends React.Component {
         });
 
         return (
-            <div className="left-col">
+            <div className="blog-listing">
 
                 {posts}
 

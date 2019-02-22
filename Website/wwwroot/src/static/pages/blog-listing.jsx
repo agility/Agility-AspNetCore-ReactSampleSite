@@ -21,7 +21,9 @@ class BlogListing extends Component {
             <div className="p-w two-column-page">
                 <div className="container-my">
                     <div className="row-my">
-                        <PostListing {...PostListingProps } />
+                        <div className="left-col">
+                            <PostListing {...PostListingProps } />
+                        </div>
                         <div className="right-col">
                             <StayInTouchBox {...StayInTouchBoxProps } />
                             <InfoBox {...InfoBoxProps } />
