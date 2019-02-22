@@ -47,6 +47,9 @@ import PodcastDetails from './components/podcast-details.jsx'
 import PostListing from './components/post-listing.jsx'
 import ResourceDetails from './components/resource-details.jsx'
 import CaseStudyDetails from './components/case-study-details.jsx'
+import PartnerDetails from './components/partner-details.jsx'
+import PartnerContentPanel from './components/partner-content-panel.jsx'
+
 
 import TestimonialsListing from './components/testimonials-listing.jsx'
 import RichText from './components/rich-text.jsx'
@@ -61,6 +64,8 @@ global['Components'] = {
   FeatureBlocks,
   CaseDetails,
   CaseStudyContentPanel,
+  PartnerDetails,
+  PartnerContentPanel,
   ComunitySummit,
   Callout,
   EventListing,

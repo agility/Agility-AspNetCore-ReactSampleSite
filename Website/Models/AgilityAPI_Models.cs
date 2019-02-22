@@ -1028,6 +1028,14 @@ namespace Website.AgilityModels
 		public virtual string SecondaryButton { get { if (!__secondarybutton_set) __secondarybutton = GetFieldValue<string>("SecondaryButton"); __secondarybutton_set = true; return __secondarybutton; } set { __secondarybutton = value; __secondarybutton_set = true; } }
 
 	}
+	public partial class Module_PartnerContentPanel : Agility.Web.AgilityContentItem
+	{
+
+	}
+	public partial class Module_PartnerDetails : Agility.Web.AgilityContentItem
+	{
+
+	}
 	public partial class Module_PartnerListing : Agility.Web.AgilityContentItem
 	{
 		private string __title = null;
