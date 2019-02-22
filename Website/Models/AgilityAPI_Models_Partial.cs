@@ -19,18 +19,16 @@ namespace Website.AgilityModels
 				resourceType = this.ResourceType.GetByID(this.ResourceTypeID);
 			}
 
-			DynamicPageItem dp = Data.GetDynamicPageItem("~/resources/resource-details", this.ContentReferenceName, this.Row);
-			string url = $"/resources/{dp.Name}";
 
 			var viewModel = new
 			{
 				key = this.ContentID,
-				image = this.Image?.ToFrontendProps(),
+				image = this.Image?.ToImage(),
 				label = resourceType?.Title,
 				resourceTypeID = ResourceTypeID,
 				title = this.Title,
 				text = this.Excerpt.Truncate(75, "...", true, true),
-				url = url
+				url = this.ResolveDynamicPageItemUrl()
 			};
 
 			return viewModel;
@@ -44,20 +42,16 @@ namespace Website.AgilityModels
 		public dynamic GetFeaturedListingViewModel()
 		{
 
-
-			DynamicPageItem dp = Data.GetDynamicPageItem("~/case-studies/case-study-details", this.ContentReferenceName, this.Row);
-			string url = $"/case-studies/{dp.Name}";
-
 			var viewModel = new
 			{
 				key = this.ContentID,
-				image = this.Image?.ToFrontendProps(),
+				image = this.Image?.ToImage(),
 				label = "Case Study",
 				resourceTypeID = -1,
 				title = this.Title,
 				text = this.Excerpt.Truncate(75, "...", true, true),
-				url = url,
-				logo = this.CustomerLogo?.ToFrontendProps(),
+				url = this.ResolveDynamicPageItemUrl(),
+				logo = this.CustomerLogo?.ToImage(),
 				products = this.Products.GetByIDs(this.ProductIDs).Select(p => p.ToFrontendProps())
 			};
 
@@ -67,44 +61,89 @@ namespace Website.AgilityModels
 
 	}
 
-	public partial class Logo
+	public partial class FeatureBlock
 	{
 		public bool MatchesWith(string[] thoseIDs)
 		{
 			if (thoseIDs == null || thoseIDs.Length == 0) return true;
-			if (string.IsNullOrWhiteSpace(this.LogoTagIDs)) return false;
+			if (string.IsNullOrWhiteSpace(this.CustomTagsIDs)) return false;
 
-			string[] thisIDs = this.LogoTagIDs.Split(',');
+			string[] thisIDs = this.CustomTagsIDs.Split(',');
 
 			var ret = thisIDs.Any(i => thoseIDs.Contains(i));
 			return ret;
 
 		}
-		public dynamic GetPartnerListingViewModel(string labelIDs, string dynPath)
+
+		public dynamic GetFeatureListingViewModel(string labelIDs)
 		{
-			IList<LogoTags> tags = null;
-			LogoTags logoTag = null;
-			if (!string.IsNullOrWhiteSpace(this.LogoTagIDs))
+			IList<CustomTag> tags = null;
+			CustomTag c_tag = null;
+			if (!string.IsNullOrWhiteSpace(this.CustomTagsIDs))
 			{
-				tags = this.LogoTags.GetByIDs(this.LogoTagIDs);
-				var tagIDsForLabel = labelIDs.Split(',');
-				logoTag = tags.FirstOrDefault(tag => tagIDsForLabel.Contains(tag.ContentID.ToString()));
+				tags = this.CustomTags.GetByIDs(this.CustomTagsIDs);
+				List<string> tagIDsForLabel = new List<string>();
+				if (!string.IsNullOrEmpty(labelIDs))
+				{
+					tagIDsForLabel = labelIDs.Split(',').ToList();
+				}
+				c_tag = tags.FirstOrDefault(tag => tagIDsForLabel.Contains(tag.ContentID.ToString()));
 			}
-
-			string dynPathForFormula = dynPath.Substring(0, dynPath.LastIndexOf("/"));
-
-			DynamicPageItem dp = Data.GetDynamicPageItem(dynPath, this.ContentReferenceName, this.Row);
-			string url = $"{dynPathForFormula}/{dp.Name}";
 
 			var viewModel = new
 			{
 				key = this.ContentID,
-				image = this._Logo?.ToFrontendProps(),
-				label = logoTag?.Title,
-				resourceTypeID = logoTag?.ContentID,
+				image = this.Icon?.ToFrontendProps(),
+				label = c_tag?.Title,
+				resourceTypeID = c_tag?.ContentID,
 				title = this.Title,
-				text = this.Description.Truncate(75, "...", true, true),
-				url = url
+				text = this.TextBlob.Truncate(75, "...", true, true),
+				url = this.BottomLink?.ParseUrl()?.Href
+			};
+
+			return viewModel;
+		}
+	}
+
+	public partial class Partner
+	{
+
+		public bool MatchesWith(string[] thoseIDs)
+		{
+			if (thoseIDs == null || thoseIDs.Length == 0) return true;
+			if (string.IsNullOrWhiteSpace(this.CustomTagsIDs)) return false;
+
+			string[] thisIDs = this.CustomTagsIDs.Split(',');
+
+			var ret = thisIDs.Any(i => thoseIDs.Contains(i));
+			return ret;
+
+		}
+		public dynamic GetPartnerListingViewModel(string labelIDs)
+		{
+			IList<CustomTag> tags = null;
+			CustomTag c_tag = null;
+			if (!string.IsNullOrWhiteSpace(this.CustomTagsIDs))
+			{
+				tags = this.CustomTags.GetByIDs(this.CustomTagsIDs);
+				List<string> tagIDsForLabel = new List<string>();
+				if (!string.IsNullOrEmpty(labelIDs))
+				{
+					tagIDsForLabel = labelIDs.Split(',').ToList();
+				}
+				c_tag = tags.FirstOrDefault(tag => tagIDsForLabel.Contains(tag.ContentID.ToString()));
+			}
+
+
+			var viewModel = new
+			{
+				key = this.ContentID,
+				image = this.PartnerLogo?.ToImage(),
+				label = c_tag?.Title,
+				resourceTypeID = c_tag?.ContentID,
+				title = this.Title,
+				text = this.Excerpt.Truncate(75, "...", true, true),
+				url = this.ResolveDynamicPageItemUrl()
 			};
 
 			return viewModel;
@@ -214,14 +253,42 @@ namespace Website.AgilityModels
 				title = dp.Title,
 				excerpt = excerpt,
 				date = this.Date,
-				author = author,
+				author = author.ToFrontendProps(),
 				url = url,
-				image = image
+				image = image.ToImage()
 
 			};
 
 			return post;
 
 		}
+	}
+
+	public partial class Podcast
+	{
+
+		public dynamic GetListingViewModel(int excerptLength = 240)
+		{
+			DynamicPageItem dp = Data.GetDynamicPageItem("~/agileliving/podcast-details", this.ContentReferenceName, this.Row);
+			string url = $"/agileliving/{dp.Name}";
+
+			string excerpt = System.Web.HttpUtility.HtmlDecode(this.Excerpt.Truncate(excerptLength, "...", true, true));
+
+			var item = new
+			{
+				key = ContentID,
+				title = Title,
+				excerpt = excerpt,
+				date = this.Date,
+				url = url,
+				episodeNumber = this.EpisodeNumber,
+				image = MainImage
+
+			};
+
+			return item;
+
+		}
+
 	}
 }

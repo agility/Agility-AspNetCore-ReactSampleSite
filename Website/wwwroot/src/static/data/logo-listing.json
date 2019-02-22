@@ -1,9 +1,9 @@
 {
     "heading": "Leaders work better together!",
-    "subHeading": "We believe heavily in real partnerships and believe you must integration and work with other leaders to be success.\nHere are just some of the platforms.",
+    "subHeading": "We believe heavily in real partnerships and believe you must integration and work with other leaders to be success. Here are just some of the platforms.\n\n",
     "renderType": "list",
     "primaryButton": {
-        "text": "See More Integrations",
+        "text": "See More",
         "href": "#",
         "target": "_self"
     },
@@ -14,508 +14,67 @@
     },
     "logos": [
         {
-            "title": "IMC",
-            "urlSlug": "imc",
-            "_Logo": {
-                "guid": null,
-                "managerID": null,
-                "blob": null,
-                "itemOrder": 1,
-                "fileName": "https://media.agilitycms.com/images/partner logos/imc.png",
-                "label": "",
-                "target": "",
-                "url": "https://media.agilitycms.com/images/partner logos/imc.png",
-                "fileSize": 0,
-                "height": 0,
-                "width": 0,
-                "thumbnails": {}
-            },
-            "shortDescription": "At IMC, we have the experience, skill, breadth and depth to address most business challenges. And we love working on them! We\u0027ve summed up our corporate Vision, Mission and Values into a single sentence: \u0022We Love to do Cool Shit\u0022. It may sound light, but we take it very seriously. We are always focused on ensuring the solutions we design and build using​ the latest technologies, methodologies, modalities, and approaches with the specific goal of having everyone who interacts with our work say, \u0022Wow, this is cool!\u0022 We are driven to ensure our solutions yield that result.",
-            "description": null,
             "url": {
-                "text": "https://www.imcba.com",
-                "href": "https://www.imcba.com",
-                "target": "_blank"
-            },
-            "city": "Toronto",
-            "country": "Canada",
-            "logoTagIDs": "487,489",
-            "logoTagNames": "Gold,Web Development",
-            "logoTags": {
-                "contentReferenceName": "ImplementationPartnerTags",
-                "languageCode": "en-ca",
-                "defaultSort": "ItemOrder"
-            },
-            "referenceName": "ImplementationPartners",
-            "key": 375
-        },
-        {
-            "title": "UNION",
-            "urlSlug": "union",
-            "_Logo": {
-                "guid": null,
-                "managerID": null,
-                "blob": null,
-                "itemOrder": 1,
-                "fileName": "https://media.agilitycms.com/Attachments/NewItems/union-logo1_20160609200328_0.png",
-                "label": "",
-                "target": "",
-                "url": "https://media.agilitycms.com/Attachments/NewItems/union-logo1_20160609200328_0.png",
-                "fileSize": 0,
-                "height": 0,
-                "width": 0,
-                "thumbnails": {}
-            },
-            "shortDescription": "UNION is a full-service integrated Canadian agency, with offices in Toronto and Montreal that is built for where our industry is going. Not where it has been. We are an accessible boutique with a start-up mindset and some of the best strategic and creative r\u0026eacute;sum\u0026eacute;s in the country.\n",
-            "description": "\u003cp\u003eAt UNION, we see ourselves as creative problem solvers who harness the passion and creative capabilities of our integrated, inter-disciplinary team to build your business and drive deeper connections in all channels between brands and consumers. We strongly believe in creating conditions where creativity goes beyond the advertising and communication we produce, using it to understand and reframe the business challenges that you face.\u003c/p\u003e\n\u003cp\u003eAt UNION, integrating digital is critical when developing ideas for our clients. Our process ensures that digital thinking is never considered as an afterthought and instead, all members of our team are considered digital experts in their own respective disciplines. We fully understand how to help brands navigate the ever-changing landscape across all aspects of a digital enabled ecosystem and the business process required to support it.\u003c/p\u003e",
-            "url": {
-                "text": "http://www.unioncreative.com/toronto/union/",
-                "href": "http://www.unioncreative.com/toronto/union/",
-                "target": "_blank"
-            },
-            "city": "Toronto",
-            "country": "Canada",
-            "logoTagIDs": "489",
-            "logoTagNames": "Web Development",
-            "logoTags": {
-                "contentReferenceName": "ImplementationPartnerTags",
-                "languageCode": "en-ca",
-                "defaultSort": "ItemOrder"
-            },
-            "referenceName": "ImplementationPartners",
-            "key": 376
-        },
-        {
-            "title": "OrderDynamics",
-            "urlSlug": "orderdynamics",
-            "_Logo": {
-                "guid": null,
-                "managerID": null,
-                "blob": null,
-                "itemOrder": 1,
-                "fileName": "https://media.agilitycms.com/Images/partner logos/OrderDynamics.jpg",
-                "label": "",
-                "target": "",
-                "url": "https://media.agilitycms.com/Images/partner logos/OrderDynamics.jpg",
-                "fileSize": 0,
-                "height": 0,
-                "width": 0,
-                "thumbnails": {}
-            },
-            "shortDescription": "OrderDynamics is the world\u0027s leading big data prescriptive analytics software company, built for enterprise-level retail. We believe that the order is the moment of truth \u0026ndash; when profit can be made or lost. With more than 90 clients in 33 countries, we help the world\u0027s leading retailers activate commerce from first interaction to final fulfillment with our Dynamic Action, Commerce Platform and Order Management solutions and services. We empower agile and intelligent commerce experiences so that our clients, including Neiman Marcus, Brooks Brothers, Speedo, Laura Canada, T.M. Lewin and Asda Direct, win at that very moment of truth.\n",
-            "description": "\u003cp\u003eOrderDynamics is headquartered in London, with offices in Silicon Valley, Toronto, France, India and Bulgaria. Connect with us at \u003ca href=\u0022https://www.orderdynamics.com/\u0022 target=\u0022_self\u0022\u003ewww.orderdynamics.com\u003c/a\u003e and \u003ca target=\u0022_blank\u0022 href=\u0022https://twitter.com/orderdynamics\u0022 rel=\u0022noopener\u0022\u003e@OrderDynamics\u003c/a\u003e on Twitter.\u003c/p\u003e",
-            "url": {
-                "text": "www.orderdynamics.com",
-                "href": "http://www.orderdynamics.com/",
-                "target": "_blank"
-            },
-            "city": "Toronto",
-            "country": "Canada",
-            "logoTagIDs": "489",
-            "logoTagNames": "Web Development",
-            "logoTags": {
-                "contentReferenceName": "ImplementationPartnerTags",
-                "languageCode": "en-ca",
-                "defaultSort": "ItemOrder"
-            },
-            "referenceName": "ImplementationPartners",
-            "key": 377
-        },
-        {
-            "title": "Dotfusion",
-            "urlSlug": "dotfusion",
-            "_Logo": {
-                "guid": null,
-                "managerID": null,
-                "blob": null,
-                "itemOrder": 1,
-                "fileName": "https://media.agilitycms.com/images/partner logos/dot.png",
-                "label": "",
-                "target": "",
-                "url": "https://media.agilitycms.com/images/partner logos/dot.png",
-                "fileSize": 0,
-                "height": 0,
-                "width": 0,
-                "thumbnails": {}
-            },
-            "shortDescription": "Since 1996 Dotfusion has been providing strategic digital solutions for clients that are tailored to their unique business model, challenges and needs. Dotfusion is about measurable results based on data, being mobile-first and creating beautiful multi-device experiences designs. Dotfusion’s team of agile experts is comprised of critical thinkers, industry leaders and people who take ownership in their clients’ success.",
-            "description": null,
-            "url": {
-                "text": "Visit their website",
-                "href": "http://www.dotfusion.com/",
-                "target": "_blank"
-            },
-            "city": "Toronto",
-            "country": "Canada",
-            "logoTagIDs": null,
-            "logoTagNames": null,
-            "logoTags": {
-                "contentReferenceName": "",
-                "languageCode": "en-ca",
-                "defaultSort": "ItemOrder"
-            },
-            "referenceName": "ImplementationPartners",
-            "key": 378
-        },
-        {
-            "title": "MitreBox User Experience Design Inc ",
-            "urlSlug": "mitrebox-user-experience-design-inc",
-            "_Logo": {
-                "guid": null,
-                "managerID": null,
-                "blob": null,
-                "itemOrder": 1,
-                "fileName": "https://media.agilitycms.com/images/partner logos/MitreBoxUXD_logo.png",
-                "label": "",
-                "target": "",
-                "url": "https://media.agilitycms.com/images/partner logos/MitreBoxUXD_logo.png",
-                "fileSize": 0,
-                "height": 0,
-                "width": 0,
-                "thumbnails": {}
-            },
-            "shortDescription": "MitreBox User Experience Design Inc. is a Toronto based UX agency focused on helping clients with the up-front and pre-launch activities necessary to succeed in the digital space. From web to mobile and beyond, MitreBox has had the pleasure of working with a wide selection of highly respected brands to deliver outstanding digital experiences.",
-            "description": null,
-            "url": {
-                "text": "www.mitreboxuxd.com",
-                "href": "http://mitreboxuxd.com/",
-                "target": "_blank"
-            },
-            "city": "Toronto",
-            "country": "Canada",
-            "logoTagIDs": null,
-            "logoTagNames": null,
-            "logoTags": {
-                "contentReferenceName": "",
-                "languageCode": "en-ca",
-                "defaultSort": "ItemOrder"
-            },
-            "referenceName": "ImplementationPartners",
-            "key": 379
-        },
-        {
-            "title": "I-Finity Associates Ltd",
-            "urlSlug": "i-finity-associates-ltd",
-            "_Logo": {
-                "guid": null,
-                "managerID": null,
-                "blob": null,
-                "itemOrder": 1,
-                "fileName": "https://media.agilitycms.com/logos/400400.png",
-                "label": "",
-                "target": "",
-                "url": "https://media.agilitycms.com/logos/400400.png",
-                "fileSize": 0,
-                "height": 0,
-                "width": 0,
-                "thumbnails": {}
-            },
-            "shortDescription": "I-Finity design, build and host high-performance websites, web applications and software solutions that provide customers with a professional technical service. \u003cbr /\u003eSpecialists in cloud technology, I-Finity design and build solutions that are secure, scalable and reliable. We continually adapt to meet the changing needs of our customers, utilising the latest developments to offer value, choice and quality. I-Finity delivers for a wide-range of customers from small local businesses, to large electronic manufacturers through to publicly traded mining companies. We have global coverage with our customers in Canada, US and UK. In addition to technology solutions, I-Finity has a comprehensive project management service as well as design, content and SEO input for customers requiring a one-stop-shop.",
-            "description": null,
-            "url": {
-                "text": "Visit their website",
-                "href": "http://www.i-finity.co.uk",
-                "target": ""
-            },
-            "city": "York",
-            "country": "United Kingdom",
-            "logoTagIDs": null,
-            "logoTagNames": null,
-            "logoTags": {
-                "contentReferenceName": "",
-                "languageCode": "en-ca",
-                "defaultSort": "ItemOrder"
-            },
-            "referenceName": "ImplementationPartners",
-            "key": 380
-        },
-        {
-            "title": "Falcon Software",
-            "urlSlug": "falcon-software",
-            "_Logo": {
-                "guid": null,
-                "managerID": null,
-                "blob": null,
-                "itemOrder": 1,
-                "fileName": "https://media.agilitycms.com/F-logo-white-on-black-200.png",
-                "label": "",
-                "target": "",
-                "url": "https://media.agilitycms.com/F-logo-white-on-black-200.png",
-                "fileSize": 0,
-                "height": 0,
-                "width": 0,
-                "thumbnails": {}
-            },
-            "shortDescription": "A web content management pioneer founded in 1993, Falcon-Software provides world class digital services with a well-known reputation for consistently delivering mission critical, technically challenging projects that drive results.\nBut it does not end there. Our exceptional customer service and post-project support programs lead to extremely positive long-term partnerships with a detailed methodology created to ensure all of our projects are completed on-time, within budget, and to our clientele\u0027s complete satisfaction. A few of our more well-known clientele include ASPCA, Remington, Microsoft, Texas Instruments, Globalstar, Canadian Armed Forces and Western Union.",
-            "description": null,
-            "url": {
-                "text": "Visit their website",
-                "href": "https://www.falcon-software.com",
+                "text": "IMC",
+                "href": "/partners/implementation/imc",
                 "target": "_self"
             },
-            "city": "Victoria",
-            "country": "Canada",
-            "logoTagIDs": null,
-            "logoTagNames": null,
-            "logoTags": {
-                "contentReferenceName": "",
-                "languageCode": "en-ca",
-                "defaultSort": "ItemOrder"
-            },
-            "referenceName": "ImplementationPartners",
-            "key": 381
-        },
-        {
-            "title": "Point Alliance",
-            "urlSlug": "point-alliance",
-            "_Logo": {
+            "image": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
                 "itemOrder": 1,
-                "fileName": "https://media.agilitycms.com/images/partner logos/point_alliance.png",
-                "label": "",
+                "fileName": "https://static.agilitycms.com/partners/implementation/imc.png",
+                "label": "IMC",
                 "target": "",
-                "url": "https://media.agilitycms.com/images/partner logos/point_alliance.png",
+                "url": "https://static.agilitycms.com/partners/implementation/imc.png",
                 "fileSize": 0,
-                "height": 0,
-                "width": 0,
+                "height": 200,
+                "width": 200,
                 "thumbnails": {}
-            },
-            "shortDescription": "Point Alliance is an award-winning provider of information technology strategies and solutions. Our consulting practice is a recognized leader in delivering proven business solutions to Global 300 companies across many industries. Backed by over 15 years of proven results from over 250 organizations, we offer comprehensive products and solutions that drive your business growth and success.",
-            "description": null,
-            "url": {
-                "text": "www.pointalliance.com/",
-                "href": "http://www.pointalliance.com/",
-                "target": "_blank"
-            },
-            "city": "Toronto",
-            "country": "Toronto, Canada",
-            "logoTagIDs": null,
-            "logoTagNames": null,
-            "logoTags": {
-                "contentReferenceName": "",
-                "languageCode": "en-ca",
-                "defaultSort": "ItemOrder"
-            },
-            "referenceName": "ImplementationPartners",
-            "key": 382
+            }
         },
         {
-            "title": "Situation",
-            "urlSlug": "situation",
-            "_Logo": {
-                "guid": null,
-                "managerID": null,
-                "blob": null,
-                "itemOrder": 1,
-                "fileName": "https://media.agilitycms.com/images/partner logos/Sit_Logo_RGB.png",
-                "label": "",
-                "target": "",
-                "url": "https://media.agilitycms.com/images/partner logos/Sit_Logo_RGB.png",
-                "fileSize": 0,
-                "height": 0,
-                "width": 0,
-                "thumbnails": {}
-            },
-            "shortDescription": "Situation is a digital-first marketing agency that works with many of the world\u0027s leading arts, entertainment, and media brands including Wicked the Musical, Major League Soccer, Bravo TV, and the Metropolitan Opera. Since its inception in 2001, Situation has invested in policies and perks that promote a culture of respect, trust, and fun. These investments have paid off - Situation has been named to more \u0027Best Places to Work in NY\u0027 lists than any other privately held digital agency in New York City.",
-            "description": null,
             "url": {
-                "text": "",
-                "href": "https://www.situationinteractive.com/",
+                "text": "Dotfusion",
+                "href": "/partners/implementation/dotfusion",
                 "target": "_self"
             },
-            "city": "New York",
-            "country": "United States",
-            "logoTagIDs": null,
-            "logoTagNames": null,
-            "logoTags": {
-                "contentReferenceName": "",
-                "languageCode": "en-ca",
-                "defaultSort": "ItemOrder"
-            },
-            "referenceName": "ImplementationPartners",
-            "key": 383
-        },
-        {
-            "title": "It’s NP! Digital Inc. ",
-            "urlSlug": "it-s-np-digital-inc",
-            "_Logo": {
+            "image": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
                 "itemOrder": 1,
-                "fileName": "https://media.agilitycms.com/Attachments/NewItems/itsnp-logo-original_2_30_20180704210918_0.png",
-                "label": "",
+                "fileName": "https://static.agilitycms.com/partners/implementation/dotfusion.png",
+                "label": "Dotfusion",
                 "target": "",
-                "url": "https://media.agilitycms.com/Attachments/NewItems/itsnp-logo-original_2_30_20180704210918_0.png",
+                "url": "https://static.agilitycms.com/partners/implementation/dotfusion.png",
                 "fileSize": 0,
-                "height": 0,
-                "width": 0,
+                "height": 200,
+                "width": 200,
                 "thumbnails": {}
-            },
-            "shortDescription": "It\u0027s NP! Digital Inc. is a small collection of big agency ex-pats who enjoy creating innovative and cutting edge digital experiences. What we bring to the table is our years of experience working at global advertising firms, bundled with the strategic partnership you would expect from a boutique agency. Our mission is not only to ensure your next digital engagement is a success, it\u0026rsquo;s to make it no problem!",
-            "description": null,
-            "url": {
-                "text": "https://itsnp.com/",
-                "href": "https://itsnp.com/",
-                "target": "_blank"
-            },
-            "city": "Toronto",
-            "country": "Canada",
-            "logoTagIDs": null,
-            "logoTagNames": null,
-            "logoTags": {
-                "contentReferenceName": "",
-                "languageCode": "en-ca",
-                "defaultSort": "ItemOrder"
-            },
-            "referenceName": "ImplementationPartners",
-            "key": 384
+            }
         },
         {
-            "title": "iMediaDesigns",
-            "urlSlug": "imediadesigns",
-            "_Logo": {
-                "guid": null,
-                "managerID": null,
-                "blob": null,
-                "itemOrder": 1,
-                "fileName": "https://media.agilitycms.com/Attachments/NewItems/imed2_Easy-Resize.com (1)_20180703185759_0.jpg",
-                "label": "",
-                "target": "",
-                "url": "https://media.agilitycms.com/Attachments/NewItems/imed2_Easy-Resize.com (1)_20180703185759_0.jpg",
-                "fileSize": 0,
-                "height": 0,
-                "width": 0,
-                "thumbnails": {}
-            },
-            "shortDescription": "iMediaDesigns is an expert in all things web \u0026 ecommerce since 2008. Based in Toronto, here you will find a flexible and agile team committed to elevating your brand. We will develop, design, optimize, maintain and future-proof your website and mobile applications. From integrating legacy systems to visioning road map and everything in between, we live and breathe all that is digital.",
-            "description": null,
             "url": {
-                "text": "https://www.imediadesigns.ca/",
-                "href": "https://www.imediadesigns.ca/",
-                "target": "_blank"
-            },
-            "city": "Toronto",
-            "country": "Canada",
-            "logoTagIDs": null,
-            "logoTagNames": null,
-            "logoTags": {
-                "contentReferenceName": "",
-                "languageCode": "en-ca",
-                "defaultSort": "ItemOrder"
-            },
-            "referenceName": "ImplementationPartners",
-            "key": 385
-        },
-        {
-            "title": "Randstad",
-            "urlSlug": "randstad",
-            "_Logo": {
-                "guid": null,
-                "managerID": null,
-                "blob": null,
-                "itemOrder": 1,
-                "fileName": "https://media.agilitycms.com/Attachments/NewItems/Randstad_logo_stacked_diap_large_(2) (1)_20181204152800_0.jpg",
-                "label": "",
-                "target": "",
-                "url": "https://media.agilitycms.com/Attachments/NewItems/Randstad_logo_stacked_diap_large_(2) (1)_20181204152800_0.jpg",
-                "fileSize": 0,
-                "height": 0,
-                "width": 0,
-                "thumbnails": {}
-            },
-            "shortDescription": "When your IT needs can\u0027t be handled with internal resources alone, Randstad\u0027s IT solutions division is the answer. We specialize in deploying, retaining and accessing the talent you need to build custom IT solutions. We\u0027re the undisputed leaders in the Canadian IT labour market, so we know a thing or two about matching top-tier tech employees with the businesses that need them most. Our unparalleled access to IT and dev talent in a variety of specialties makes us different than other IT solution providers. We\u0027re able to offer flexible solutions tailored to your precise needs. Our solutions are more adaptable than those provided by traditional systems integration and consulting firms. We also offer full-service project management, so we can take ownership of the project and manage it on your behalf, offering continuity of service from start to finish.",
-            "description": null,
-            "url": {
-                "text": "",
-                "href": "randstad.ca",
-                "target": "_blank"
-            },
-            "city": "Montreal",
-            "country": "Canada",
-            "logoTagIDs": null,
-            "logoTagNames": null,
-            "logoTags": {
-                "contentReferenceName": "",
-                "languageCode": "en-ca",
-                "defaultSort": "ItemOrder"
-            },
-            "referenceName": "ImplementationPartners",
-            "key": 386
-        },
-        {
-            "title": "9th Wonder",
-            "urlSlug": "9th-wonder",
-            "_Logo": {
-                "guid": null,
-                "managerID": null,
-                "blob": null,
-                "itemOrder": 1,
-                "fileName": "https://media.agilitycms.com/Attachments/NewItems/9thwonder-black_20181214215215_0.png",
-                "label": "",
-                "target": "",
-                "url": "https://media.agilitycms.com/Attachments/NewItems/9thwonder-black_20181214215215_0.png",
-                "fileSize": 0,
-                "height": 0,
-                "width": 0,
-                "thumbnails": {}
-            },
-            "shortDescription": "Have you ever found people who think like you? Who loves what they do and see an opportunity to change the way we all do it? Well, that\u0027s us. In 7 locations worldwide with nearly 250 people who want to do it together.\nA global team of agency expatriates, we combined all our experiences to create a unique offering of thinkers, tinkerers and doers with the intent to break convention. To fill a void in what brands deserve from their creative partner. Yeah, we know, you\u0027ve heard that before. But we\u0027re happy to show you how we put our purpose into practice.\n",
-            "description": "\u003cp\u003e\u003cspan\u003e9thWonder isn\u0026rsquo;t a company, but an idea. A North Star that guides us to shine a light on the brands we use and take for granted every day. And raise them to a level of a Wonder in their world. To create the next Colossus, identify the Great Pyramids, cultivate the Hanging Gardens of our daily lives.\u003c/span\u003e\u003c/p\u003e",
-            "url": {
-                "text": "9th Wonder",
-                "href": "https://www.9thwonder.com",
+                "text": "Union",
+                "href": "/partners/implementation/union",
                 "target": "_self"
             },
-            "city": "Houston",
-            "country": "United States",
-            "logoTagIDs": null,
-            "logoTagNames": null,
-            "logoTags": {
-                "contentReferenceName": "",
-                "languageCode": "en-ca",
-                "defaultSort": "ItemOrder"
-            },
-            "referenceName": "ImplementationPartners",
-            "key": 387
-        },
-        {
-            "title": "SOCi",
-            "urlSlug": "soci",
-            "_Logo": {
+            "image": {
                 "guid": null,
                 "managerID": null,
                 "blob": null,
                 "itemOrder": 1,
-                "fileName": "https://media.agilitycms.com/company-logos/soci-250.png",
-                "label": "",
+                "fileName": "https://static.agilitycms.com/partners/implementation/union.png",
+                "label": "Union",
                 "target": "",
-                "url": "https://media.agilitycms.com/company-logos/soci-250.png",
+                "url": "https://static.agilitycms.com/partners/implementation/union.png",
                 "fileSize": 0,
-                "height": 0,
-                "width": 0,
+                "height": 200,
+                "width": 200,
                 "thumbnails": {}
-            },
-            "shortDescription": "SOCi is a multidisciplinary digital agency based in Toronto [YYZ] with a focus on delivering innovative interactive experiences and custom .net solutions for clients large and small.  For over 12 years we’ve been delivering creative enterprise level software solutions for clients such as Etsy, Mercedes-Benz, LCBO, Puma, and CIBC.   We love the process of crafting connections between our clients and their audience using all the exciting digital tools in our toolbox and Agility CMS.    YOU NAME IT, WE MAKE IT.",
-            "description": null,
-            "url": {
-                "text": "http://www.socimedia.com",
-                "href": "http://www.socimedia.com",
-                "target": "_blank"
-            },
-            "city": "Toronto",
-            "country": "Canada",
-            "logoTagIDs": null,
-            "logoTagNames": null,
-            "logoTags": {
-                "contentReferenceName": "",
-                "languageCode": "en-ca",
-                "defaultSort": "ItemOrder"
-            },
-            "referenceName": "ImplementationPartners",
-            "key": 388
+            }
         }
     ]
 }

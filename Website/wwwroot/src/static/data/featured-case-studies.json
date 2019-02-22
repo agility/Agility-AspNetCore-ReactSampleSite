@@ -1,220 +1,120 @@
 {
   "title": "Featured Case Studies",
   "primaryButton": {
-    "text": "See More Success Stories",
-    "href": "~/case-studies",
-    "target": "_self"
+      "text": "See More Success Stories",
+      "href": "~/case-studies",
+      "target": "_self"
   },
   "items": [
-    {
-      "key": 498,
-      "image": {
-        "guid": null,
-        "managerID": null,
-        "blob": null,
-        "itemOrder": 1,
-        "fileName": "https://static.agilitycms.com/case-studies/images/react-agility_20190208142910_0.jpg",
-        "label": "Test Study 1 Img Alt",
-        "target": "",
-        "url": "https://static.agilitycms.com/case-studies/images/react-agility_20190208142910_0.jpg",
-        "fileSize": 0,
-        "height": 676,
-        "width": 1200,
-        "thumbnails": {}
+      {
+          "key": 498,
+          "image": {
+              "url": "https://static.agilitycms.com/case-studies/images/react-agility_20190208142910_0.jpg",
+              "label": "Test Study 1 Img Alt"
+          },
+          "label": "Case Study",
+          "resourceTypeID": -1,
+          "title": "Test Study 1",
+          "text": "This is the excerpt for the case study.  We studied a lot of things.",
+          "url": "/case-studies/test-study-1",
+          "logo": {
+              "url": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+              "label": "Playstation"
+          },
+          "products": [
+              {
+                  "title": "Ecommerce",
+                  "logo": {
+                      "url": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+                      "label": ""
+                  },
+                  "url": {
+                      "text": "Learn about Ecommerce",
+                      "href": "/home",
+                      "target": "_self"
+                  },
+                  "referenceName": "CaseStudyProducts",
+                  "key": 502
+              },
+              {
+                  "title": "Ticketing",
+                  "logo": {
+                      "url": "https://static.agilitycms.com/logos/test/Hexagon_AB_Logo_Color.svg",
+                      "label": ""
+                  },
+                  "url": {
+                      "text": "Learn about Ticketing",
+                      "href": "/partners",
+                      "target": "_self"
+                  },
+                  "referenceName": "CaseStudyProducts",
+                  "key": 503
+              }
+          ]
       },
-      "label": "Case Study",
-      "resourceTypeID": -1,
-      "title": "Test Study 1",
-      "text": "This is the excerpt for the case study.  We studied a lot of things.",
-      "url": "/case-studies/test-study-1",
-      "logo": {
-        "guid": null,
-        "managerID": null,
-        "blob": null,
-        "itemOrder": 1,
-        "fileName": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
-        "label": "Playstation",
-        "target": "",
-        "url": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
-        "fileSize": 0,
-        "height": 0,
-        "width": 0,
-        "thumbnails": {}
+      {
+          "key": 500,
+          "image": {
+              "url": "https://static.agilitycms.com/case-studies/images/react-agility_20190208142910_0.jpg",
+              "label": "Test Study 1 Img Alt"
+          },
+          "label": "Case Study",
+          "resourceTypeID": -1,
+          "title": "Test Study 2",
+          "text": "This is the excerpt for the case study.  We studied a lot of things.",
+          "url": "/case-studies/test-study-2",
+          "logo": {
+              "url": "https://static.agilitycms.com/logos/test/Hexagon_AB_Logo_Color.svg",
+              "label": "Hexagon"
+          },
+          "products": [
+              {
+                  "title": "Ecommerce",
+                  "logo": {
+                      "url": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+                      "label": ""
+                  },
+                  "url": {
+                      "text": "Learn about Ecommerce",
+                      "href": "/home",
+                      "target": "_self"
+                  },
+                  "referenceName": "CaseStudyProducts",
+                  "key": 502
+              }
+          ]
       },
-      "products": [
-        {
-          "title": "Ecommerce",
-          "icon": {
-            "guid": null,
-            "managerID": null,
-            "blob": null,
-            "itemOrder": 1,
-            "fileName": "https://static.agilitycms.com/case-studies/icons/money-check_20190213142643_0.svg",
-            "label": "Ecommerce",
-            "target": "",
-            "url": "https://static.agilitycms.com/case-studies/icons/money-check_20190213142643_0.svg",
-            "fileSize": 0,
-            "height": 0,
-            "width": 0,
-            "thumbnails": {}
+      {
+          "key": 501,
+          "image": {
+              "url": "https://static.agilitycms.com/case-studies/images/react-agility_20190208142910_0.jpg",
+              "label": "Test Study 1 Img Alt"
           },
-          "url": {
-            "text": "Learn about Ecommerce",
-            "href": "/home",
-            "target": "_self"
+          "label": "Case Study",
+          "resourceTypeID": -1,
+          "title": "Test Study 3",
+          "text": "This is the excerpt for the case study.  We studied a lot of things.",
+          "url": "/case-studies/test-study-3",
+          "logo": {
+              "url": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
+              "label": "Playstation"
           },
-          "referenceName": "CaseStudyProducts",
-          "key": 502
-        },
-        {
-          "title": "Ticketing",
-          "icon": {
-            "guid": null,
-            "managerID": null,
-            "blob": null,
-            "itemOrder": 1,
-            "fileName": "https://static.agilitycms.com/case-studies/icons/ticket-alt_20190213142709_0.svg",
-            "label": "Ticketing",
-            "target": "",
-            "url": "https://static.agilitycms.com/case-studies/icons/ticket-alt_20190213142709_0.svg",
-            "fileSize": 0,
-            "height": 0,
-            "width": 0,
-            "thumbnails": {}
-          },
-          "url": {
-            "text": "Learn about Ticketing",
-            "href": "/partners",
-            "target": "_self"
-          },
-          "referenceName": "CaseStudyProducts",
-          "key": 503
-        }
-      ]
-    },
-    {
-      "key": 500,
-      "image": {
-        "guid": null,
-        "managerID": null,
-        "blob": null,
-        "itemOrder": 1,
-        "fileName": "https://static.agilitycms.com/case-studies/images/react-agility_20190208142910_0.jpg",
-        "label": "Test Study 1 Img Alt",
-        "target": "",
-        "url": "https://static.agilitycms.com/case-studies/images/react-agility_20190208142910_0.jpg",
-        "fileSize": 0,
-        "height": 676,
-        "width": 1200,
-        "thumbnails": {}
-      },
-      "label": "Case Study",
-      "resourceTypeID": -1,
-      "title": "Test Study 2",
-      "text": "This is the excerpt for the case study.  We studied a lot of things.",
-      "url": "/case-studies/test-study-2",
-      "logo": {
-        "guid": null,
-        "managerID": null,
-        "blob": null,
-        "itemOrder": 1,
-        "fileName": "https://static.agilitycms.com/logos/test/Hexagon_AB_Logo_Color.svg",
-        "label": "Hexagon",
-        "target": "",
-        "url": "https://static.agilitycms.com/logos/test/Hexagon_AB_Logo_Color.svg",
-        "fileSize": 0,
-        "height": 0,
-        "width": 0,
-        "thumbnails": {}
-      },
-      "products": [
-        {
-          "title": "Ecommerce",
-          "icon": {
-            "guid": null,
-            "managerID": null,
-            "blob": null,
-            "itemOrder": 1,
-            "fileName": "https://static.agilitycms.com/case-studies/icons/money-check_20190213142643_0.svg",
-            "label": "Ecommerce",
-            "target": "",
-            "url": "https://static.agilitycms.com/case-studies/icons/money-check_20190213142643_0.svg",
-            "fileSize": 0,
-            "height": 0,
-            "width": 0,
-            "thumbnails": {}
-          },
-          "url": {
-            "text": "Learn about Ecommerce",
-            "href": "/home",
-            "target": "_self"
-          },
-          "referenceName": "CaseStudyProducts",
-          "key": 502
-        }
-      ]
-    },
-    {
-      "key": 501,
-      "image": {
-        "guid": null,
-        "managerID": null,
-        "blob": null,
-        "itemOrder": 1,
-        "fileName": "https://static.agilitycms.com/case-studies/images/react-agility_20190208142910_0.jpg",
-        "label": "Test Study 1 Img Alt",
-        "target": "",
-        "url": "https://static.agilitycms.com/case-studies/images/react-agility_20190208142910_0.jpg",
-        "fileSize": 0,
-        "height": 676,
-        "width": 1200,
-        "thumbnails": {}
-      },
-      "label": "Case Study",
-      "resourceTypeID": -1,
-      "title": "Test Study 3",
-      "text": "This is the excerpt for the case study.  We studied a lot of things.",
-      "url": "/case-studies/test-study-3",
-      "logo": {
-        "guid": null,
-        "managerID": null,
-        "blob": null,
-        "itemOrder": 1,
-        "fileName": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
-        "label": "Playstation",
-        "target": "",
-        "url": "https://static.agilitycms.com/logos/test/Playstation_logo_colour.svg",
-        "fileSize": 0,
-        "height": 0,
-        "width": 0,
-        "thumbnails": {}
-      },
-      "products": [
-        {
-          "title": "Ticketing",
-          "icon": {
-            "guid": null,
-            "managerID": null,
-            "blob": null,
-            "itemOrder": 1,
-            "fileName": "https://static.agilitycms.com/case-studies/icons/ticket-alt_20190213142709_0.svg",
-            "label": "Ticketing",
-            "target": "",
-            "url": "https://static.agilitycms.com/case-studies/icons/ticket-alt_20190213142709_0.svg",
-            "fileSize": 0,
-            "height": 0,
-            "width": 0,
-            "thumbnails": {}
-          },
-          "url": {
-            "text": "Learn about Ticketing",
-            "href": "/partners",
-            "target": "_self"
-          },
-          "referenceName": "CaseStudyProducts",
-          "key": 503
-        }
-      ]
-    }
+          "products": [
+              {
+                  "title": "Ticketing",
+                  "logo": {
+                      "url": "https://static.agilitycms.com/logos/test/Hexagon_AB_Logo_Color.svg",
+                      "label": ""
+                  },
+                  "url": {
+                      "text": "Learn about Ticketing",
+                      "href": "/partners",
+                      "target": "_self"
+                  },
+                  "referenceName": "CaseStudyProducts",
+                  "key": 503
+              }
+          ]
+      }
   ]
 }

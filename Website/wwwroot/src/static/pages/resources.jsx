@@ -4,8 +4,8 @@ import { hot } from 'react-hot-loader/root'
 import FeaturedResources from '../../components/featured-resources.jsx'
 import FeaturedResourcesProps from '../data/featured-resources.json'
 
-import LatestResources from '../../components/latest-resources.jsx'
-import LatestResourcesProps from '../data/latest-resources.json'
+import FilteredListing from '../../components/latest-resources.jsx'
+import FilteredListingProps from '../data/latest-resources.json'
 
 import FeaturedCaseStudies from '../../components/featured-case-studies.jsx'
 import FeaturedCaseStudiesProps from '../data/featured-case-studies.json'
@@ -22,7 +22,7 @@ class Resources extends Component {
         return (
             <div id="resource-page">
                 <FeaturedResources {...FeaturedResourcesProps } />
-                <LatestResources {...LatestResourcesProps } />
+                <FilteredListing {...FilteredListingProps } />
                 <FeaturedCaseStudies {...FeaturedCaseStudiesProps } />
                 <LatestBlogPosts {...LatestBlogPostsProps } />
             </div>

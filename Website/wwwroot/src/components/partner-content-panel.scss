@@ -1,0 +1,122 @@
+.case-study-content-panel {
+  position: relative;
+  padding-top: 112px;
+  padding-bottom: 160px;
+  overflow: hidden;
+
+  .container-my {
+    display: block;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+  }
+
+  .canvas#canvas-5 {
+    top: 70px;
+  }
+
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    display: block;
+    content: "";
+    border-bottom: 250px solid #fff;
+    border-left: 100vw solid transparent;
+    z-index: 5;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .col-md-6 {
+    align-items: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-align: center;
+
+    &.right {
+      justify-content: flex-end;
+      -webkit-box-pack: end;
+      -moz-box-pack: end;
+      -ms-flex-pack: end;
+    }
+
+    &.left {
+      justify-content: flex-start;
+      -webkit-box-pack: start;
+      -moz-box-pack: start;
+      -ms-flex-pack: start;
+
+      @media (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &.left + .col-md-6 {
+      justify-content: flex-end;
+      -webkit-box-pack: end;
+      -moz-box-pack: end;
+      -ms-flex-pack: end;
+    }
+  }
+
+  .start-content {
+    @media (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+
+    .image {
+      margin-bottom: 55px;
+      max-width: 160px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .h1 {
+      margin-bottom: 29px;
+      font-size: 24px;
+      line-height: 32px;
+      font-family: "Muli-Bold", sans-serif;
+      color: #2a3846;
+    }
+
+    p {
+      max-width: 520px;
+      font-size: 16px;
+      line-height: 2;
+      font-family: "Muli-Regular", sans-serif;
+    }
+  }
+
+  .start-image {
+    position: relative;
+    text-align: right;
+    z-index: 10;
+
+    .image-inner {
+      display: inline-block;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      overflow: hidden;
+      -webkit-box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15);
+      -moz-box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15);
+      box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15);
+
+      img {
+        display: block;
+      }
+    }
+  }
+}

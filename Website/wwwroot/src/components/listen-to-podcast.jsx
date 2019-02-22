@@ -6,8 +6,10 @@ class StayInTouchBox extends React.Component {
 
     render() {
 
-        var four = this.props.items.map(function (items){
-            return <StayInTouchBoxContent item={items} />
+
+
+        var four = this.props.items.map(function (item) {
+            return <StayInTouchBoxContent item={item} key={item.key} />
         });
 
         return (
@@ -29,7 +31,7 @@ class StayInTouchBoxContent extends React.Component {
     render() {
 
         return (
-            <a href={this.props.item.href} target="_blank"><img src={this.props.item.ico.url} alt=""/><span>{this.props.item.title}</span></a>
+            <a href={this.props.item.url.href} target="_blank"><img src={this.props.item.image.url} alt={this.props.item.image.label} /></a>
         );
     }
 }

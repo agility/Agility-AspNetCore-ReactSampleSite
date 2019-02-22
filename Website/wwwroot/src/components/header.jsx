@@ -15,6 +15,15 @@ class Header extends React.Component {
             hiddenParent.addEventListener('click', function (e) {
                 this.classList.toggle('open');
             });
+
+            //search    
+            document.addEventListener('keydown', function (event) {
+                var key = event.key;
+                if ("Escape" === key) {
+                    hideSearch();
+                }
+            });
+
         }
     }
 
@@ -81,17 +90,10 @@ class Header extends React.Component {
             document.getElementById('frontend-only').classList.toggle('search-open');
         }
 
-        document.addEventListener('keydown', function(event) {
-            var key = event.key;
-            if ("Escape" === key) {
-                hideSearch();
-            }
-        });
-
         var searchResults = require('../static/data/search-results.json');
         searchResults = searchResults.results;
-        var results = searchResults.map(function(res){
-            return <SearchResults result={res}/>
+        var results = searchResults.map(function (res) {
+            return <SearchResults result={res} />
         });
 
         return (
@@ -138,17 +140,17 @@ class Header extends React.Component {
 }
 export default hot(Header);
 
-class SearchResults extends React.Component{
+class SearchResults extends React.Component {
     render() {
 
         var label = this.props.result.label;
-        var labelClass = 'label '+label;
+        var labelClass = 'label ' + label;
 
-        return(
+        return (
             <div className="search-item d-flex ai-center">
                 <div className="si-left">
                     <h3 className="h3"><a href={this.props.result.href}>{this.props.result.title}</a></h3>
-                    <div className="text" dangerouslySetInnerHTML={{__html: this.props.result.text}}></div>
+                    <div className="text" dangerouslySetInnerHTML={{ __html: this.props.result.text }}></div>
                 </div>
                 <div className="si-right">
                     <div className={labelClass}>{label}</div>

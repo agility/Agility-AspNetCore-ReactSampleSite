@@ -11,7 +11,8 @@ class RequestADemo extends React.Component {
 
     componentDidMount() {
         if (window != undefined && window) {
-            document.getElementById("firstname").focus();
+            var elem = document.getElementById("firstname");
+            if (elem) elem.focus();
         }
     }
 
@@ -74,6 +75,7 @@ class RequestADemo extends React.Component {
                 formTitle={this.props.rightColumnTitle}
                 thanksMessage={this.props.thanksMessage}
                 conversionScript={this.props.conversionScript}
+                redirectURL={this.props.redirectURL}
                 postURL={this.props.submissionPOSTURL}
             >
                 <FormField id="firstname" label="First Name">
@@ -127,7 +129,7 @@ class RequestADemo extends React.Component {
                     </div>
 
                 </FormField>
-                <input type="hidden" id="leadsourcedetail" name="leadsourcedetail" />
+                <input type="hidden" id="leadsourcedetail" name="leadsourcedetail" value="Request for Demo" />
                 <input type="hidden" name="_autopilot_session_id" />
             </FullPageForm>
 
