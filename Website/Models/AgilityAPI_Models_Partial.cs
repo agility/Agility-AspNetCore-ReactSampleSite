@@ -279,7 +279,7 @@ namespace Website.AgilityModels
 				key = ContentID,
 				title = Title,
 				excerpt = excerpt,
-				//	date = this.Date,
+				date = this.Date,
 				url = url,
 				episodeNumber = this.EpisodeNumber,
 				image = MainImage

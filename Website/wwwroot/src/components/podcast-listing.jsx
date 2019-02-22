@@ -1,6 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
 import './podcast-listing.scss'
+import moment from 'moment';
 
 class BlogListing extends React.Component {
 
@@ -11,10 +12,12 @@ class BlogListing extends React.Component {
         });
 
         return (
-
-            <div className="left-col">
-                {items}
+            <div class="podcast-listing">
+                <div className="left-col">
+                    {items}
+                </div>
             </div>
+
 
         );
     }
@@ -30,7 +33,7 @@ class BlogListingContent extends React.Component {
                     <div className="block-hover">
                         <a href={this.props.item.url}>
                             <img src={this.props.item.image.url} alt="" />
-                            <div className="play d-flex jc-c ai-center"><img src="dist/img/Triangle.svg" alt="" /></div>
+                            <div className="play d-flex jc-c ai-center"><img src="/dist/img/Triangle.svg" alt="" /></div>
                         </a>
                     </div>
                     <img src="dist/img/podcast.svg" alt="" className="podcast" />
@@ -40,8 +43,8 @@ class BlogListingContent extends React.Component {
                     <div className="author">
                         <h5 class="h5">Episode #{this.props.item.episodeNumber}</h5>
                     </div>
-                    <div className="text"><p>{this.props.excerpt}</p></div>
-                    <span className="date">{this.props.item.date}</span>
+                    <div className="text"><p>{this.props.item.excerpt}</p></div>
+                    <span className="date">{moment(this.props.item.date).format("LL")}</span>
                 </div>
             </div>
         );

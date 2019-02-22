@@ -3,11 +3,12 @@ import { hot } from 'react-hot-loader/root'
 import './podcast-details.scss'
 import './rich-text.scss'
 import ResponsiveImage from './responsive-image.jsx'
+import moment from 'moment';
 
 class BlogPostDetails extends React.Component {
 
     render() {
-        console.log(this.props);
+
         return (
 
             <section className="podcast-details">
@@ -18,7 +19,7 @@ class BlogPostDetails extends React.Component {
                             <div className="author d-flex ai-center">
                                 <h5 className="h5">Episode #{this.props.episodeNumber}</h5>
                             </div>
-                            <span className="date">{this.props.date}</span>
+                            <span className="date">{moment(this.props.date).format("LL")}</span>
                         </div>
                         <div className="image" >
                             <ResponsiveImage img={this.props.mainImage}

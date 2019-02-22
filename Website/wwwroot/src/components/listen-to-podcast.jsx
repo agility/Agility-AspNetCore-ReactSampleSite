@@ -5,7 +5,7 @@ import './listen-to-podcast.scss'
 class StayInTouchBox extends React.Component {
 
     render() {
-        console.log(this.props);
+
 
 
         var four = this.props.items.map(function (item) {
