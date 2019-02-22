@@ -37,6 +37,8 @@ import LogoListing from './components/logo-listing.jsx'
 import FilteredListing from './components/filtered-listing.jsx'
 import LatestBlogPosts from './components/latest-blog-posts.jsx'
 import ListenToPodcast from './components/listen-to-podcast.jsx'
+import PodcastListing from './components/podcast-listing.jsx'
+
 import TabPanels from './components/tab-panels.jsx'
 import PeopleListing from './components/people-listing.jsx'
 import LogoCloud from './components/logo-cloud.jsx'
@@ -45,6 +47,9 @@ import PodcastDetails from './components/podcast-details.jsx'
 import PostListing from './components/post-listing.jsx'
 import ResourceDetails from './components/resource-details.jsx'
 import CaseStudyDetails from './components/case-study-details.jsx'
+import PartnerDetails from './components/partner-details.jsx'
+import PartnerContentPanel from './components/partner-content-panel.jsx'
+
 
 import TestimonialsListing from './components/testimonials-listing.jsx'
 import RichText from './components/rich-text.jsx'
@@ -59,6 +64,8 @@ global['Components'] = {
   FeatureBlocks,
   CaseDetails,
   CaseStudyContentPanel,
+  PartnerDetails,
+  PartnerContentPanel,
   ComunitySummit,
   Callout,
   EventListing,
@@ -83,6 +90,7 @@ global['Components'] = {
   PostDetails,
   PostListing,
   PodcastDetails,
+  PodcastListing,
   CaseStudyDetails,
   ResourceDetails,
   TestimonialsListing,
