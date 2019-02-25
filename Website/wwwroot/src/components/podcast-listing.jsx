@@ -3,12 +3,12 @@ import { hot } from 'react-hot-loader/root'
 import './podcast-listing.scss'
 import moment from 'moment';
 
-class BlogListing extends React.Component {
+class PodcastListing extends React.Component {
 
     render() {
 
         var items = this.props.items.map(function (item, index) {
-            return <BlogListingContent item={item} id={index} key={item.key} />
+            return <PodcastListedItem item={item} id={index} key={item.key} />
         });
 
         return (
@@ -23,13 +23,13 @@ class BlogListing extends React.Component {
         );
     }
 }
-export default hot(BlogListing);
+export default hot(PodcastListing);
 
-class BlogListingContent extends React.Component {
+class PodcastListedItem extends React.Component {
     render() {
 
         return (
-            <div className="blog-post">
+            <div className="podcast-episode">
                 <div className="image">
                     <div className="block-hover">
                         <a href={this.props.item.href}>
