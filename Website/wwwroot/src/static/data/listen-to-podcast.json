@@ -1,33 +1,73 @@
 {
-  "title": "Subscribe to Podcast",
+  "title": "Listen \u0026 Subscribe",
   "items": [
     {
+      "title": "Google Podcasts",
       "ico": {
-        "url": "dist/img/spotify_new_grey.png"
+        "label": "Listen on Google Podcasts",
+        "target": "",
+        "url": "https://static.agilitycms.com/podcast/subscribe/google_podcast_new.png",
+        "height": 280,
+        "width": 1048,
+        "thumbnails": {}
       },
-      "href": "#",
-      "title": ""
+      "url": {
+        "text": "Listen on Google Podcasts",
+        "href": "https://play.google.com/music/listen?u=0#/ps/Ixgwebp6dovvleu3ilpxiwo4rpe",
+        "target": "_blank"
+      },
+      "key": 594
     },
     {
+      "title": "Apple Podcasts",
       "ico": {
-        "url": "dist/img/listen_stitcher_new.png"
+        "label": "Listen on Apple Podcasts",
+        "target": "",
+        "url": "https://static.agilitycms.com/podcast/subscribe/apple_podcast.png",
+        "height": 257,
+        "width": 1000,
+        "thumbnails": {}
       },
-      "href": "#",
-      "title": ""
+      "url": {
+        "text": "Listen on Apple Podcasts",
+        "href": "https://itunes.apple.com/ca/podcast/agile-living-an-entrepreneurs-journey/id1439541592?mt=2",
+        "target": "_blank"
+      },
+      "key": 595
     },
     {
+      "title": "Spotify",
       "ico": {
-        "url": "dist/img/google_podcast_new.png"
+        "label": "Listen on Spotify",
+        "target": "",
+        "url": "https://static.agilitycms.com/podcast/subscribe/spotify_new.png",
+        "height": 48,
+        "width": 190,
+        "thumbnails": {}
       },
-      "href": "#",
-      "title": ""
+      "url": {
+        "text": "Listen on Spotify",
+        "href": "https://open.spotify.com/show/7lS5DoKQ6UURYEfOSdBMht?si=C-CIBtyFSHWsZFoKIS1SFw",
+        "target": "_blank"
+      },
+      "key": 596
     },
     {
+      "title": "Stitcher",
       "ico": {
-        "url": "dist/img/apple_podcast.png"
+        "label": "Listen on Stitcher",
+        "target": "",
+        "url": "https://static.agilitycms.com/podcast/subscribe/listen_stitcher_new.png",
+        "height": 256,
+        "width": 1000,
+        "thumbnails": {}
       },
-      "href": "#",
-      "title": ""
+      "url": {
+        "text": "Listen on Stitcher",
+        "href": "https://www.stitcher.com/podcast/jon-voigt/agile-living-an-entrepreneurs-journey?refid=stpr",
+        "target": "_blank"
+      },
+      "key": 597
     }
   ]
 }

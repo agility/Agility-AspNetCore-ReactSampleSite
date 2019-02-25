@@ -15,15 +15,22 @@ class Podcast extends Component {
 
         return (
             <div id="podcast-listing-page">
+
                 <ContentPanel {...ContentPanelProps} />
-                <div className="p-w podcast-listing two-column-page">
-                    <div className="container-my">
-                        <div className="row-my">
-                            <PodcastListing {...PodcastListingProps} />
-                            <ListenToPodcast {...ListenToPodcastProps} />
+                <div class="p-w two-column-page">
+                    <div class="container-my">
+                        <div class="row-my">
+                            <div class="left-col">
+                                <PodcastListing {...PodcastListingProps} />
+                            </div>
+                            <div class="right-col">
+                                <ListenToPodcast {...ListenToPodcastProps} />
+                            </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
         );
     }

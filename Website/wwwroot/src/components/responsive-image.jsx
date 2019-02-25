@@ -29,8 +29,8 @@ class ResponsiveImage extends React.Component {
 			}
 
 			let thumbStr = "?w=" + res.w;
-			if(res.h) {
-				thumbStr+= "&h=" + res.h;
+			if (res.h) {
+				thumbStr += "&h=" + res.h;
 			}
 
 			return (
