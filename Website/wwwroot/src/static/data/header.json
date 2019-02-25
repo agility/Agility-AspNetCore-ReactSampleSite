@@ -9,7 +9,7 @@
             "url": {
                 "text": "Help",
                 "href": "https://help.agilitycms.com/hc/en-us",
-                "target": "_self"
+                "target": "_blank"
             },
             "referenceName": "Header_Link",
             "key": 23
@@ -25,9 +25,14 @@
             "key": 24
         }
     ],
+    "preHeaderPrimaryButton": {
+        "text": "Change Me!",
+        "href": "/some-link",
+        "target": "_self"
+    },
     "primaryButton": {
-        "text": "Try for FREE",
-        "href": "~/request-a-demo",
+        "text": "Request a Demo",
+        "href": "/request-a-demo",
         "target": "_self"
     },
     "menu": [
