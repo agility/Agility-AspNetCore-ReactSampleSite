@@ -216,6 +216,7 @@
       line-height: normal;
       letter-spacing: normal;
       position: relative;
+      margin-top: 3px;
     }
 
     .foter-copyright-menu {
@@ -224,12 +225,17 @@
 
       li {
         margin-left: 10px;
+
+        &::after {
+          content: '|';
+          margin-left: 7px;
+        }
+
+        &:last-child::after {
+          display: none;
+        }
       }
 
-      span {
-        margin-left: 10px;
-        font-size: 12px;
-      }
 
       a {
         font-family: $regular;
@@ -240,7 +246,6 @@
         line-height: normal;
         letter-spacing: normal;
         color: $white;
-        display: block;
       }
     }
   }

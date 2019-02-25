@@ -415,12 +415,11 @@ namespace Website.AgilityModels
 		private string __copyright = null;
 		private bool __copyright_set = false;
 		public virtual string Copyright { get { if (!__copyright_set) __copyright = GetFieldValue<string>("Copyright"); __copyright_set = true; return __copyright; } set { __copyright = value; __copyright_set = true;  } }
-		private string __privacypolicylink = null;
-		private bool __privacypolicylink_set = false;
-		public virtual string PrivacyPolicyLink { get { if (!__privacypolicylink_set) __privacypolicylink = GetFieldValue<string>("PrivacyPolicyLink"); __privacypolicylink_set = true; return __privacypolicylink; } set { __privacypolicylink = value; __privacypolicylink_set = true;  } }
-		private string __securitylink = null;
-		private bool __securitylink_set = false;
-		public virtual string SecurityLink { get { if (!__securitylink_set) __securitylink = GetFieldValue<string>("SecurityLink"); __securitylink_set = true; return __securitylink; } set { __securitylink = value; __securitylink_set = true;  } }
+		private string __bottomlinkssortids = null;
+		private bool __bottomlinkssortids_set = false;
+		public virtual string BottomLinksSortIDs { get { if (!__bottomlinkssortids_set) __bottomlinkssortids = GetFieldValue<string>("BottomLinksSortIDs"); __bottomlinkssortids_set = true; return __bottomlinkssortids; } set { __bottomlinkssortids = value; __bottomlinkssortids_set = true;  } }
+		private IAgilityContentRepository<Link> __bottomlinks = null;
+		public virtual IAgilityContentRepository<Link> BottomLinks { get { if (__bottomlinks == null) __bottomlinks = GetLinkedContent<Link>("BottomLinks", "", "ItemOrder ", ""); return __bottomlinks; } set { __bottomlinks = value; }}
 
 	}
 	public partial class GlobalHeader : Agility.Web.AgilityContentItem
