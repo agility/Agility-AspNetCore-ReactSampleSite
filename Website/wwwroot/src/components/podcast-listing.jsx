@@ -12,9 +12,10 @@ class BlogListing extends React.Component {
         });
 
         return (
-            <div class="podcast-listing">
-                <div className="left-col">
-                    {items}
+            <div className="left-col">
+                {items}
+                <div className="load-more">
+                    <a href="#">Load more</a>
                 </div>
             </div>
 
@@ -31,7 +32,7 @@ class BlogListingContent extends React.Component {
             <div className="blog-post">
                 <div className="image">
                     <div className="block-hover">
-                        <a href={this.props.item.url}>
+                        <a href={this.props.item.href}>
                             <img src={this.props.item.image.url} alt="" />
                             <div className="play d-flex jc-c ai-center"><img src="/dist/img/Triangle.svg" alt="" /></div>
                         </a>
@@ -39,7 +40,7 @@ class BlogListingContent extends React.Component {
                     <img src="dist/img/podcast.svg" alt="" className="podcast" />
                 </div>
                 <div className="content">
-                    <h3 className="h3"><a href={this.props.item.url}>{this.props.item.title}</a></h3>
+                    <h3 className="h3"><a href={this.props.item.href}>{this.props.item.title}</a></h3>
                     <div className="author">
                         <h5 class="h5">Episode #{this.props.item.episodeNumber}</h5>
                     </div>

@@ -31,7 +31,7 @@ class StayInTouchBoxContent extends React.Component {
     render() {
 
         return (
-            <a href={this.props.item.url.href} target="_blank"><img src={this.props.item.image.url} alt={this.props.item.image.label} /></a>
+            <a href={this.props.item.href} target="_blank"><img src={this.props.item.ico.url} alt="" /></a>
         );
     }
 }
