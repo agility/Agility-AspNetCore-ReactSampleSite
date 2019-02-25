@@ -3,18 +3,19 @@ import { hot } from 'react-hot-loader/root'
 import './podcast-listing.scss'
 import moment from 'moment';
 
-class BlogListing extends React.Component {
+class PodcastListing extends React.Component {
 
     render() {
 
         var items = this.props.items.map(function (item, index) {
-            return <BlogListingContent item={item} id={index} key={item.key} />
+            return <PodcastListedItem item={item} id={index} key={item.key} />
         });
 
         return (
-            <div class="podcast-listing">
-                <div className="left-col">
-                    {items}
+            <div className="left-col">
+                {items}
+                <div className="load-more">
+                    <a href="#">Load more</a>
                 </div>
             </div>
 
@@ -22,16 +23,16 @@ class BlogListing extends React.Component {
         );
     }
 }
-export default hot(BlogListing);
+export default hot(PodcastListing);
 
-class BlogListingContent extends React.Component {
+class PodcastListedItem extends React.Component {
     render() {
 
         return (
-            <div className="blog-post">
+            <div className="podcast-episode">
                 <div className="image">
                     <div className="block-hover">
-                        <a href={this.props.item.url}>
+                        <a href={this.props.item.href}>
                             <img src={this.props.item.image.url} alt="" />
                             <div className="play d-flex jc-c ai-center"><img src="/dist/img/Triangle.svg" alt="" /></div>
                         </a>
@@ -39,7 +40,7 @@ class BlogListingContent extends React.Component {
                     <img src="dist/img/podcast.svg" alt="" className="podcast" />
                 </div>
                 <div className="content">
-                    <h3 className="h3"><a href={this.props.item.url}>{this.props.item.title}</a></h3>
+                    <h3 className="h3"><a href={this.props.item.href}>{this.props.item.title}</a></h3>
                     <div className="author">
                         <h5 class="h5">Episode #{this.props.item.episodeNumber}</h5>
                     </div>
