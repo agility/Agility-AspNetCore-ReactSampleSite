@@ -25,7 +25,7 @@ namespace Website.ViewComponents.Modules
 									   {
 										   title = r.Title,
 										   ico = r.Logo.ToFrontendProps(),
-										   url = r.ParseUrl("FollowURL"),
+										   url = r.FollowURL.ParseUrl(),
 										   key = r.ContentID
 									   });
 

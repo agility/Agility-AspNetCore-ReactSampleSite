@@ -1,6 +1,6 @@
 {
     "title": "Design \u003e Build \u003e Deploy Faster with Agility!",
-    "textBlob": "\u003ch2\u003eWant to be more flexible, quicker to market and adapt\u003cbr /\u003eto the pace of business? Bring Agility to your team.\u003c/h2\u003e\n\u003cp\u003e\u003cspan\u003eAgility is a content-first Headless CMS. Start with your most valuable asset, your\u003c/span\u003e\u003cbr /\u003e\u003cspan\u003econtent. Then Build, Deploy and Engage your customers with a platform that\u003c/span\u003e\u003cbr /\u003e\u003cspan\u003emanages your content across all your digital channels.\u003c/span\u003e\u003c/p\u003e",
+    "textBlob": "\u003ch2\u003eWant to be more flexible, quicker to market and adapt\u003cbr /\u003eto the pace of business? Bring Agility to your team.\u003c/h2\u003e\n\u003cp\u003e\u003cspan\u003eAgility is a content-first Headless CMS. Start with your most valuable asset, your\u003c/span\u003e\u003cbr /\u003e\u003cspan\u003econtent. Then Build, Deploy and Engage your customers with a platform that\u003c/span\u003e\u003cbr /\u003e\u003cspan\u003emanages your content across all your digital channels.\u003c/span\u003e\u003c/p\u003e\n\u003cp\u003e\u003cspan class=\u0022one words\u0022\u003eOkay, hello, it\u0027s the Martian. Young money. Excuse my charisma, vodka with a spritzer. So misunderstood but what\u0027s the world without enigma?\u003c/span\u003e\u003cspan class=\u0022two words\u0022\u003e\u003cspan\u003e\u0026nbsp;\u003c/span\u003eI lost my mind, it\u0027s somewhere out there stranded. I need a Winn-Dixie bag full of money right now to the VIP section. Just talked to moms, told her she the sweetest. Talking to myself because I am my own consultant. Paper chasin\u0027, tell that paper \u0022Look, I\u0027m right behind ya.\u0022 Real G\u0027s move in silence like lasagna. People say I\u0027m borderline crazy, sorta kinda. Got the Maserati dancing on the bridge. You \u003cg class=\u0022gr_ gr_42 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace\u0022 id=\u002242\u0022 data-gr-id=\u002242\u0022\u003epop\u0027em\u003c/g\u003e cause we \u003cg class=\u0022gr_ gr_43 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace\u0022 id=\u002243\u0022 data-gr-id=\u002243\u0022\u003epop\u0027em\u003c/g\u003e like Orville Redenbacher.\u003c/span\u003e\u003cspan class=\u0022three words\u0022\u003e\u003cspan\u003e\u0026nbsp;\u003c/span\u003eBut what should I scream for? This is my theme park. You\u0027re a goon but what\u0027s a goon to a goblin? I don\u0027t owe you like two vowels. Even Gwen Stefani said she couldn\u0027t doubt me. Met a female dragon, had a fire conversation. Approving million-dollar deals from my iPhone. Flyer than Beetlejuice, Beetlejuice, Beetlejuice. I got summer hating on me cause I\u0027m hotter than the sun. Got Spring hating on me cause I ain\u0027t ever sprung. I parallel park in that red-and-yellow thing, old school Atlanta Hawk. And my chain Toucan Sam, that tropical colors, you can\u0027t match that, gotta be abstract. Quick Draw McGraw, I went to art school. I\u0027m about to go Andre the Giant. Gotta handful of stacks, better grab an umbrella. I\u0027m counting all day like a clock on the wall. I\u0027m too clean for the choir.\u003c/span\u003e\u003c/p\u003e",
     "primaryButton": {
         "text": "Try for FREE",
         "href": "/",
@@ -12,20 +12,11 @@
         "target": "_self"
     },
     "image": {
-        "guid": null,
-        "managerID": null,
-        "blob": null,
-        "itemOrder": 3,
-        "fileName": "https://static.agilitycms.com/layout/img/content/img1.png",
-        "label": "Design - Deploy - Faster with Agility",
-        "target": "",
         "url": "https://static.agilitycms.com/layout/img/content/img1.png",
-        "fileSize": 0,
-        "height": 0,
-        "width": 0,
-        "thumbnails": {}
+        "label": "Design - Deploy - Faster with Agility"
     },
     "imagePosition": "right",
     "enableBackgroundImage": true,
+    "referenceName": "CMSContentPanels",
     "key": 7
 }

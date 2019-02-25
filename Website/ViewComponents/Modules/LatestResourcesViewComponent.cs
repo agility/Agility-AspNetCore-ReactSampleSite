@@ -31,7 +31,7 @@ namespace Website.ViewComponents.Modules
 					types = resourceTypes,
 					title = module.Title,
 					subTitle = module.SubTitle,
-					leftButton = module.ParseUrl("LeftButton"),
+					leftButton = module.LeftButton.ParseUrl(),
 					leftBottomTitle = module.LeftTypeTitle,
 					items = module.Resources
 								  .Items(rowFilter: null, sort: "Date desc", take: 100, skip: 0)
