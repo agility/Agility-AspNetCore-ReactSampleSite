@@ -130,7 +130,7 @@ class Header extends React.Component {
 
                         {renderMenu(this.props.menu, 0)}
 
-                        <button href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</button>
+                        <a href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</a>
                     </div>
                 </header>
             </div>
