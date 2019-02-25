@@ -4,39 +4,39 @@
   -moz-box-pack: center;
   -ms-flex-pack: center;
 }
-.two-column-page {
-  padding-top: 75px;
-  padding-bottom: 160px;
+// .two-column-page {
+//   padding-top: 75px;
+//   padding-bottom: 160px;
 
-  @media (max-width: 767px) {
-    padding-bottom: 50px;
-  }
+//   @media (max-width: 767px) {
+//     padding-bottom: 50px;
+//   }
 
-  .left-col {
-    padding-left: 16px;
-    padding-right: 16px;
-    max-width: 58%;
-    -webkit-box: 0 0 58%;
-    -moz-box: 0 0 58%;
-    -webkit-flex: 0 0 58%;
-    -ms-flex: 0 0 58%;
-    flex: 0 0 58%;
-    margin-bottom: 50px;
-    @media (max-width: 767px) {
-      max-width: 100%;
-      -webkit-box: 0 0 100%;
-      -moz-box: 0 0 100%;
-      -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-      flex: 0 0 100%;
-    }
+//   .left-col {
+//     padding-left: 16px;
+//     padding-right: 16px;
+//     max-width: 58%;
+//     -webkit-box: 0 0 58%;
+//     -moz-box: 0 0 58%;
+//     -webkit-flex: 0 0 58%;
+//     -ms-flex: 0 0 58%;
+//     flex: 0 0 58%;
+//     margin-bottom: 50px;
+//     @media (max-width: 767px) {
+//       max-width: 100%;
+//       -webkit-box: 0 0 100%;
+//       -moz-box: 0 0 100%;
+//       -webkit-flex: 0 0 100%;
+//       -ms-flex: 0 0 100%;
+//       flex: 0 0 100%;
+//     }
 
-    > div {
+//     > div {
       
-    }
+//     }
     
-  }
-}
+//   }
+// }
 
 
 .podcast-listing {
@@ -53,31 +53,33 @@
             border-radius: 5px 5px 0 0;
             
             position: relative;
-                height: 400px;
+            
+            // height: 400px;
 
-            @media (max-width: 1199px) {
-                height: 320px;
-            }
+            // @media (max-width: 1199px) {
+            //     height: 320px;
+            // }
 
-            @media (max-width: 991px) {
-                height: 260px;
-            }
+            // @media (max-width: 991px) {
+            //     height: 260px;
+            // }
 
-            @media (max-width: 480px) {
-                height: 220px;
-            }
+            // @media (max-width: 480px) {
+            //     height: 220px;
+            // }
 
-            @media (max-width: 360px) {
-                height: 200px;
-            }
+            // @media (max-width: 360px) {
+            //     height: 200px;
+            // }
             img {
-            display: block;
+              display: block;
             }
     
             a {
+              
             > img {
-                height: 100%;
-                width: 100%;
+                // height: 100%;
+                // width: auto;
             }
         }
 
@@ -89,17 +91,18 @@
         }
 
         .block-hover {
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 100%;
-          height: 100%;
+          // position: absolute;
+          // left: 0;
+          // top: 0;
+          // width: 100%;
+          // height: 100%;
           > img {
-            height: 100%;
-            width: 100%;
+            // height: 100%;
+            // width: 100%;
           }
 
           .play {
+            
             position: absolute;
             left: 0;
             top: 0;
