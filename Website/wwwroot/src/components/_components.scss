@@ -12,6 +12,16 @@ button {
     outline: none !important;
   }
 }
+p.intro {
+  max-width: 1008px;
+  display: block;
+  margin: 0 auto 30px;
+  font-size: 20px;
+  line-height: 1.6;
+  font-family: "Muli-SemiBold", sans-serif;
+  color: #484b4d;
+  text-align: center;
+}
 .p-w
   > p {
     @media (max-width: 1440px) {

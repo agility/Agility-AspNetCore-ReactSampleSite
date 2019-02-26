@@ -109,13 +109,12 @@
       -webkit-border-radius: 5px;
       -moz-border-radius: 5px;
       border-radius: 5px;
-      overflow: hidden;
-      -webkit-box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15);
-      -moz-box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15);
-      box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15);
 
       img {
         display: block;
+        -webkit-box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15);
       }
     }
   }
