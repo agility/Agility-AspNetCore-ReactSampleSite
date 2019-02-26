@@ -51,9 +51,9 @@ class LatestBlogPostsContent extends React.Component {
                         </div>
                     }
                     <div className="content">
-                        <h4 className="h4">{this.props.item.title}</h4>
+                        <a href={this.props.item.url} ><h3>{this.props.item.title}</h3></a>
                         <p>{this.props.item.excerpt}</p>
-                        <a href={this.props.item.url} >{this.props.readMoreText}</a>
+                        <a href={this.props.item.url} className="btn"><span>{this.props.readMoreText}</span></a>
                     </div>
                 </div>
             </div>

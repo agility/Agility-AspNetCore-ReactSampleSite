@@ -33,12 +33,12 @@ class PostDetails extends React.Component {
                                     breaks={[{ w: 640, max: 640 }, { w: 780, max: 800 }, { w: 1200, max: 1920 }]} />
                             </div>
                         }
-                        
+
                     </div>
                     <RichText html={this.props.post.textBlob} />
-                    
+
                     <div className="container p-w-small">
-                        <a href="/posts" className="back d-flex ai-center"><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt="" /><span>Back to All Articles</span></a>
+                        <a href="/resources/posts" className="back d-flex ai-center"><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt="" /><span>Back to All Articles</span></a>
                     </div>
 
                 </div>
