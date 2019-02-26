@@ -59,6 +59,43 @@ namespace Website.AgilityModels
 
 		}
 
+		public dynamic GetListingViewModel(int excerptLength = 240)
+		{
+
+			var image = this.Image;
+
+			// if (author == null)
+			// {
+			// 	author = new BlogAuthor()
+			// 	{
+			// 		Title = "Agility"
+			// 	};
+			// }
+
+			// if (author.Image == null)
+			// {
+			// 	author.Image = new Attachment()
+			// 	{
+			// 		URL = BlogAuthor.BlankImage
+			// 	};
+			// }
+
+			string excerpt = System.Web.HttpUtility.HtmlDecode(this.Excerpt.Truncate(excerptLength, "...", true, true));
+
+			var post = new
+			{
+				key = ContentID,
+				title = this.Title,
+				excerpt = excerpt,
+				//date = this..Date,
+				//author = author.ToFrontendProps(),
+				url = this.ResolveDynamicPageItemUrl(),
+				image = image?.ToImage()
+			};
+
+			return post;
+		}
+
 	}
 
 	public partial class FeatureBlock
