@@ -77,6 +77,21 @@ class Footer extends React.Component {
             return links;
         };
 
+        const outputBottomLinks = (lst) => {
+            let links = [];
+            if(!lst || lst.length == 0) return null;
+
+            lst.forEach(item => {
+                links.push(
+                    <li key={item.key}>
+                        <a href={item.url.href} target={item.url.target}>{item.title}</a> <span>|</span>
+                    </li>
+                );
+            })
+
+            return links;
+        }
+
         const getYear = () => {
             const d = new Date();
             return d.getFullYear();
@@ -120,9 +135,10 @@ class Footer extends React.Component {
                     <div className="foter-copyright">
                         <p>{this.props.bottomCopyright} {getYear()}</p>
                         <ul className="foter-copyright-menu">
-                            <li dangerouslySetInnerHTML={{ __html: this.props.bottomPrivacyPolicyLink }}></li>
+                            {outputBottomLinks(this.props.bottomLinks)}
+                            {/* <li dangerouslySetInnerHTML={{ __html: this.props.bottomPrivacyPolicyLink }}></li>
                             <span>|</span>
-                            <li dangerouslySetInnerHTML={{ __html: this.props.bottomSecurityLink }}></li>
+                            <li dangerouslySetInnerHTML={{ __html: this.props.bottomSecurityLink }}></li> */}
                         </ul>
                     </div>
                 </div>

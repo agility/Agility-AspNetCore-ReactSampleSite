@@ -1,16 +1,14 @@
 import React, { Component } from 'react'
 import { hot } from 'react-hot-loader/root'
 
-import FormPage from '../../components/form.jsx'
+import RequestADemo from '../../components/request-a-demo.jsx'
 import FormPageProps from '../data/form-purple.json'
 
 class Form extends Component {
     render() {
 
         return (
-            <div id="form-page" className="purple">
-                <FormPage {...FormPageProps } />
-            </div>
+            <RequestADemo {...FormPageProps } />
         );
     }
 }

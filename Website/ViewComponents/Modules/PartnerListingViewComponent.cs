@@ -35,7 +35,7 @@ namespace Website.ViewComponents.Modules
 					types = tags,
 					title = module.Title,
 					subTitle = module.SubTitle,
-					leftButton = module.ParseUrl("LeftButton"),
+					leftButton = module.LeftButton.ParseUrl(),
 					leftBottomTitle = module.LeftTypeTitle,
 					items = module.Partners
 								  .Items(rowFilter: null, sort: null, take: 100, skip: 0)

@@ -150,21 +150,23 @@ class FilteredListingItem extends React.Component {
         return (
             <div className="col-md-6">
                 <div className="filtered-listing-item">
-                    <div className="image">
+                    <a href={this.props.item.url}>
+                        <div className="image">
                             <ResponsiveImage img={this.props.item.image}
                                 breaks={[{ w: 640, h: 369, max: 640 }, { w: 768, h: 433, min: 800 }, { w: 480, h: 277, min: 1190 }]} />
-                        {this.props.item.label &&
-                            <span>{this.props.item.label}</span>
-                        }
+                            {this.props.item.label &&
+                                <span>{this.props.item.label}</span>
+                            }
 
-                    </div>
+                        </div>
+                    </a>
                     <div className="content">
-                        <h4 className="h4">{this.props.item.title}</h4>
+                        <a href={this.props.item.url}><h4 className="h4">{this.props.item.title}</h4></a>
                         <p>{this.props.item.text}</p>
-                        <a href={this.props.item.url}>Read More</a>
+                        <a href={this.props.item.url} >Read More</a>
                     </div>
                 </div>
-            </div>
+            </div >
         );
     }
 }

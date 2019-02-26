@@ -6,13 +6,13 @@ import moment from 'moment';
 class PodcastListing extends React.Component {
 
     render() {
-
+        console.log(this.props)
         var items = this.props.items.map(function (item, index) {
             return <PodcastListedItem item={item} id={index} key={item.key} />
         });
 
         return (
-            <div className="left-col">
+            <div className="podcast-listing">
                 {items}
                 <div className="load-more">
                     <a href="#">Load more</a>
@@ -30,17 +30,21 @@ class PodcastListedItem extends React.Component {
 
         return (
             <div className="podcast-episode">
-                <div className="image">
-                    <div className="block-hover">
-                        <a href={this.props.item.href}>
+                <a href={this.props.item.url}>
+                    <div className="image">
+
+                        <div className="block-hover">
+
                             <img src={this.props.item.image.url} alt="" />
                             <div className="play d-flex jc-c ai-center"><img src="/dist/img/Triangle.svg" alt="" /></div>
-                        </a>
+
+                        </div>
+
+                        <img src="/dist/img/podcast.svg" alt="" className="podcast" />
                     </div>
-                    <img src="dist/img/podcast.svg" alt="" className="podcast" />
-                </div>
+                </a>
                 <div className="content">
-                    <h3 className="h3"><a href={this.props.item.href}>{this.props.item.title}</a></h3>
+                    <h3 className="h3"><a href={this.props.item.url}>{this.props.item.title}</a></h3>
                     <div className="author">
                         <h5 class="h5">Episode #{this.props.item.episodeNumber}</h5>
                     </div>

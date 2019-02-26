@@ -37,9 +37,8 @@ namespace Website.ViewComponents.Shared
 					subscribeEmailPlaceholder = item.SubscribeEmailPlaceholder,
 					subscribePOSTUrl = item.SubscribePOSTUrl,
 					subscribeRedirect = item.SubscribeRedirect,
-					bottomPrivacyPolicyLink = item.PrivacyPolicyLink,
-					bottomCopyright = item.Copyright,
-					bottomSecurityLink = item.SecurityLink
+					bottomLinks = item.BottomLinks.SortByIDs(item.BottomLinksSortIDs).Select(a => a.ToFrontendProps()),
+					bottomCopyright = item.Copyright
 				};
 
 

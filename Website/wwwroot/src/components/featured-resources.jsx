@@ -41,12 +41,14 @@ class FeaturedResContent extends React.Component {
         return (
             <div className="col-md-4">
                 <div className="featured-item">
-                    <div className="image">
-                        <ResponsiveImage img={this.props.item.image}
+                    <a href={this.props.item.url}>
+                        <div className="image">
+                            <ResponsiveImage img={this.props.item.image}
                                 breaks={[{ w: 640, h: 305, max: 640 }, { w: 768, h: 366, min: 800 }, { w: 480, h: 229, min: 1190 }]} />
-                    </div>
+                        </div>
+                    </a>
                     <div className="content">
-                        <h3>{this.props.item.title}</h3>
+                        <a href={this.props.item.url}><h3>{this.props.item.title}</h3></a>
                         <p>{this.props.item.text}</p>
                         <a href={this.props.item.url} className="btn" ><span>{this.props.readMoreLabel}</span></a>
                     </div>

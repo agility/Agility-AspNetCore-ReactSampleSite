@@ -120,7 +120,7 @@ class Header extends React.Component {
                         </div>
                     </div>
                 </div>
-                <SignIn preHeaderLinks={this.props.preHeaderLinks} primaryButton={this.props.primaryButton} />
+                <SignIn preHeaderLinks={this.props.preHeaderLinks} preHeaderPrimaryButton={this.props.preHeaderPrimaryButton} />
                 <Hamburger />
                 <header className={headerClass}>
                     <div className="container-my">
@@ -130,7 +130,7 @@ class Header extends React.Component {
 
                         {renderMenu(this.props.menu, 0)}
 
-                        <button href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</button>
+                        <a href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</a>
                     </div>
                 </header>
             </div>

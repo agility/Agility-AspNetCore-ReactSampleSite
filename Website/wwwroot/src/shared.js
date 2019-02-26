@@ -28,7 +28,6 @@ import JobListing from './components/job-listing.jsx'
 import FeaturedResources from './components/featured-resources.jsx'
 import FeaturedCaseStudies from './components/featured-case-studies.jsx'
 import FAQs from './components/faqs.jsx'
-import FormPage from './components/form.jsx'
 import RequestADemo from './components/request-a-demo.jsx'
 import BecomeAPartner from './components/become-a-partner.jsx'
 
@@ -75,7 +74,6 @@ global['Components'] = {
   FeaturedResources,
   FeaturedCaseStudies,
   FAQs,
-  FormPage,
   RequestADemo,
   BecomeAPartner,
   InfoBox,

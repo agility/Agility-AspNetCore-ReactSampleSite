@@ -20,7 +20,7 @@ namespace Website.ViewComponents.Modules
 				var viewModel = new
 				{
 					title = module.Title,
-					primaryButton = module.ParseUrl("PrimaryButton"),
+					primaryButton = module.PrimaryButton.ParseUrl(),
 					items = module.CaseStudies.GetByIDs(module.IDs).Select(p => p.GetFeaturedListingViewModel())
 				};
 

@@ -44,7 +44,8 @@ namespace Website.ViewComponents.Shared
 				{
 					logo = item.Logo.ToImage(),
 					preHeaderLinks = item.PreHeaderLinks.SortByIDs(item.PreHeaderLinkSortIDs).Select(a => a.ToFrontendProps()),
-					primaryButton = item.ParseUrl("PrimaryButton"),
+					preHeaderPrimaryButton = item.PreHeaderPrimaryButton.ParseUrl(),
+					primaryButton = item.PrimaryButton.ParseUrl(),
 					menu = topLevelNodes
 				};
 
