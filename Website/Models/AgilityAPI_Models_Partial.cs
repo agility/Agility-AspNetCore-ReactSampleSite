@@ -61,7 +61,7 @@ namespace Website.AgilityModels
 
 	}
 
-	public partial class FeatureBlock 
+	public partial class FeatureBlock
 	{
 		public bool MatchesWith(string[] thoseIDs)
 		{
@@ -83,7 +83,8 @@ namespace Website.AgilityModels
 			{
 				tags = this.CustomTags.GetByIDs(this.CustomTagsIDs);
 				List<string> tagIDsForLabel = new List<string>();
-				if(!string.IsNullOrEmpty(labelIDs)) {
+				if (!string.IsNullOrEmpty(labelIDs))
+				{
 					tagIDsForLabel = labelIDs.Split(',').ToList();
 				}
 				c_tag = tags.FirstOrDefault(tag => tagIDsForLabel.Contains(tag.ContentID.ToString()));
@@ -126,7 +127,8 @@ namespace Website.AgilityModels
 			{
 				tags = this.CustomTags.GetByIDs(this.CustomTagsIDs);
 				List<string> tagIDsForLabel = new List<string>();
-				if(!string.IsNullOrEmpty(labelIDs)) {
+				if (!string.IsNullOrEmpty(labelIDs))
+				{
 					tagIDsForLabel = labelIDs.Split(',').ToList();
 				}
 				c_tag = tags.FirstOrDefault(tag => tagIDsForLabel.Contains(tag.ContentID.ToString()));
@@ -215,8 +217,6 @@ namespace Website.AgilityModels
 
 		public dynamic GetListingViewModel(int excerptLength = 240)
 		{
-			DynamicPageItem dp = Data.GetDynamicPageItem("~/posts/post-details", this.ContentReferenceName, this.Row);
-			string url = $"/posts/{dp.Name}";
 
 			var image = this.PostImage;
 			BlogAuthor author = null;
@@ -248,11 +248,11 @@ namespace Website.AgilityModels
 			var post = new
 			{
 				key = ContentID,
-				title = dp.Title,
+				title = this.Title,
 				excerpt = excerpt,
 				date = this.Date,
 				author = author.ToFrontendProps(),
-				url = url,
+				url = this.ResolveDynamicPageItemUrl(),
 				image = image.ToImage()
 
 			};
@@ -260,5 +260,32 @@ namespace Website.AgilityModels
 			return post;
 
 		}
+	}
+
+	public partial class Podcast
+	{
+
+		public dynamic GetListingViewModel(int excerptLength = 240)
+		{
+
+
+			string excerpt = System.Web.HttpUtility.HtmlDecode(this.Excerpt.Truncate(excerptLength, "...", true, true));
+
+			var item = new
+			{
+				key = ContentID,
+				title = Title,
+				excerpt = excerpt,
+				date = this.Date,
+				url = this.ResolveDynamicPageItemUrl(),
+				episodeNumber = this.EpisodeNumber,
+				image = MainImage.ToImage()
+
+			};
+
+			return item;
+
+		}
+
 	}
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './case-study-details.scss'
+import './partner-details.scss'
 import './rich-text.scss'
 
-class CaseDetails extends React.Component {
+class PartnerDetails extends React.Component {
 
     render() {
 
@@ -55,4 +55,4 @@ class CaseDetails extends React.Component {
         );
     }
 }
-export default hot(CaseDetails);
+export default hot(PartnerDetails);

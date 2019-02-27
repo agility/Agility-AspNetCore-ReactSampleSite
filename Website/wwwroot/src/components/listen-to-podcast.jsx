@@ -2,33 +2,36 @@ import React from 'react';
 import { hot } from 'react-hot-loader/root'
 import './listen-to-podcast.scss'
 
-class StayInTouchBox extends React.Component {
+class ListenToPodcast extends React.Component {
 
     render() {
 
-        var four = this.props.items.map(function (items){
-            return <StayInTouchBoxContent item={items} />
+
+
+        var four = this.props.items.map(function (item) {
+            return <ListenToPodcastContent item={item} key={item.key} />
         });
 
         return (
 
-            <div className="stay-in-touch-box">
+            <div className="listen-to-podcast">
                 <h4 className="h4">{this.props.title}</h4>
-                <div className="social">
+                <div className="platform">
                     {four}
                 </div>
             </div>
 
+
         );
     }
 }
-export default hot(StayInTouchBox);
+export default hot(ListenToPodcast);
 
-class StayInTouchBoxContent extends React.Component {
+class ListenToPodcastContent extends React.Component {
     render() {
 
         return (
-            <a href={this.props.item.href} target="_blank"><img src={this.props.item.ico.url} alt=""/><span>{this.props.item.title}</span></a>
+            <a href={this.props.item.url.href} target="_blank"><img src={this.props.item.ico.url} alt="" /></a>
         );
     }
 }

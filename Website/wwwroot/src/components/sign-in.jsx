@@ -30,7 +30,7 @@ class SignIn extends React.Component {
             <div className="sign-in p-w">
                 <div className="container-my">
                     <ul className="sign-in-list">
-                        <li><a href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</a></li>
+                        <li><a href={this.props.preHeaderPrimaryButton.href} target={this.props.preHeaderPrimaryButton.target} className="btn">{this.props.preHeaderPrimaryButton.text}</a></li>
                         {this.outputLinks()}
                     </ul>
                     <button className="open-search" onClick={showSearch}></button>

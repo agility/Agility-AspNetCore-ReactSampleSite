@@ -21,7 +21,7 @@ namespace Website.ViewComponents.Modules
 					testimonials = module.Testimonials.GetByIDs(module.TestimonialIDs).Select(t => t.ToFrontendProps()),
 					header = module.Header,
 					subHeading = module.SubHeading,
-					bottomlink = module.ParseUrl("BottomLink")
+					bottomlink = module.BottomLink.ParseUrl()
 				};
 
 				return new ReactViewComponentResult("Components.TestimonialsListing", model);

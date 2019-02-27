@@ -19,8 +19,8 @@ namespace Website.ViewModels
             Heading = module.Heading;
             SubHeading = module.SubHeading;
             RenderType = module.RenderType;
-            PrimaryButton = module.ParseUrl("PrimaryButton");
-            SecondaryButton = module.ParseUrl("SecondaryButton");
+            PrimaryButton = module.PrimaryButton.ParseUrl();
+            SecondaryButton = module.SecondaryButton.ParseUrl();
             Logos = module.Logos.SortByIDs(module.LogoIDs).Select(p => new LogoListedItemViewModel {
                 Url = p.URL.ParseUrl(),
                 Image = p._Logo.ToImage()
@@ -31,8 +31,8 @@ namespace Website.ViewModels
             Heading = module.Heading;
             SubHeading = module.SubHeading;
             RenderType = module.RenderType;
-            PrimaryButton = module.ParseUrl("PrimaryButton");
-            SecondaryButton = module.ParseUrl("SecondaryButton");
+            PrimaryButton = module.PrimaryButton.ParseUrl();
+            SecondaryButton = module.SecondaryButton.ParseUrl();
             Logos = module.Partners.GetByIDs(module.PartnersIDs).Select(p => new LogoListedItemViewModel() {
                 Url = new UrlField() {
                     Text = p.Title,

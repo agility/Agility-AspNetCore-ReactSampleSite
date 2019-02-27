@@ -17,7 +17,7 @@ class Header extends React.Component {
             });
 
             //search    
-            document.addEventListener('keydown', function(event) {
+            document.addEventListener('keydown', function (event) {
                 var key = event.key;
                 if ("Escape" === key) {
                     hideSearch();
@@ -92,8 +92,8 @@ class Header extends React.Component {
 
         var searchResults = require('../static/data/search-results.json');
         searchResults = searchResults.results;
-        var results = searchResults.map(function(res){
-            return <SearchResults result={res}/>
+        var results = searchResults.map(function (res) {
+            return <SearchResults result={res} />
         });
 
         return (
@@ -120,7 +120,7 @@ class Header extends React.Component {
                         </div>
                     </div>
                 </div>
-                <SignIn preHeaderLinks={this.props.preHeaderLinks} primaryButton={this.props.primaryButton} />
+                <SignIn preHeaderLinks={this.props.preHeaderLinks} preHeaderPrimaryButton={this.props.preHeaderPrimaryButton} />
                 <Hamburger />
                 <header className={headerClass}>
                     <div className="container-my">
@@ -130,7 +130,7 @@ class Header extends React.Component {
 
                         {renderMenu(this.props.menu, 0)}
 
-                        <button href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</button>
+                        <a href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</a>
                     </div>
                 </header>
             </div>
@@ -140,17 +140,17 @@ class Header extends React.Component {
 }
 export default hot(Header);
 
-class SearchResults extends React.Component{
+class SearchResults extends React.Component {
     render() {
 
         var label = this.props.result.label;
-        var labelClass = 'label '+label;
+        var labelClass = 'label ' + label;
 
-        return(
+        return (
             <div className="search-item d-flex ai-center">
                 <div className="si-left">
                     <h3 className="h3"><a href={this.props.result.href}>{this.props.result.title}</a></h3>
-                    <div className="text" dangerouslySetInnerHTML={{__html: this.props.result.text}}></div>
+                    <div className="text" dangerouslySetInnerHTML={{ __html: this.props.result.text }}></div>
                 </div>
                 <div className="si-right">
                     <div className={labelClass}>{label}</div>
