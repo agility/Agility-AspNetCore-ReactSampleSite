@@ -6,8 +6,10 @@ namespace Website.Models
 	{
         public Image() {}
         public Image(Attachment attachment) {
-            Url = attachment.URL;
-            Label = attachment.Label;
+            if(attachment != null) {
+                Url = attachment.URL;
+                Label = attachment.Label;
+            }
         }
 		public string Url { get; set; }
         public string Label {get;set;}

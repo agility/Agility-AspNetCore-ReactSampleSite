@@ -98,6 +98,7 @@ namespace Website.Extensions
         }
 
         public static Image ToImage(this Attachment attachment) {
+            if(attachment == null) return null;
             return new Image(attachment);
         }
 
