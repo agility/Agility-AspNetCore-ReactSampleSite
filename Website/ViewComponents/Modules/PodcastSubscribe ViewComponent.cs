@@ -24,8 +24,8 @@ namespace Website.ViewComponents.Modules
 									   .Select(r => new
 									   {
 										   title = r.Title,
-										   image = r.Logo.ToFrontendProps(),
-										   url = r.ParseUrl("FollowURL"),
+										   ico = r.Logo.ToFrontendProps(),
+										   url = r.FollowURL.ParseUrl(),
 										   key = r.ContentID
 									   });
 

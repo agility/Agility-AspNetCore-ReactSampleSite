@@ -114,6 +114,39 @@ i.more {
   z-index: 2;
 }
 
+a.arrow-button {
+  min-width: 112px;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+  align-items: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+
+  span {
+    display: block;
+    padding-right: 8px;
+    font-size: 14px;
+    font-family: "Muli-bold", sans-serif;
+    color: #484b4d;
+    -webkit-transition: all 0.2s cubic-bezier(0.24, 0.35, 0, 1.01);
+    -moz-transition: all 0.2s cubic-bezier(0.24, 0.35, 0, 1.01);
+    -ms-transition: all 0.2s cubic-bezier(0.24, 0.35, 0, 1.01);
+    -o-transition: all 0.2s cubic-bezier(0.24, 0.35, 0, 1.01);
+    transition: all 0.2s cubic-bezier(0.24, 0.35, 0, 1.01);
+  }
+
+  &:hover {
+    span {
+      padding-right: 15px;
+    }
+  }
+}
+
+
 .container-my {
   display: -webkit-box;
   display: -moz-box;

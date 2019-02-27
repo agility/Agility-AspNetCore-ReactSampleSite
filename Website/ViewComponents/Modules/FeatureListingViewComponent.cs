@@ -32,7 +32,7 @@ namespace Website.ViewComponents.Modules
 					types = tags,
 					title = module.Title,
 					subTitle = module.Subtitle,
-					leftButton = module.ParseUrl("LeftButton"),
+					leftButton = module.LeftButton.ParseUrl(),
 					leftBottomTitle = module.LeftTypeTitle,
 					items = module.FeatureBlocks.Items(rowFilter: null, sort: null, take: 100, skip: 0)
 						.Select(i => i.GetFeatureListingViewModel(module.CustomTagsToHighlightIDs))

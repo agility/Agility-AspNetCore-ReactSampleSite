@@ -15,11 +15,14 @@
     "agility": "^1.0.3",
     "agility-ugc": "^1.0.4",
     "babel-polyfill": "^6.26.0",
+    "mobx": "^4.2.0",
     "moment": "^2.24.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-particles-js": "^2.4.2",
-    "react-router-dom": "^4.3.1"
+    "react-router-dom": "^4.3.1",
+    "redoc": "^2.0.0-rc.2",
+    "styled-components": "^4.1.3"
   },
   "devDependencies": {
     "@babel/core": "^7.2.2",

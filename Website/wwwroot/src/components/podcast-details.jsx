@@ -27,7 +27,7 @@ class BlogPostDetails extends React.Component {
                         </div>
                         <div dangerouslySetInnerHTML={{ __html: this.props.embed }}></div>
                         <div className="content" dangerouslySetInnerHTML={{ __html: this.props.textBlob }}></div>
-                        <a href="/agileliving" className="back d-flex ai-center"><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt="" /><span>Back to Episodes</span></a>
+                        <a href="./" className="back d-flex ai-center"><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt="" /><span>Back to Episodes</span></a>
                     </div>
                 </div>
             </section>

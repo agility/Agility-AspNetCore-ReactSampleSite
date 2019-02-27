@@ -22,7 +22,7 @@ namespace Website.ViewComponents.Modules
 					title = module.Title,
 					sideTitle = module.SideTitle,
 					sideBody = module.SideBody,
-					sideLink = module.ParseUrl("SideLink"),
+					sideLink = module.SideLink.ParseUrl(),
 					features = module.FeatureBlocks.GetByIDs(module.FeatureBlockIDs).Select(p => p.ToFrontendProps())
 				};
 
