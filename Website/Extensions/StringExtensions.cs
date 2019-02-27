@@ -8,6 +8,10 @@ namespace Website.Extensions
         {
             UrlField link;
 
+            if(string.IsNullOrEmpty(str)) {
+                return null;
+            }
+
             if (str.StartsWith("~/") || str.StartsWith("/") || str.StartsWith("http"))
             {
                 link = new UrlField {Href = str};
