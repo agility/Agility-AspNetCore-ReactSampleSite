@@ -62,7 +62,7 @@ class PostListing extends React.Component {
 
         event.preventDefault();
 
-        var url = "Listing/Posts?skip=" + (this.state.skip + this.state.take) + "&take=" + this.state.take;
+        var url = "/Listing/Posts?skip=" + (this.state.skip + this.state.take) + "&take=" + this.state.take;
 
         this.setState({ loadingMore: true });
 

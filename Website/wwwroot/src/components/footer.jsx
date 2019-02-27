@@ -84,7 +84,7 @@ class Footer extends React.Component {
             lst.forEach(item => {
                 links.push(
                     <li key={item.key}>
-                        <a href={item.url.href} target={item.url.target}>{item.title}</a> <span>|</span>
+                        <a href={item.url.href} target={item.url.target}>{item.title}</a>
                     </li>
                 );
             })
@@ -136,9 +136,7 @@ class Footer extends React.Component {
                         <p>{this.props.bottomCopyright} {getYear()}</p>
                         <ul className="foter-copyright-menu">
                             {outputBottomLinks(this.props.bottomLinks)}
-                            {/* <li dangerouslySetInnerHTML={{ __html: this.props.bottomPrivacyPolicyLink }}></li>
-                            <span>|</span>
-                            <li dangerouslySetInnerHTML={{ __html: this.props.bottomSecurityLink }}></li> */}
+
                         </ul>
                     </div>
                 </div>

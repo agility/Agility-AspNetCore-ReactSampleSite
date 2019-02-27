@@ -10,7 +10,7 @@ class ResponsiveImage extends React.Component {
 
 	render() {
 		let image = this.props.img;
-		if (!image) return null;
+		if (!image || !image.url) return null;
 
 		let url = image.url;
 		let alt = image.label;
