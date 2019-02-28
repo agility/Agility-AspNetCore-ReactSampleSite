@@ -40,7 +40,7 @@
       "ico": {
         "label": "Listen on Spotify",
         "target": "",
-        "url": "https://static.agilitycms.com/podcast/subscribe/spotify_new.png",
+        "url": "dist/img/spotify_new1.png",
         "height": 48,
         "width": 190,
         "thumbnails": {}

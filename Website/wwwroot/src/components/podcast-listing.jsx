@@ -14,9 +14,9 @@ class PodcastListing extends React.Component {
         return (
             <div className="podcast-listing">
                 {items}
-                <div className="load-more">
+                {/* <div className="load-more">
                     <a href="#">Load more</a>
-                </div>
+                </div> */}
             </div>
 
 

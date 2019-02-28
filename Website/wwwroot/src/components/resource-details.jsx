@@ -2,10 +2,11 @@ import React from 'react';
 import moment from 'moment';
 import { hot } from 'react-hot-loader/root'
 import './resource-details.scss'
+import ResponsiveImage from './responsive-image.jsx'
 
 class ResourceDetails extends React.Component {
     render() {
-
+        console.log(this.props)
         return (
             <section className="resource-details">
                 <div className="rich-text">
@@ -24,9 +25,9 @@ class ResourceDetails extends React.Component {
                             <span className="date">{moment(this.props.resource.date).format("LL")}</span>
                         </div>
 
-                        {this.props.resource.postImage &&
+                        {this.props.resource.image &&
                             <div className="image">
-                                <ResponsiveImage img={this.props.resource.postImage}
+                                <ResponsiveImage img={this.props.resource.image}
                                     breaks={[{ w: 640, max: 640 }, { w: 780, max: 800 }, { w: 1200, max: 1920 }]} />
                             </div>
                         }

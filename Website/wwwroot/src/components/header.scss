@@ -250,6 +250,10 @@ body.shadow {
     li {
       margin-left: 30px;
       margin-right: 30px;
+      @media (max-width: 1199px) {
+        margin-left: 22px;
+        margin-right: 22px;
+      }
     }
 
     .h-menu-li {}

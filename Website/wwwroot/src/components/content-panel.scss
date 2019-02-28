@@ -143,7 +143,6 @@
   .start-image {
     line-height: 0;
     margin-top: 86px;
-    box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15);
     width: 40%;
     min-width: 40%;
     max-width: 40%;
@@ -153,6 +152,9 @@
     -ms-flex: 0 0 40%;
     flex: 0 0 40%;
     margin-left: 0;
+    img {
+      box-shadow: 0 2px 63px 0 rgba(0, 0, 0, 0.15);
+    }
 
     @media (max-width: 767px) {
       padding-right: 0;
