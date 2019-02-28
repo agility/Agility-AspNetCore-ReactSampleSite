@@ -17,12 +17,31 @@ class SignIn extends React.Component {
     }
     render() {
 
+        function setNativeValue(element, value) {
+            const valueSetter = Object.getOwnPropertyDescriptor(element, 'value').set;
+            const prototype = Object.getPrototypeOf(element);
+            const prototypeValueSetter = Object.getOwnPropertyDescriptor(prototype, 'value').set;
+            
+            if (valueSetter && valueSetter !== prototypeValueSetter) {
+                prototypeValueSetter.call(element, value);
+            } else {
+              valueSetter.call(element, value);
+            }
+          }
+
         function showSearch(b) {
             b.target.classList.toggle('close');
             var searchFrame = document.querySelector('.search-frame');
             searchFrame.classList.toggle('open');
-            document.getElementById('frontend-only').classList.toggle('search-open');
+            // document.getElementById('frontend-only').classList.toggle('search-open');
             document.querySelector('html').classList.toggle('search-open');
+
+            var searchInput = document.getElementById('search-input')
+ 
+            setNativeValue(searchInput, '');
+            searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+
+            searchInput.focus();
 
         }
 
