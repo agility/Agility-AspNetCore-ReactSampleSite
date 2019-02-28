@@ -90,6 +90,13 @@ namespace Website
 					defaults: new { controller = "Redirect", action = "BlogPost" }
 				);
 
+				//news redirects
+				routes.MapRoute(
+					name: "NewsRedirect",
+					template: "news/{url}",
+					defaults: new { controller = "Redirect", action = "BlogPost" }
+				);
+
 				//Agility Builtin Route
 				routes.MapRoute("Agility", "{*sitemapPath}", new { controller = "Agility", action = "RenderPage" },
 					new { isAgilityPath = new Agility.Web.Mvc.AgilityRouteConstraint() });

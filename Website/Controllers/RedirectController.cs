@@ -12,7 +12,7 @@ namespace Website.Controllers
 	{
 		public IActionResult BlogPost(string category, string url)
 		{
-			return Redirect($"/posts/{url}");
+			return Redirect($"/resources/posts/{url.ToLower()}");
 		}
 	}
 }
