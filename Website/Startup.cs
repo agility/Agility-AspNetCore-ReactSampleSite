@@ -18,6 +18,7 @@ using Microsoft.Extensions.DependencyInjection.Extensions;
 using System.Reflection;
 using Website.Middleware;
 using Newtonsoft.Json.Serialization;
+using Microsoft.AspNetCore.Diagnostics;
 
 namespace Website
 {
@@ -65,8 +66,24 @@ namespace Website
 			}
 			else
 			{
-				app.UseExceptionHandler("/Home/Error");
+				app.UseStatusCodePagesWithReExecute("/error/{0}");
 			}
+
+			app.UseExceptionHandler(appError =>
+			{
+				appError.Run(async context =>
+				{
+					var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
+					if (contextFeature != null)
+					{
+						Agility.Web.Tracing.WebTrace.WriteException(contextFeature.Error);
+					}
+				});
+			});
+
+
+
+
 
 			//configure the Agility Context 
 			AgilityContext.Configure(app, env, useResponseCaching: true);
@@ -77,6 +94,7 @@ namespace Website
 
 			app.MapWhen(context => context.Request.Path.Value.EndsWith("sitemap.xml", true, null),
 						appBranch => { appBranch.UseSitemapHandler(); });
+
 
 
 			app.UseStaticFiles();

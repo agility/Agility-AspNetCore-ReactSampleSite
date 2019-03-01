@@ -12,40 +12,8 @@ class CaseStudyContentPanel extends React.Component {
         return (
 
             <section className="p-w case-study-content-panel" style={{backgroundColor: bgColor}}>
-                <div className="canvas" id="canvas-5">
-                    <div className="img">
-                        <div className="item item-tangle-top-5 twentyone w58">
-                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-5 twentytwo w58 rotate">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-5 twentythree w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-5 twentyfour w58 rotate">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-5 twentyfive w58">
-                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-5 twentysix w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-5 twentyseven w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-5 twentyeight w58">
-                            <img src="https://static.agilitycms.com/layout/img/yellow_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-5 twentynine w58">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                        <div className="item item-tangle-top-5 thirty w58 rotate">
-                            <img src="https://static.agilitycms.com/layout/img/green_treangle.svg" alt="" />
-                        </div>
-                    </div>
-                </div>
+                
+                
                 <div className="container-my">
                     <div className="row-my">
 
