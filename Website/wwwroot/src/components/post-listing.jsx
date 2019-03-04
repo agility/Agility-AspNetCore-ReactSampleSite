@@ -137,15 +137,23 @@ class PostListItem extends React.Component {
                 }
                 <div className="content">
                     <h3 className="h3"><a href={this.props.item.url}>{this.props.item.title}</a></h3>
-                    <div className="author">
-                        <div className="author-image">
+                    {
+                        this.props.item.author &&
+                        <div className="author">
+                            <div className="author-image">
 
-                            <img src={this.props.item.author.image ? this.props.item.author.image.url + '?w=100' : "https://static.agilitycms.com/authors/blank-head-profile-pic.jpg?w=100"} alt="" />
+                                <img src={this.props.item.author.image ? this.props.item.author.image.url + '?w=100' : "https://static.agilitycms.com/authors/blank-head-profile-pic.jpg?w=100"} alt="" />
+                            </div>
+                            <h5 className="h5">{this.props.item.author.title}</h5>
                         </div>
-                        <h5 className="h5">{this.props.item.author.title}</h5>
-                    </div>
+                    }
+                    
                     <div className="text"><p>{this.props.item.excerpt}</p></div>
-                    <span className="date">{moment(this.props.item.date).format("LL")}</span>
+
+                    {
+                        this.props.item.date && 
+                        <span className="date">{moment(this.props.item.date).format("LL")}</span>
+                    }
                 </div>
             </div>
         );

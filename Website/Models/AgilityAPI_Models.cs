@@ -727,6 +727,15 @@ namespace Website.AgilityModels
 	{
 
 	}
+	public partial class Module_CaseStudyListing : Agility.Web.AgilityContentItem
+	{
+		private int __casecount;
+		private bool __casecount_set = false;
+		public virtual int CaseCount { get { if (!__casecount_set) __casecount = GetFieldValue<int>("CaseCount"); __casecount_set = true; return __casecount; } set { __casecount = value; __casecount_set = true;  } }
+		private IAgilityContentRepository<CaseStudy> __casestudies = null;
+		public virtual IAgilityContentRepository<CaseStudy> CaseStudies { get { if (__casestudies == null) __casestudies = GetLinkedContent<CaseStudy>("CaseStudies"); return __casestudies; } set { __casestudies = value; }}
+
+	}
 	public partial class Module_CaseStudyTechStack : Agility.Web.AgilityContentItem
 	{
 

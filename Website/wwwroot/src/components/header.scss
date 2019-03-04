@@ -126,6 +126,10 @@ body.shadow {
       .search-items {
         max-height: 97%;
         overflow-y: scroll;
+        .load-more-container{
+          padding-top: 10px;
+          text-align: center;
+        }
       }
       .search-item {
         padding: 20px 24px;
@@ -169,26 +173,24 @@ body.shadow {
             font-size: 16px;
             font-family: "Muli-Bold", sans-serif;
             text-transform: capitalize;
+            padding: 10px 20px;
+            color: #fff;
+            text-transform: uppercase;
+
             &.blog {
-              padding: 10px 20px;
               background-color: #FFCB28;
-              color: #fff;
             }
+
             &.page {
-              padding: 10px 20px;
               background-color: #07AE31;
-              color: #fff;
             }
+
             &.faq {
-              padding: 10px 20px;
               background-color: #FF5A28;
-              color: #fff;
-              text-transform: uppercase;
             }
+
             &.podcast {
-              padding: 10px 20px;
               background-color: #0664FF;
-              color: #fff;
             }
           }
         }
