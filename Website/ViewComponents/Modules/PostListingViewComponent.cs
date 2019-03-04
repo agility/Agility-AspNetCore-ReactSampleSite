@@ -29,7 +29,8 @@ namespace Website.ViewComponents.Modules
 				{
 					posts = posts,
 					skip = 0,
-					take = module.PostCount
+					take = module.PostCount,
+					type = "Post"
 				};
 
 

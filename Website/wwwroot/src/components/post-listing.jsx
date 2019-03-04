@@ -19,7 +19,8 @@ class PostListing extends React.Component {
             skip: this.props.skip,
             take: this.props.take,
             loadingMore: false,
-            noMoreData: false
+            noMoreData: false,
+            type: this.props.type
         };
 
     }
@@ -62,7 +63,13 @@ class PostListing extends React.Component {
 
         event.preventDefault();
 
-        var url = "/Listing/Posts?skip=" + (this.state.skip + this.state.take) + "&take=" + this.state.take;
+        var url = "";
+
+        if(this.state.type == "Post") {
+            url = "/Listing/Posts?skip=" + (this.state.skip + this.state.take) + "&take=" + this.state.take;
+        } else if(this.state.type == "CaseStudy") {
+            url = "/Listing/CaseStudies?skip=" + (this.state.skip + this.state.take) + "&take=" + this.state.take;
+        }
 
         this.setState({ loadingMore: true });
 
