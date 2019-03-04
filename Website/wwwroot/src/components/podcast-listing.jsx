@@ -31,17 +31,15 @@ class PodcastListedItem extends React.Component {
         return (
             <div className="podcast-episode">
                 <a href={this.props.item.url}>
-                    <div className="image">
-
-                        <div className="block-hover">
-
-                            <img src={this.props.item.image.url} alt="" />
-                            <div className="play d-flex jc-c ai-center"><img src="/dist/img/Triangle.svg" alt="" /></div>
-
+                    {this.props.item.image &&
+                        <div className="image">
+                            <div className="block-hover">
+                                <img src={this.props.item.image.url} alt="" />
+                                <div className="play d-flex jc-c ai-center"><img src="/dist/img/Triangle.svg" alt="" /></div>
+                            </div>
+                            <img src="/dist/img/podcast.svg" alt="" className="podcast" />
                         </div>
-
-                        <img src="/dist/img/podcast.svg" alt="" className="podcast" />
-                    </div>
+                    }
                 </a>
                 <div className="content">
                     <h3 className="h3"><a href={this.props.item.url}>{this.props.item.title}</a></h3>

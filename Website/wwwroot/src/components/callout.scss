@@ -28,9 +28,9 @@
   }
 
   h3 {
-    display: inline-block;
+    display: block;
     max-width: 1008px;
-    margin-bottom: 40px;
+    margin: 0 auto 40px auto;
     font-size: 36px;
     line-height: 1.56;
     font-family: "Muli-bold", sans-serif;
@@ -56,7 +56,6 @@
   }
 
   .btn {
-    width: 176px;
     background-color: $primaryColor;
     color: #484b4d;
     -webkit-box-shadow: 0 5px 35px 0 rgba(255, 255, 255, 0.25);

@@ -2,6 +2,7 @@
 
 .featured-resources {
   font-family: "Muli-Regular", sans-serif;
+  padding-bottom: 63px!important;
 
   h2.title-component {
     max-width: 1008px;
@@ -43,6 +44,7 @@
 
   .featured-wrapper {
     .col-md-4 {
+      margin-bottom: 32px;
       @media (max-width: 991px) {
         margin-bottom: 30px;
       }

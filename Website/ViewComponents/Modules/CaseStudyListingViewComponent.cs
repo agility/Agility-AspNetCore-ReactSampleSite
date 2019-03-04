@@ -27,7 +27,8 @@ namespace Website.ViewComponents.Modules
 				{
 					posts = caseStudies,
 					skip = 0,
-					take = module.CaseCount
+					take = module.CaseCount,
+					type = "CaseStudy"
 				};
 
 				return new ReactViewComponentResult("Components.PostListing", viewModel);
