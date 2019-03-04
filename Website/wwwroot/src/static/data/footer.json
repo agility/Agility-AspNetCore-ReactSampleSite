@@ -89,7 +89,7 @@
             "title": "Blog",
             "url": {
                 "text": "Blog",
-                "href": "/posts",
+                "href": "/resources/posts",
                 "target": "_self"
             },
             "referenceName": "Footer_Link25",
@@ -165,6 +165,16 @@
             },
             "referenceName": "Footer_Link160",
             "key": 636
+        },
+        {
+            "title": "Google",
+            "url": {
+                "text": "Google",
+                "href": "#google",
+                "target": "_blank"
+            },
+            "referenceName": "Footer_Link160",
+            "key": 656
         }
     ],
     "bottomCopyright": "© Copyright, Agility"
