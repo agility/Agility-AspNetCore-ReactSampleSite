@@ -205,6 +205,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @media (max-width: 767px) {
+      flex-wrap: wrap-reverse;
+      -webkit-flex-wrap: wrap-reverse;
+      -ms-flex-wrap: wrap-reverse;
+    }
 
     p {
       font-family: $regular;
@@ -216,11 +221,33 @@
       letter-spacing: normal;
       position: relative;
       margin-top: 3px;
+      @media (max-width: 767px) {
+        max-width: 100%;
+        -webkit-box: 0 0 100%;
+        -moz-box: 0 0 100%;
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        text-align: center;
+      }
     }
 
     .foter-copyright-menu {
       display: flex;
       align-items: center;
+      @media (max-width: 767px) {
+        max-width: 100%;
+        -webkit-box: 0 0 100%;
+        -moz-box: 0 0 100%;
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        justify-content: center;
+      }
 
       li {
         margin-left: 10px;
