@@ -1,6 +1,6 @@
 @import "./_variables.scss";
 
-body.shadow {
+body {
   header {
     -webkit-box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.09);
     -moz-box-shadow: 0 4px 19px 0 rgba(0, 0, 0, 0.09);
@@ -224,7 +224,7 @@ body.shadow {
 .header {
   position: relative;
   padding-top: 36px;
-  padding-bottom: 70px;
+  padding-bottom: 36px;
   background-color: #ffcb28;
 
   .header-logo {
