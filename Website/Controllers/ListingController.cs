@@ -33,6 +33,25 @@ namespace Website.Controllers
 			return Json(viewModel);
 		}
 
+		public IActionResult CaseStudies(int skip, int take)
+		{
+
+			var caseStudyRepo = new AgilityContentRepository<CaseStudy>("CaseStudies");
+
+			var caseStudies = caseStudyRepo
+					.Items(rowFilter: null, sort: null, take: take, skip: skip)
+					.Select(p => p.GetListingViewModel());
+
+			var viewModel = new
+			{
+				posts = caseStudies,
+				skip = skip,
+				take = take
+			};
+
+			return Json(viewModel);
+		}
+
 		public IActionResult Resources(string ids = null, int skip = 0, int take = 100)
 		{
 

@@ -33,11 +33,11 @@ namespace Website.ViewComponents.Modules
 					renderType =  caseStudy.ProductsRenderType,
 					logos = !string.IsNullOrEmpty(caseStudy.ProductIDs) ? caseStudy.Products.GetByIDs(caseStudy.ProductIDs).Select(p => new {
 						url = p.URL.ParseUrl(),
-						_Logo = p.Logo,
+						Image = p.Logo.ToImage(),
 						title = p.Title						
 					}) : null
 				};
-
+				
 				if (caseStudy.ProductsRenderType == "cloud")
 				{
 					return new ReactViewComponentResult("Components.LogoCloud", viewModel);

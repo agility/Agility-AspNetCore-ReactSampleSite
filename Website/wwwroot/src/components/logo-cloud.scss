@@ -89,6 +89,9 @@
     justify-content: space-between;
     max-width: 400px;
     margin: 0 auto;
+    @media (max-width: 480px) {
+      justify-content: center !important;
+    }
 
     button {
       width: 186px;
@@ -98,6 +101,12 @@
       width: 186px;
       height: 48px;
       line-height: 48px;
+      @media (max-width: 480px) {
+        width: 160px;
+        padding: 0;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
     }
   }
 }

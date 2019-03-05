@@ -26,6 +26,7 @@ import PodcastDetailsPage from './pages/podcast-details-page.jsx'
 import Team from './pages/team.jsx'
 import BlogPost from './pages/blog-details-page.jsx'
 import CaseStudyDetails from './pages/case-study-details-page.jsx'
+import ApiReference from './pages/api-reference.jsx'
 
 
 
@@ -51,6 +52,7 @@ ReactDOM.render((
                         <Route path="/form-page-yellow" component={FormYellow} />
                         <Route path="/podcast-listing-page" component={Podcast} />
                         <Route path="/podcast-details-page" component={PodcastDetailsPage} />
+                        <Route path="/api-reference" component={ApiReference} />
 
                         <Route component={NotFound} />
                     </Switch>

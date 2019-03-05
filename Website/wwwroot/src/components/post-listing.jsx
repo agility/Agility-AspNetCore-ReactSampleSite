@@ -19,7 +19,8 @@ class PostListing extends React.Component {
             skip: this.props.skip,
             take: this.props.take,
             loadingMore: false,
-            noMoreData: false
+            noMoreData: false,
+            type: this.props.type
         };
 
     }
@@ -62,7 +63,13 @@ class PostListing extends React.Component {
 
         event.preventDefault();
 
-        var url = "Listing/Posts?skip=" + (this.state.skip + this.state.take) + "&take=" + this.state.take;
+        var url = "";
+
+        if(this.state.type == "Post") {
+            url = "/Listing/Posts?skip=" + (this.state.skip + this.state.take) + "&take=" + this.state.take;
+        } else if(this.state.type == "CaseStudy") {
+            url = "/Listing/CaseStudies?skip=" + (this.state.skip + this.state.take) + "&take=" + this.state.take;
+        }
 
         this.setState({ loadingMore: true });
 
@@ -137,15 +144,23 @@ class PostListItem extends React.Component {
                 }
                 <div className="content">
                     <h3 className="h3"><a href={this.props.item.url}>{this.props.item.title}</a></h3>
-                    <div className="author">
-                        <div className="author-image">
+                    {
+                        this.props.item.author &&
+                        <div className="author">
+                            <div className="author-image">
 
-                            <img src={this.props.item.author.image ? this.props.item.author.image.url + '?w=100' : "https://static.agilitycms.com/authors/blank-head-profile-pic.jpg?w=100"} alt="" />
+                                <img src={this.props.item.author.image ? this.props.item.author.image.url + '?w=100' : "https://static.agilitycms.com/authors/blank-head-profile-pic.jpg?w=100"} alt="" />
+                            </div>
+                            <h5 className="h5">{this.props.item.author.title}</h5>
                         </div>
-                        <h5 className="h5">{this.props.item.author.title}</h5>
-                    </div>
+                    }
+                    
                     <div className="text"><p>{this.props.item.excerpt}</p></div>
-                    <span className="date">{moment(this.props.item.date).format("LL")}</span>
+
+                    {
+                        this.props.item.date && 
+                        <span className="date">{moment(this.props.item.date).format("LL")}</span>
+                    }
                 </div>
             </div>
         );

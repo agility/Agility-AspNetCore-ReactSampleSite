@@ -5,6 +5,16 @@
   padding-bottom: 95px;
   position: relative;
   overflow: hidden;
+  @media (max-width: 480px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .container-my {
+    @media (max-width: 480px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 
   .rotated-bg {
     position: absolute;
