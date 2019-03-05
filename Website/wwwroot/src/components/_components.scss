@@ -78,6 +78,10 @@ p.intro {
   }
 }
 
+p {
+  word-break: break-word;
+}
+
 // titles
 .title-conponent {
   font-family: $bold;
