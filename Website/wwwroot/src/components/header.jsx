@@ -13,7 +13,7 @@ class Header extends React.Component {
     componentDidMount() {
         //dropdown Menu
         if (document) {
-            var hiddenParent = document.querySelector('.has-children');
+            var hiddenParent = document.querySelector('.header-menu .has-children');
             hiddenParent.addEventListener('click', function (e) {
                 this.classList.toggle('open');
             });

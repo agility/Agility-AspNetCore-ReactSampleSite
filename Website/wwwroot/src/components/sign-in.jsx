@@ -49,7 +49,9 @@ class SignIn extends React.Component {
             <div className="sign-in p-w">
                 <div className="container-my">
                     <ul className="sign-in-list">
+                        {this.props.preHeaderPrimaryButton &&
                         <li><a href={this.props.preHeaderPrimaryButton.href} target={this.props.preHeaderPrimaryButton.target} className="btn">{this.props.preHeaderPrimaryButton.text}</a></li>
+                        }
                         {this.outputLinks()}
                     </ul>
                     <button className="open-search" onClick={showSearch}></button>

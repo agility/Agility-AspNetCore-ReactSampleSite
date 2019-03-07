@@ -1,7 +1,10 @@
 .header-container {
     &.is-preview {
-        .search-frame {
-        top: 70px;
+        .search-frame.open {
+            top: 70px;
+            @media (max-width: 991px) {
+                top: 106px;
+            }
         }
     }
 }
