@@ -43,6 +43,7 @@ namespace Website.ViewComponents.Shared
 				var viewModel = new
 				{
 					logo = item.Logo.ToImage(),
+					mobileLogo = item.MobileLogo.ToImage(),
 					preHeaderLinks = item.PreHeaderLinks.SortByIDs(item.PreHeaderLinkSortIDs).Select(a => a.ToFrontendProps()),
 					preHeaderPrimaryButton = item.PreHeaderPrimaryButton.ParseUrl(),
 					primaryButton = item.PrimaryButton.ParseUrl(),

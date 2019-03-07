@@ -3,6 +3,10 @@
         "url": "https://static.agilitycms.com/brand/logo.svg",
         "label": "Agility"
     },
+    "mobileLogo": {
+        "url": "https://static.agilitycms.com/layout/img/logo-original.svg",
+        "label": "Agility"
+    },
     "preHeaderLinks": [
         {
             "title": "Help",
@@ -23,11 +27,21 @@
             },
             "referenceName": "Header_Link",
             "key": 24
+        },
+        {
+            "title": "Support",
+            "url": {
+                "text": "Support",
+                "href": "#support",
+                "target": "_blank"
+            },
+            "referenceName": "Header_Link",
+            "key": 658
         }
     ],
     "preHeaderPrimaryButton": {
-        "text": "Change Me!",
-        "href": "/some-link",
+        "text": "Contact Us",
+        "href": "/contact-us",
         "target": "_self"
     },
     "primaryButton": {
