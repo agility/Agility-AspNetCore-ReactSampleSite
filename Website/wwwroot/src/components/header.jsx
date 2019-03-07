@@ -87,6 +87,7 @@ class Header extends React.Component {
                         <a href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</a>
                     </div>
                 </header>
+                <div className="drop-shadow"></div>
             </div>
 
         );
