@@ -179,7 +179,6 @@ class HeaderSearch extends React.Component {
             searchFrame.classList.toggle('open');
             document.querySelector('html').classList.toggle('search-open');
             document.querySelector('.open-search').classList.toggle('close');
-            // document.getElementById('frontend-only').classList.toggle('search-open');
         }
 
         return (
@@ -205,7 +204,7 @@ class HeaderSearch extends React.Component {
                         <div className="search-items">
                             {results}
 
-                            {
+                            {/* {
                                 this.state.results && this.state.results.length > 0 && this.state.results.length < this.state.count && !this.state.loading &&
                                 <div className="load-more-container">
                                     <a href="#" onClick={this.loadMore} className="btn">
@@ -221,7 +220,7 @@ class HeaderSearch extends React.Component {
                                         Loading...
                                     </a>
                                 </div>
-                            }
+                            } */}
                         </div>
                         <div className="result-footer">
                             <p>Like our search? Get <a href="" target="_blank">Agility Search</a> for your website today.</p>
@@ -235,9 +234,16 @@ class HeaderSearch extends React.Component {
 
 class HeaderSearchResult extends React.Component {
     render() {
+        
+        //var category = this.props.result.category;
+        //TODO: implement categories for real
+        var category = null;
+        if(category == null || category.length == 0) {
+            category = "Page";
+        }
+        var categoryClass = 'label ' + category.toLowerCase();
 
-        var category = this.props.result.label;
-        var categoryClass = 'label ' + category;
+        
 
         return (
             <div className="search-item d-flex ai-center">
