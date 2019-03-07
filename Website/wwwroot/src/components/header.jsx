@@ -75,12 +75,14 @@ class Header extends React.Component {
             <div className="header-container">
                 <HeaderSearch />
                 <SignIn preHeaderLinks={this.props.preHeaderLinks} preHeaderPrimaryButton={this.props.preHeaderPrimaryButton} />
-                <Hamburger />
+                <Hamburger {...this.props} />
                 <header className={headerClass}>
                     <div className="container-my">
-                        <div className="header-logo">
-                            <a href="/"><img src={this.props.logo.url} alt={this.props.logo.label} /></a>
-                        </div>
+                        {this.props.logo &&
+                            <div className="header-logo">
+                                <a href="/"><img src={this.props.logo.url} alt={this.props.logo.label} /></a>
+                            </div>
+                        }
 
                         {renderMenu(this.props.menu, 0)}
 

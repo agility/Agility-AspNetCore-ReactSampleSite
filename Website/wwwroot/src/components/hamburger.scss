@@ -65,8 +65,8 @@
 }
 
 .Sidebar {
-  position: fixed;
-  z-index: 21;
+  position: absolute;
+  z-index: 22;
   left: 0;
   top: 0;
   transform: translateX(-100%);
