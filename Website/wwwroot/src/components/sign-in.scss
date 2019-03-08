@@ -27,27 +27,38 @@
     border: none;
     cursor: pointer;
     z-index: 10;
+    @media (max-width: 991px) {
+      -webkit-transition: all .3s ease-out;
+      -moz-transition: all .3s ease-out;
+      -ms-transition: all .3s ease-out;
+      -o-transition: all .3s ease-out;
+      transition: all .3s ease-out;
+    }
     &.close {
       &:before {
-        width: 22px;
-        height: 1px;
-        -webkit-border-radius: 0;
-        -moz-border-radius: 0;
-        border-radius: 0;
-        border: none;
-        background-color: #000;
-        top: 13px;
-        left: 3px;
-        -webkit-transform: rotate(-45deg);
-        -moz-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
-        -o-transform: rotate(-45deg);
-        transform: rotate(-45deg);
+        @media (min-width: 992px) {
+          width: 22px;
+          height: 1px;
+          -webkit-border-radius: 0;
+          -moz-border-radius: 0;
+          border-radius: 0;
+          border: none;
+          background-color: #000;
+          top: 13px;
+          left: 3px;
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -ms-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
       }
       &:after {
-        width: 22px;
-        top: 14px;
-        left: 3px;
+        @media (min-width: 992px) {
+          width: 22px;
+          top: 14px;
+          left: 3px;
+        }
       }
     }
     &:before,
