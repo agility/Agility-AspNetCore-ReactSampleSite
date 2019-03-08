@@ -178,7 +178,6 @@ class HeaderSearch extends React.Component {
             var searchFrame = document.querySelector('.search-frame');
             searchFrame.classList.toggle('open');
             document.querySelector('html').classList.toggle('search-open');
-            document.querySelector('.open-search').classList.toggle('close');
         }
 
         return (
@@ -187,6 +186,8 @@ class HeaderSearch extends React.Component {
                 <div className="search-form">
                     <form action="">
                         <input id="search-input" type="text" placeholder="Search" onChange={this.handleOnChange} />
+                        <span className="search-ico"></span>
+                        <span className="search-ico-mobile" onClick={hideSearch}></span>
                     </form>
                 </div>
                 <div className="search-result">
@@ -246,7 +247,7 @@ class HeaderSearchResult extends React.Component {
         
 
         return (
-            <div className="search-item d-flex ai-center">
+            <div className="search-item d-flex ai-center jc-sb">
                 <div className="si-left">
                     <h3 className="h3"><a href={this.props.result.href}>{this.props.result.title}</a></h3>
                     <div className="text" dangerouslySetInnerHTML={{ __html: this.props.result.text }}></div>
