@@ -434,6 +434,8 @@ namespace Website.AgilityModels
 		public virtual string PreHeaderLinkSortIDs { get { if (!__preheaderlinksortids_set) __preheaderlinksortids = GetFieldValue<string>("PreHeaderLinkSortIDs"); __preheaderlinksortids_set = true; return __preheaderlinksortids; } set { __preheaderlinksortids = value; __preheaderlinksortids_set = true;  } }
 		private Attachment __logo = null;
 		public virtual Attachment Logo { get {  if (__logo == null) __logo = GetAttachment("Logo"); return __logo; } set { __logo = value; } }
+		private Attachment __mobilelogo = null;
+		public virtual Attachment MobileLogo { get {  if (__mobilelogo == null) __mobilelogo = GetAttachment("MobileLogo"); return __mobilelogo; } set { __mobilelogo = value; } }
 		private string __primarybutton = null;
 		private bool __primarybutton_set = false;
 		public virtual string PrimaryButton { get { if (!__primarybutton_set) __primarybutton = GetFieldValue<string>("PrimaryButton"); __primarybutton_set = true; return __primarybutton; } set { __primarybutton = value; __primarybutton_set = true;  } }
