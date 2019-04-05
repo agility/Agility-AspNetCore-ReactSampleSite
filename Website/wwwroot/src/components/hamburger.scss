@@ -65,8 +65,8 @@
 }
 
 .Sidebar {
-  position: fixed;
-  z-index: 10;
+  position: absolute;
+  z-index: 22;
   left: 0;
   top: 0;
   transform: translateX(-100%);
@@ -78,7 +78,7 @@
   min-height: 100vh;
   padding-bottom: 60px;
   overflow-y: auto;
-  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;  
 
   &.active {
     transform: translateX(0);

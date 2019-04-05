@@ -434,6 +434,8 @@ namespace Website.AgilityModels
 		public virtual string PreHeaderLinkSortIDs { get { if (!__preheaderlinksortids_set) __preheaderlinksortids = GetFieldValue<string>("PreHeaderLinkSortIDs"); __preheaderlinksortids_set = true; return __preheaderlinksortids; } set { __preheaderlinksortids = value; __preheaderlinksortids_set = true;  } }
 		private Attachment __logo = null;
 		public virtual Attachment Logo { get {  if (__logo == null) __logo = GetAttachment("Logo"); return __logo; } set { __logo = value; } }
+		private Attachment __mobilelogo = null;
+		public virtual Attachment MobileLogo { get {  if (__mobilelogo == null) __mobilelogo = GetAttachment("MobileLogo"); return __mobilelogo; } set { __mobilelogo = value; } }
 		private string __primarybutton = null;
 		private bool __primarybutton_set = false;
 		public virtual string PrimaryButton { get { if (!__primarybutton_set) __primarybutton = GetFieldValue<string>("PrimaryButton"); __primarybutton_set = true; return __primarybutton; } set { __primarybutton = value; __primarybutton_set = true;  } }
@@ -725,6 +727,15 @@ namespace Website.AgilityModels
 	}
 	public partial class Module_CaseStudyDetails : Agility.Web.AgilityContentItem
 	{
+
+	}
+	public partial class Module_CaseStudyListing : Agility.Web.AgilityContentItem
+	{
+		private int __casecount;
+		private bool __casecount_set = false;
+		public virtual int CaseCount { get { if (!__casecount_set) __casecount = GetFieldValue<int>("CaseCount"); __casecount_set = true; return __casecount; } set { __casecount = value; __casecount_set = true;  } }
+		private IAgilityContentRepository<CaseStudy> __casestudies = null;
+		public virtual IAgilityContentRepository<CaseStudy> CaseStudies { get { if (__casestudies == null) __casestudies = GetLinkedContent<CaseStudy>("CaseStudies"); return __casestudies; } set { __casestudies = value; }}
 
 	}
 	public partial class Module_CaseStudyTechStack : Agility.Web.AgilityContentItem

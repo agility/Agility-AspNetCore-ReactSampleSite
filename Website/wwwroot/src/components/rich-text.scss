@@ -1,4 +1,5 @@
 .rich-text {
+  word-break: break-word;
   h1 {
     margin-bottom: 42px;
     font-size: 36px;
@@ -113,6 +114,10 @@
   ul {
     margin-top: 0;
 
+    ul {
+      margin-left: 20px;
+    }
+
     li {
       position: relative;
       margin-bottom: 20px;
@@ -168,6 +173,9 @@
   }
   ol {
     padding-left: 20px;
+    ol {
+      padding-left: 20px;
+    }
     li {
       display: list-item;
       list-style-type: decimal;

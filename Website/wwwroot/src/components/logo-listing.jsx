@@ -18,10 +18,14 @@ class LogoListing extends React.Component {
         }
 
         //loop all the tabs and render them
-        const logos = this.props.logos.map(function (logo) {
-            return renderLogo(logo)
-        })
-
+        let logos = null;
+        if(this.props.logos && this.props.logos.length > 0) {
+            logos = this.props.logos.map(function (logo) {
+                return renderLogo(logo)
+            })
+        }
+            
+        
 
         return (
             <section id="sec-5" className="work p-w">

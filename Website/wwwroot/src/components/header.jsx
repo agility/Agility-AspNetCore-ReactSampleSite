@@ -3,46 +3,32 @@ import { hot } from 'react-hot-loader/root'
 import './header.scss'
 import SignIn from './sign-in.jsx'
 import Hamburger from './hamburger.jsx'
+import HeaderSearch from './header-search.jsx'
 
 class Header extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props);
     }
+
     componentDidMount() {
         //dropdown Menu
         if (document) {
-            var hiddenParent = document.querySelector('.has-children');
+            var hiddenParent = document.querySelector('.header-menu .has-children');
             hiddenParent.addEventListener('click', function (e) {
                 this.classList.toggle('open');
             });
 
-            //search    
-            document.addEventListener('keydown', function (event) {
-                var key = event.key;
-                if ("Escape" === key) {
-                    hideSearch();
-                }
-            });
-
+            //check for preview bar
+            //HACK
+            var previewBar = document.getElementById('pnlAgilityStatusBar');
+            if(previewBar) {
+                document.getElementsByClassName('header-container')[0].classList.add('is-preview');
+            }
         }
     }
 
     render() {
-
-
-
         let headerClass = "header p-w";
-
-        //MOD: JOEL V - THIS BREAKS SERVER RENDERING - should be handled in css
-        // var url = "";//document.location;
-        // url = url.toString();
-        // url = url.split('/');
-        // var curUrl = url[3];
-        // if ('' == curUrl || 'product' == curUrl || 'community' == curUrl || 'partners' == curUrl) {
-        //     var headerClass = "header p-w";
-        // } else  {
-        //     ;
-        // }
 
         const renderMenu = (menu, level) => {
             let links = []
@@ -82,57 +68,28 @@ class Header extends React.Component {
             return <ul className={className}>{links}</ul>;
         };
 
-        function hideSearch() {
-            var searchFrame = document.querySelector('.search-frame');
-            searchFrame.classList.toggle('open');
-            document.querySelector('html').classList.toggle('search-open');
-            document.querySelector('.open-search').classList.toggle('close');
-            document.getElementById('frontend-only').classList.toggle('search-open');
-        }
 
-        var searchResults = require('../static/data/search-results.json');
-        searchResults = searchResults.results;
-        var results = searchResults.map(function (res) {
-            return <SearchResults result={res} />
-        });
 
         return (
 
-            <div>
-                <div className="search-frame">
-                    <div className="search-inner" onClick={hideSearch}></div>
-                    <div className="search-form">
-                        <form action="">
-                            <input type="text" placeholder="Search" />
-                        </form>
-                    </div>
-                    <div className="search-result">
-                        <div className="result-inner">
-                            <div className="results-quant">
-                                <p>Results for Hello (<span>3</span>)</p>
-                            </div>
-                            <div className="search-items">
-                                {results}
-                            </div>
-                            <div className="result-footer">
-                                <p>Like our search? Get <a href="" target="_blank">Agility Search</a> for your website today.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div className="header-container">
+                <HeaderSearch />
                 <SignIn preHeaderLinks={this.props.preHeaderLinks} preHeaderPrimaryButton={this.props.preHeaderPrimaryButton} />
-                <Hamburger />
+                <Hamburger {...this.props} />
                 <header className={headerClass}>
                     <div className="container-my">
-                        <div className="header-logo">
-                            <a href="/"><img src={this.props.logo.url} alt={this.props.logo.label} /></a>
-                        </div>
+                        {this.props.logo &&
+                            <div className="header-logo">
+                                <a href="/"><img src={this.props.logo.url} alt={this.props.logo.label} /></a>
+                            </div>
+                        }
 
                         {renderMenu(this.props.menu, 0)}
 
                         <a href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</a>
                     </div>
                 </header>
+                <div className="drop-shadow"></div>
             </div>
 
         );
@@ -140,23 +97,4 @@ class Header extends React.Component {
 }
 export default hot(Header);
 
-class SearchResults extends React.Component {
-    render() {
-
-        var label = this.props.result.label;
-        var labelClass = 'label ' + label;
-
-        return (
-            <div className="search-item d-flex ai-center">
-                <div className="si-left">
-                    <h3 className="h3"><a href={this.props.result.href}>{this.props.result.title}</a></h3>
-                    <div className="text" dangerouslySetInnerHTML={{ __html: this.props.result.text }}></div>
-                </div>
-                <div className="si-right">
-                    <div className={labelClass}>{label}</div>
-                </div>
-            </div>
-        );
-    }
-}
 

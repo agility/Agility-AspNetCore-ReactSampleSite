@@ -12,27 +12,24 @@ using Agility.Web.AgilityContentServer;
 
 namespace Website.ViewComponents.Modules
 {
-	public class PostListing : ViewComponent
+	public class CaseStudyListing : ViewComponent
 	{
-		public Task<IViewComponentResult> InvokeAsync(Module_PostListing module)
+		public Task<IViewComponentResult> InvokeAsync(Module_CaseStudyListing module)
 		{
 			return Task.Run<IViewComponentResult>(() =>
 			{
 
-
-
-				var posts = module.Posts
-					.Items(rowFilter: null, sort: null, take: module.PostCount, skip: 0)
+				var caseStudies = module.CaseStudies
+					.Items(rowFilter: null, sort: null, take: module.CaseCount, skip: 0)
 					.Select(p => p.GetListingViewModel());
 
 				var viewModel = new
 				{
-					posts = posts,
+					posts = caseStudies,
 					skip = 0,
-					take = module.PostCount,
-					type = "Post"
+					take = module.CaseCount,
+					type = "CaseStudy"
 				};
-
 
 				return new ReactViewComponentResult("Components.PostListing", viewModel);
 			});
