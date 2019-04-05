@@ -87,10 +87,10 @@ namespace Website.Middleware
 				{
 
 					string url = post.ResolveDynamicPageItemUrl();
-					UriBuilder ub = new UriBuilder(Request.Scheme, Request.Host.Host, Request.Host.Port.GetValueOrDefault(80), url);
+					UriBuilder ub = new UriBuilder(Request.Scheme, Request.Host.Host, Request.Host.Port.GetValueOrDefault(), url);
 
 					UriBuilder ub2 = new UriBuilder(Request.Scheme, Request.Host.Host,
-						Request.Host.Port.GetValueOrDefault(80),
+						Request.Host.Port.GetValueOrDefault(),
 						$"/resources/posts/post-details?ContentID={post.ContentID}");
 
 
