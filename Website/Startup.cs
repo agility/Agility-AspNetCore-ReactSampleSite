@@ -95,6 +95,8 @@ namespace Website
 			app.MapWhen(context => context.Request.Path.Value.EndsWith("sitemap.xml", true, null),
 						appBranch => { appBranch.UseSitemapHandler(); });
 
+			app.MapWhen(context => context.Request.Path.Value.EndsWith("posts.xml", true, null),
+									appBranch => { appBranch.UseFeedHandler(); });
 
 
 			app.UseStaticFiles();
