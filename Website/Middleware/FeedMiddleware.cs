@@ -66,13 +66,18 @@ namespace Website.Middleware
 					"Agility Blog",
 					$"Copyright Agility {DateTime.Now.Year}",
 					new Uri("https://agilitycms.com"),
-					"agility-posts",
+					"https://agilitycms.com/posts.xml",
 					new DateTimeOffset(lastUpdate));
 
 				feed.ImageUrl = new Uri("https://static.agilitycms.com/favicon/favicon-128.png");
+				feed.Links.Add(new SyndicationLink(
+					new Uri("https://agilitycms.com/posts.xml")
+				));
+
 				//feed.Authors.Add(new SyndicationPerson("someone@microsoft.com"));
 				feed.Categories.Add(new SyndicationCategory("News"));
 				feed.Categories.Add(new SyndicationCategory("Blog"));
+
 
 				//feed.Description = new TextSyndicationContent("This is a sample that illistrates how to expose a feed using ATOM with WCF");
 
@@ -84,6 +89,9 @@ namespace Website.Middleware
 					string url = post.ResolveDynamicPageItemUrl();
 					UriBuilder ub = new UriBuilder(Request.Scheme, Request.Host.Host, Request.Host.Port.GetValueOrDefault(80), url);
 
+					UriBuilder ub2 = new UriBuilder(Request.Scheme, Request.Host.Host,
+						Request.Host.Port.GetValueOrDefault(80),
+						$"/resources/posts/post-details?ContentID={post.ContentID}");
 
 
 					// Create item
@@ -91,7 +99,7 @@ namespace Website.Middleware
 						post.Title,
 						post.Excerpt,
 						ub.Uri,
-						$"agility-posts-{post.ContentID}",
+						ub2.Uri.ToString(),
 						post.Date
 					);
 
@@ -99,7 +107,17 @@ namespace Website.Middleware
 
 					if (post.PostImage != null)
 					{
-						item.ElementExtensions.Add(new XElement("image", post.PostImage.URL));
+
+						var contentType = "image/jpeg";
+						if (post.PostImage.URL.EndsWith(".png", StringComparison.CurrentCultureIgnoreCase))
+						{
+							contentType = "image/png";
+						}
+
+						item.Links.Add(SyndicationLink.CreateMediaEnclosureLink(
+							new Uri(post.PostImage.URL),
+							contentType,
+							0));
 					}
 
 
@@ -115,7 +133,7 @@ namespace Website.Middleware
 						var author = post.Author.GetByID(post.AuthorID);
 						if (author != null)
 						{
-							item.Contributors.Add(new SyndicationPerson(author.Title, author.Title, null));
+							item.Authors.Add(new SyndicationPerson(null, author.Title, null));
 						}
 					}
 
@@ -128,15 +146,17 @@ namespace Website.Middleware
 
 				var atomFeed = new Atom10FeedFormatter(feed);
 
+				Encoding utf8noBOM = new UTF8Encoding(false);
 
-
-
-
-
-				using (StringWriter sw = new StringWriter())
+				using (StringWriter sw = new StringWriterWithEncoding(utf8noBOM))
 				{
 
-					using (XmlWriter xmlWriter = XmlWriter.Create(sw, new XmlWriterSettings() { Async = true, Indent = true }))
+					using (XmlWriter xmlWriter = XmlWriter.Create(sw, new XmlWriterSettings()
+					{
+						Async = true,
+						Indent = true,
+						Encoding = utf8noBOM
+					}))
 					{
 						atomFeed.WriteTo(xmlWriter);
 
@@ -225,6 +245,23 @@ namespace Website.Middleware
 			return relativeUrl;
 		}
 
+	}
+
+	public sealed class StringWriterWithEncoding : StringWriter
+	{
+		private readonly Encoding encoding;
+
+		public StringWriterWithEncoding() { }
+
+		public StringWriterWithEncoding(Encoding encoding)
+		{
+			this.encoding = encoding;
+		}
+
+		public override Encoding Encoding
+		{
+			get { return encoding; }
+		}
 	}
 
 	public static class RSSExtensions
