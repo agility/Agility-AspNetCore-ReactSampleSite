@@ -7,10 +7,11 @@ class LogoListing extends React.Component {
 
         const renderLogo = (logo) => {
             //render one tab
+
             return (
 
                 <li className="work-item" key={logo.key}>
-                    <a href={logo.url.href} target={logo.url.target}><img src={logo.image.url} alt={logo.image.label} /></a>
+                    <a href={logo.url.href} target={logo.url.target}><img src={logo._Logo.url} alt={logo._Logo.label} /></a>
                 </li>
 
             );
@@ -83,7 +84,7 @@ class LogoListing extends React.Component {
                         </ul>
                     </div>
                 }
-                
+
                 {
                     (this.props.primaryButton || this.props.secondaryButton) &&
                     <div className="buttons">
