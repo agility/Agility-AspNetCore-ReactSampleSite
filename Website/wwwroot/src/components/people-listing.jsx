@@ -7,7 +7,7 @@ class PeopleListing extends React.Component {
     render() {
 
         const team = this.props.items.map(function (item) {
-            return <PeopleListingContent item={item}/>
+            return <PeopleListingContent item={item} />
         })
 
         return (
@@ -103,11 +103,11 @@ class PeopleListingContent extends React.Component {
 
         return (
             <div className="team-item">
-                <div class="row-my jc-sb">
+                <div className="row-my jc-sb">
                     <div className="col-md-4">
                         <div className="image">
-                            { this.props.item.headshot && this.props.item.headshot != null && this.props.item.headshot.url
-                                ? <img src={this.props.item.headshot.url} alt=""/>
+                            {this.props.item.headshot && this.props.item.headshot != null && this.props.item.headshot.url
+                                ? <img src={this.props.item.headshot.url} alt="" />
                                 : null
                             }
                         </div>
@@ -116,7 +116,7 @@ class PeopleListingContent extends React.Component {
                         <div className="content">
                             <h4 className="h4">{this.props.item.fullName}</h4>
                             <em>{this.props.item.jobTitle}</em>
-                            <div className="text" dangerouslySetInnerHTML={{__html: this.props.item.summary}}></div>
+                            <div className="text" dangerouslySetInnerHTML={{ __html: this.props.item.summary }}></div>
                         </div>
                     </div>
                 </div>

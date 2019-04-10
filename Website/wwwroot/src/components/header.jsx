@@ -21,7 +21,7 @@ class Header extends React.Component {
             //check for preview bar
             //HACK
             var previewBar = document.getElementById('pnlAgilityStatusBar');
-            if(previewBar) {
+            if (previewBar) {
                 document.getElementsByClassName('header-container')[0].classList.add('is-preview');
             }
         }
@@ -86,7 +86,9 @@ class Header extends React.Component {
 
                         {renderMenu(this.props.menu, 0)}
 
-                        <a href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</a>
+                        {this.props.primaryButton && this.props.primaryButton.href &&
+                            <a href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</a>
+                        }
                     </div>
                 </header>
                 <div className="drop-shadow"></div>

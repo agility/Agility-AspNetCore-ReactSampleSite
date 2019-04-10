@@ -42,7 +42,7 @@ class LatestBlogPostsContent extends React.Component {
 
 
         return (
-            <div class="col-md-4">
+            <div className="col-md-4">
                 <div className="blog-item">
                     {this.props.item.image != null &&
                         <div className="image"><a href={this.props.item.url} >

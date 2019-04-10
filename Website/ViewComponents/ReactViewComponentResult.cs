@@ -42,9 +42,8 @@ namespace Website.ViewComponents
 				var component = React.ReactEnvironment.Current.CreateComponent(this.ComponentName, this.Props, clientOnly: this.ClientOnly, serverOnly: this.ServerOnly);
 				component.ContainerTag = !string.IsNullOrWhiteSpace(this.ContainerTag) ? this.ContainerTag : "div";
 				component.ContainerClass = this.ContainerCssClass;
-				//HACK: disable SSR for now
-				//return component.RenderHtml(this.ClientOnly, this.ServerOnly);
-				return component.RenderHtml(true, false);
+				return component.RenderHtml(this.ClientOnly, this.ServerOnly);
+
 			}
 			catch (Exception ex)
 			{

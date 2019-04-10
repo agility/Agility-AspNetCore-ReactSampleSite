@@ -23,14 +23,17 @@ class HeaderSearch extends React.Component {
             take: 10,
             skip: 0
         }
+        this.abortController = null;
 
-        this.abortController = new AbortController();
     }
 
 
     componentDidMount() {
         //dropdown Menu
+
         if (document) {
+            this.abortController = new AbortController();
+
             //search    
             document.addEventListener('keydown', function (event) {
                 var key = event.key;
@@ -42,7 +45,7 @@ class HeaderSearch extends React.Component {
         }
     }
 
-    componentWillMount(){
+    componentWillMount() {
         this.timer = null;
     }
 
@@ -50,14 +53,17 @@ class HeaderSearch extends React.Component {
         this.loadResults(this.state.query, true);
     }
 
-    loadResults(query, loadingMore){
+    loadResults(query, loadingMore) {
+
+
+
         let skip = loadingMore ? this.state.skip + this.state.take : 0;
         let formData = new FormData();
         formData.append('query', query);
         formData.append('top', this.state.take);
         formData.append('skip', skip);
 
-        if(loadingMore){
+        if (loadingMore) {
             this.setState({
                 loading: true,
                 query: query,
@@ -75,7 +81,7 @@ class HeaderSearch extends React.Component {
 
         this.abortController.abort();
         this.abortController = new AbortController();
-        
+
         fetch('https://search.agilitycms.com/search', {
             method: 'post',
             body: formData,
@@ -86,60 +92,60 @@ class HeaderSearch extends React.Component {
                 'as-AuthKey': '35qIX1Ky0nQL1o9WTiGaVlZSy59P_6KB-teYWGz02Q4'
             }
         }).then(response => response.json())
-        .then(data => {
-            if(data.IsError){
-                //something went wrong
+            .then(data => {
+                if (data.IsError) {
+                    //something went wrong
+                    this.setState({
+                        loading: false,
+                        count: 0
+                    })
+                } else if (data.ResponseData && data.ResponseData.Results) {
+                    //render results
+                    this.setState(prevState => ({
+                        loading: false,
+                        count: data.ResponseData.Count,
+                        results: loadingMore ? prevState.results.concat(
+                            data.ResponseData.Results.map(function (result) {
+                                return {
+                                    title: result.Title,
+                                    text: result.Description || result.Highlight,
+                                    category: result.Category,
+                                    href: result.Url
+                                }
+                            })
+                        ) :
+                            data.ResponseData.Results.map(function (result) {
+                                return {
+                                    title: result.Title,
+                                    text: result.Description || result.Highlight,
+                                    category: result.Category,
+                                    href: result.Url
+                                }
+                            })
+                    }));
+                } else {
+                    //no results
+                    this.setState({
+                        count: 0,
+                        loading: false
+                    })
+                }
+            }).catch(err => {
+                if (err.name === "AbortError") {
+                    console.warn('aborted');
+                    return;
+                }
+
                 this.setState({
                     loading: false,
                     count: 0
                 })
-            } else if(data.ResponseData && data.ResponseData.Results) {
-                //render results
-                this.setState(prevState =>({
-                    loading: false,
-                    count: data.ResponseData.Count,
-                    results: loadingMore ? prevState.results.concat(
-                        data.ResponseData.Results.map(function(result){
-                            return {
-                                title: result.Title,
-                                text: result.Description || result.Highlight,
-                                category: result.Category,
-                                href: result.Url
-                            }
-                        })
-                    ) :
-                    data.ResponseData.Results.map(function(result){
-                        return {
-                            title: result.Title,
-                            text: result.Description || result.Highlight,
-                            category: result.Category,
-                            href: result.Url
-                        }
-                    })
-                }));
-            } else {
-                //no results
-                this.setState({
-                    count: 0,
-                    loading: false
-                })
-            }
-        }).catch(err => {
-            if(err.name === "AbortError"){
-                console.warn('aborted');
-                return;
-            }
 
-            this.setState({
-                loading: false,
-                count: 0
-            })
-
-            console.warn("An error occurred while loading data...", err);
-        });
+                console.warn("An error occurred while loading data...", err);
+            });
     }
 
-    handleOnChange(event){
+    handleOnChange(event) {
         var self = this;
 
         var query = event.target.value;
@@ -149,12 +155,12 @@ class HeaderSearch extends React.Component {
             loading: false
         }));
 
-        
-        if(query.length >= 3){
-        
+
+        if (query.length >= 3) {
+
             clearTimeout(self.timer);
-    
-            self.timer = setTimeout(function(){
+
+            self.timer = setTimeout(function () {
                 self.loadResults(query);
             }, 300);
 
@@ -170,14 +176,17 @@ class HeaderSearch extends React.Component {
     render() {
         var self = this;
 
+
         var results = this.state.results.map(function (res) {
             return <HeaderSearchResult result={res} />
         });
 
         function hideSearch() {
-            var searchFrame = document.querySelector('.search-frame');
-            searchFrame.classList.toggle('open');
-            document.querySelector('html').classList.toggle('search-open');
+            if (document) {
+                var searchFrame = document.querySelector('.search-frame');
+                searchFrame.classList.toggle('open');
+                document.querySelector('html').classList.toggle('search-open');
+            }
         }
 
         return (
@@ -193,7 +202,7 @@ class HeaderSearch extends React.Component {
                 <div className="search-result">
                     <div className="result-inner">
                         <div className="results-quant">
-                            { this.state.loading && this.state.query &&
+                            {this.state.loading && this.state.query &&
                                 <p>Searching for {this.state.query}...</p>
                             }
 
@@ -229,22 +238,23 @@ class HeaderSearch extends React.Component {
                     </div>
                 </div>
             </div>
-        )
+        );
+
     }
 }
 
 class HeaderSearchResult extends React.Component {
     render() {
-        
+
         //var category = this.props.result.category;
         //TODO: implement categories for real
         var category = null;
-        if(category == null || category.length == 0) {
+        if (category == null || category.length == 0) {
             category = "Page";
         }
         var categoryClass = 'label ' + category.toLowerCase();
 
-        
+
 
         return (
             <div className="search-item d-flex ai-center jc-sb">

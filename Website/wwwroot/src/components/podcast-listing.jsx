@@ -44,7 +44,7 @@ class PodcastListedItem extends React.Component {
                 <div className="content">
                     <h3 className="h3"><a href={this.props.item.url}>{this.props.item.title}</a></h3>
                     <div className="author">
-                        <h5 class="h5">Episode #{this.props.item.episodeNumber}</h5>
+                        <h5 className="h5">Episode #{this.props.item.episodeNumber}</h5>
                     </div>
                     <div className="text"><p>{this.props.item.excerpt}</p></div>
                     <span className="date">{moment(this.props.item.date).format("LL")}</span>

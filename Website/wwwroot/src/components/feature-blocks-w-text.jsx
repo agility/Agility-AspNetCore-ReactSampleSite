@@ -64,7 +64,7 @@ class FeatureBlocksWithText extends React.Component {
                                 <div className="features-left">
                                     <h3>{this.props.sideTitle}</h3>
                                     <div className="text" dangerouslySetInnerHTML={{ __html: this.props.sideBody }} />
-                                    <a class="btn" href={this.props.sideLink.href} target={this.props.sideLink.target}>{this.props.sideLink.text}</a>
+                                    <a className="btn" href={this.props.sideLink.href} target={this.props.sideLink.target}>{this.props.sideLink.text}</a>
                                 </div>
                             </div>
                             <div className="col-md-8">

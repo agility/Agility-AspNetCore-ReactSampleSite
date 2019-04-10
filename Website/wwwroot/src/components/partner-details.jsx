@@ -10,7 +10,7 @@ class PartnerDetails extends React.Component {
         var bgColor = this.props.bgColor;
         const metrics = this.props.metrics.map(function (item) {
             return (
-                <div class="metrics-item" style={{ color: bgColor }}>
+                <div className="metrics-item" style={{ color: bgColor }}>
                     <h4 className="h4" dangerouslySetInnerHTML={{ __html: item.value }}></h4>
                     <hr style={{ backgroundColor: bgColor }} />
                     <span>{item.title}</span>
