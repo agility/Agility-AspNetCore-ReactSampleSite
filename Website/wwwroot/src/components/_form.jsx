@@ -246,10 +246,10 @@ class Form extends React.Component {
 		if (this.state.isError) {
 			errorMessage = this._renderErrorMessage();
 		}
-
-		let btnClass = "btn " + (this.state.isSubmitting ? "submitting" : "");
+		
+		let btnClass = props.btnStyles + (this.state.isSubmitting ? " submitting" : "");
 		if (this.state.isSubmitting) {
-			btnClass += "submitting";
+			btnClass += " submitting";
 			classNames.push("submitting");
 		}
 

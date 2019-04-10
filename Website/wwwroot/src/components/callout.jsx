@@ -5,9 +5,9 @@ import './callout.scss'
 class Callout extends React.Component {
 
     render() {
-        var isPrimaryTheme = this.props.theme === 'primary';
-        var calloutClasses = 'features p-w callout' + (!isPrimaryTheme ? ' callout-secondary' : '');
-        var buttonClasses = 'btn' + (isPrimaryTheme ? ' btn-secondary' : '');
+        var isPrimaryColor = this.props.theme === 'primary';
+        var calloutClasses = 'features p-w callout' + (!isPrimaryColor ? ' callout-secondary' : '');
+        var buttonClasses = 'btn' + (!isPrimaryColor ? ' btn-secondary' : '');
 
         return (
 

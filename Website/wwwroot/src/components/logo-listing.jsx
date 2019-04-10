@@ -7,11 +7,14 @@ class LogoListing extends React.Component {
 
         const renderLogo = (logo) => {
             //render one tab
-
             return (
 
                 <li className="work-item" key={logo.key}>
-                    <a href={logo.url.href} target={logo.url.target}><img src={logo._Logo.url} alt={logo._Logo.label} /></a>
+                    <a href={logo.url.href} target={logo.url.target}>
+                        {logo.image && 
+                        <img src={logo.image.url} alt={logo.image.label} />
+                        }
+                    </a>
                 </li>
 
             );
