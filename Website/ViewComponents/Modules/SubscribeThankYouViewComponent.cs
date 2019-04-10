@@ -21,13 +21,10 @@ namespace Website.ViewComponents.Modules
 					Html = module.TextBlob
 				};
 
-				// if (Request.Query["subscribed"] != "true")
-				// {
-				// 	viewModel = new
-				// 	{
-				// 		Html = string.Empty
-				// 	};
-				// }
+				if (Request.Query["subscribed"] != "true")
+				{
+					return Content(string.Empty);
+				}
 
 
 				return new ReactViewComponentResult("Components.RichText", viewModel)
