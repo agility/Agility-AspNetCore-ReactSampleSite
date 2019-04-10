@@ -12,7 +12,8 @@ class Footer extends React.Component {
 
 
         this.state = {
-            isSubmitting: false
+            isSubmitting: false,
+            subscribeButtonLabel: this.props.subscribeButtonLabel
         };
 
         this.submitHandler = this.submitHandler.bind(this);
@@ -37,7 +38,9 @@ class Footer extends React.Component {
             data[input.name] = input.value;
         });
 
-        this.setState({ isSubmitting: true });
+        if (!data["email"]) return;
+
+        this.setState({ isSubmitting: true, subscribeButtonLabel: "Subscribing..." });
 
         PostUtil.postData(
             this.props.subscribePOSTUrl,
@@ -46,7 +49,7 @@ class Footer extends React.Component {
             location.href = this.props.subscribeRedirect;
         }).catch(err => {
 
-            this.setState({ isSubmitting: false });
+            this.setState({ isSubmitting: false, subscribeButtonLabel: this.props.subscribeButtonLabel });
         });
 
     }
@@ -79,7 +82,7 @@ class Footer extends React.Component {
 
         const outputBottomLinks = (lst) => {
             let links = [];
-            if(!lst || lst.length == 0) return null;
+            if (!lst || lst.length == 0) return null;
 
             lst.forEach(item => {
                 links.push(
@@ -124,8 +127,8 @@ class Footer extends React.Component {
                             <span>{this.props.subscribeTitle}</span>
                             <p>{this.props.subscribeDescription}</p>
                             <form onSubmit={this.submitHandler} action="" className="foter-subscribe-form">
-                                <input type="email" placeholder={this.props.subscribeEmailPlaceholder} name="email" />
-                                <input type="submit" placeholder={this.props.subscribeButtonLabel} />
+                                <input type="email" placeholder={this.props.subscribeEmailPlaceholder} name="email" disabled={this.state.isSubmitting} />
+                                <input type="submit" value={this.state.subscribeButtonLabel} />
                                 <input type="hidden" name="_autopilot_session_id" />
                             </form>
                         </div>

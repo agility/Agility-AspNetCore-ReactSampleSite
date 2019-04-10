@@ -32,6 +32,7 @@ namespace Website.ViewComponents.Modules
                 }
 
                 var events = module.Events.Items(filter).Select(i => new { 
+                    Key = i.ContentID,
                     Title = i.Title,
                     SubTitle = i.SubTitle,
                     Organizer = (i.Organizer.GetByID(i.OrganizerID) != null ? i.Organizer.GetByID(i.OrganizerID).ToFrontendProps() : null),

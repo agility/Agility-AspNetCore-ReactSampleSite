@@ -8,7 +8,7 @@ class ComunityEvents extends React.Component {
     render() {
 
         var currentDate = new Date();
-        var currentMonth = currentDate.getMonth()+1;
+        var currentMonth = currentDate.getMonth() + 1;
         var currentDay = currentDate.getDate();
 
         const registerLabel = this.props.registerLabel;
@@ -16,7 +16,7 @@ class ComunityEvents extends React.Component {
         const backLabel = this.props.backLabel;
 
         const comunityEvents = this.props.items.map(function (item) {
-            return <ComunityEventsContent item={item} registerLabel={registerLabel} viewDetailsLabel={viewDetailsLabel} backLabel={backLabel} curMonth={currentMonth} curDay={currentDay}/>
+            return <ComunityEventsContent item={item} key={item.key} registerLabel={registerLabel} viewDetailsLabel={viewDetailsLabel} backLabel={backLabel} curMonth={currentMonth} curDay={currentDay} />
         })
 
         return (
@@ -107,13 +107,13 @@ class ComunityEventsContent extends React.Component {
             }
         }
 
- 
+
         return (
             <div className="col-md-4">
                 <div className={itemClass} onClick={rotateEvents}>
                     <div className="item-front">
                         <div className="image">
-                            <img src={this.props.item.thumbnail.url} alt=""/>
+                            <img src={this.props.item.thumbnail.url} alt="" />
                             <div className="passed-label"><span>passed</span></div>
                         </div>
                         <div className="front-date"><p><span>{day}</span>{month}</p></div>
@@ -121,30 +121,30 @@ class ComunityEventsContent extends React.Component {
                             <h4 className="h4">{this.props.item.title}</h4>
                             <p className="front-content">{this.props.item.subTitle}</p>
                             <div className="adres">
-                                <img src="/dist/img/location.svg" alt=""/><span>{this.props.item.address}</span>
+                                <img src="/dist/img/location.svg" alt="" /><span>{this.props.item.address}</span>
                             </div>
-                            <a href="" className="arrow-button"><span>{this.props.viewDetailsLabel}</span><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt=""/></a>
+                            <a href="" className="arrow-button"><span>{this.props.viewDetailsLabel}</span><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt="" /></a>
                         </div>
                     </div>
                     <div className="item-back">
                         <div className="title">
                             <div className="title-img">
-                                <img src={this.props.item.organizer.image.url} alt=""/>
+                                <img src={this.props.item.organizer.image.url} alt="" />
                             </div>
                             <h5 className="h5">{this.props.item.organizer.title}</h5>
                         </div>
                         <div className="inner-content">
                             <div className="date-back">
-                                <img src="/dist/img/calendar.svg" alt=""/><span>{dateText}</span>
+                                <img src="/dist/img/calendar.svg" alt="" /><span>{dateText}</span>
                             </div>
                             <div className="adres">
-                                <img src="/dist/img/location.svg" alt=""/><span>{this.props.item.address}</span>
+                                <img src="/dist/img/location.svg" alt="" /><span>{this.props.item.address}</span>
                             </div>
                             <p>{this.props.item.description}</p>
-                            <a class="btn" href={this.props.item.externalLink.href} target={this.props.item.externalLink.target} title={this.props.item.externalLink.title}>{this.props.registerLabel}</a>
+                            <a className="btn" href={this.props.item.externalLink.href} target={this.props.item.externalLink.target} title={this.props.item.externalLink.title}>{this.props.registerLabel}</a>
                             <br />
-                            <a href="" className="arrow-button"><span>{this.props.backLabel}</span><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt=""/></a>
-                            
+                            <a href="" className="arrow-button"><span>{this.props.backLabel}</span><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt="" /></a>
+
                         </div>
                     </div>
                 </div>

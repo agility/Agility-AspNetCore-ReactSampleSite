@@ -6,8 +6,8 @@ const isStatic = process.env.NODE_ENV === 'static';
 
 module.exports = {
   entry: {
-      server: './src/_server.js',
-      client: './src/_client.js'       
+    server: './src/_server.js',
+    client: './src/_client.js'
   },
   output: {
     path: path.resolve(__dirname, './dist'),
@@ -16,33 +16,33 @@ module.exports = {
   },
   module: {
     rules: [{
-        test: /\.css$/,
-        loader: 'style-loader!css-loader'
-      },
-      { 
-          test: /\.scss$/,
-            use: [
-              devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
-              'css-loader',
-              'sass-loader'
-        ]
-      },
-      {
-        test: /\.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.(png|jpg|gif|svg)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[ext]?[hash]'
-        }
-      },
-      {
-        test: /\.txt$/,
-        use: 'raw-loader' 
+      test: /\.css$/,
+      loader: 'style-loader!css-loader'
+    },
+    {
+      test: /\.scss$/,
+      use: [
+        devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
+        'css-loader',
+        'sass-loader'
+      ]
+    },
+    {
+      test: /\.jsx?$/,
+      loader: 'babel-loader',
+      exclude: /node_modules/
+    },
+    {
+      test: /\.(png|jpg|gif|svg)$/,
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]?[hash]'
       }
+    },
+    {
+      test: /\.txt$/,
+      use: 'raw-loader'
+    }
     ]
   },
   resolve: {
@@ -54,7 +54,7 @@ module.exports = {
   devtool: '#eval-source-map'
 }
 
-if(isStatic) {
+if (isStatic) {
   module.exports.entry = {
     static: './src/static/index.js'
   }
@@ -65,18 +65,18 @@ if(isStatic) {
   }
 } else {
   //running with backend
-  module.exports.devServer =  {
-      historyApiFallback: true,
-      noInfo: true,
-      overlay: true,
-      proxy: {
-        '*': {
-          target: 'https://localhost:5001',
-          changeOrigin: true,
-          secure: false
-        }
+  module.exports.devServer = {
+    historyApiFallback: true,
+    noInfo: true,
+    overlay: true,
+    proxy: {
+      '*': {
+        target: 'https://localhost:5001',
+        changeOrigin: true,
+        secure: false
       }
     }
+  }
 }
 
 

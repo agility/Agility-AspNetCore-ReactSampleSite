@@ -11,10 +11,12 @@ class Hamburger extends React.Component {
 
 
     componentDidMount() {
+        if (!document) return;
+
         var menu = document.querySelector('.mobile-menu-inner .has-children');
         menu.onclick = function (e) {
             //don't toggle again if we've just clicked a child item anchor are going to load a new page
-            if(e.target.className == "sub-menu-a") return;
+            if (e.target.className == "sub-menu-a") return;
             this.classList.toggle('open');
         };
 
@@ -65,7 +67,7 @@ class Hamburger extends React.Component {
             const valueSetter = Object.getOwnPropertyDescriptor(element, 'value').set;
             const prototype = Object.getPrototypeOf(element);
             const prototypeValueSetter = Object.getOwnPropertyDescriptor(prototype, 'value').set;
-            
+
             if (valueSetter && valueSetter !== prototypeValueSetter) {
                 prototypeValueSetter.call(element, value);
             } else {
@@ -78,9 +80,9 @@ class Hamburger extends React.Component {
             var searchFrame = document.querySelector('.search-frame');
             searchFrame.classList.toggle('open');
             document.querySelector('html').classList.toggle('search-open');
-            
+
             var searchInput = document.getElementById('search-input')
- 
+
             setNativeValue(searchInput, '');
             searchInput.dispatchEvent(new Event('input', { bubbles: true }));
 
@@ -91,7 +93,7 @@ class Hamburger extends React.Component {
 
         const renderMobileMenu = () => {
             let links = [];
-            
+
             const menu = this.props.menu;
             if (!menu || !menu.length || menu.length == 0) return null;
 
@@ -99,12 +101,12 @@ class Hamburger extends React.Component {
             menu.forEach(item => {
                 let link = null;
                 const hasChildren = item.children != null && item.children.length > 0;
-                if(hasChildren) {
+                if (hasChildren) {
                     const children = item.children.map(function (child) {
                         return <li key={child.key} className="sub-menu-inner"><a className="sub-menu-a" href={child.url} target={child.target}>{child.text}</a></li>;
                     });
-            
-                    link = 
+
+                    link =
                         <li key={item.key} className="mobile-menu-li has-children">
                             <a href={item.url} target={item.target} className="mobile-menu-a">{item.text}</a>
                             <span className="sub-menu-icon">
@@ -117,7 +119,7 @@ class Hamburger extends React.Component {
                             </div>
                         </li>;
                 } else {
-                    link = 
+                    link =
                         <li key={item.key} className="mobile-menu-li">
                             <a href={item.url} target={item.target} className="mobile-menu-a">{item.text}</a>
                         </li>;
@@ -131,8 +133,8 @@ class Hamburger extends React.Component {
 
             this.props.preHeaderLinks.forEach(item => {
                 const link = <li key={item.key} className="mobile-menu-li">
-                                <a href={item.url.href} target={item.url.target} className="mobile-menu-a">{item.url.text}</a>
-                            </li>;
+                    <a href={item.url.href} target={item.url.target} className="mobile-menu-a">{item.url.text}</a>
+                </li>;
                 preHeaderLinks.push(link);
             })
 
@@ -141,7 +143,7 @@ class Hamburger extends React.Component {
                     {links}
                     {preHeaderLinks}
                 </ul>
-                );
+            );
         };
 
         return (
@@ -152,7 +154,7 @@ class Hamburger extends React.Component {
 
                     <div className="inner">
                         <div className="mobile-logo">
-                            {this.props.mobileLogo && 
+                            {this.props.mobileLogo &&
                                 <a href="/"><img src={this.props.mobileLogo.url} alt={this.props.mobileLogo.label} /></a>
                             }
                         </div>
