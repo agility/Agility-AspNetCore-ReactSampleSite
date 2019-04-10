@@ -7,7 +7,7 @@ class FAQs extends React.Component {
     render() {
 
         const faqs = this.props.items.map(function (item) {
-            return <FaqsContent item={item} />
+            return <FaqsContent key={item.key} item={item} />
         });
 
         return (

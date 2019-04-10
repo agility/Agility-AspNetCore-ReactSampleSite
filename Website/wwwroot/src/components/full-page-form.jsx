@@ -16,7 +16,9 @@ class FullPageForm extends React.Component {
 
         var pageBg = colourObj.pageBg;
         var textColor = colourObj.textColor;
-        var btnStyles = { backgroundColor: colourObj.btnBGColor, color: colourObj.btnTextColour }
+        
+        var isPrimaryTheme = overallColour == 'yellow';
+        var btnStyles = 'btn' + (isPrimaryTheme ? ' btn-secondary' : '');
         var styles = { backgroundColor: pageBg, color: textColor }
 
 

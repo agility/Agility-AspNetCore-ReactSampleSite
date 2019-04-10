@@ -22,6 +22,7 @@ namespace Website.ViewModels
             PrimaryButton = module.PrimaryButton.ParseUrl();
             SecondaryButton = module.SecondaryButton.ParseUrl();
             Logos = module.Logos.SortByIDs(module.LogoIDs).Select(p => new LogoListedItemViewModel {
+                Key = p.ContentID,
                 Url = p.URL.ParseUrl(),
                 Image = p._Logo.ToImage()
             }).ToList();
@@ -34,6 +35,7 @@ namespace Website.ViewModels
             PrimaryButton = module.PrimaryButton.ParseUrl();
             SecondaryButton = module.SecondaryButton.ParseUrl();
             Logos = module.Partners.GetByIDs(module.PartnersIDs).Select(p => new LogoListedItemViewModel() {
+                Key = p.ContentID,
                 Url = new UrlField() {
                     Text = p.Title,
                     Href = p.ResolveDynamicPageItemUrl(),
@@ -52,6 +54,7 @@ namespace Website.ViewModels
     }
 
     public class LogoListedItemViewModel {
+        public object Key {get;set;}
         public UrlField Url {get;set;}
         public Image Image {get;set;}
     }

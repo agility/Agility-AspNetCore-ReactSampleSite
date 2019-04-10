@@ -78,6 +78,20 @@ p.intro {
   }
 }
 
+.btn-secondary {
+  background-color: $primaryColor;
+  color: #484b4d;
+  -webkit-box-shadow: 0 5px 35px 0 rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: 0 5px 35px 0 rgba(255, 255, 255, 0.25);
+  box-shadow: 0 5px 35px 0 rgba(255, 255, 255, 0.25);
+  &:hover {
+    -webkit-box-shadow: 0 5px 46px 0 rgba(255, 255, 255, 0.6);
+    -moz-box-shadow: 0 5px 46px 0 rgba(255, 255, 255, 0.6);
+    box-shadow: 0 5px 46px 0 rgba(255, 255, 255, 0.6);
+    background-color: $primaryColor;
+  }
+}
+
 p {
   word-break: break-word;
 }

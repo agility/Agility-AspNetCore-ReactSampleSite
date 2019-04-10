@@ -101,7 +101,7 @@ class Hamburger extends React.Component {
                 const hasChildren = item.children != null && item.children.length > 0;
                 if(hasChildren) {
                     const children = item.children.map(function (child) {
-                        return <li key={child.key} className="sub-menu-inner"><a class="sub-menu-a" href={child.url} target={child.target}>{child.text}</a></li>;
+                        return <li key={child.key} className="sub-menu-inner"><a className="sub-menu-a" href={child.url} target={child.target}>{child.text}</a></li>;
                     });
             
                     link = 
