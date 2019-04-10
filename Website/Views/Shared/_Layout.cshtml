@@ -49,9 +49,28 @@
 
 </head>
 <body>
+
+    <!-- Start: Header -->
+    <vc:header></vc:header>
+    <!-- End: Header -->
+
     <!-- Start: Inner Page Template Render -->
-    @RenderBody()
+    <main>
+        @RenderBody()
+    </main>
     <!-- End: Inner Page Template Render -->
+
+    <!-- Start: Footer -->
+    <vc:footer></vc:footer>
+    <!-- End: Footer -->
+
+    <!-- Start: Animated BG -->
+    <vc:animated-bg></vc:animated-bg>
+    <!-- End: Animated BG -->
+
+    <!-- Start: Custom Tracking Script -->
+    <vc:global-scripts></vc:global-scripts>
+    <!-- End: Custom Tracking Script -->
 
     <!-- Start: Agility Preview Bar + Bottom Page and Global Scripts -->
     @Html.RenderAgilityScripts()
