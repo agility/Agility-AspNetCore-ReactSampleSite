@@ -48,11 +48,13 @@
       display: block;
       cursor: pointer;
       margin-bottom: 14px;
-      transition: opacity 0.2s cubic-bezier(0.24, 0.35, 0, 1.01);
+      transition: all 0.2s ease-in-out;
 
       &:hover {
-        font-weight: 600;
+        //MOD: joelv - removed this to take away the text jump... switched to the text shadow below
+        //font-weight: 600; 
         color: $white;
+        text-shadow: #fff 1px 0px;
       }
     }
   }
