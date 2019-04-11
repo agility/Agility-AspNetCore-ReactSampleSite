@@ -174,7 +174,6 @@ class HeaderSearch extends React.Component {
     }
 
     render() {
-        console.log(this.props);
         var results = this.state.results.map(function (res) {
             return <HeaderSearchResult result={res} />
         });
@@ -257,15 +256,17 @@ class HeaderSearchResult extends React.Component {
 
 
         return (
-            <div className="search-item d-flex ai-center jc-sb">
+            <a href={this.props.result.href} className="search-item d-flex ai-center jc-sb">
+                
                 <div className="si-left">
-                    <h3 className="h3"><a href={this.props.result.href}>{this.props.result.title}</a></h3>
+                    <h3 className="h3">{this.props.result.title}</h3>
+                    <div className="url">{this.props.result.href}</div>
                     <div className="text" dangerouslySetInnerHTML={{ __html: this.props.result.text }}></div>
                 </div>
                 <div className="si-right">
                     <div className={categoryClass}>{category}</div>
                 </div>
-            </div>
+            </a>
         );
     }
 }
