@@ -174,9 +174,7 @@ class HeaderSearch extends React.Component {
     }
 
     render() {
-        var self = this;
-
-
+        console.log(this.props);
         var results = this.state.results.map(function (res) {
             return <HeaderSearchResult result={res} />
         });
@@ -233,7 +231,9 @@ class HeaderSearch extends React.Component {
                             } */}
                         </div>
                         <div className="result-footer">
-                            <p>Like our search? Get <a href="" target="_blank">Agility Search</a> for your website today.</p>
+                            {this.props.siteSearchSettings.searchProductPage &&
+                                <p>Like our search? Get <a href={this.props.siteSearchSettings.searchProductPage.href} target={this.props.siteSearchSettings.searchProductPage.target}>{this.props.siteSearchSettings.searchProductPage.text}</a> for your website today.</p>
+                            }
                         </div>
                     </div>
                 </div>

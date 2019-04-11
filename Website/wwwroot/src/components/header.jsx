@@ -11,6 +11,7 @@ class Header extends React.Component {
     }
 
     componentDidMount() {
+        
         //dropdown Menu
         if (document) {
             var hiddenParent = document.querySelector('.header-menu .has-children');
@@ -22,7 +23,10 @@ class Header extends React.Component {
             //HACK
             var previewBar = document.getElementById('pnlAgilityStatusBar');
             if (previewBar) {
-                document.getElementsByClassName('header-container')[0].classList.add('is-preview');
+                const header = document.getElementsByClassName('header-container')[0];
+                if(header) {
+                    header.classList.add('is-preview');
+                }
             }
         }
     }
@@ -73,7 +77,7 @@ class Header extends React.Component {
         return (
 
             <div className="header-container">
-                <HeaderSearch />
+                <HeaderSearch siteSearchSettings={this.props.siteSearchSettings} />
                 <SignIn preHeaderLinks={this.props.preHeaderLinks} preHeaderPrimaryButton={this.props.preHeaderPrimaryButton} />
                 <Hamburger {...this.props} />
                 <header className={headerClass}>
