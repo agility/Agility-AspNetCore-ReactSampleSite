@@ -127,7 +127,7 @@ class Footer extends React.Component {
                             <span>{this.props.subscribeTitle}</span>
                             <p>{this.props.subscribeDescription}</p>
                             <form onSubmit={this.submitHandler} action="" className="foter-subscribe-form">
-                                <input type="email" placeholder={this.props.subscribeEmailPlaceholder} name="email" disabled={this.state.isSubmitting} />
+                                <input type="email" placeholder={this.props.subscribeEmailPlaceholder} name="email" disabled={this.state.isSubmitting} required />
                                 <input type="submit" value={this.state.subscribeButtonLabel} />
                                 <input type="hidden" name="_autopilot_session_id" />
                             </form>
