@@ -83,18 +83,27 @@
       }
     }
 
+    li:nth-child(2) {
+      a {
+        margin-top: 3px;
+        margin-bottom: 11px;
+      }
+    }
+
+
     li {
       width: 50%;
       text-align: center;
 
       a {
         img {
-          transition: all 0.2s ease-out;
+          filter: invert(100%) grayscale(1);
+          transition: filter 0.2s ease-out;
         }
 
         &:hover {
           img {
-            filter: invert(100%) grayscale(1);
+            filter: brightness(0) invert(1);
           }
         }
       }
