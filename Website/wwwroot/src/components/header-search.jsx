@@ -191,7 +191,7 @@ class HeaderSearch extends React.Component {
             <div className="search-frame">
                 <div className="search-inner" onClick={hideSearch}></div>
                 <div className="search-form">
-                    <form action="">
+                    <form onSubmit={e => { e.preventDefault(); }}>
                         <input id="search-input" type="text" placeholder="Search" onChange={this.handleOnChange} />
                         <span className="search-ico"></span>
                         <span className="search-ico-mobile" onClick={hideSearch}></span>
