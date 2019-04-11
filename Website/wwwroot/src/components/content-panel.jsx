@@ -77,7 +77,7 @@ class ContentPanel extends React.Component {
                 <div className={this.props.enableBackgroundImage ? 'rotated-bg' : ''}></div>
 
                 <div className="container-my">
-                {this.props.imagePosition === 'left' &&
+                {this.props.imagePosition === 'left' && this.props.image &&
                     <div className="start-image left">
                         <img src={this.props.image.url + '?w=500&h=500'} alt={this.props.image.label} />
                     </div>
@@ -87,12 +87,16 @@ class ContentPanel extends React.Component {
                     <h1>{this.props.title}</h1>
                     <div dangerouslySetInnerHTML={{ __html: this.props.textBlob }} />
                     <div className="start-buttons">
+                        {this.props.primaryButton &&
                         <a href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</a>
+                        }
+                        {this.props.secondaryButton &&
                         <a href={this.props.secondaryButton.href} target={this.props.secondaryButton.target} className="btn-link">{this.props.secondaryButton.text} <span><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt="" /></span></a>
+                        }
                     </div>
                 </div>
 
-                {this.props.imagePosition === 'right' &&
+                {this.props.imagePosition === 'right' && this.props.image &&
                     <div className="start-image right">
                         <img src={this.props.image.url + '?w=500&h=500'} alt={this.props.image.label} />
                     </div>
