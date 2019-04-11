@@ -47,7 +47,8 @@ namespace Website.ViewComponents.Shared
 					preHeaderLinks = item.PreHeaderLinks.SortByIDs(item.PreHeaderLinkSortIDs).Select(a => a.ToFrontendProps()),
 					preHeaderPrimaryButton = item.PreHeaderPrimaryButton.ParseUrl(),
 					primaryButton = item.PrimaryButton.ParseUrl(),
-					menu = topLevelNodes
+					menu = topLevelNodes,
+					siteSearchSettings = new AgilityContentRepository<SiteSearchSettings>("SiteSearchSettings").Item(null).ToFrontendProps()
 				};
 
 				return new ReactViewComponentResult("Components.Header", viewModel);
