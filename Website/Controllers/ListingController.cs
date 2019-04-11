@@ -63,7 +63,7 @@ namespace Website.Controllers
 			}
 
 			var items = repo
-					.Items(rowFilter: filter, sort: "Date desc", take: take, skip: skip)
+					.Items(rowFilter: filter, sort: "ItemOrder", take: take, skip: skip)
 					.Select(p => p.GetListingViewModel());
 
 			var viewModel = new

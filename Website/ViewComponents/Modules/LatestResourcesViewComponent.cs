@@ -34,7 +34,7 @@ namespace Website.ViewComponents.Modules
 					leftButton = module.LeftButton.ParseUrl(),
 					leftBottomTitle = module.LeftTypeTitle,
 					items = module.Resources
-								  .Items(rowFilter: null, sort: "Date desc", take: 100, skip: 0)
+								  .Items(rowFilter: null, sort: "ItemOrder", take: 100, skip: 0)
 								  .Select(i => i.GetListingViewModel())
 				};
 
