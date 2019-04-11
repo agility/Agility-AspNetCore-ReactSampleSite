@@ -77,7 +77,7 @@ class ContentPanel extends React.Component {
                 <div className={this.props.enableBackgroundImage ? 'rotated-bg' : ''}></div>
 
                 <div className="container-my">
-                {this.props.imagePosition === 'left' &&
+                {this.props.imagePosition === 'left' && this.props.image &&
                     <div className="start-image left">
                         <img src={this.props.image.url + '?w=500&h=500'} alt={this.props.image.label} />
                     </div>
@@ -96,7 +96,7 @@ class ContentPanel extends React.Component {
                     </div>
                 </div>
 
-                {this.props.imagePosition === 'right' &&
+                {this.props.imagePosition === 'right' && this.props.image &&
                     <div className="start-image right">
                         <img src={this.props.image.url + '?w=500&h=500'} alt={this.props.image.label} />
                     </div>
