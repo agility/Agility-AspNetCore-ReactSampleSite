@@ -69,6 +69,8 @@
             }
           }
 
+        
+
           &.submit {
             .btn {
               background-color: #ffcb28;
@@ -100,7 +102,22 @@
 
   form.submitting {
     .form-item {
-      opacity: 0.75;
+      input, select {
+      
+        background-color: #e7e7e7;
+        color: #ccc;
+      }
+      div.select {
+        
+          background-color: #e7e7e7;
+          color: #ccc;
+          pointer-events: none;
+      }
+
+      .btn.submitting {
+        background-color: lighten(#4600a8, 25);
+        color: #ccc;
+      }
     }
   }
 

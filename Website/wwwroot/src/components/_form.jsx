@@ -246,8 +246,9 @@ class Form extends React.Component {
 		if (this.state.isError) {
 			errorMessage = this._renderErrorMessage();
 		}
-		
+
 		let btnClass = props.btnStyles + (this.state.isSubmitting ? " submitting" : "");
+		let submitMsg = this.state.isSubmitting ? "Submitting" : "Submit";
 		if (this.state.isSubmitting) {
 			btnClass += " submitting";
 			classNames.push("submitting");
@@ -265,7 +266,7 @@ class Form extends React.Component {
 				{this.props.children}
 
 				<div className="form-item submit">
-					<button type="submit" className={btnClass} disabled={this.state.isSubmitting} >Submit</button>
+					<button type="submit" className={btnClass} disabled={this.state.isSubmitting} >{submitMsg}</button>
 				</div>
 
 				{invalidMessage}
