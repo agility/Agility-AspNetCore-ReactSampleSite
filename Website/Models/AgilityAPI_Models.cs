@@ -1194,6 +1194,15 @@ namespace Website.AgilityModels
 	}
 	public partial class Module_SubmissionForm : Agility.Web.AgilityContentItem
 	{
+		private string __componentname = null;
+		private bool __componentname_set = false;
+		public virtual string ComponentName { get { if (!__componentname_set) __componentname = GetFieldValue<string>("ComponentName"); __componentname_set = true; return __componentname; } set { __componentname = value; __componentname_set = true;  } }
+		private string __backgroundcolour = null;
+		private bool __backgroundcolour_set = false;
+		public virtual string BackgroundColour { get { if (!__backgroundcolour_set) __backgroundcolour = GetFieldValue<string>("BackgroundColour"); __backgroundcolour_set = true; return __backgroundcolour; } set { __backgroundcolour = value; __backgroundcolour_set = true;  } }
+		private string __submissionposturl = null;
+		private bool __submissionposturl_set = false;
+		public virtual string SubmissionPOSTURL { get { if (!__submissionposturl_set) __submissionposturl = GetFieldValue<string>("SubmissionPOSTURL"); __submissionposturl_set = true; return __submissionposturl; } set { __submissionposturl = value; __submissionposturl_set = true;  } }
 		private string __leftcolumntitle = null;
 		private bool __leftcolumntitle_set = false;
 		public virtual string LeftColumnTitle { get { if (!__leftcolumntitle_set) __leftcolumntitle = GetFieldValue<string>("LeftColumnTitle"); __leftcolumntitle_set = true; return __leftcolumntitle; } set { __leftcolumntitle = value; __leftcolumntitle_set = true;  } }
@@ -1203,15 +1212,9 @@ namespace Website.AgilityModels
 		private string __rightcolumntitle = null;
 		private bool __rightcolumntitle_set = false;
 		public virtual string RightColumnTitle { get { if (!__rightcolumntitle_set) __rightcolumntitle = GetFieldValue<string>("RightColumnTitle"); __rightcolumntitle_set = true; return __rightcolumntitle; } set { __rightcolumntitle = value; __rightcolumntitle_set = true;  } }
-		private string __backgroundcolour = null;
-		private bool __backgroundcolour_set = false;
-		public virtual string BackgroundColour { get { if (!__backgroundcolour_set) __backgroundcolour = GetFieldValue<string>("BackgroundColour"); __backgroundcolour_set = true; return __backgroundcolour; } set { __backgroundcolour = value; __backgroundcolour_set = true;  } }
-		private string __submissionposturl = null;
-		private bool __submissionposturl_set = false;
-		public virtual string SubmissionPOSTURL { get { if (!__submissionposturl_set) __submissionposturl = GetFieldValue<string>("SubmissionPOSTURL"); __submissionposturl_set = true; return __submissionposturl; } set { __submissionposturl = value; __submissionposturl_set = true;  } }
-		private string __componentname = null;
-		private bool __componentname_set = false;
-		public virtual string ComponentName { get { if (!__componentname_set) __componentname = GetFieldValue<string>("ComponentName"); __componentname_set = true; return __componentname; } set { __componentname = value; __componentname_set = true;  } }
+		private string __submissioncopy = null;
+		private bool __submissioncopy_set = false;
+		public virtual string SubmissionCopy { get { if (!__submissioncopy_set) __submissioncopy = GetFieldValue<string>("SubmissionCopy"); __submissioncopy_set = true; return __submissioncopy; } set { __submissioncopy = value; __submissioncopy_set = true;  } }
 		private string __redirecturl = null;
 		private bool __redirecturl_set = false;
 		public virtual string RedirectURL { get { if (!__redirecturl_set) __redirecturl = GetFieldValue<string>("RedirectURL"); __redirecturl_set = true; return __redirecturl; } set { __redirecturl = value; __redirecturl_set = true;  } }

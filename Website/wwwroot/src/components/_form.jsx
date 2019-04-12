@@ -254,6 +254,10 @@ class Form extends React.Component {
 			classNames.push("submitting");
 		}
 
+		const createSubmissionCopyMarkup = () =>  {
+			return { __html: this.props.submissionCopy}
+		}
+
 		return (
 			<form
 				// {...props}
@@ -264,6 +268,8 @@ class Form extends React.Component {
 
 			>
 				{this.props.children}
+
+				<div className="rich-text" dangerouslySetInnerHTML={createSubmissionCopyMarkup()}></div>
 
 				<div className="form-item submit">
 					<button type="submit" className={btnClass} disabled={this.state.isSubmitting} >{submitMsg}</button>
