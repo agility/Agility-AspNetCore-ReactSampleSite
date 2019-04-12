@@ -265,6 +265,9 @@ namespace Website.AgilityModels
 		private string __title = null;
 		private bool __title_set = false;
 		public virtual string Title { get { if (!__title_set) __title = GetFieldValue<string>("Title"); __title_set = true; return __title; } set { __title = value; __title_set = true;  } }
+		private string __subtitle = null;
+		private bool __subtitle_set = false;
+		public virtual string Subtitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("Subtitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true;  } }
 		private Attachment __image = null;
 		public virtual Attachment Image { get {  if (__image == null) __image = GetAttachment("Image"); return __image; } set { __image = value; } }
 		private string __link = null;
@@ -1126,6 +1129,12 @@ namespace Website.AgilityModels
 	{
 		private IAgilityContentRepository<Podcast> __items = null;
 		public virtual IAgilityContentRepository<Podcast> Items { get { if (__items == null) __items = GetLinkedContent<Podcast>("Items"); return __items; } set { __items = value; }}
+		private string __sortorder = null;
+		private bool __sortorder_set = false;
+		public virtual string SortOrder { get { if (!__sortorder_set) __sortorder = GetFieldValue<string>("SortOrder"); __sortorder_set = true; return __sortorder; } set { __sortorder = value; __sortorder_set = true;  } }
+		private int __itemsperpage;
+		private bool __itemsperpage_set = false;
+		public virtual int ItemsPerPage { get { if (!__itemsperpage_set) __itemsperpage = GetFieldValue<int>("ItemsPerPage"); __itemsperpage_set = true; return __itemsperpage; } set { __itemsperpage = value; __itemsperpage_set = true;  } }
 
 	}
 	public partial class Module_PodcastSubscribe : Agility.Web.AgilityContentItem
@@ -1181,6 +1190,22 @@ namespace Website.AgilityModels
 		private string __subtitle = null;
 		private bool __subtitle_set = false;
 		public virtual string SubTitle { get { if (!__subtitle_set) __subtitle = GetFieldValue<string>("SubTitle"); __subtitle_set = true; return __subtitle; } set { __subtitle = value; __subtitle_set = true;  } }
+
+	}
+	public partial class Module_Share : Agility.Web.AgilityContentItem
+	{
+		private string __sharelabel = null;
+		private bool __sharelabel_set = false;
+		public virtual string ShareLabel { get { if (!__sharelabel_set) __sharelabel = GetFieldValue<string>("ShareLabel"); __sharelabel_set = true; return __sharelabel; } set { __sharelabel = value; __sharelabel_set = true;  } }
+		private bool __facebook;
+		private bool __facebook_set = false;
+		public virtual bool Facebook { get { if (!__facebook_set) __facebook = GetFieldValue<bool>("Facebook"); __facebook_set = true; return __facebook; } set { __facebook = value; __facebook_set = true;  } }
+		private bool __twitter;
+		private bool __twitter_set = false;
+		public virtual bool Twitter { get { if (!__twitter_set) __twitter = GetFieldValue<bool>("Twitter"); __twitter_set = true; return __twitter; } set { __twitter = value; __twitter_set = true;  } }
+		private bool __linkedin;
+		private bool __linkedin_set = false;
+		public virtual bool LinkedIn { get { if (!__linkedin_set) __linkedin = GetFieldValue<bool>("LinkedIn"); __linkedin_set = true; return __linkedin; } set { __linkedin = value; __linkedin_set = true;  } }
 
 	}
 	public partial class Module_StayInTouch : Agility.Web.AgilityContentItem

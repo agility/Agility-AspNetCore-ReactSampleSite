@@ -56,6 +56,7 @@ import SectionHeading from './components/section-heading.jsx'
 import StayInTouchBox from './components/stay-in-touch-box.jsx'
 import ContactUs from './components/contact-us.jsx'
 import Blank from './components/blank.jsx'
+import Share from './components/share.jsx'
 
 
 global['Components'] = {
@@ -99,7 +100,8 @@ global['Components'] = {
   Footer,
   StayInTouchBox,
   AnimatedBg,
-  GlobalScripts
+  GlobalScripts,
+  Share
 }
 
 
