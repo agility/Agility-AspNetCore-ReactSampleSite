@@ -179,10 +179,12 @@ class HeaderSearch extends React.Component {
         });
 
         function hideSearch() {
+            
             if (document) {
                 var searchFrame = document.querySelector('.search-frame');
                 searchFrame.classList.toggle('open');
                 document.querySelector('html').classList.toggle('search-open');
+                document.querySelector('button.open-search').classList.toggle('close');
             }
         }
 
