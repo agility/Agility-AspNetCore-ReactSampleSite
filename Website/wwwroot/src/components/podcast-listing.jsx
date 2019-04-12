@@ -6,7 +6,7 @@ import moment from 'moment';
 class PodcastListing extends React.Component {
     constructor(props) {
         super(props)
-
+        
         this.loadMore = this.loadMore.bind(this);
         this.handleHistoryEvent = this.handleHistoryEvent.bind(this);
 
@@ -100,6 +100,9 @@ class PodcastListing extends React.Component {
             <div className="podcast-listing">
                 {podcasts}
 
+                {this.state.loadingMore &&
+                    <div><a className="btn" disabled> Loading... </a></div>
+                }
                 {!this.state.loadingMore &&
                     !this.state.noMoreData &&
                     this.state.podcasts &&
