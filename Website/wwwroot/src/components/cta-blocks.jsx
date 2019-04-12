@@ -46,6 +46,10 @@ class CtaBlock extends React.Component {
 
                         </div>
                         <p>{this.props.item.title}</p>
+                        {
+                            this.props.item.subtitle &&
+                            <p className="cta-subtitle">{this.props.item.subtitle}</p>
+                        }
                     </a>
                 </div>
             </div>

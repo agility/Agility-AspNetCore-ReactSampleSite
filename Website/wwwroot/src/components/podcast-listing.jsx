@@ -4,19 +4,108 @@ import './podcast-listing.scss'
 import moment from 'moment';
 
 class PodcastListing extends React.Component {
+    constructor(props) {
+        super(props)
+
+        this.loadMore = this.loadMore.bind(this);
+        this.handleHistoryEvent = this.handleHistoryEvent.bind(this);
+
+        this.state = {
+            podcasts: this.props.podcasts,
+            skip: this.props.podcasts.length,
+            take: this.props.itemsPerPage,
+            loadingMore: false,
+            totalCount: this.props.totalCount,
+            noMoreData: false,
+            refName: this.props.refName,
+            sortBy: this.props.sortBy
+        };
+    }
+
+    componentDidMount() {
+        this.handleHistoryEvent();
+    }
+
+    loadMore(event) {
+
+        event.preventDefault();
+
+        var url = "/Listing/Podcasts?sortBy=" + this.state.sortBy +"&refName=" + this.state.refName + "&skip=" + this.state.skip + "&take=" + this.state.take;
+
+        this.setState({ loadingMore: true });
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+
+                let noMore = false;
+                if (!data.podcasts || !data.podcasts.length || data.podcasts.length == 0) {
+                    noMore = true;
+                }
+
+                this.setState(prevState => ({
+                    podcasts: prevState.podcasts.concat(data.podcasts),
+                    loadingMore: false,
+                    skip: prevState.skip + data.podcasts.length,
+                    take: data.take,
+                    noMoreData: noMore
+                }));
+
+                //set the state in the browser in case we come back
+                window.history.replaceState(this.state, null);
+
+            }).catch(err => {
+                console.warn("An error occurred while loading more data...", err);
+                this.setState(prevState => ({
+                    loadingMore: false,
+                    noMoreData: true
+                }));
+            });
+
+        return false;
+    }
+
+    handleHistoryEvent() {
+        var self = this;
+
+        if (window != undefined
+            && window
+            && window.history
+            && window.history.state) {
+
+            //if we have some podcasts listed in the state, use them here
+            let newState = window.history.state;
+            if (newState.podcasts && newState.podcasts.length > 0) {
+
+                self.setState(prevState => ({
+                    podcasts: newState.podcasts,
+                    loadingMore: false,
+                    skip: newState.skip,
+                    take: newState.take,
+                    noMoreData: newState.noMoreData,
+                    totalCount: newState.totalCount,
+                    refName: newState.refName,
+                    sortBy: newState.sortBy
+                }));
+            }
+        }
+    }
 
     render() {
-        console.log(this.props)
-        var items = this.props.items.map(function (item, index) {
+        var podcasts = this.state.podcasts.map(function (item, index) {
             return <PodcastListedItem item={item} id={index} key={item.key} />
         });
 
         return (
             <div className="podcast-listing">
-                {items}
-                {/* <div className="load-more">
-                    <a href="#">Load more</a>
-                </div> */}
+                {podcasts}
+
+                {!this.state.loadingMore &&
+                    !this.state.noMoreData &&
+                    this.state.podcasts &&
+                    this.state.podcasts.length < this.state.totalCount &&
+                    <div className="load-more"><a href="#" onClick={this.loadMore} className="btn"> Load More</a></div>
+                }
             </div>
 
 

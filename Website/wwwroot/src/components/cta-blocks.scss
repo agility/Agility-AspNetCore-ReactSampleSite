@@ -41,11 +41,13 @@
   }
 
   .app-item {
-    margin-bottom: 32px;
     border-radius: 5px;
-    -webkit-box-shadow: 0 2px 27px 0 rgba(0, 0, 0, 0.05) {
-      box-shadow: 0 2px 27px 0 rgba(0, 0, 0, 0.05);
-    };
+    overflow: hidden;
+    height: 90%;
+    height: calc(100% - 32px);
+    padding-bottom:16px;
+    box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
 
     a {
@@ -72,10 +74,22 @@
     }
 
     p {
+      margin-top: 32px;
       font-size: 16px;
       line-height: 24px;
       font-family: "Muli-SemiBold", sans-serif;
       color: #2a3846;
+
+      &.cta-subtitle {
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 0;
+        color:#484b4d;
+
+        @media (max-width: 767px) {
+          margin-bottom: 16px;
+        }
+      }
     }
   }
 }

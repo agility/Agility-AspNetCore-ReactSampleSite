@@ -18,18 +18,20 @@ namespace Website.ViewComponents.Modules
 		{
 			return Task.Run<IViewComponentResult>(() =>
 			{
+				var sortBy = "Date " + (module.SortOrder == "asc" ? "ASC" : "DESC");
+				var podcasts = module.Items
+					.Items(null, sortBy, module.ItemsPerPage, 0, out int totalCount)
 
-				int postCount = 100;
-				var posts = module.Items
-					.Items(rowFilter: null, sort: null, take: postCount, skip: 0)
 					.Select(p => p.GetListingViewModel(240));
 
 				var viewModel = new
 				{
-					items = posts
-
+					podcasts,
+					itemsPerPage = module.ItemsPerPage,
+					totalCount,
+					refName = module.Items.ContentReferenceName,
+					sortBy
 				};
-
 
 				return new ReactViewComponentResult("Components.PodcastListing", viewModel);
 
