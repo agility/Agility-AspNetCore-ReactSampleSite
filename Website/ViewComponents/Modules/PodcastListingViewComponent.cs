@@ -21,8 +21,7 @@ namespace Website.ViewComponents.Modules
 				var sortBy = "Date " + (module.SortOrder == "asc" ? "ASC" : "DESC");
 				var podcasts = module.Items
 					.Items(null, sortBy, module.ItemsPerPage, 0, out int totalCount)
-
-					.Select(p => p.GetListingViewModel(240));
+					.Select(p => p.GetListingViewModel(240)).ToList();
 
 				var viewModel = new
 				{
@@ -33,7 +32,7 @@ namespace Website.ViewComponents.Modules
 					sortBy
 				};
 
-				return new ReactViewComponentResult("Components.PodcastListing", viewModel);
+				return new ReactViewComponentResult("Components.PodcastListing", viewModel) { ClientOnly = true};
 
 			});
 		}

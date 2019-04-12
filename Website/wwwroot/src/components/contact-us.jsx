@@ -35,6 +35,7 @@ class ContactUs extends React.Component {
                 conversionScript={this.props.conversionScript}
                 redirectURL={this.props.redirectURL}
                 postURL={this.props.submissionPOSTURL}
+                submissionCopy={this.props.submissionCopy}
             >
                 <FormField id="firstname" label="First Name">
                     <input id="firstname" className="changed" type="text" placeholder="First Name" required />

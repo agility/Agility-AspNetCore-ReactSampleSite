@@ -4,6 +4,7 @@ import { hot } from 'react-hot-loader/root'
 import ResponsiveImage from './responsive-image.jsx'
 import './post-details.scss'
 import RichText from './rich-text.jsx'
+import Share from './share.jsx'
 
 class PostDetails extends React.Component {
     render() {

@@ -1194,6 +1194,18 @@ namespace Website.AgilityModels
 	}
 	public partial class Module_Share : Agility.Web.AgilityContentItem
 	{
+		private string __sharelabel = null;
+		private bool __sharelabel_set = false;
+		public virtual string ShareLabel { get { if (!__sharelabel_set) __sharelabel = GetFieldValue<string>("ShareLabel"); __sharelabel_set = true; return __sharelabel; } set { __sharelabel = value; __sharelabel_set = true;  } }
+		private bool __facebook;
+		private bool __facebook_set = false;
+		public virtual bool Facebook { get { if (!__facebook_set) __facebook = GetFieldValue<bool>("Facebook"); __facebook_set = true; return __facebook; } set { __facebook = value; __facebook_set = true;  } }
+		private bool __twitter;
+		private bool __twitter_set = false;
+		public virtual bool Twitter { get { if (!__twitter_set) __twitter = GetFieldValue<bool>("Twitter"); __twitter_set = true; return __twitter; } set { __twitter = value; __twitter_set = true;  } }
+		private bool __linkedin;
+		private bool __linkedin_set = false;
+		public virtual bool LinkedIn { get { if (!__linkedin_set) __linkedin = GetFieldValue<bool>("LinkedIn"); __linkedin_set = true; return __linkedin; } set { __linkedin = value; __linkedin_set = true;  } }
 
 	}
 	public partial class Module_StayInTouch : Agility.Web.AgilityContentItem

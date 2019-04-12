@@ -106,6 +106,7 @@
     padding-bottom: 100px;
   }
 
+ 
   form.submitting {
     .form-item {
       input, select {
@@ -439,10 +440,39 @@
   }
 
   &.purple {
-    a {
-      color: $primaryColor;
-      
+    .form-left {
+      .rich-text p {
+        color: #fff;
+      }
+      a {
+        color: $primaryColor;
+      }
     }
+    .form-right {
+      a {
+        color: $secondaryColor;
+      }
+    }
+  }
+
+  &.yellow {
+    .form-left {
+      .rich-text p {
+        color: #484b4d;
+      }
+      a {
+        color: $secondaryColor;
+      }
+    }
+    .form-right {
+      .rich-text p {
+        color: #fff;
+      }
+      a {
+        color: $primaryColor;
+      }
+    }
+   
   }
 
   .alert {

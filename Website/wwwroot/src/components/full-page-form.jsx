@@ -25,7 +25,7 @@ class FullPageForm extends React.Component {
         var formBg = colourObj.formBg;
         var formColor = colourObj.formColor;
         var stylesForm = { backgroundColor: formBg, color: formColor }
-
+        console.log(this.props);
         return (
             <div id="form-page">
                 <section className={"p-w form-container " + overallColour} style={styles}>
@@ -36,7 +36,7 @@ class FullPageForm extends React.Component {
                                 <div className="form-left">
                                     <h1 className="h1">{this.props.title}</h1>
                                     <h3 className="h3">{this.props.subTitle}</h3>
-                                    <div className="content" dangerouslySetInnerHTML={{ __html: this.props.text }}></div>
+                                    <div className="rich-text" dangerouslySetInnerHTML={{ __html: this.props.text }}></div>
                                 </div>
                             </div>
                             <div className="col-md-6">
@@ -51,6 +51,7 @@ class FullPageForm extends React.Component {
                                         errorMessage={this.props.errorMessage}
                                         validationMessage={this.props.validationMessage}
                                         btnStyles={btnStyles}
+                                        submissionCopy={this.props.submissionCopy}
                                     >
                                         <h3 className="form-title">{this.props.formTitle}</h3>
                                         {this.props.children}
