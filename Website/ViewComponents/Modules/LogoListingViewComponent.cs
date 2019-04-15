@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Website.AgilityModels;
 using Website.Extensions;
 using Agility.Web.Extensions;
+using Website.ViewModels;
 
 namespace Website.ViewComponents.Modules
 {
@@ -16,19 +17,8 @@ namespace Website.ViewComponents.Modules
 		{
 			return Task.Run<IViewComponentResult>(() =>
 			{
-				//TODO: implement viewmodel
+				var viewModel = new LogoListingViewModel(module);
 
-
-
-				var viewModel = new
-				{
-					heading = module.Heading,
-					subHeading = module.SubHeading,
-					renderType = module.RenderType,
-					primaryButton = module.ParseUrl("PrimaryButton"),
-					secondaryButton = module.ParseUrl("SecondaryButton"),
-					logos = module.Logos.SortByIDs(module.LogoIDs).Select(p => p.ToFrontendProps())
-				};
 
 				if (module.RenderType == "cloud")
 				{

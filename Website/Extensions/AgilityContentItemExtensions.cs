@@ -1,11 +1,13 @@
 using Agility.Web;
 using Agility.Web.Extensions;
+using Agility.Web.Objects;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Dynamic;
 using System.Linq;
 using System.Web;
+using Website.AgilityModels;
 
 namespace Website.Extensions
 {
@@ -29,27 +31,23 @@ namespace Website.Extensions
         public static dynamic ToDynamic(this AgilityContentItem ci, bool removeHrefTilde = false)
         {
             var dynamicObj = new ExpandoObject() as IDictionary<string, Object>;
-            DataColumnCollection columns = ci.Row.Table.Columns;
-            
-            //write each column into our dynamic obj
-            foreach (var col in columns)
-            {
-                string colName = col.ToString();
-                var objValue = ci[colName];
 
+
+            //write each column into our dynamic obj
+            foreach (var col in ci.GetType().GetProperties())
+            {
+                if(col.GetIndexParameters().Length > 0) {
+                    continue;
+                }
+                string colName = col.Name;
+                var objValue = ci.GetType().GetProperty(colName).GetValue(ci, null);
+                
                 //specific cases with a string
                 if (objValue is string)
                 {
-                    //have to test whether this is an attachment
-                    //TODO: need a more performant way to do this
-                    var attachment = ci.GetAttachment(colName);
 
-                    if (attachment != null)
-                    {
-                        objValue = attachment;
-                    }
                     //test whether this is a UrlField
-                    else if (IsAnchorTag(objValue as string))
+                    if (IsAnchorTag(objValue as string))
                     {
                         if (removeHrefTilde)
                         {
@@ -59,12 +57,32 @@ namespace Website.Extensions
                             objValue = ci.ParseUrl(colName);
                         }
                     }
+                } else if(objValue is Attachment) {
+                    //convert attachment to a friendlier 'Image' with less fields
+                    objValue = (objValue as Attachment).ToImage();
                 }
 
                 dynamicObj.Add(colName, objValue);
             }
 
             return dynamicObj;
+        }
+
+        public static string ResolveDynamicPageItemUrl(this AgilityContentItem ci) {
+
+            var thisDynamicPageMapping = new AgilityContentRepository<DynamicPageMapping>("DynamicPageMappings")
+											.Items()
+											.FirstOrDefault(i => i.DynamicPageReferenceName == ci.ReferenceName);
+
+			if(thisDynamicPageMapping == null) {
+				Agility.Web.Tracing.WebTrace.WriteErrorLine($"The Dynamic Page Mapping {ci.ReferenceName} could not be found. Please check Dynamic Page Mappings in Shared Content and ensure there is an item for this and it is published.");
+				return "#";
+			}
+
+            string dynamicDetailsPagePath = thisDynamicPageMapping.DynamicPagePath;
+            string urlWithoutLastPart = dynamicDetailsPagePath.Substring(0, dynamicDetailsPagePath.LastIndexOf('/'));
+			DynamicPageItem d = Data.GetDynamicPageItem(dynamicDetailsPagePath, ci.ReferenceName, ci.Row);
+            return $"{urlWithoutLastPart}/{d.Name}".ToLowerInvariant();
         }
     }
 }

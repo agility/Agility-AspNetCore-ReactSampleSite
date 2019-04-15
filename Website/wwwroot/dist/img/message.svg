@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="15px" viewBox="0 0 20 15" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>ic/message</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Design" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Blog-Listing-Page" transform="translate(-1122.000000, -357.000000)" fill="#6D7882">
+            <g id="1" transform="translate(352.000000, 224.000000)">
+                <g id="stay-in-touch" transform="translate(728.000000, 0.000000)">
+                    <g id="ic/message" transform="translate(40.000000, 128.000000)">
+                        <g id="001-contact" transform="translate(2.000000, 5.000000)">
+                            <path d="M19.5454545,0 L0.454545455,0 C0.203181818,0 0,0.203181818 0,0.454545455 L0,14.0909091 C0,14.3422727 0.203181818,14.5454545 0.454545455,14.5454545 L19.5454545,14.5454545 C19.7963636,14.5454545 20,14.3422727 20,14.0909091 L20,0.454545455 C20,0.203181818 19.7963636,0 19.5454545,0 Z M19.0909091,12.5368182 L13.46,6.90636364 L12.8172727,7.54909091 L18.9045455,13.6363636 L1.09545455,13.6363636 L7.18272727,7.54909091 L6.54,6.90636364 L0.909090909,12.5368182 L0.909090909,0.909090909 L19.0909091,0.909090909 L19.0909091,12.5368182 Z" id="Shape" fill-rule="nonzero"></path>
+                            <path d="M18.1722727,0.909090909 L10,9.08136364 L1.82772727,0.909090909 L0.909090909,0.909090909 L0.909090909,1.27590909 L9.67863636,10.0454545 C9.85636364,10.2231818 10.1436364,10.2231818 10.3213636,10.0454545 L19.0909091,1.27590909 L19.0909091,0.909090909 L18.1722727,0.909090909 Z" id="Shape" fill-rule="nonzero"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

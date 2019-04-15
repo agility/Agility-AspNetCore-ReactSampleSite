@@ -1,0 +1,30 @@
+{
+  "title": "Advisory Board",
+  "subtitle": "Well educated, intellectual people, especially scientists at all times demonstrate considerably smaller adherence to religiosity than others.",
+  "items": [
+    {
+      "headshot": {
+        "url": "dist/img/team3-min.jpg"
+      },
+      "fullName": "Noah Nunez",
+      "jobTitle": "Manager",
+      "text": "<p>There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).</p>"
+    },
+    {
+      "headshot": {
+        "url": "dist/img/team3-min.jpg"
+      },
+      "fullName": "Noah Nunez",
+      "jobTitle": "Manager",
+      "text": "<p>There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).</p><p>There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).</p>"
+    },
+    {
+      "headshot": {
+        "url": "dist/img/team3-min.jpg"
+      },
+      "fullName": "Noah Nunez",
+      "jobTitle": "Manager",
+      "text": "<p>There are many kinds of narratives and organizing principles. Science is driven .. evidence gathered in experiments, and by the falsification of extant theories and their replacement with newer, asymptotically truer, ones. Other systems – religion, nationalism, paranoid ideation, or art – are based on personal experiences (faith, inspiration, paranoia, etc.).</p>"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './sign-in.sass'
+import './sign-in.scss'
 import { debug } from 'util';
 
 
@@ -16,12 +16,46 @@ class SignIn extends React.Component {
         
     }
     render() {
+
+        function setNativeValue(element, value) {
+            const valueSetter = Object.getOwnPropertyDescriptor(element, 'value').set;
+            const prototype = Object.getPrototypeOf(element);
+            const prototypeValueSetter = Object.getOwnPropertyDescriptor(prototype, 'value').set;
+            
+            if (valueSetter && valueSetter !== prototypeValueSetter) {
+                prototypeValueSetter.call(element, value);
+            } else {
+              valueSetter.call(element, value);
+            }
+          }
+
+        function showSearch(b) {
+            b.target.classList.toggle('close');
+            var searchFrame = document.querySelector('.search-frame');
+            searchFrame.classList.toggle('open');
+            // document.getElementById('frontend-only').classList.toggle('search-open');
+            document.querySelector('html').classList.toggle('search-open');
+
+            var searchInput = document.getElementById('search-input')
+ 
+            setNativeValue(searchInput, '');
+            searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+
+            searchInput.focus();
+
+        }
+
         return (
             <div className="sign-in p-w">
-                <ul className="sign-in-list">
-                    <li><button href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</button></li>
-                    {this.outputLinks()}
-                </ul>
+                <div className="container-my">
+                    <ul className="sign-in-list">
+                        {this.props.preHeaderPrimaryButton &&
+                        <li><a href={this.props.preHeaderPrimaryButton.href} target={this.props.preHeaderPrimaryButton.target} className="btn">{this.props.preHeaderPrimaryButton.text}</a></li>
+                        }
+                        {this.outputLinks()}
+                    </ul>
+                    <button className="open-search" onClick={showSearch}></button>
+                </div>
             </div>
         );
     }

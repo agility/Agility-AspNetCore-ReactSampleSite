@@ -6,9 +6,9 @@ There are two way to run this project. You can either run this as an isomorphic 
 
 If you are a full stack developer who is comfortable working in .NET and React, then we recommend running the full isomporphic web application as that integrates with Agility and is how the full application will function. You will need the Agility *websiteName* and *securityKey* in order to run the application locally.
 
-If you are primarily a frontend developer and prefer to seperate concerns, then you can run a static version of the site which has no dependancy on Agility or .NET. Instead, you can build out your own static pages using React components and .sass styles and then pass that off to a .NET developer who will integrte your React component with a .NET ViewComponent and supply dynamic props to your component.
+If you are primarily a frontend developer and prefer to seperate concerns, then you can run a static version of the site which has no dependancy on Agility or .NET. Instead, you can build out your own static pages using React components and .scss styles and then pass that off to a .NET developer who will integrte your React component with a .NET ViewComponent and supply dynamic props to your component.
 
----
+-----
 
 ## Isomorphic Web App - Full Stack
 Running this site as an isomorphic web app means you'll be running a .NET Core website alongside a webpack dev server. Requests to the webpack dev server will be proxied through to your .NET Core website, serving dynamic content from the CMS.
@@ -68,7 +68,7 @@ Website\wwwroot> npm run static
 1. Frontend developer creates a new static page to the project.
 2. Frontend developer then adds any existing components they want to reuse to on the page.
 3. Frontend developer adds a new static component to the page based on a design.
-4. Each frontend component should have its own .sass file.
+4. Each frontend component should have its own .scss file.
 5. When done, frontend developer commits their code to their branch and submits a pull request into the UAT branch.
 6. Code reviewer reviews the pull request for code quality and approves it if ok.
 7. Backend/JS developer then integrates this component with the CMS and updates the static component to accept dynamic properties (i.e. "props").
@@ -76,7 +76,7 @@ Website\wwwroot> npm run static
 9. Backend developer checks their code back into the UAT branch so that the frontend developers get the update as well.
 
 ### Creating a new Static Page
-When implementing static html, you'll need to create a new .jsx file, .sass file and register it as a route within our static React App.
+When implementing static html, you'll need to create a new .jsx file, .scss file and register it as a route within our static React App.
 1. Create a new static page by navigating to the **Website/wwwroot/src/static/pages** directory.
 2. Create a new file and name it **sample.jsx** (where 'sample' is your page name).
 3. Copy and paste this boilerplate code in the file to get started:
@@ -109,10 +109,10 @@ import Sample from './pages/sample.jsx'
 ```
 6. Determine which components you should have on the page based on the design. Likely there are already some existing components that you can simply add to get started. For example, you may want to remove the "ContentPanel" component and/or add others.
 7. For your new code you need to add, simply add the HTML within the "return" method of the React component. Where possible, it is best to encapsulate this in a new React component. However, if your React skills aren't quite there yet you can just add it directly within the markup. Best practice would be to wrap it in a *section* html tag.
-8. For each new React component, or *section* element, add a new .sass file to the **Website/wwwroot/src/components** folder.
-9. Add an **imports** statement for your new .sass file at the top of your new component file or in the top of the file representing your page if you are just doing this inline as a **section**. This will register it as a dependancy for webpack, include it in your bundles and allow for hot module reloading :)
+8. For each new React component, or *section* element, add a new .scss file to the **Website/wwwroot/src/components** folder.
+9. Add an **imports** statement for your new .scss file at the top of your new component file or in the top of the file representing your page if you are just doing this inline as a **section**. This will register it as a dependancy for webpack, include it in your bundles and allow for hot module reloading :)
 ``` javascript
-import '/.sample.sass'
+import '/.sample.scss'
 ```
 
 ### Using Existing Components
@@ -178,7 +178,7 @@ module.exports = {
 ## How CSS Bundling Works
 This project is using the css and sass loader. When webpack sees dependancies on css/sass files within the react components, the styles will be bundled into the /dist/client.css file bundle.
 ``` javascript
-import style from './styles.sass';
+import style from './styles.scss';
 class HeadingH2 extends React.Component {
     render() {
         return (
@@ -224,11 +224,11 @@ namespace Website.ViewComponents.Modules
 ```
 Website> dotnet run
 ```
-5. In the **Website/wwwroot/src/components** folder add a new *.jsx/js* file and a .sass/css for your component
+5. In the **Website/wwwroot/src/components** folder add a new *.jsx/js* file and a .scss/css for your component
 ``` javascript
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './content-panel.sass'
+import './content-panel.scss'
 class ContentPanel extends React.Component {
     render() {
         return (

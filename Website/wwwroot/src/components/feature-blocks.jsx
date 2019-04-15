@@ -1,6 +1,7 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './feature-blocks.sass'
+import FeatureBlock from './feature-block.jsx'
+import './feature-blocks.scss'
 
 class FeatureBlocks extends React.Component {
     constructor() {
@@ -131,13 +132,15 @@ class FeatureBlocks extends React.Component {
                 <h2 className="title-conponent">{this.props.title}</h2>
 
                 <div className="ben-items container">
-                    <div className="ben-items-forslider my-slider" id="slider">
-                        {features}
-                    </div>
-                    <div id="slider-nav">
-                        <button data-slide="0" className="current"></button>
-                        <button data-slide="1"></button>
-                        <button data-slide="2"></button>
+                    <div className="container-my">
+                        <div className="ben-items-forslider my-slider" id="slider">
+                            {features}
+                        </div>
+                        <div id="slider-nav">
+                            <button data-slide="0" className="current"></button>
+                            <button data-slide="1"></button>
+                            <button data-slide="2"></button>
+                        </div>
                     </div>
                 </div>
 
@@ -148,19 +151,3 @@ class FeatureBlocks extends React.Component {
     }
 }
 export default hot(FeatureBlocks);
-
-
-class FeatureBlock extends React.Component {
-    render() {
-
-        return (
-
-            <div className="ben-item slide">
-                <div className="img"><img src={this.props.data.icon.url} alt={this.props.data.icon.label} /></div>
-                <h3 className="ben-title">{this.props.data.title}</h3>
-                <div dangerouslySetInnerHTML={{ __html: this.props.data.textBlob }} />
-            </div>
-        );
-    }
-}
-

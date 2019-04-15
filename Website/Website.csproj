@@ -12,6 +12,7 @@
     <PackageReference Include="JavaScriptEngineSwitcher.Extensions.MsDependencyInjection" Version="3.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="React.AspNet" Version="4.0.0" />
-    <PackageReference Include="Agility.AspNetCore" Version="0.0.1.11" />
+    <PackageReference Include="Agility.AspNetCore" Version="0.0.1.17" />
+    <PackageReference Include="System.ServiceModel.Syndication" Version="4.5.0" />
   </ItemGroup>
 </Project>

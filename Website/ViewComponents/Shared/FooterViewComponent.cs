@@ -30,14 +30,15 @@ namespace Website.ViewComponents.Shared
 					column2Links = item.Column2Links.SortByIDs(item.Column2SortIDs).Select(a => a.ToFrontendProps()),
 					column3Links = item.Column3Links.SortByIDs(item.Column3SortIDs).Select(a => a.ToFrontendProps()),
 					followTitle = item.FollowTitle,
-					followLinks = item.FollowLinks.SortByIDs(item.FollowLinkIDs).Select(a => a.ToFrontendProps()),
+					followLinks = item.FollowLinks.Items().Select(a => a.ToFrontendProps()),
 					subscribeTitle = item.SubscribeTitle,
 					subscribeButtonLabel = item.SubscribeButtonLabel,
 					subscribeDescription = item.SubscribeDescription,
 					subscribeEmailPlaceholder = item.SubscribeEmailPlaceholder,
-					bottomPrivacyPolicyLink = item.PrivacyPolicyLink,
-					bottomCopyright = item.Copyright,
-					bottomSecurityLink = item.SecurityLink
+					subscribePOSTUrl = item.SubscribePOSTUrl,
+					subscribeRedirect = item.SubscribeRedirect,
+					bottomLinks = item.BottomLinks.SortByIDs(item.BottomLinksSortIDs).Select(a => a.ToFrontendProps()),
+					bottomCopyright = item.Copyright
 				};
 
 

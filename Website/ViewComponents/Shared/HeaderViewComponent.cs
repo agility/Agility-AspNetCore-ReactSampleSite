@@ -42,10 +42,13 @@ namespace Website.ViewComponents.Shared
 
 				var viewModel = new
 				{
-					logo = item.Logo,
+					logo = item.Logo.ToImage(),
+					mobileLogo = item.MobileLogo.ToImage(),
 					preHeaderLinks = item.PreHeaderLinks.SortByIDs(item.PreHeaderLinkSortIDs).Select(a => a.ToFrontendProps()),
-					primaryButton = item.ParseUrl("PrimaryButton"),
-					menu = topLevelNodes
+					preHeaderPrimaryButton = item.PreHeaderPrimaryButton.ParseUrl(),
+					primaryButton = item.PrimaryButton.ParseUrl(),
+					menu = topLevelNodes,
+					siteSearchSettings = new AgilityContentRepository<SiteSearchSettings>("SiteSearchSettings").Item(null).ToFrontendProps()
 				};
 
 				return new ReactViewComponentResult("Components.Header", viewModel);

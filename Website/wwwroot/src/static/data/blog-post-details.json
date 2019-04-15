@@ -1,0 +1,84 @@
+{
+  "post": {
+    "title": "Announcing Support for ASP.Net Core in Agility",
+    "textBlob": "\u003cp\u003eThe world \u003cg data-gr-id=\u002240\u0022 id=\u002240\u0022 class=\u0022gr_ gr_40 gr-alert gr_gramm gr_disable_anim_appear Style multiReplace\u0022\u003eof .\u003c/g\u003eNet development has been an exciting place to play in lately!\u003c/p\u003e\n\u003cp\u003eWhat with the Microsoft\u0027s purchase of GitHub, their closer relationship to the Open Source community, and the rapid expansion of the Azure platform for DevOps, there\u0027s lots to talk about.\u003c/p\u003e\n\u003cp\u003eOne of the most significant areas of development \u003cg class=\u0022gr_ gr_50 gr-alert gr_gramm gr_inline_cards gr_disable_anim_appear Style multiReplace\u0022 id=\u002250\u0022 data-gr-id=\u002250\u0022\u003efor .\u003c/g\u003eNet is in the ASP.Net Core offering. \u0026nbsp;Take a look at a few of the areas where Microsoft are \u003ca href=\u0022https://docs.microsoft.com/en-us/dotnet/standard/choosing-core-framework-server\u0022 rel=\u0022noopener\u0022\u003erecommending folks choose ASP.Net Core\u003c/a\u003e over the legacy framework:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eCross-platform needs\u003c/li\u003e\n\u003cli\u003eMicroservices\u003c/li\u003e\n\u003cli\u003eDocker Containers\u003c/li\u003e\n\u003cli\u003eHigh performance and scalable systems\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eLooking at that list leads me to this conclusion: \u0026nbsp;unless you have a reason NOT to \u003cg class=\u0022gr_ gr_51 gr-alert gr_gramm gr_inline_cards gr_disable_anim_appear Style multiReplace\u0022 id=\u002251\u0022 data-gr-id=\u002251\u0022\u003echoose .\u003c/g\u003eNet Core, you need to be at least considering it for new projects.\u003c/p\u003e\n\u003cp\u003eToday, we are announcing the public preview of AgilityWebCore - the Agility\u003cg data-gr-id=\u002242\u0022 id=\u002242\u0022 class=\u0022gr_ gr_42 gr-alert gr_gramm gr_disable_anim_appear Style replaceWithoutSep\u0022\u003e.Web\u003c/g\u003e assembly retooled and improved for targetting ASP.Net Core!\u003c/p\u003e\n\u003cp\u003eHere are a few of the benefits that targetting ASP.Net Core for Agility sites:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eEasily host your Agility website on Linux\u0026nbsp;in a \u003cg class=\u0022gr_ gr_43 gr-alert gr_gramm gr_inline_cards gr_disable_anim_appear Style multiReplace\u0022 id=\u002243\u0022 data-gr-id=\u002243\u0022\u003eDocker \u003c/g\u003e\u003cimg src=\u0022https://media.agilitycms.com/svg/docker.svg\u0022 alt=\u0022\u0022 style=\u0022height: 1em;\u0022 class=\u0022\u0022 /\u003e\u003cg class=\u0022gr_ gr_43 gr-alert gr_gramm gr_inline_cards gr_disable_anim_appear Style multiReplace\u0022 id=\u002243\u0022 data-gr-id=\u002243\u0022\u003e\u0026nbsp;container\u003c/g\u003e.\u003c/li\u003e\n\u003cli\u003eUse your \u003cg data-gr-id=\u002234\u0022 id=\u002234\u0022 class=\u0022gr_ gr_34 gr-alert gr_spell gr_disable_anim_appear ContextualSpelling multiReplace\u0022\u003efavourite\u003c/g\u003e Javascript framework, such as \u003cg data-gr-id=\u002237\u0022 id=\u002237\u0022 class=\u0022gr_ gr_37 gr-alert gr_gramm gr_disable_anim_appear Style multiReplace\u0022\u003eReact \u003c/g\u003e\u003cimg src=\u0022https://media.agilitycms.com/svg/react.svg\u0022 alt=\u0022\u0022 style=\u0022height: 1em;\u0022 /\u003e\u003cg data-gr-id=\u002237\u0022 id=\u002237\u0022 class=\u0022gr_ gr_37 gr-alert gr_gramm gr_disable_anim_appear Style multiReplace\u0022\u003e,\u003c/g\u003e \u0026nbsp;\u003cg data-gr-id=\u002235\u0022 id=\u002235\u0022 class=\u0022gr_ gr_35 gr-alert gr_gramm gr_disable_anim_appear Style multiReplace\u0022\u003eAngular \u003c/g\u003e\u003cimg src=\u0022https://media.agilitycms.com/svg/angular.svg\u0022 alt=\u0022\u0022 style=\u0022height: 1em;\u0022 /\u003e\u003cg data-gr-id=\u002235\u0022 id=\u002235\u0022 class=\u0022gr_ gr_35 gr-alert gr_gramm gr_disable_anim_appear Style multiReplace\u0022\u003e\u0026nbsp;or\u003c/g\u003e \u003cg data-gr-id=\u002236\u0022 id=\u002236\u0022 class=\u0022gr_ gr_36 gr-alert gr_gramm gr_disable_anim_appear Style multiReplace\u0022\u003eVue \u003c/g\u003e\u003cimg src=\u0022https://media.agilitycms.com/svg/vuejs.svg\u0022 alt=\u0022\u0022 style=\u0022height: 1em;\u0022 /\u003e\u003cg data-gr-id=\u002236\u0022 id=\u002236\u0022 class=\u0022gr_ gr_36 gr-alert gr_gramm gr_disable_anim_appear Style multiReplace\u0022\u003e\u0026nbsp;and\u003c/g\u003e take advantage of Server-Side-Rendering.\u003c/li\u003e\n\u003cli\u003eBoost the performance of your site out-of-the-box by as much as 200%, especially for complex sites.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u0026nbsp;This is big news for our customers and partners who want to continue to grow their business with a stable, reliable toolset. \u0026nbsp;We were able to take our\u0026nbsp;standard Agility\u003cg data-gr-id=\u002245\u0022 id=\u002245\u0022 class=\u0022gr_ gr_45 gr-alert gr_gramm gr_disable_anim_appear Style replaceWithoutSep\u0022\u003e.Web\u003c/g\u003e SDK and bring all the same features into Agility\u003cg data-gr-id=\u002246\u0022 id=\u002246\u0022 class=\u0022gr_ gr_46 gr-alert gr_gramm gr_disable_anim_appear Style replaceWithoutSep\u0022\u003e.Web\u003c/g\u003e \u003cg class=\u0022gr_ gr_48 gr-alert gr_gramm gr_inline_cards gr_disable_anim_appear Style multiReplace\u0022 id=\u002248\u0022 data-gr-id=\u002248\u0022\u003efor .\u003c/g\u003eNet Core. \u0026nbsp;\u003c/p\u003e\n\u003cp\u003eRead more about the implementation details on the \u003ca href=\u0022https://help.agilitycms.com/hc/en-us/articles/360019026211-Agility-Web-for-ASP-NET-Core\u0022\u003eAgility Help Centre\u003c/a\u003e.\u0026nbsp;\u003c/p\u003e\n\u003cp\u003e\u003c/p\u003e",
+    "url": "announcing-support-for-asp-net-core-in-agility",
+    "date": "2018-12-18T00:00:00",
+    "authorID": 319,
+    "authorTitle": "Agility",
+    "author": {
+      "contentReferenceName": "BlogAuthors",
+      "languageCode": "en-ca",
+      "defaultSort": "Title ASC"
+    },
+    "enableComments": false,
+    "subTitle": null,
+    "excerpt": "\u003cp\u003eThe world \u003cg class=\u0022gr_ gr_12 gr-alert gr_gramm gr_inline_cards gr_disable_anim_appear Style multiReplace\u0022 id=\u002212\u0022 data-gr-id=\u002212\u0022\u003eof .\u003c/g\u003eNet development has been an exciting place to play in lately!\u003c/p\u003e\n\u003cp\u003eWhat with the Microsoft\u0027s purchase of GitHub, their closer relationship to the Open Source community, and the rapid expansion of the Azure platform for DevOps, there\u0027s lots to talk about.\u003c/p\u003e\n\u003cp\u003eToday, we are announcing the public preview of AgilityWebCore - the Agility\u003cg class=\u0022gr_ gr_11 gr-alert gr_gramm gr_inline_cards gr_disable_anim_appear Style replaceWithoutSep\u0022 id=\u002211\u0022 data-gr-id=\u002211\u0022\u003e.Web\u003c/g\u003e assembly retooled and improved for targetting ASP.Net Core!\u003c/p\u003e",
+    "postImage": {
+      "guid": null,
+      "managerID": null,
+      "blob": null,
+      "itemOrder": 1,
+      "fileName": "https://static.agilitycms.com/posts/agility-asp-net-core-header.jpg",
+      "label": "Announcing Support for ASP.Net Core in Agility",
+      "target": "",
+      "url": "https://static.agilitycms.com/posts/agility-asp-net-core-header.jpg",
+      "fileSize": 0,
+      "height": 676,
+      "width": 1200,
+      "thumbnails": {}
+    },
+    "displayImageinPost": false,
+    "listingImageOverride": null,
+    "categoriesIDs": "318",
+    "categoriesTitle": "News",
+    "categories": {
+      "contentReferenceName": "BlogCategories",
+      "languageCode": "en-ca",
+      "defaultSort": "itemOrder ASC"
+    },
+    "blogTagsIDs": null,
+    "blogTagsTitle": null,
+    "blogTags": {
+      "contentReferenceName": "BlogTags",
+      "languageCode": "en-ca",
+      "defaultSort": "itemOrder ASC"
+    },
+    "relatePostsBy": null,
+    "relatedPosts": {
+      "contentReferenceName": "BlogPosts",
+      "languageCode": "en-ca",
+      "defaultSort": "itemOrder"
+    },
+    "relatedPostsIDs": null,
+    "relatedPostTitles": null,
+    "referenceName": "BlogPosts",
+    "key": 374
+  },
+  "category": {
+    "title": "News",
+    "referenceName": "BlogCategories",
+    "key": 318
+  },
+  "author": {
+    "title": "Agility",
+    "textBlob": null,
+    "jobTitle": null,
+    "image": {
+      "guid": null,
+      "managerID": null,
+      "blob": null,
+      "itemOrder": 1,
+      "fileName": "https://static.agilitycms.com/authors/agility-logo-author.png",
+      "label": "Agility Growth Strategy for 2019",
+      "target": "",
+      "url": "https://static.agilitycms.com/authors/agility-logo-author.png",
+      "fileSize": 0,
+      "height": 300,
+      "width": 300,
+      "thumbnails": {}
+    },
+    "referenceName": "BlogAuthors",
+    "key": 319
+  }
+}

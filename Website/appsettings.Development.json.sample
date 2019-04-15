@@ -9,7 +9,7 @@
       "developmentMode": "true",
       "Trace": {
         "traceLevel": "Verbose",
-        "logFilePath": "c:/AgilityLogs/Website.log"
+        "logFilePath": "../AgilityLogs/Website.log"
       }
     }
   }

@@ -1,99 +1,181 @@
 {
     "column1Title": "Product",
     "column2Title": "About Us",
-    "column3Title": "Resources",
+    "column3Title": "Learn More",
     "column1Links": [
         {
-            "title": "Why Agility",
-            "textBlob": null,
+            "title": "Why Agility?",
             "url": {
                 "text": "",
                 "href": "/why-agility",
                 "target": "_self"
             },
+            "referenceName": "Footer_Link",
             "key": 17
+        },
+        {
+            "title": "For Marketers",
+            "url": {
+                "text": "For Marketers",
+                "href": "/product/for-marketers",
+                "target": "_self"
+            },
+            "referenceName": "Footer_Link",
+            "key": 619
+        },
+        {
+            "title": "For Developers",
+            "url": {
+                "text": "For Developers",
+                "href": "/product/for-developers",
+                "target": "_self"
+            },
+            "referenceName": "Footer_Link",
+            "key": 620
+        },
+        {
+            "title": "Pricing",
+            "url": {
+                "text": "Pricing",
+                "href": "/pricing",
+                "target": "_self"
+            },
+            "referenceName": "Footer_Link",
+            "key": 621
         }
     ],
     "column2Links": [
         {
             "title": "About Us",
-            "textBlob": null,
             "url": {
-                "text": "",
-                "href": "/about-us",
+                "text": "About Us",
+                "href": "/about-us/about-us",
                 "target": "_self"
             },
+            "referenceName": "Footer_Link25",
             "key": 18
+        },
+        {
+            "title": "Our Team",
+            "url": {
+                "text": "Our Team",
+                "href": "/about-us/team",
+                "target": "_self"
+            },
+            "referenceName": "Footer_Link25",
+            "key": 624
+        },
+        {
+            "title": "Culture \u0026 Careers",
+            "url": {
+                "text": "Culture \u0026 Careers",
+                "href": "/about-us/careers",
+                "target": "_self"
+            },
+            "referenceName": "Footer_Link25",
+            "key": 625
+        },
+        {
+            "title": "Community",
+            "url": {
+                "text": "Community",
+                "href": "/community",
+                "target": "_self"
+            },
+            "referenceName": "Footer_Link25",
+            "key": 626
+        },
+        {
+            "title": "Blog",
+            "url": {
+                "text": "Blog",
+                "href": "/resources/posts",
+                "target": "_self"
+            },
+            "referenceName": "Footer_Link25",
+            "key": 627
         }
     ],
     "column3Links": [
         {
             "title": "Guides",
-            "textBlob": null,
             "url": {
-                "text": "",
+                "text": "Guides",
                 "href": "/guides",
                 "target": "_self"
             },
+            "referenceName": "Footer_Link26",
             "key": 19
+        },
+        {
+            "title": "Help / Support",
+            "url": {
+                "text": "Help / Support",
+                "href": "https://help.agilitycms.com/hc/en-us",
+                "target": "_blank"
+            },
+            "referenceName": "Footer_Link26",
+            "key": 628
+        },
+        {
+            "title": "Partners",
+            "url": {
+                "text": "Partners",
+                "href": "/partners",
+                "target": "_self"
+            },
+            "referenceName": "Footer_Link26",
+            "key": 629
+        },
+        {
+            "title": "Contact Us",
+            "url": {
+                "text": "Contact Us",
+                "href": "/contact-us",
+                "target": "_self"
+            },
+            "referenceName": "Footer_Link26",
+            "key": 630
         }
     ],
     "followTitle": "Follow Us",
-    "followLinks": [
-        {
-            "title": "Twitter",
-            "textBlob": null,
-            "logo": {
-                "guid": null,
-                "managerID": null,
-                "blob": null,
-                "itemOrder": 1,
-                "fileName": "https://cdn.agilitycms.com/agility-cms-2019/social/twitter.svg",
-                "label": "Twitter",
-                "target": "",
-                "url": "https://cdn.agilitycms.com/agility-cms-2019/social/twitter.svg",
-                "fileSize": 0,
-                "height": 0,
-                "width": 0,
-                "thumbnails": {}
-            },
-            "followURL": {
-                "text": "@agilitycms",
-                "href": "http://twitter.com/agilitycms",
-                "target": "_blank"
-            },
-            "key": 20
-        },
-        {
-            "title": "Facebook",
-            "textBlob": null,
-            "logo": {
-                "guid": null,
-                "managerID": null,
-                "blob": null,
-                "itemOrder": 1,
-                "fileName": "https://cdn.agilitycms.com/agility-cms-2019/social/facebook.svg",
-                "label": "",
-                "target": "",
-                "url": "https://cdn.agilitycms.com/agility-cms-2019/social/facebook.svg",
-                "fileSize": 0,
-                "height": 0,
-                "width": 0,
-                "thumbnails": {}
-            },
-            "followURL": {
-                "text": "Agility",
-                "href": "https://www.facebook.com/AgilityInc",
-                "target": "_blank"
-            },
-            "key": 21
-        }
-    ],
     "subscribeTitle": "Subscribe",
     "subscribeButtonLabel": "Subscribe",
-    "subscribeDescription": "Learn about our platform get involved in our Community",
+    "subscribeDescription": "Learn about our platform and get involved in our Community here!",
     "subscribeEmailPlaceholder": "Email",
-    "bottomPrivacyPolicyLink": "\u003ca href=\u0022#\u0022 target=\u0022_self\u0022\u003ePrivacy Policy\u003c/a\u003e",
-    "bottomCopyright": "© Copyright, Agility",
-    "bottomSecurityLink": "\u003ca href=\u0022#\u0022 target=\u0022_self\u0022\u003eSecurity\u003c/a\u003e"
+    "subscribePOSTUrl": "https://prod-21.northcentralus.logic.azure.com:443/workflows/6bcbdadc7e4e45c997af480bc61bfe41/triggers/manual/paths/invoke?api-version=2016-10-01\u0026sp=%2Ftriggers%2Fmanual%2Frun\u0026sv=1.0\u0026sig=oYW5ZwIrE2UlLAgUp3wf9FisbfZsz-aWkNwmwMy6VhY",
+    "subscribeRedirect": "/community?subscribed=true",
+    "bottomLinks": [
+        {
+            "title": "Privacy Policy",
+            "url": {
+                "text": "Privacy Policy",
+                "href": "#privacy",
+                "target": "_self"
+            },
+            "referenceName": "Footer_Link160",
+            "key": 635
+        },
+        {
+            "title": "Security",
+            "url": {
+                "text": "Security",
+                "href": "#security",
+                "target": "_self"
+            },
+            "referenceName": "Footer_Link160",
+            "key": 636
+        },
+        {
+            "title": "Google",
+            "url": {
+                "text": "Google",
+                "href": "#google",
+                "target": "_blank"
+            },
+            "referenceName": "Footer_Link160",
+            "key": 656
+        }
+    ],
+    "bottomCopyright": "© Copyright, Agility"
 }

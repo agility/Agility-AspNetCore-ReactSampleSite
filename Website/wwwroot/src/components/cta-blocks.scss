@@ -1,0 +1,95 @@
+.comunity-apps {
+  text-align: center;
+
+  .container-my {
+    display: block;
+  }
+
+  p.intro {
+    display: inline-block;
+    margin-bottom: 80px;
+    text-align: center;
+    max-width: 1008px;
+    font-size: 20px;
+    line-height: 32px;
+    font-family: "Muli-SemiBold", sans-serif;
+    color: #484b4d;
+  }
+
+  .col-md-4 {
+    @media (max-width: 767px) {
+      max-width: 50%;
+      -webkit-flex: 0 0 50%;
+      -moz-flex: 0 0 50%;
+      -ms-flex: 0 0 50%;
+      -o-flex: 0 0 50%;
+      flex: 0 0 50%;
+    }
+
+    @media (max-width: 480px) {
+      max-width: 100%;
+      -webkit-flex: 0 0 100%;
+      -moz-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+      -o-flex: 0 0 100%;
+      flex: 0 0 100%;
+    }
+  }
+
+  #canvas-3 {
+    top: 120px;
+  }
+
+  .app-item {
+    border-radius: 5px;
+    overflow: hidden;
+    height: 90%;
+    height: calc(100% - 32px);
+    padding-bottom:16px;
+    box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 2px 26px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+
+    a {
+      display: block;
+      padding: 40px;
+
+      @media (max-width: 991px) {
+        padding: 30px;
+      }
+
+      @media (max-width: 767px) {
+        padding: 20px;
+      }
+    }
+
+    .image {
+      height: 120px;
+      line-height: 120px;
+
+      img {
+        vertical-align: middle;
+        height: 100%;
+      }
+    }
+
+    p {
+      margin-top: 32px;
+      font-size: 16px;
+      line-height: 24px;
+      font-family: "Muli-SemiBold", sans-serif;
+      color: #2a3846;
+
+      &.cta-subtitle {
+        font-size: 12px;
+        line-height: 18px;
+        margin-top: 0;
+        color:#484b4d;
+
+        @media (max-width: 767px) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+}

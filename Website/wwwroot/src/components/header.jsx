@@ -1,23 +1,38 @@
 import React from 'react';
 import { hot } from 'react-hot-loader/root'
-import './header.sass'
+import './header.scss'
 import SignIn from './sign-in.jsx'
 import Hamburger from './hamburger.jsx'
-
+import HeaderSearch from './header-search.jsx'
 
 class Header extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props);
     }
-    componentDidMount() {
-        //dropdown Menu
-        var hiddenParent = document.querySelector('.has-children');
-        hiddenParent.addEventListener('click', function (e) {
 
-            this.classList.toggle('open');
-        });
+    componentDidMount() {
+        
+        //dropdown Menu
+        if (document) {
+            var hiddenParent = document.querySelector('.header-menu .has-children');
+            hiddenParent.addEventListener('click', function (e) {
+                this.classList.toggle('open');
+            });
+
+            //check for preview bar
+            //HACK
+            var previewBar = document.getElementById('pnlAgilityStatusBar');
+            if (previewBar) {
+                const header = document.getElementsByClassName('header-container')[0];
+                if(header) {
+                    header.classList.add('is-preview');
+                }
+            }
+        }
     }
+
     render() {
+        let headerClass = "header p-w";
 
         const renderMenu = (menu, level) => {
             let links = []
@@ -57,22 +72,35 @@ class Header extends React.Component {
             return <ul className={className}>{links}</ul>;
         };
 
+
+
         return (
-            <div>
-                <SignIn preHeaderLinks={this.props.preHeaderLinks} primaryButton={this.props.primaryButton} />
-                <Hamburger />
-                <header className="header p-w">
-                    <div className="header-logo">
-                        <a href="/"><img src={this.props.logo.url} alt={this.props.logo.label} /></a>
+
+            <div className="header-container">
+                <HeaderSearch siteSearchSettings={this.props.siteSearchSettings} />
+                <SignIn preHeaderLinks={this.props.preHeaderLinks} preHeaderPrimaryButton={this.props.preHeaderPrimaryButton} />
+                <Hamburger {...this.props} />
+                <header className={headerClass}>
+                    <div className="container-my">
+                        {this.props.logo &&
+                            <div className="header-logo">
+                                <a href="/"><img src={this.props.logo.url} alt={this.props.logo.label} /></a>
+                            </div>
+                        }
+
+                        {renderMenu(this.props.menu, 0)}
+
+                        {this.props.primaryButton && this.props.primaryButton.href &&
+                            <a href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</a>
+                        }
                     </div>
-
-                    {renderMenu(this.props.menu, 0)}
-
-                    <button href={this.props.primaryButton.href} target={this.props.primaryButton.target} className="btn">{this.props.primaryButton.text}</button>
                 </header>
+                <div className="drop-shadow"></div>
             </div>
+
         );
     }
 }
 export default hot(Header);
+
 

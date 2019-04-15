@@ -1,0 +1,38 @@
+{
+  "title": "Don't Just Take Our Word for It..",
+  "items": [
+    {
+      "image": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "url": "/dist/img/team3-min.jpg"
+      },
+      "title": "Emma Fisher",
+      "position": "Co-Founder & CTO",
+      "content": "If you find yourself doing the same routine day after day, never remembering what you did the day before, having nothing to look forward to, living your life – but never enjoying it or anything in it…"
+    },
+    {
+      "image": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "url": "/dist/img/team3-min.jpg"
+      },
+      "title": "Jackson Holland",
+      "position": "Co-Founder & CTO",
+      "content": "If you find yourself doing the same routine day after day, never remembering what you did the day before, having nothing to look forward to, living your life – but never enjoying it or anything in it…"
+    },
+    {
+      "image": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "url": "/dist/img/team3-min.jpg"
+      },
+      "title": "Cameron Shaw",
+      "position": "Co-Founder & CTO",
+      "content": "If you find yourself doing the same routine day after day, never remembering what you did the day before, having nothing to look forward to, living your life – but never enjoying it or anything in it…"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "title": "The Features You Need, Nothing Else",
+  "sideTitle": "Side title",
+  "sideBody": "\u003cp\u003eLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\u003c/p\u003e",
+  "sideLink": {
+    "text": "Learn More",
+    "href": "#",
+    "target": "_self"
+  },
+  "features": [
+    {
+      "title": "Unlimited Creative Flexibility",
+      "textBlob": "\u003cp\u003eUnlimited Creative Flexibility\u003c/p\u003e\u003cp\u003eDevelop in the framework of your choice\u003c/p\u003e\u003cp\u003eConnect to ANY destination\u003c/p\u003e",
+      "icon": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 2,
+        "fileName": "https://static.agilitycms.com/layout/img/ben/ben1.svg",
+        "label": "Agility Logo",
+        "target": "",
+        "url": "https://static.agilitycms.com/layout/img/ben/ben1.svg",
+        "fileSize": 0,
+        "height": 0,
+        "width": 0,
+        "thumbnails": {}
+      },
+      "bottomLink": {
+        "text": "Get Started",
+        "href": "#",
+        "target": "_self"
+      },
+      "key": 29
+    },
+    {
+      "title": "Better / Faster Teams",
+      "textBlob": "\u003cp\u003eApproach aligns marketers and developers\u003c/p\u003e\u003cp\u003eFaster development and management of content\u003c/p\u003e\u003cp\u003eEasy to use interface \u003c/p\u003e",
+      "icon": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/layout/img/ben/ben2.svg",
+        "label": "",
+        "target": "",
+        "url": "https://static.agilitycms.com/layout/img/ben/ben2.svg",
+        "fileSize": 0,
+        "height": 0,
+        "width": 0,
+        "thumbnails": {}
+      },
+      "bottomLink": null,
+      "key": 278
+    },
+    {
+      "title": "Secure, Scalable, Fully Managed",
+      "textBlob": "\u003cp\u003eUse ANY hosting setup or our Fully Managed Cloud Services\u003c/p\u003e \u003cp\u003eDedicated Support and SLAs\u003c/p\u003e \u003cp\u003eUnlimited Integration Options\u003c/p\u003e",
+      "icon": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 1,
+        "fileName": "https://static.agilitycms.com/layout/img/ben/ben3.svg",
+        "label": "",
+        "target": "",
+        "url": "https://static.agilitycms.com/layout/img/ben/ben3.svg",
+        "fileSize": 0,
+        "height": 0,
+        "width": 0,
+        "thumbnails": {}
+      },
+      "bottomLink": null,
+      "key": 279
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "title": "Stay in Touch",
+  "links": [
+    {
+      "title": "Follow us on Twitter",
+      "logo": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 3,
+        "fileName": "https://static.agilitycms.com/social/twitter-brand-color.svg",
+        "label": "Twitter",
+        "target": "",
+        "url": "https://static.agilitycms.com/social/twitter-brand-color.svg",
+        "fileSize": 0,
+        "height": 0,
+        "width": 0,
+        "thumbnails": {}
+      },
+      "followURL": {
+        "text": "@agilitycms",
+        "href": "http://twitter.com/agilitycms",
+        "target": "_blank"
+      },
+      "referenceName": "SocialFollowLinks",
+      "key": 453
+    },
+    {
+      "title": "Follow us on Facebook",
+      "logo": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 2,
+        "fileName": "https://static.agilitycms.com/social/facebook-brand-color.svg",
+        "label": "",
+        "target": "",
+        "url": "https://static.agilitycms.com/social/facebook-brand-color.svg",
+        "fileSize": 0,
+        "height": 0,
+        "width": 0,
+        "thumbnails": {}
+      },
+      "followURL": {
+        "text": "Agility",
+        "href": "https://www.facebook.com/AgilityInc",
+        "target": "_blank"
+      },
+      "referenceName": "SocialFollowLinks",
+      "key": 454
+    },
+    {
+      "title": "Follow us on LinkedIn",
+      "logo": {
+        "guid": null,
+        "managerID": null,
+        "blob": null,
+        "itemOrder": 2,
+        "fileName": "https://static.agilitycms.com/social/linkedin-brand-color.svg",
+        "label": "Agility",
+        "target": "",
+        "url": "https://static.agilitycms.com/social/linkedin-brand-color.svg",
+        "fileSize": 0,
+        "height": 0,
+        "width": 0,
+        "thumbnails": {}
+      },
+      "followURL": {
+        "text": "Agility",
+        "href": "https://www.linkedin.com/company/agility-inc-",
+        "target": "_blank"
+      },
+      "referenceName": "SocialFollowLinks",
+      "key": 455
+    }
+  ]
+}

@@ -5,6 +5,8 @@ using System.Dynamic;
 using System.Linq;
 using System.Reflection;
 using System.Web;
+using Website.Models;
+using Agility.Web.Objects;
 
 namespace Website.Extensions
 {
@@ -34,7 +36,8 @@ namespace Website.Extensions
             "ManagerID",
             "Guid",
             "Blob",
-            "FileName"
+            "FileName",
+            "FileSize"
         };
 
 
@@ -46,9 +49,23 @@ namespace Website.Extensions
         public static dynamic ToFrontendProps(this object o, string keyField = "ContentID")
         {
             //convert to expando object
-            dynamic result = o as IDictionary<string, Object>;
+            var result = new ExpandoObject() as IDictionary<string, Object>;
+            foreach (var col in o.GetType().GetProperties())
+            {
+                if(col.GetIndexParameters().Length > 0) {
+                    continue;
+                }
+
+                var objValue = col.GetValue(o);
+
+                if(objValue is Attachment) {
+                    objValue = (objValue as Attachment).ToImage();
+                }
+
+                result.Add(col.Name, objValue);
+            }
             
-            if(result == null) {
+            if(result == null || result.Count == 0) {
                 return o;
             }
 
@@ -78,6 +95,11 @@ namespace Website.Extensions
             IgnoreProps(o);
 
             return o;
+        }
+
+        public static Image ToImage(this Attachment attachment) {
+            if(attachment == null) return null;
+            return new Image(attachment);
         }
 
         /// <summary>

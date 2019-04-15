@@ -1,0 +1,29 @@
+.two-column-page {
+  .right-col {
+    > div {
+      .about {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 1.5;
+        font-family: "Muli-Regular", sans-serif;
+        color: #6d7882;
+
+        p {
+          font-size: 16px;
+          line-height: 1.5;
+          font-family: "Muli-Regular", sans-serif;
+          color: #6d7882;
+
+          a {
+            color: #4600a8;
+            text-decoration: underline;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

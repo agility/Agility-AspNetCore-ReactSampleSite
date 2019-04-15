@@ -16,6 +16,9 @@ using React.AspNet;
 using Agility.Web;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using System.Reflection;
+using Website.Middleware;
+using Newtonsoft.Json.Serialization;
+using Microsoft.AspNetCore.Diagnostics;
 
 namespace Website
 {
@@ -42,7 +45,9 @@ namespace Website
 
 			services.AddMvc()
 				.AddApplicationPart(assembly)
-				.AddControllersAsServices();
+				.AddControllersAsServices()
+				.AddJsonOptions(options => options.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver());
+
 
 
 			AgilityContext.ConfigureServices(services, Configuration);
@@ -61,11 +66,38 @@ namespace Website
 			}
 			else
 			{
-				app.UseExceptionHandler("/Home/Error");
+				app.UseStatusCodePagesWithReExecute("/error/{0}");
 			}
+
+			app.UseExceptionHandler(appError =>
+			{
+				appError.Run(async context =>
+				{
+					var contextFeature = context.Features.Get<IExceptionHandlerFeature>();
+					if (contextFeature != null)
+					{
+						Agility.Web.Tracing.WebTrace.WriteException(contextFeature.Error);
+					}
+				});
+			});
+
+
+
+
 
 			//configure the Agility Context 
 			AgilityContext.Configure(app, env, useResponseCaching: true);
+
+			//custom middleware defined in this website code
+			app.MapWhen(context => context.Request.Path.Value.EndsWith("robots.txt", true, null),
+						appBranch => { appBranch.UseRobotsHandler(); });
+
+			app.MapWhen(context => context.Request.Path.Value.EndsWith("sitemap.xml", true, null),
+						appBranch => { appBranch.UseSitemapHandler(); });
+
+			app.MapWhen(context => context.Request.Path.Value.EndsWith("posts.xml", true, null),
+									appBranch => { appBranch.UseFeedHandler(); });
+
 
 			app.UseStaticFiles();
 
@@ -75,6 +107,13 @@ namespace Website
 				routes.MapRoute(
 					name: "BlogPostRedirect",
 					template: "blog/{category}/{url}",
+					defaults: new { controller = "Redirect", action = "BlogPost" }
+				);
+
+				//news redirects
+				routes.MapRoute(
+					name: "NewsRedirect",
+					template: "news/{url}",
 					defaults: new { controller = "Redirect", action = "BlogPost" }
 				);
 

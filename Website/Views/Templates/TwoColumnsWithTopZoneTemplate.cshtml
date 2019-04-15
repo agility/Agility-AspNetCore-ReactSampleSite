@@ -1,0 +1,21 @@
+@using Agility.Web;
+@using Agility.Web.Mvc;
+
+
+
+
+@await Component.RenderContentZone("Top")
+
+<div class="p-w two-column-page">
+	<div class="container-my">
+		<div class="row-my">
+			<div class="left-col">
+				@await Component.RenderContentZone("Main")
+			</div>
+			<div class="right-col">
+				@await Component.RenderContentZone("RightColumn")	
+			</div>
+		</div>
+	</div>
+</div>
+
