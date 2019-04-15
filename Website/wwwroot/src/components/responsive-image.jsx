@@ -19,6 +19,9 @@ class ResponsiveImage extends React.Component {
 			urlNoQuery = urlNoQuery.substring(0, urlNoQuery.indexOf("?"));
 		}
 
+		let smallestSrc = url;
+		let smallestWidth = -1;
+
 		const sources = this.props.breaks.map((res, index) => {
 
 			let media = "";
@@ -33,6 +36,11 @@ class ResponsiveImage extends React.Component {
 				thumbStr += "&h=" + res.h;
 			}
 
+			if (smallestWidth == -1 || res.w < smallestWidth) {
+				smallestSrc = urlNoQuery + thumbStr;
+				smallestWidth = res.w;
+			}
+
 			return (
 				<source key={index + '-img'} srcSet={urlNoQuery + thumbStr} media={media} />
 			)
@@ -41,7 +49,7 @@ class ResponsiveImage extends React.Component {
 		return (
 			<picture>
 				{sources}
-				<img src={url} alt={alt} />
+				<img src={smallestSrc} alt={alt} />
 			</picture>
 		)
 	}
