@@ -6,7 +6,7 @@
   },
   "AllowedHosts": "*",
   "Agility": {
-    "applicationName": "My Web Application",
+    "applicationName": "{{agilityWebsiteName}}",
     "websiteName": "{{agilityWebsiteName}}",
     "securityKey": "{{agilitySecurityKey}}",
     "contentCacheFilePath": "d:/home/AgilityContent/",
