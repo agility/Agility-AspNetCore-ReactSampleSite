@@ -7,8 +7,8 @@
   "AllowedHosts": "*",
   "Agility": {
     "applicationName": "My Web Application",
-    "websiteName": "{{website name goes here}}",
-    "securityKey": "{{security key goes here}}",
+    "websiteName": "{{agilityWebsiteName}}",
+    "securityKey": "{{agilitySecurityKey}}",
     "contentCacheFilePath": "d:/home/AgilityContent/",
     "contentServerUrl": "https://contentserver1503.agilitycms.com/agilitycontentserver.svc",
     "developmentMode": "false",
@@ -18,8 +18,8 @@
     },
     "UGC": {
       "Url": "https://ugc.agilitycms.com/",
-      "Key": "{{ugc key goes here}}",
-      "Password": "{{ugc password goes here}}"
+      "Key": "{{ugcKey}}",
+      "Password": "{{ugcPassword}}"
     },
     "Analytics": {
       "Url": ""
