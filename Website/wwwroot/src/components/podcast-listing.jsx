@@ -127,9 +127,9 @@ class PodcastListedItem extends React.Component {
                         <div className="image">
                             <div className="block-hover">
                                 <img src={this.props.item.image.url} alt="" />
-                                <div className="play d-flex jc-c ai-center"><img src="/dist/img/Triangle.svg" alt="" /></div>
+                                <div className="play d-flex jc-c ai-center"><img src="https://static.agilitycms.com/layout/img/Triangle.svg" alt="" /></div>
                             </div>
-                            <img src="/dist/img/podcast.svg" alt="" className="podcast" />
+                            <img src="https://static.agilitycms.com/layout/img/podcast.svg" alt="" className="podcast" />
                         </div>
                     }
                 </a>
