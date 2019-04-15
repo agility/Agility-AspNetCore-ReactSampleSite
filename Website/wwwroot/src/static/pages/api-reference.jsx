@@ -17,7 +17,7 @@ class ApiReference extends Component {
         return (
 
             <div id="api-reference">
-                <div class="postman-run-button"
+                <div className="postman-run-button"
                         data-postman-action="collection/import"
                         data-postman-var-1="3497f11fc6243a0dc5da"></div>
 

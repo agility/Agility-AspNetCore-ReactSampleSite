@@ -121,7 +121,7 @@ class ComunityEventsContent extends React.Component {
                             <h4 className="h4">{this.props.item.title}</h4>
                             <p className="front-content">{this.props.item.subTitle}</p>
                             <div className="adres">
-                                <img src="/dist/img/location.svg" alt="" /><span>{this.props.item.address}</span>
+                                <img src="https://static.agilitycms.com/layout/img/location.svg" alt="" /><span>{this.props.item.address}</span>
                             </div>
                             <a href="" className="arrow-button"><span>{this.props.viewDetailsLabel}</span><img src="https://static.agilitycms.com/layout/img/ico/gray.svg" alt="" /></a>
                         </div>
@@ -135,10 +135,10 @@ class ComunityEventsContent extends React.Component {
                         </div>
                         <div className="inner-content">
                             <div className="date-back">
-                                <img src="/dist/img/calendar.svg" alt="" /><span>{dateText}</span>
+                                <img src="https://static.agilitycms.com/layout/img/calendar.svg" alt="" /><span>{dateText}</span>
                             </div>
                             <div className="adres">
-                                <img src="/dist/img/location.svg" alt="" /><span>{this.props.item.address}</span>
+                                <img src="https://static.agilitycms.com/layout/img/location.svg" alt="" /><span>{this.props.item.address}</span>
                             </div>
                             <p>{this.props.item.description}</p>
                             <a className="btn" href={this.props.item.externalLink.href} target={this.props.item.externalLink.target} title={this.props.item.externalLink.title}>{this.props.registerLabel}</a>

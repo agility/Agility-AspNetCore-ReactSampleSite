@@ -99,7 +99,7 @@ class RequestADemo extends React.Component {
                     <div className="select" id="select">
                         <button className="d-flex jc-sb ai-center" onClick={showDropdown}>
                             <span id="select-value">Country</span>
-                            <img src="/dist/img/down-gray.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/down-gray.svg" alt="" />
                         </button>
                         <div className="dropdown-list">
                             {countryOptions}
@@ -114,7 +114,7 @@ class RequestADemo extends React.Component {
                     <div className="select" id="select-jobtitle">
                         <button className="d-flex jc-sb ai-center" onClick={showJobTitleDropdown}>
                             <span id="select-value-jobtitle">Job Title</span>
-                            <img src="/dist/img/down-gray.svg" alt="" />
+                            <img src="https://static.agilitycms.com/layout/img/down-gray.svg" alt="" />
                         </button>
                         <div className="dropdown-list">
                             <div className="option"><button onClick={getJobTitleValue}>C-Suite</button></div>

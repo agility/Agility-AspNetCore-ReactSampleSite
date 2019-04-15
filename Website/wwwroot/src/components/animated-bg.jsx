@@ -40,22 +40,22 @@ class AnimatedBg extends React.Component {
 
 						images: [
 							{
-								src: "/dist/img/1.png",
+								src: "https://static.agilitycms.com/layout/img/1.png",
 								height: 20,
 								width: 20
 							},
 							{
-								src: "/dist/img/2.png",
+								src: "https://static.agilitycms.com/layout/img/2.png",
 								height: 20,
 								width: 20
 							},
 							{
-								src: "/dist/img/3.png",
+								src: "https://static.agilitycms.com/layout/img/3.png",
 								height: 20,
 								width: 20
 							},
 							{
-								src: "/dist/img/4.png",
+								src: "https://static.agilitycms.com/layout/img/4.png",
 								height: 20,
 								width: 20
 							}
