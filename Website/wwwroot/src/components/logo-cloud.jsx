@@ -18,7 +18,9 @@ class LogoListing extends React.Component {
         }
 
         //loop all the logos and render them
-        const logos = this.props.logos.map(function (logo, index) {
+        const logos = this.props.logos.filter(function(logo){
+            return logo.url && logo.image;
+        }).map(function (logo, index) {
             return renderLogo(logo, index);
         })
 
@@ -76,8 +78,15 @@ class LogoListing extends React.Component {
                 </div>
 
                 <div className="buttons">
-                    <a href={this.props.primaryButton.href} className="btn" target={this.props.primaryButton.target}>{this.props.primaryButton.text}</a>
-                    <a href={this.props.secondaryButton.href} className="btn" target={this.props.secondaryButton.target}>{this.props.secondaryButton.text}</a>
+                    {
+                        this.props.primaryButton &&
+                        <a href={this.props.primaryButton.href} className="btn" target={this.props.primaryButton.target}>{this.props.primaryButton.text}</a>
+                    }
+
+                    {
+                        this.props.secondaryButton &&
+                        <a href={this.props.secondaryButton.href} className="btn" target={this.props.secondaryButton.target}>{this.props.secondaryButton.text}</a>
+                    }
                 </div>
             </section>
         );
