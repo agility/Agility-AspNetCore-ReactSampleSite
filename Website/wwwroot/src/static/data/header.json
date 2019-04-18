@@ -1,104 +1,99 @@
 {
-    "logo": {
-        "url": "https://static.agilitycms.com/brand/logo.svg",
-        "label": "Agility"
+  "logo": {
+    "url": "https://static.agilitycms.com/brand/logo.svg",
+    "label": "Agility"
+  },
+  "mobileLogo": {
+    "url": "https://static.agilitycms.com/layout/img/logo-original.svg",
+    "label": "Agility"
+  },
+  "preHeaderLinks": [
+    {
+      "title": "Help",
+      "url": {
+        "text": "Help",
+        "href": "https://help.agilitycms.com/hc/en-us",
+        "target": "_blank"
+      },
+      "referenceName": "Header_Link",
+      "key": 23
     },
-    "mobileLogo": {
-        "url": "https://static.agilitycms.com/layout/img/logo-original.svg",
-        "label": "Agility"
-    },
-    "preHeaderLinks": [
+    {
+      "title": "Sign In",
+      "url": {
+        "text": "Sign In",
+        "href": "https://manager.agilitycms.com",
+        "target": "_blank"
+      },
+      "referenceName": "Header_Link",
+      "key": 24
+    }
+  ],
+  "preHeaderPrimaryButton": null,
+  "primaryButton": {
+    "text": "Chat with Us",
+    "href": "/contact-us/chat-sales",
+    "target": "_self"
+  },
+  "menu": [
+    {
+      "key": 4,
+      "text": "Product",
+      "url": "javascript:;",
+      "target": null,
+      "children": [
         {
-            "title": "Help",
-            "url": {
-                "text": "Help",
-                "href": "https://help.agilitycms.com/hc/en-us",
-                "target": "_blank"
-            },
-            "referenceName": "Header_Link",
-            "key": 23
+          "key": 13,
+          "text": "For Developers",
+          "url": "/product/for-developers",
+          "target": null,
+          "children": null
         },
         {
-            "title": "Sign In",
-            "url": {
-                "text": "Sign In",
-                "href": "https://manager.agilitycms.com",
-                "target": "_blank"
-            },
-            "referenceName": "Header_Link",
-            "key": 24
-        },
-        {
-            "title": "Support",
-            "url": {
-                "text": "Support",
-                "href": "#support",
-                "target": "_blank"
-            },
-            "referenceName": "Header_Link",
-            "key": 658
+          "key": 12,
+          "text": "For Marketers",
+          "url": "/product/for-marketers",
+          "target": null,
+          "children": null
         }
-    ],
-    "preHeaderPrimaryButton": {
-        "text": "Contact Us",
-        "href": "/contact-us",
-        "target": "_self"
+      ]
     },
-    "primaryButton": {
-        "text": "Request a Demo",
-        "href": "/request-a-demo",
-        "target": "_self"
+    {
+      "key": 7,
+      "text": "Pricing",
+      "url": "/pricing",
+      "target": null,
+      "children": []
     },
-    "menu": [
-        {
-            "key": 4,
-            "text": "Product",
-            "url": "javascript:;",
-            "target": null,
-            "children": [
-                {
-                    "key": 13,
-                    "text": "For Developers",
-                    "url": "/product/for-developers",
-                    "target": null,
-                    "children": null
-                },
-                {
-                    "key": 12,
-                    "text": "For Marketers",
-                    "url": "/product/for-marketers",
-                    "target": null,
-                    "children": null
-                }
-            ]
-        },
-        {
-            "key": 7,
-            "text": "Pricing",
-            "url": "/pricing",
-            "target": null,
-            "children": []
-        },
-        {
-            "key": 11,
-            "text": "Resources",
-            "url": "/resources",
-            "target": null,
-            "children": []
-        },
-        {
-            "key": 9,
-            "text": "Community",
-            "url": "/community",
-            "target": null,
-            "children": []
-        },
-        {
-            "key": 14,
-            "text": "Partners",
-            "url": "/partners",
-            "target": null,
-            "children": []
-        }
-    ]
+    {
+      "key": 11,
+      "text": "Resources",
+      "url": "/resources",
+      "target": null,
+      "children": []
+    },
+    {
+      "key": 9,
+      "text": "Community",
+      "url": "/community",
+      "target": null,
+      "children": []
+    },
+    {
+      "key": 14,
+      "text": "Partners",
+      "url": "/partners",
+      "target": null,
+      "children": []
+    }
+  ],
+  "siteSearchSettings": {
+    "searchProductPage": {
+      "text": "Agility Search",
+      "href": "/set-me-to-something",
+      "target": "_self"
+    },
+    "referenceName": "SiteSearchSettings",
+    "key": 860
+  }
 }
