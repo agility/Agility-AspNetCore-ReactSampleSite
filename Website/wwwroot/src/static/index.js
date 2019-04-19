@@ -18,6 +18,7 @@ import Form from './pages/form-page-purple.jsx'
 import FormYellow from './pages/form-page-yellow.jsx'
 import Community from './pages/community.jsx'
 import Partners from './pages/partners.jsx'
+import PricingPage from './pages/pricing.jsx'
 import Resources from './pages/resources.jsx'
 import RichTextPage from './pages/rich-text.jsx'
 import BlogListing from './pages/blog-listing.jsx'
@@ -53,6 +54,7 @@ ReactDOM.render((
                         <Route path="/podcast-listing-page" component={Podcast} />
                         <Route path="/podcast-details-page" component={PodcastDetailsPage} />
                         <Route path="/api-reference" component={ApiReference} />
+                        <Route path="/pricing" component={PricingPage} />
 
                         <Route component={NotFound} />
                     </Switch>
