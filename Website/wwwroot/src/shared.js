@@ -38,6 +38,7 @@ import LatestBlogPosts from './components/latest-blog-posts.jsx'
 import ListenToPodcast from './components/listen-to-podcast.jsx'
 import PodcastListing from './components/podcast-listing.jsx'
 
+import Pricing from './components/pricing.jsx'
 import TabPanels from './components/tab-panels.jsx'
 import PeopleListing from './components/people-listing.jsx'
 import LogoCloud from './components/logo-cloud.jsx'
@@ -71,6 +72,7 @@ global['Components'] = {
   EventListing,
   CtaBlocks,
   FeatureBlocksWithText,
+  Pricing,
   JobListing,
   FeaturedResources,
   FeaturedCaseStudies,
