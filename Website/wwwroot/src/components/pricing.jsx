@@ -7,7 +7,7 @@ class Pricing extends React.Component {
     render() {
 
         const price = this.props.items.map(function (item) {
-            return <PriceContent item={item} />
+            return <PriceContent item={item} key={item.key} />
         });
 
         return (
@@ -19,8 +19,6 @@ class Pricing extends React.Component {
                     </div>
                 </div>
             </section>
-
-
         );
     }
 }
@@ -31,24 +29,22 @@ class PriceContent extends React.Component {
         super(props)
     }
     render() {
-        var priceClass = 'price-item '+this.props.item.currentClass;
-        var priceVal = this.props.item.price;
-        var price;
-        var buttonText;
-        if ('Free' == priceVal) {
-            price = priceVal;
-        } else {
-            price = '$ <span>'+priceVal+'</span> / <em>mo</em>';
+        var priceClass = 'price-item';
+        
+        if(this.props.item.isRecommended){
+            priceClass += ' current';
         }
-        if ('current' == this.props.item.currentClass) {
-            buttonText = 'Current Plan';
-        } else {
-            buttonText = 'Let`s try';
+
+        var price = '$ <span>' + this.props.item.price + '</span> ' + this.props.item.pricePerUnitLabel;
+
+        if(this.props.item.price <= 0){
+            price = this.props.item.pricePerUnitLabel;
         }
-        var benefits = this.props.item.benefits;
+
+        var features = this.props.item.features;
         var liArray = [];
-        for (var i = 0; i < benefits.length; i++) {
-            var liArr = '<li>'+benefits[i].item+'</li>';
+        for (var i = 0; i < features.length; i++) {
+            var liArr = '<li>'+ features[i].label + '<strong> ' + features[i].value +'</strong>' + '</li>';
             liArray.push(liArr);
         }
         var list = liArray.join('');
@@ -56,19 +52,26 @@ class PriceContent extends React.Component {
         return (
             <div className="col-md-3 col-sm-6">
                 <div className={priceClass}>
-                    <h3 className="item-title">{this.props.item.heading}</h3>
-                    <div className="image">
-                        <img src={this.props.item.image.url} alt=""/>
-                    </div>
-                    <div className="intro"><p>{this.props.item.introText}</p></div>
+                    <h3 className="item-title">{this.props.item.title}</h3>
+                    {
+                        this.props.item.icon && 
+                        <div className="image">
+                            <img src={this.props.item.icon.url} alt=""/>
+                        </div>
+                    }
+                    
+                    <div className="intro"><p>{this.props.item.description}</p></div>
                     <div className="price" dangerouslySetInnerHTML={{ __html: price }}></div>
-                    <div className="price-intro"><p>{this.props.item.priceText}</p></div>
-                    <div className="benefits">
+                    <div className="price-intro"><p>{this.props.item.subtitle}</p></div>
+                    <div className="features">
                         <ul dangerouslySetInnerHTML={{ __html: list }}></ul>
                     </div>
-                    <div className="buttons">
-                        <a href="" className="btn">{buttonText}</a>
-                    </div>
+                    {
+                        this.props.item.callToAction && 
+                        <div className="buttons">
+                            <a href={this.props.item.callToAction.href} target={this.props.item.callToAction.target} className="btn">{this.props.item.callToAction.text}</a>
+                        </div>
+                    }
                 </div>
             </div>
         );
