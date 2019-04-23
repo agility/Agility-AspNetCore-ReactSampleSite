@@ -1,0 +1,120 @@
+{
+  "title": "Price",
+  "items": [
+    {
+      "title": "30 Day Trial",
+      "isRecommended": true,
+      "icon": {
+        "url": "../../../dist/img/trial.svg"
+      },
+      "description": "An Ugly Myspace Profile Will Sure Ruin Your Reputation",
+      "pricePerUnitLabel": "Free",
+      "subtitle": "Guidelines For Inkjet Cartridge Refill",
+      "features": [
+        {
+          "label": "User",
+          "value": "Unlimited"
+        },
+        {
+          "label": "Storage",
+          "value": "20gb"
+        }
+      ],
+      "callToAction": {
+        "text": "Partners",
+        "href": "/partners",
+        "target": "_self"
+      }
+    },
+    {
+      "title": "Personal",
+      "isRecommended": false,
+      "icon": {
+        "url": "../../../dist/img/pers1.svg"
+      },
+      "description": "An Ugly Myspace Profile Will Sure Ruin Your Reputation",
+      "price": "19",
+      "pricePerUnitLabel": "/ mo",
+      "subtitle": "Guidelines For Inkjet Cartridge Refill",
+      "features": [
+        {
+          "label": "User",
+          "value": "Unlimited"
+        },
+        {
+          "label": "Storage",
+          "value": "20gb"
+        }
+      ],
+      "callToAction": {
+        "text": "Partners",
+        "href": "/partners",
+        "target": "_self"
+      }
+    },
+    {
+      "title": "Personal",
+      "isRecommended": false,
+      "icon": {
+        "url": "../../../dist/img/pers2.svg"
+      },
+      "description": "An Ugly Myspace Profile Will Sure Ruin Your Reputation",
+      "price": "19",
+      "pricePerUnitLabel": "/ mo",
+      "subtitle": "Guidelines For Inkjet Cartridge Refill",
+      "features": [
+        {
+          "label": "Members",
+          "value": "20"
+        },
+        {
+          "label": "Project",
+          "value": "30"
+        }
+      ],
+      "callToAction": {
+        "text": "Partners",
+        "href": "/partners",
+        "target": "_self"
+      }
+    },
+    {
+      "title": "Advanced",
+      "isRecommended": false,
+      "icon": {
+        "url": "../../../dist/img/advanced.svg"
+      },
+      "description": "An Ugly Myspace Profile Will Sure Ruin Your Reputation",
+      "price": "49",
+      "pricePerUnitLabel": "/ mo",
+      "subtitle": "Guidelines For Inkjet Cartridge Refill",
+      "features": [
+        {
+          "label": "Members",
+          "value": "20"
+        },
+        {
+          "label": "Project",
+          "value": "30"
+        },
+        {
+          "label": "User",
+          "value": "Unlimited"
+        },
+        {
+          "label": "Storage",
+          "value": "20gb"
+        },
+        {
+          "label": "More",
+          "value": "20"
+        }
+      ],
+      "callToAction": {
+        "text": "Partners",
+        "href": "/partners",
+        "target": "_self"
+      }
+    }
+  ]
+}
